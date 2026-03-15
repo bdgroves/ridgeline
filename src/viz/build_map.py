@@ -57,22 +57,39 @@ CLUSTER_LABELS = {
 
 
 def load_incidents() -> pd.DataFrame:
-    parquet = PROC_DIR / "sar_incidents_clean.parquet"
-    csv     = PROC_DIR / "sar_incidents_clean.csv"
-    if parquet.exists():
-        df = pd.read_parquet(parquet)
-    elif csv.exists():
-        df = pd.read_csv(csv, low_memory=False)
-    else:
+    frames = []
+
+    # 1. Seed / NSAR data
+    for path in [PROC_DIR / "sar_incidents_clean.parquet",
+                 PROC_DIR / "sar_incidents_clean.csv"]:
+        if path.exists():
+            df = pd.read_parquet(path) if path.suffix == ".parquet" else pd.read_csv(path, low_memory=False)
+            df["data_source_label"] = "seed"
+            frames.append(df)
+            break
+
+    # 2. Real Phoenix Fire geocoded data — shown as separate layer
+    geocoded = PROC_DIR / "phoenix_fire_sar_geocoded.parquet"
+    if geocoded.exists():
+        real = pd.read_parquet(geocoded)
+        real["data_source_label"] = "phoenix_fire_real"
+        # Ensure behavioral_cluster exists
+        if "behavioral_cluster" not in real.columns:
+            real["behavioral_cluster"] = "recreational_underequipped"
+        frames.append(real)
+        console.print(f"  [green]✓[/green] Real Phoenix Fire data: [cyan]{len(real):,}[/cyan] geocoded incidents")
+
+    if not frames:
         console.print("[yellow]No incident data — map will show GIS layers only[/yellow]")
         return pd.DataFrame()
 
-    df = df.dropna(subset=["latitude","longitude"])
-    df = df[
-        df["latitude"].between(31.0, 37.0) &
-        df["longitude"].between(-115.0, -109.0)
+    combined = pd.concat(frames, ignore_index=True)
+    combined = combined.dropna(subset=["latitude","longitude"])
+    combined = combined[
+        combined["latitude"].between(31.0, 37.0) &
+        combined["longitude"].between(-115.0, -109.0)
     ].copy()
-    return df
+    return combined
 
 
 def load_geojson(path: Path) -> dict | None:
