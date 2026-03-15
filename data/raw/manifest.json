@@ -1,0 +1,11 @@
+{
+  "generated": "2026-03-15",
+  "files": [
+    "data\\raw\\phoenix_fire_mountain_rescue.csv",
+    "data\\raw\\seed_incidents.csv"
+  ],
+  "record_counts": {
+    "phoenix_fire_mountain_rescue.csv": 16,
+    "seed_incidents.csv": 5000
+  }
+}

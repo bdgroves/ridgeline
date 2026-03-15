@@ -1,0 +1,8 @@
+cluster,total_incidents,avg_per_year,pct_weekend,pct_self_called,median_duration_hrs,median_dist_trail_m,top_incident_type
+Recreational — Underequipped,1800,180.0,29.9,53.7,2.8,208.0,Heat Exhaustion
+Casual Proximity,700,70.0,29.1,59.7,1.5,1146.0,Lost / Disoriented
+Youth / Teen,600,60.0,30.5,22.5,2.0,1417.0,Lost / Disoriented
+Dog Walker,550,55.0,27.3,52.9,1.8,799.0,Lost / Disoriented
+Unhoused / Encampment,500,50.0,25.4,14.8,1.2,1970.0,Medical Emergency
+Party / Social Spillover,450,45.0,28.4,32.7,2.6,578.0,Lost / Disoriented
+Flash Flood Stranded,400,40.0,29.5,53.5,3.6,444.0,Flash Flood Stranded
