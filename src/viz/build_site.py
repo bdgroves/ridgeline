@@ -1,7 +1,7 @@
 """
 ridgeline / src / viz / build_site.py
 
-Reads processed data + R-generated plots, renders the full
+Reads processed data + analysis plots, renders the full
 GitHub Pages site into site/.
 
 Run:
@@ -81,7 +81,7 @@ def load_summary() -> dict:
 
 
 def copy_assets() -> None:
-    """Copy R-generated plots into site/assets/."""
+    """Copy analysis plots into site/assets/."""
     assets = SITE_DIR / "assets"
     assets.mkdir(exist_ok=True)
 
@@ -182,7 +182,7 @@ def write_index(summary: dict) -> None:
     </div>
   </div>
 
-  {"<div class='section'><div class='section-title'>R Analysis — Statistical Plots</div><div class='plot-grid'>" + "".join(f"<div class='plot-card'><img src='assets/{p}' alt='{p}' loading='lazy'></div>" for p in plots) + "</div></div>" if plots else "<!-- R plots will appear after running pixi run stats -->"}
+  {"<div class='section'><div class='section-title'>Analysis — Behavioral Cluster Plots</div><div class='plot-grid'>" + "".join(f"<div class='plot-card'><img src='assets/{p}' alt='{p}' loading='lazy'></div>" for p in plots) + "</div></div>" if plots else "<!-- Plots will appear after running pixi run stats -->"}
 
   <div class="section">
     <div class="section-title">Data</div>
@@ -197,7 +197,7 @@ def write_index(summary: dict) -> None:
     RIDGELINE · WUI SAR Analysis · Arizona &nbsp;|&nbsp;
     Sources: AZ DEMA (~600 SAR/yr statewide) · Phoenix Fire Dept (200+ mtn rescues/yr) ·
     SARA Tucson (100+ missions/yr) · MCSO Aviation + Volunteers &nbsp;|&nbsp;
-    Built with Python · R · pixi · GitHub Pages
+    Built with Python · pixi · GitHub Pages
   </footer>
 </div>
 
