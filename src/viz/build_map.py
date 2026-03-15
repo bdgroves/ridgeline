@@ -89,13 +89,13 @@ def load_geojson(path: Path) -> dict | None:
 def build_map(df: pd.DataFrame) -> folium.Map:
     # Centre on AZ WUI corridor midpoint
     m = folium.Map(
-        location=[33.0, -111.5],
-        zoom_start=8,
+        location=[33.45, -112.05],   # Phoenix metro
+        zoom_start=10,
         tiles=None,
         prefer_canvas=True,
     )
 
-    # ── Base tiles ─────────────────────────────────────────────────────────
+    # ── Base tiles — dark first so it's the default ────────────────────────
     folium.TileLayer(
         tiles="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
         attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
@@ -254,12 +254,12 @@ def build_map(df: pd.DataFrame) -> folium.Map:
                 )
                 folium.CircleMarker(
                     location=[row["latitude"], row["longitude"]],
-                    radius=5,
+                    radius=7,
                     color=color,
                     fill=True,
                     fill_color=color,
-                    fill_opacity=0.75,
-                    weight=1,
+                    fill_opacity=0.82,
+                    weight=0,
                     popup=folium.Popup(popup_html, max_width=230),
                     tooltip=f"{label} — {row.get('incident_type','')}",
                 ).add_to(fg)
@@ -288,9 +288,10 @@ def _has_field(geojson: dict, field: str) -> bool:
 
 def _build_legend() -> str:
     items = "".join(
-        f'<div style="display:flex;align-items:center;gap:6px;margin:3px 0;">'
-        f'<div style="width:10px;height:10px;border-radius:50%;background:{color};flex-shrink:0;"></div>'
-        f'<span style="font-size:10px;">{label}</span></div>'
+        f'<div style="display:flex;align-items:center;gap:8px;margin:4px 0;">'
+        f'<div style="width:14px;height:14px;border-radius:50%;background:{color};'
+        f'flex-shrink:0;border:2px solid rgba(255,255,255,0.3);"></div>'
+        f'<span style="font-size:11px;color:#d4cbb8;">{label}</span></div>'
         for key, color in CLUSTER_COLORS.items()
         if key != "unknown"
         for label in [CLUSTER_LABELS.get(key, key)]
