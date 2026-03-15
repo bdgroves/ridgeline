@@ -1,0 +1,31 @@
+# pixi environments
+.pixi/
+*.egg-info/
+
+# Data — raw is tracked, large processed files are not
+data/processed/*.parquet
+data/raw/*.csv
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Site build output (generated)
+site/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+*.key

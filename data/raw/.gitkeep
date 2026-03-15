@@ -1,0 +1,3 @@
+# Raw source data lives here.
+# Files are downloaded by: pixi run ingest
+# Large files (.csv, .parquet) are .gitignored — only seed data and manifest are tracked.
