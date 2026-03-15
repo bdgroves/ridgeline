@@ -22,7 +22,7 @@ from pathlib import Path
 import folium
 import geopandas as gpd
 import pandas as pd
-from folium.plugins import MarkerCluster, HeatMap
+from folium.plugins import HeatMap
 from rich.console import Console
 
 ROOT     = Path(__file__).resolve().parents[2]
@@ -84,15 +84,6 @@ def load_geojson(path: Path) -> dict | None:
     except Exception:
         return None
 
-
-def make_circle_icon(color: str) -> folium.DivIcon:
-    return folium.DivIcon(
-        html=f'<div style="width:8px;height:8px;border-radius:50%;'
-             f'background:{color};border:1px solid rgba(255,255,255,0.6);'
-             f'opacity:0.85;"></div>',
-        icon_size=(8, 8),
-        icon_anchor=(4, 4),
-    )
 
 
 def build_map(df: pd.DataFrame) -> folium.Map:
@@ -230,58 +221,52 @@ def build_map(df: pd.DataFrame) -> folium.Map:
     # ── Incident layers ────────────────────────────────────────────────────
     if not df.empty:
 
-        # Heatmap layer (all incidents)
-        fg_heat = folium.FeatureGroup(name="Incident Heatmap", show=False)
-        heat_data = df[["latitude","longitude"]].dropna().values.tolist()
+        # Heatmap (all incidents, off by default)
+        fg_heat = folium.FeatureGroup(name="🔥 Incident Heatmap", show=False)
         HeatMap(
-            heat_data,
-            radius=12,
-            blur=15,
-            max_zoom=13,
-            gradient={0.2: "#1a1e18", 0.5: "#e8793a", 0.8: "#d94f1e", 1.0: "#ffffff"},
+            df[["latitude","longitude"]].dropna().values.tolist(),
+            radius=14, blur=18, max_zoom=13,
+            gradient={0.2:"#1a1e18", 0.5:"#e8793a", 0.8:"#d94f1e", 1.0:"#ffffff"},
         ).add_to(fg_heat)
         fg_heat.add_to(m)
 
-        # Clustered markers by behavioral cluster
+        # One CircleMarker FeatureGroup per cluster — colors render correctly
+        cluster_col = "behavioral_cluster"
         for cluster_key, color in CLUSTER_COLORS.items():
             label = CLUSTER_LABELS.get(cluster_key, cluster_key)
-            sub   = df[df.get("behavioral_cluster", pd.Series(dtype=str)) == cluster_key]
+            sub   = df[df[cluster_col] == cluster_key] if cluster_col in df.columns else pd.DataFrame()
             if sub.empty:
                 continue
 
-            fg = folium.FeatureGroup(name=f"● {label}", show=True)
-            mc = MarkerCluster(
-                options={
-                    "maxClusterRadius": 40,
-                    "spiderfyOnMaxZoom": True,
-                    "showCoverageOnHover": False,
-                    "iconCreateFunction": _cluster_icon_js(color),
-                }
-            )
-
+            fg = folium.FeatureGroup(name=f"⬤ {label}", show=True)
             for _, row in sub.iterrows():
                 popup_html = (
-                    f"<div style='font-family:monospace;font-size:11px;min-width:180px;'>"
-                    f"<b style='color:{color}'>{label}</b><br>"
+                    f"<div style='font-family:monospace;font-size:11px;min-width:190px;"
+                    f"line-height:1.6;background:#0d0f0c;color:#d4cbb8;"
+                    f"padding:8px;border:1px solid {color};'>"
+                    f"<span style='color:{color};font-weight:bold;'>{label}</span><br>"
                     f"<b>{row.get('location_name','')}</b><br>"
-                    f"{row.get('incident_type','')}<br>"
-                    f"📅 {str(row.get('date',''))[:10]}<br>"
-                    f"🕐 {row.get('time_of_day_bucket','')}<br>"
+                    f"<span style='color:#c8a96e;'>{row.get('incident_type','')}</span><br>"
+                    f"📅 {str(row.get('date',''))[:10]} &nbsp;🕐 {row.get('time_of_day_bucket','')}<br>"
                     f"📞 {row.get('caller_context','')}<br>"
                     f"🏃 {row.get('activity_at_onset','')}"
                     f"</div>"
                 )
-                folium.Marker(
+                folium.CircleMarker(
                     location=[row["latitude"], row["longitude"]],
-                    icon=make_circle_icon(color),
-                    popup=folium.Popup(popup_html, max_width=220),
+                    radius=5,
+                    color=color,
+                    fill=True,
+                    fill_color=color,
+                    fill_opacity=0.75,
+                    weight=1,
+                    popup=folium.Popup(popup_html, max_width=230),
                     tooltip=f"{label} — {row.get('incident_type','')}",
-                ).add_to(mc)
-
-            mc.add_to(fg)
+                ).add_to(fg)
             fg.add_to(m)
 
-        console.print(f"  [green]✓[/green] {len(df):,} incident markers across {df['behavioral_cluster'].nunique()} clusters")
+        n_clusters = df[cluster_col].nunique() if cluster_col in df.columns else "?"
+        console.print(f"  [green]✓[/green] {len(df):,} incidents · {n_clusters} clusters · CircleMarker (color coded)")
 
     # ── Legend ─────────────────────────────────────────────────────────────
     legend_html = _build_legend()
@@ -299,20 +284,6 @@ def _has_field(geojson: dict, field: str) -> bool:
         return False
     return field in features[0].get("properties", {})
 
-
-def _cluster_icon_js(color: str) -> str:
-    return (
-        f"function(cluster) {{"
-        f"  var c = cluster.getChildCount();"
-        f"  return L.divIcon({{"
-        f"    html: '<div style=\"background:{color};width:28px;height:28px;"
-        f"border-radius:50%;display:flex;align-items:center;justify-content:center;"
-        f"color:white;font-size:10px;font-weight:bold;border:2px solid rgba(255,255,255,0.4);\">'+ c +'</div>',"
-        f"    className: '',"
-        f"    iconSize: [28, 28]"
-        f"  }});"
-        f"}}"
-    )
 
 
 def _build_legend() -> str:
