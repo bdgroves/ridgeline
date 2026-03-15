@@ -1,0 +1,4739 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00092834374846,
+          33.831290931919284
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "AmenityName": "Picnic Area",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00383755306744,
+          33.829243940624465
+        ]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "AmenityName": "Group Picnic Area",
+        "AmenityType": "Group Picnic Area",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3169608547607,
+          33.89952446348363
+        ]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "AmenityName": "Picnic Area - Cottonwood",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.2847153730897,
+          33.85091259233852
+        ]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "AmenityName": "Picnic Area - Bobcat",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "None for single tables; reservation for ramadas."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28164781683724,
+          33.849917513885664
+        ]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "AmenityName": "Picnic Area - Ringtail",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "None for single tables; reservation for ramadas."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30237902287813,
+          33.856810216913175
+        ]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "AmenityName": "Picnic Area - Sunset Ridge",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30329333715746,
+          33.863767645225956
+        ]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "AmenityName": "Picnic Area - Wild Burro",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30297979458057,
+          33.87830358942298
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "AmenityName": "Picnic Area - Lakeview",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50086956161974,
+          33.58364521379746
+        ]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "AmenityName": "Group Picnic Area 4",
+        "AmenityType": "Group Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.51114771679137,
+          33.592176610925506
+        ]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "AmenityName": "Group Picnic Area 7",
+        "AmenityType": "Group Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.4992508882076,
+          33.57621103867304
+        ]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "AmenityName": "Group Picnic Area 3",
+        "AmenityType": "Group Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61269169810785,
+          33.4742903128178
+        ]
+      },
+      "properties": {
+        "OBJECTID": 12,
+        "AmenityName": "Group Picnic Area (C&D)",
+        "AmenityType": "Group Picnic Area",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60741500490873,
+          33.47370442160703
+        ]
+      },
+      "properties": {
+        "OBJECTID": 13,
+        "AmenityName": "Picnic Area 8",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60822696424627,
+          33.47062256711838
+        ]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "AmenityName": "Picnic Area 6",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Larger ramadas reservable."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60751745327529,
+          33.4684048342859
+        ]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "AmenityName": "Picnic Area 9",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6073697289201,
+          33.47194410153284
+        ]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "AmenityName": "Picnic Area 7",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61346240860418,
+          33.46676239500338
+        ]
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "AmenityName": "Picnic Area 10",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Larger ramadas reservable."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61096811764023,
+          33.46574389558739
+        ]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "AmenityName": "Picnic Area",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50242496938137,
+          33.587157417766434
+        ]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "AmenityName": "Picnic Area 5",
+        "AmenityType": "Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50596778562307,
+          33.5979644868718
+        ]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "AmenityName": "Picnic Area 10",
+        "AmenityType": "Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.51024629423469,
+          33.59616522671929
+        ]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "AmenityName": "Picnic Area 8",
+        "AmenityType": "Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50267335445574,
+          33.56470218166434
+        ]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "AmenityName": "Picnic Area 1",
+        "AmenityType": "Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50429634786609,
+          33.57237295775287
+        ]
+      },
+      "properties": {
+        "OBJECTID": 23,
+        "AmenityName": "Picnic Area 2",
+        "AmenityType": "Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5077227208874,
+          33.58994740380905
+        ]
+      },
+      "properties": {
+        "OBJECTID": 24,
+        "AmenityName": "Picnic Area 6",
+        "AmenityType": "Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.71802493774489,
+          33.69114474971321
+        ]
+      },
+      "properties": {
+        "OBJECTID": 25,
+        "AmenityName": "Group Picnic Area",
+        "AmenityType": "Group Picnic Area",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.6460402651941,
+          33.28414549398161
+        ]
+      },
+      "properties": {
+        "OBJECTID": 26,
+        "AmenityName": "Group Picnic Area",
+        "AmenityType": "Group Picnic Area",
+        "ParkName": "Buckeye Hills Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.6536675916753,
+          33.30299281787836
+        ]
+      },
+      "properties": {
+        "OBJECTID": 27,
+        "AmenityName": "Picnic Area",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Buckeye Hills Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.64389701248697,
+          33.29481207183189
+        ]
+      },
+      "properties": {
+        "OBJECTID": 28,
+        "AmenityName": "Picnic Area",
+        "AmenityType": "Picnic Area",
+        "ParkName": "Buckeye Hills Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37377539689459,
+          33.384090286105675
+        ]
+      },
+      "properties": {
+        "OBJECTID": 29,
+        "AmenityName": "Turf Picnic Area",
+        "AmenityType": "Turf Picnic Area",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69559029505831,
+          33.71799531369901
+        ]
+      },
+      "properties": {
+        "OBJECTID": 30,
+        "AmenityName": "Picnic Area",
+        "AmenityType": "Picnic Area",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01751771355998,
+          33.823985104746
+        ]
+      },
+      "properties": {
+        "OBJECTID": 31,
+        "AmenityName": "RV Dump Station",
+        "AmenityType": "RV Dump Station",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Available with camping fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61887967017898,
+          33.47949700468626
+        ]
+      },
+      "properties": {
+        "OBJECTID": 32,
+        "AmenityName": "RV Dump Station",
+        "AmenityType": "RV Dump Station",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Available with camping fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7312646003547,
+          33.69412647731254
+        ]
+      },
+      "properties": {
+        "OBJECTID": 33,
+        "AmenityName": "RV Dump Station",
+        "AmenityType": "RV Dump Station",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Available with camping fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3084796059401,
+          33.861381307607154
+        ]
+      },
+      "properties": {
+        "OBJECTID": 34,
+        "AmenityName": "RV Dump Station",
+        "AmenityType": "RV Dump Station",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Available with camping fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5014417399467,
+          33.60125120895276
+        ]
+      },
+      "properties": {
+        "OBJECTID": 35,
+        "AmenityName": "RV Dump Station",
+        "AmenityType": "RV Dump Station",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Available with camping fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.68893446601416,
+          33.72175716996677
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36,
+        "AmenityName": "Youth Group Area",
+        "AmenityType": "Youth Group Area",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Youth groups only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69252589907906,
+          33.71602377633153
+        ]
+      },
+      "properties": {
+        "OBJECTID": 37,
+        "AmenityName": "Youth Group Area - Mink's Camp",
+        "AmenityType": "Youth Group Area",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Youth groups only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5011636951966,
+          33.59900988076909
+        ]
+      },
+      "properties": {
+        "OBJECTID": 38,
+        "AmenityName": "Tent Group Campground",
+        "AmenityType": "Youth Group Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.72884504113755,
+          33.69289000562896
+        ]
+      },
+      "properties": {
+        "OBJECTID": 39,
+        "AmenityName": "Nature Center - McDowell",
+        "AmenityType": "Nature Center",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37985998185967,
+          33.38330103524393
+        ]
+      },
+      "properties": {
+        "OBJECTID": 40,
+        "AmenityName": "Nature Center - Estrella",
+        "AmenityType": "Nature Center",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.27680927871458,
+          33.84717814452501
+        ]
+      },
+      "properties": {
+        "OBJECTID": 41,
+        "AmenityName": "Discovery Center at Lake Pleasant",
+        "AmenityType": "Nature Center",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49816947560733,
+          33.56684258312863
+        ]
+      },
+      "properties": {
+        "OBJECTID": 42,
+        "AmenityName": "Nature Center & Library - White Tank",
+        "AmenityType": "Nature Center",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.63536046152043,
+          33.168129150152154
+        ]
+      },
+      "properties": {
+        "OBJECTID": 43,
+        "AmenityName": "Visitor Center - San Tan",
+        "AmenityType": "Nature Center",
+        "ParkName": "San Tan Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.62077007587975,
+          33.4808203900358
+        ]
+      },
+      "properties": {
+        "OBJECTID": 44,
+        "AmenityName": "Nature Center - Usery",
+        "AmenityType": "Nature Center",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00577274158175,
+          33.829071207401114
+        ]
+      },
+      "properties": {
+        "OBJECTID": 45,
+        "AmenityName": "Nature Center - Cave Creek",
+        "AmenityType": "Nature Center",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60734256117097,
+          33.46606142672793
+        ]
+      },
+      "properties": {
+        "OBJECTID": 46,
+        "AmenityName": "Trailhead Staging Area",
+        "AmenityType": "Staging Area",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.71811554990927,
+          33.69039686237579
+        ]
+      },
+      "properties": {
+        "OBJECTID": 47,
+        "AmenityName": "Trailhead Staging Area",
+        "AmenityType": "Staging Area",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49961095543135,
+          33.58711522649977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 48,
+        "AmenityName": "Trailhead Staging Area",
+        "AmenityType": "Staging Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.63444964977239,
+          33.16779658310561
+        ]
+      },
+      "properties": {
+        "OBJECTID": 49,
+        "AmenityName": "Trailhead Staging Area",
+        "AmenityType": "Staging Area",
+        "ParkName": "San Tan Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70025637551105,
+          33.67216537237809
+        ]
+      },
+      "properties": {
+        "OBJECTID": 50,
+        "AmenityName": "Four Peaks Staging Area",
+        "AmenityType": "Staging Area",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Fee for horse camping."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00170995889401,
+          33.829373639185775
+        ]
+      },
+      "properties": {
+        "OBJECTID": 51,
+        "AmenityName": "Horse Staging Area",
+        "AmenityType": "Horse Staging",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.36904176043754,
+          33.370602048839395
+        ]
+      },
+      "properties": {
+        "OBJECTID": 52,
+        "AmenityName": "Horse Staging Area",
+        "AmenityType": "Horse Staging",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50348784614407,
+          33.6047163266236
+        ]
+      },
+      "properties": {
+        "OBJECTID": 53,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Group campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50340783589665,
+          33.60214621612799
+        ]
+      },
+      "properties": {
+        "OBJECTID": 54,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50321632046797,
+          33.587285051086766
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5074349321114,
+          33.589434634958415
+        ]
+      },
+      "properties": {
+        "OBJECTID": 56,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50588703426554,
+          33.59827932173909
+        ]
+      },
+      "properties": {
+        "OBJECTID": 57,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5101909714879,
+          33.59578000857931
+        ]
+      },
+      "properties": {
+        "OBJECTID": 58,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50223670854896,
+          33.564896704700736
+        ]
+      },
+      "properties": {
+        "OBJECTID": 59,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30391709315477,
+          33.863628075005614
+        ]
+      },
+      "properties": {
+        "OBJECTID": 60,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3034177475361,
+          33.878494027614764
+        ]
+      },
+      "properties": {
+        "OBJECTID": 61,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28947611351549,
+          33.854218580074495
+        ]
+      },
+      "properties": {
+        "OBJECTID": 62,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28701744165085,
+          33.852974691611934
+        ]
+      },
+      "properties": {
+        "OBJECTID": 63,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28522521013255,
+          33.85093106582108
+        ]
+      },
+      "properties": {
+        "OBJECTID": 64,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28122004179389,
+          33.84973896966575
+        ]
+      },
+      "properties": {
+        "OBJECTID": 65,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.31035884109028,
+          33.86164456871263
+        ]
+      },
+      "properties": {
+        "OBJECTID": 66,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Group campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.31113325174726,
+          33.8606972804152
+        ]
+      },
+      "properties": {
+        "OBJECTID": 67,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Group campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30957092965288,
+          33.90557866803312
+        ]
+      },
+      "properties": {
+        "OBJECTID": 68,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.31724674988806,
+          33.89792526207839
+        ]
+      },
+      "properties": {
+        "OBJECTID": 69,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.27924791994502,
+          33.84905575941642
+        ]
+      },
+      "properties": {
+        "OBJECTID": 70,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.27989722762227,
+          33.847788006619965
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28094848377846,
+          33.84886430283525
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.02016684084128,
+          33.826395890313
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0196335353116,
+          33.82434373999119
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01930163206865,
+          33.82305024467339
+        ]
+      },
+      "properties": {
+        "OBJECTID": 75,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.02124467545177,
+          33.82560686076897
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00286055255096,
+          33.82961338456113
+        ]
+      },
+      "properties": {
+        "OBJECTID": 77,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00140630048023,
+          33.830548051988416
+        ]
+      },
+      "properties": {
+        "OBJECTID": 78,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00123333346554,
+          33.831901300650856
+        ]
+      },
+      "properties": {
+        "OBJECTID": 79,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73597378826301,
+          33.69527846628359
+        ]
+      },
+      "properties": {
+        "OBJECTID": 80,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73388028605292,
+          33.69541928271083
+        ]
+      },
+      "properties": {
+        "OBJECTID": 81,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73852287556099,
+          33.692995858024965
+        ]
+      },
+      "properties": {
+        "OBJECTID": 82,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7374906097899,
+          33.691450676199594
+        ]
+      },
+      "properties": {
+        "OBJECTID": 83,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73385245714374,
+          33.69150869928478
+        ]
+      },
+      "properties": {
+        "OBJECTID": 84,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73557490573414,
+          33.693075651589176
+        ]
+      },
+      "properties": {
+        "OBJECTID": 85,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7317782884752,
+          33.69549388485238
+        ]
+      },
+      "properties": {
+        "OBJECTID": 86,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Group campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70037178297392,
+          33.7101750961385
+        ]
+      },
+      "properties": {
+        "OBJECTID": 87,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69873442370555,
+          33.71660781313446
+        ]
+      },
+      "properties": {
+        "OBJECTID": 88,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69634276166951,
+          33.72040813673126
+        ]
+      },
+      "properties": {
+        "OBJECTID": 89,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.71759325413173,
+          33.69067973380732
+        ]
+      },
+      "properties": {
+        "OBJECTID": 90,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70126681850893,
+          33.66877350794458
+        ]
+      },
+      "properties": {
+        "OBJECTID": 91,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37994734122441,
+          33.38543098981798
+        ]
+      },
+      "properties": {
+        "OBJECTID": 92,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Softball fields."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37386969664323,
+          33.385166012336114
+        ]
+      },
+      "properties": {
+        "OBJECTID": 93,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37024171382438,
+          33.38359272340888
+        ]
+      },
+      "properties": {
+        "OBJECTID": 94,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37402887541664,
+          33.381863656421494
+        ]
+      },
+      "properties": {
+        "OBJECTID": 95,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37753899118536,
+          33.383539077121185
+        ]
+      },
+      "properties": {
+        "OBJECTID": 96,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6159973555213,
+          33.48206253077663
+        ]
+      },
+      "properties": {
+        "OBJECTID": 97,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Shooting range."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60745475985163,
+          33.474137453216265
+        ]
+      },
+      "properties": {
+        "OBJECTID": 98,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60790279549789,
+          33.47093958132236
+        ]
+      },
+      "properties": {
+        "OBJECTID": 99,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61990369390733,
+          33.477021800148
+        ]
+      },
+      "properties": {
+        "OBJECTID": 100,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61918973986896,
+          33.47602802531496
+        ]
+      },
+      "properties": {
+        "OBJECTID": 101,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.62095621039985,
+          33.47451391705277
+        ]
+      },
+      "properties": {
+        "OBJECTID": 102,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6069727777691,
+          33.46865165775281
+        ]
+      },
+      "properties": {
+        "OBJECTID": 103,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6130690084935,
+          33.467017649150705
+        ]
+      },
+      "properties": {
+        "OBJECTID": 104,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61220015345913,
+          33.47424751344535
+        ]
+      },
+      "properties": {
+        "OBJECTID": 105,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "None if group picnic is not fully reserved."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61699151116477,
+          33.47669119427332
+        ]
+      },
+      "properties": {
+        "OBJECTID": 106,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Group campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50370489438808,
+          33.57244879673444
+        ]
+      },
+      "properties": {
+        "OBJECTID": 107,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.51022619443019,
+          33.59253043341786
+        ]
+      },
+      "properties": {
+        "OBJECTID": 108,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37204343155207,
+          33.38285404159392
+        ]
+      },
+      "properties": {
+        "OBJECTID": 109,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3065281309697,
+          33.8591495981685
+        ]
+      },
+      "properties": {
+        "OBJECTID": 110,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30128451104437,
+          33.85989564224478
+        ]
+      },
+      "properties": {
+        "OBJECTID": 111,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30378405894938,
+          33.85844557586738
+        ]
+      },
+      "properties": {
+        "OBJECTID": 112,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30194117233053,
+          33.86302281281159
+        ]
+      },
+      "properties": {
+        "OBJECTID": 113,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.64521300125908,
+          33.29480436196841
+        ]
+      },
+      "properties": {
+        "OBJECTID": 114,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Buckeye Hills Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.64567610883917,
+          33.284417623118344
+        ]
+      },
+      "properties": {
+        "OBJECTID": 115,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Buckeye Hills Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50065319519703,
+          33.58316049015359
+        ]
+      },
+      "properties": {
+        "OBJECTID": 116,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50021006165728,
+          33.575020149061416
+        ]
+      },
+      "properties": {
+        "OBJECTID": 117,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.2765665889591,
+          33.84717988437027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 118,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.38032940908779,
+          33.38335593059539
+        ]
+      },
+      "properties": {
+        "OBJECTID": 119,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00579862743497,
+          33.82886561565117
+        ]
+      },
+      "properties": {
+        "OBJECTID": 120,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.62096198477052,
+          33.48100695740171
+        ]
+      },
+      "properties": {
+        "OBJECTID": 121,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.72891482316714,
+          33.69302757694539
+        ]
+      },
+      "properties": {
+        "OBJECTID": 122,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.63537092060527,
+          33.16767109609359
+        ]
+      },
+      "properties": {
+        "OBJECTID": 123,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "San Tan Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37187159731295,
+          33.3703987198752
+        ]
+      },
+      "properties": {
+        "OBJECTID": 124,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3689976486655,
+          33.37012824703127
+        ]
+      },
+      "properties": {
+        "OBJECTID": 125,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50090215788816,
+          33.60792913009019
+        ]
+      },
+      "properties": {
+        "OBJECTID": 126,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.95054892986474,
+          33.88850630868281
+        ]
+      },
+      "properties": {
+        "OBJECTID": 127,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "Spur Cross Ranch Conservation Area",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.32032604083304,
+          33.36433591435567
+        ]
+      },
+      "properties": {
+        "OBJECTID": 128,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7685323139459,
+          33.63526739473935
+        ]
+      },
+      "properties": {
+        "OBJECTID": 129,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.25764164701958,
+          33.864630267952485
+        ]
+      },
+      "properties": {
+        "OBJECTID": 130,
+        "AmenityName": "Floating Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 131,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73560955734791,
+          33.69392280161151
+        ]
+      },
+      "properties": {
+        "OBJECTID": 131,
+        "AmenityName": "Playground",
+        "AmenityType": "Playground",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 132,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0029932085656,
+          33.82984071729327
+        ]
+      },
+      "properties": {
+        "OBJECTID": 132,
+        "AmenityName": "Playground",
+        "AmenityType": "Playground",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 133,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50751986063499,
+          33.59101032736434
+        ]
+      },
+      "properties": {
+        "OBJECTID": 133,
+        "AmenityName": "Playground",
+        "AmenityType": "Playground",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 134,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5002339370809,
+          33.58402684832668
+        ]
+      },
+      "properties": {
+        "OBJECTID": 134,
+        "AmenityName": "Playground",
+        "AmenityType": "Playground",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 135,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61050639346566,
+          33.46555456158042
+        ]
+      },
+      "properties": {
+        "OBJECTID": 135,
+        "AmenityName": "Outdoor Gym",
+        "AmenityType": "Outdoor Gym",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 136,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61318422371689,
+          33.46762279573514
+        ]
+      },
+      "properties": {
+        "OBJECTID": 136,
+        "AmenityName": "Playground",
+        "AmenityType": "Playground",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 137,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61197556206169,
+          33.474578178848326
+        ]
+      },
+      "properties": {
+        "OBJECTID": 137,
+        "AmenityName": "Playground",
+        "AmenityType": "Playground",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "None if group picnic is not fully reserved."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 138,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37264129900122,
+          33.38365015765685
+        ]
+      },
+      "properties": {
+        "OBJECTID": 138,
+        "AmenityName": "Super Playground",
+        "AmenityType": "Playground",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 139,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49644129127385,
+          33.56605464413397
+        ]
+      },
+      "properties": {
+        "OBJECTID": 139,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Pay Station",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 140,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3220154332176,
+          33.863263787070046
+        ]
+      },
+      "properties": {
+        "OBJECTID": 140,
+        "AmenityName": "Park Entrance - Main Entry",
+        "AmenityType": "Pay Station",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 141,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.32306844468185,
+          33.908106051298695
+        ]
+      },
+      "properties": {
+        "OBJECTID": 141,
+        "AmenityName": "Park Entrance - North Entry",
+        "AmenityType": "Pay Station",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 142,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69564040308485,
+          33.66594271879472
+        ]
+      },
+      "properties": {
+        "OBJECTID": 142,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Pay Station",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 143,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.62320968369743,
+          33.48211335597035
+        ]
+      },
+      "properties": {
+        "OBJECTID": 143,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Pay Station",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 144,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.38306612210928,
+          33.386989463124934
+        ]
+      },
+      "properties": {
+        "OBJECTID": 144,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Pay Station",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 145,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0131567458935,
+          33.82090765837704
+        ]
+      },
+      "properties": {
+        "OBJECTID": 145,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Pay Station",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 146,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.63417614600604,
+          33.16879464740991
+        ]
+      },
+      "properties": {
+        "OBJECTID": 146,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Pay Station",
+        "ParkName": "San Tan Mountain Regional Park",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 147,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.15222241525366,
+          33.69808044998546
+        ]
+      },
+      "properties": {
+        "OBJECTID": 147,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Free Entry",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 148,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.63260670392518,
+          33.27602017049868
+        ]
+      },
+      "properties": {
+        "OBJECTID": 148,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Free Entry",
+        "ParkName": "Buckeye Hills Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 149,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.18949362418962,
+          33.98174476720114
+        ]
+      },
+      "properties": {
+        "OBJECTID": 149,
+        "AmenityName": "Park Entrance - Table Mesa Rd",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 150,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37934957258997,
+          33.38577213558547
+        ]
+      },
+      "properties": {
+        "OBJECTID": 150,
+        "AmenityName": "Softball Fields",
+        "AmenityType": "Softball",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Reservation required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 151,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28998129279361,
+          33.854712588339005
+        ]
+      },
+      "properties": {
+        "OBJECTID": 151,
+        "AmenityName": "10-Lane Boat Ramp",
+        "AmenityType": "Boat Ramp",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Extra fee for watercraft payable at park entrance."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 152,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30852462590886,
+          33.90603324237104
+        ]
+      },
+      "properties": {
+        "OBJECTID": 152,
+        "AmenityName": "Castle Creek Boat Ramp",
+        "AmenityType": "Boat Ramp",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Extra fee for watercraft payable at park entrance."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 153,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.25174046659451,
+          33.859909268008174
+        ]
+      },
+      "properties": {
+        "OBJECTID": 153,
+        "AmenityName": "Desert Outdoor Center",
+        "AmenityType": "DOC",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 154,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61534419946136,
+          33.48251919671342
+        ]
+      },
+      "properties": {
+        "OBJECTID": 154,
+        "AmenityName": "Archery Range",
+        "AmenityType": "Archery",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 155,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61682726948641,
+          33.48241150711236
+        ]
+      },
+      "properties": {
+        "OBJECTID": 155,
+        "AmenityName": "Archery Courses",
+        "AmenityType": "Archery",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 156,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61529443638788,
+          33.48196733657332
+        ]
+      },
+      "properties": {
+        "OBJECTID": 156,
+        "AmenityName": "Archery Courses",
+        "AmenityType": "Archery",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 157,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.02109187741183,
+          33.82171122660338
+        ]
+      },
+      "properties": {
+        "OBJECTID": 157,
+        "AmenityName": "Rodeo Arena",
+        "AmenityType": "Rodeo Arena",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Special events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 158,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73014388376582,
+          33.6741649181984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 158,
+        "AmenityName": "Pemberton Pond",
+        "AmenityType": "Landmark",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 159,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.51963663183462,
+          33.58392965294343
+        ]
+      },
+      "properties": {
+        "OBJECTID": 159,
+        "AmenityName": "Waterfall",
+        "AmenityType": "Landmark",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Waterfall runs only after heavy rain."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 160,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.59689644888897,
+          33.476603315527335
+        ]
+      },
+      "properties": {
+        "OBJECTID": 160,
+        "AmenityName": "Wind Cave",
+        "AmenityType": "Landmark",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Trail is rated \"difficult\"."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 161,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70817962501314,
+          33.71014871904824
+        ]
+      },
+      "properties": {
+        "OBJECTID": 161,
+        "AmenityName": "Nursery Tank",
+        "AmenityType": "Landmark",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 162,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.95138952479859,
+          33.89320222859597
+        ]
+      },
+      "properties": {
+        "OBJECTID": 162,
+        "AmenityName": "Solar Oasis",
+        "AmenityType": "Landmark",
+        "ParkName": "Spur Cross Ranch Conservation Area",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 163,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01212047273793,
+          33.82672535860581
+        ]
+      },
+      "properties": {
+        "OBJECTID": 163,
+        "AmenityName": "Horse Rental Concession",
+        "AmenityType": "Horse Rental",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Concessionaire fees."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 164,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.29688132166122,
+          33.87296622714348
+        ]
+      },
+      "properties": {
+        "OBJECTID": 164,
+        "AmenityName": "Marina - Scorpion Bay",
+        "AmenityType": "Marina",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Marina fees; free access to restaurant."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 165,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.38699530016143,
+          33.37871930253396
+        ]
+      },
+      "properties": {
+        "OBJECTID": 165,
+        "AmenityName": "Golf Course - Sierra Estrella",
+        "AmenityType": "Golf Course",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Green fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 166,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.5887906293818,
+          33.44294600183082
+        ]
+      },
+      "properties": {
+        "OBJECTID": 166,
+        "AmenityName": "Superstition Airpark",
+        "AmenityType": "Model Planes",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Contact organized group."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 167,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.16336594897952,
+          33.696023764026464
+        ]
+      },
+      "properties": {
+        "OBJECTID": 167,
+        "AmenityName": "The 500 Club Golf Course",
+        "AmenityType": "Golf Course",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Green fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 168,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.1495045875144,
+          33.68479622758371
+        ]
+      },
+      "properties": {
+        "OBJECTID": 168,
+        "AmenityName": "Arizona Model Pilots Society",
+        "AmenityType": "Model Planes",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Contact organized group."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 169,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.16365673363698,
+          33.68162037525676
+        ]
+      },
+      "properties": {
+        "OBJECTID": 169,
+        "AmenityName": "Fort Adobe Paint Complex",
+        "AmenityType": "Paintball",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Contact organized group."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 170,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.1586235916777,
+          33.68772194225243
+        ]
+      },
+      "properties": {
+        "OBJECTID": 170,
+        "AmenityName": "Arizona Karting Association",
+        "AmenityType": "Kart",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Contact organized group."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 171,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.15604833106558,
+          33.69015989347104
+        ]
+      },
+      "properties": {
+        "OBJECTID": 171,
+        "AmenityName": "Arizona Kart Racing Association",
+        "AmenityType": "Kart",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Contact organized group."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 172,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.15027419577785,
+          33.695611467400134
+        ]
+      },
+      "properties": {
+        "OBJECTID": 172,
+        "AmenityName": "Wet 'n' Wild (Waterpark)",
+        "AmenityType": "Water Park",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 173,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.15286213611022,
+          33.69636172416872
+        ]
+      },
+      "properties": {
+        "OBJECTID": 173,
+        "AmenityName": "Sahuaro Central Railroad",
+        "AmenityType": "Railroad",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Contact organized group."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 174,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.14978751909965,
+          33.69213130029447
+        ]
+      },
+      "properties": {
+        "OBJECTID": 174,
+        "AmenityName": "Victory Lane Sports Park",
+        "AmenityType": "Softball",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Contact organized group."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 175,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.15278086103488,
+          33.677052070152435
+        ]
+      },
+      "properties": {
+        "OBJECTID": 175,
+        "AmenityName": "Deer Valley Petroglyph Preserve",
+        "AmenityType": "Landmark",
+        "ParkName": "Adobe Dam Regional Park",
+        "AmenityComment": "Entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 176,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00477069244188,
+          33.65267393770051
+        ]
+      },
+      "properties": {
+        "OBJECTID": 176,
+        "AmenityName": "Golf Course - Paradise Valley",
+        "AmenityType": "Golf Course",
+        "ParkName": "Paradise Valley Park",
+        "AmenityComment": "Green fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 177,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.63840791802879,
+          33.27237475182177
+        ]
+      },
+      "properties": {
+        "OBJECTID": 177,
+        "AmenityName": "General Joe Foss Public Shooting Complex",
+        "AmenityType": "Shooting",
+        "ParkName": "Buckeye Hills Regional Park",
+        "AmenityComment": "Fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 178,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.64820050324663,
+          33.27347165129724
+        ]
+      },
+      "properties": {
+        "OBJECTID": 178,
+        "AmenityName": "Sheriff's Shooting Range (Closed to Public)",
+        "AmenityType": "Shooting (Closed)",
+        "ParkName": "Buckeye Hills Regional Park",
+        "AmenityComment": "Closed to public."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 179,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49963032041394,
+          33.60803703447346
+        ]
+      },
+      "properties": {
+        "OBJECTID": 179,
+        "AmenityName": "Competitive Track Parking",
+        "AmenityType": "Staging Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "May be closed for special events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 180,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.31923329329051,
+          33.364566613556725
+        ]
+      },
+      "properties": {
+        "OBJECTID": 180,
+        "AmenityName": "Competitive Track Parking",
+        "AmenityType": "Staging Area",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "May be closed for special events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 181,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3206937545165,
+          33.35181351338185
+        ]
+      },
+      "properties": {
+        "OBJECTID": 181,
+        "AmenityName": "Competitive Track - Estrella",
+        "AmenityType": "Competitive Track",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "May be closed for special events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 182,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50763608915803,
+          33.61911108842242
+        ]
+      },
+      "properties": {
+        "OBJECTID": 182,
+        "AmenityName": "Competitive Track - Sonoran Loop",
+        "AmenityType": "Competitive Track",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "May be closed for special events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 183,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70600785618562,
+          33.65819917540562
+        ]
+      },
+      "properties": {
+        "OBJECTID": 183,
+        "AmenityName": "Competitive Track - McDowell",
+        "AmenityType": "Competitive Track",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "May be closed for special events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 184,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70056836759575,
+          33.66802191658272
+        ]
+      },
+      "properties": {
+        "OBJECTID": 184,
+        "AmenityName": "Competitive Track Parking",
+        "AmenityType": "Staging Area",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "May be closed for special events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 185,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01956266632052,
+          33.82626371413903
+        ]
+      },
+      "properties": {
+        "OBJECTID": 185,
+        "AmenityName": "Family Campground",
+        "AmenityType": "Campground",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 186,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73599348562223,
+          33.69223767383252
+        ]
+      },
+      "properties": {
+        "OBJECTID": 186,
+        "AmenityName": "Family Campground - E. I. Rowland",
+        "AmenityType": "Campground",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 187,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73494155932285,
+          33.695537336220106
+        ]
+      },
+      "properties": {
+        "OBJECTID": 187,
+        "AmenityName": "Family Campground - E. I. Rowland",
+        "AmenityType": "Campground",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 188,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73119381311032,
+          33.69522885397842
+        ]
+      },
+      "properties": {
+        "OBJECTID": 188,
+        "AmenityName": "Group Campground",
+        "AmenityType": "Group Campground",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 189,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30267600141947,
+          33.86258097144571
+        ]
+      },
+      "properties": {
+        "OBJECTID": 189,
+        "AmenityName": "Family Campground - Desert Tortoise",
+        "AmenityType": "Campground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 190,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30232246584616,
+          33.86053140420414
+        ]
+      },
+      "properties": {
+        "OBJECTID": 190,
+        "AmenityName": "Family Campground - Desert Tortoise",
+        "AmenityType": "Campground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 191,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30705946290068,
+          33.86012868457187
+        ]
+      },
+      "properties": {
+        "OBJECTID": 191,
+        "AmenityName": "Family Campground - Desert Tortoise",
+        "AmenityType": "Campground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 192,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28001923141427,
+          33.848641329207354
+        ]
+      },
+      "properties": {
+        "OBJECTID": 192,
+        "AmenityName": "Family Campground - Roadrunner",
+        "AmenityType": "Campground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 193,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.3107214801907,
+          33.86114032057645
+        ]
+      },
+      "properties": {
+        "OBJECTID": 193,
+        "AmenityName": "Group Campground",
+        "AmenityType": "Group Campground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 194,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50308756134504,
+          33.60509374919591
+        ]
+      },
+      "properties": {
+        "OBJECTID": 194,
+        "AmenityName": "Group Campground",
+        "AmenityType": "Group Campground",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 195,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5040968275499,
+          33.60249815564389
+        ]
+      },
+      "properties": {
+        "OBJECTID": 195,
+        "AmenityName": "Family Campground",
+        "AmenityType": "Campground",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 196,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61656773362444,
+          33.46987615259365
+        ]
+      },
+      "properties": {
+        "OBJECTID": 196,
+        "AmenityName": "Group Campground - Cholla Forest Primitive",
+        "AmenityType": "Group Campground",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 197,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.62003341063436,
+          33.47560590027422
+        ]
+      },
+      "properties": {
+        "OBJECTID": 197,
+        "AmenityName": "Family Campground - Buckhorn",
+        "AmenityType": "Campground",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 198,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61749894790918,
+          33.476368948540625
+        ]
+      },
+      "properties": {
+        "OBJECTID": 198,
+        "AmenityName": "Group Campground - A&B",
+        "AmenityType": "Group Campground",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 199,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50478150010328,
+          33.5935927310109
+        ]
+      },
+      "properties": {
+        "OBJECTID": 199,
+        "AmenityName": "Willow Canyon Campground (Small campers)",
+        "AmenityType": "Campground",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 200,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.36977344452467,
+          33.37024557596883
+        ]
+      },
+      "properties": {
+        "OBJECTID": 200,
+        "AmenityName": "Campground",
+        "AmenityType": "Campground",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Reservations required; may be in use by hosts."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 201,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37031721812234,
+          33.37981631641365
+        ]
+      },
+      "properties": {
+        "OBJECTID": 201,
+        "AmenityName": "Gila Trail",
+        "AmenityType": "Barrier-Free Trail",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 202,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50427035062177,
+          33.5842914636004
+        ]
+      },
+      "properties": {
+        "OBJECTID": 202,
+        "AmenityName": "Black Rock Trail",
+        "AmenityType": "Barrier-Free Trail",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 203,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.51078505792802,
+          33.588612242038195
+        ]
+      },
+      "properties": {
+        "OBJECTID": 203,
+        "AmenityName": "Waterfall Trail",
+        "AmenityType": "Barrier-Free Trail",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 204,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70711333914393,
+          33.709984802490006
+        ]
+      },
+      "properties": {
+        "OBJECTID": 204,
+        "AmenityName": "Nursery Tank Trail",
+        "AmenityType": "Barrier-Free Trail",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 205,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61117710619949,
+          33.468801127174785
+        ]
+      },
+      "properties": {
+        "OBJECTID": 205,
+        "AmenityName": "Merkle Trail",
+        "AmenityType": "Barrier-Free Trail",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 206,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37441646522406,
+          33.38063654151279
+        ]
+      },
+      "properties": {
+        "OBJECTID": 206,
+        "AmenityName": "Amphitheater",
+        "AmenityType": "Amphitheater",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Organized events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 207,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.27754818884985,
+          33.84762059081342
+        ]
+      },
+      "properties": {
+        "OBJECTID": 207,
+        "AmenityName": "Amphitheater",
+        "AmenityType": "Amphitheater",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Organized events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 208,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.62045035558866,
+          33.48042960973681
+        ]
+      },
+      "properties": {
+        "OBJECTID": 208,
+        "AmenityName": "Amphitheater",
+        "AmenityType": "Amphitheater",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Organized events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 209,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00585956644888,
+          33.82961463001505
+        ]
+      },
+      "properties": {
+        "OBJECTID": 209,
+        "AmenityName": "Amphitheater",
+        "AmenityType": "Amphitheater",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Organized events."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 210,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.51012623529529,
+          33.59968093374058
+        ]
+      },
+      "properties": {
+        "OBJECTID": 210,
+        "AmenityName": "Picnic Area 9",
+        "AmenityType": "Picnic Area",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 211,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61602706729931,
+          33.46960100398965
+        ]
+      },
+      "properties": {
+        "OBJECTID": 211,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Group campground use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 212,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60763532032541,
+          33.46584090314874
+        ]
+      },
+      "properties": {
+        "OBJECTID": 212,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 213,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.68876197869984,
+          33.721469739270574
+        ]
+      },
+      "properties": {
+        "OBJECTID": 213,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Youth group area use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 214,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50074165409968,
+          33.598893068569
+        ]
+      },
+      "properties": {
+        "OBJECTID": 214,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Youth group area use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 215,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.51041249064707,
+          33.599953075294316
+        ]
+      },
+      "properties": {
+        "OBJECTID": 215,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 216,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49993898693545,
+          33.5869520909817
+        ]
+      },
+      "properties": {
+        "OBJECTID": 216,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 217,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49769092958076,
+          33.567225672955516
+        ]
+      },
+      "properties": {
+        "OBJECTID": 217,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "None (at regional library)."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 218,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37174759387113,
+          33.36980915929446
+        ]
+      },
+      "properties": {
+        "OBJECTID": 218,
+        "AmenityName": "Horse Rental Concession",
+        "AmenityType": "Horse Rental",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Concessionaire fees."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 219,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7566251044307,
+          33.72689415113778
+        ]
+      },
+      "properties": {
+        "OBJECTID": 219,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 220,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73912698360643,
+          33.72696455027394
+        ]
+      },
+      "properties": {
+        "OBJECTID": 220,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 221,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.71757274649212,
+          33.72701600682314
+        ]
+      },
+      "properties": {
+        "OBJECTID": 221,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 222,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.78690449464334,
+          33.71669484916102
+        ]
+      },
+      "properties": {
+        "OBJECTID": 222,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 223,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.76829518745699,
+          33.64015348164019
+        ]
+      },
+      "properties": {
+        "OBJECTID": 223,
+        "AmenityName": "Park Entrance - Dixie Mine Trailhead",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 224,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0018032740891,
+          33.82813848569403
+        ]
+      },
+      "properties": {
+        "OBJECTID": 224,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 225,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61523067127408,
+          33.451522652545606
+        ]
+      },
+      "properties": {
+        "OBJECTID": 225,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 226,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60879172248897,
+          33.45150832413088
+        ]
+      },
+      "properties": {
+        "OBJECTID": 226,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 227,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.63664256943328,
+          33.129717394564366
+        ]
+      },
+      "properties": {
+        "OBJECTID": 227,
+        "AmenityName": "Park Entrance - Rock Peak Wash",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "San Tan Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 228,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.65551987281496,
+          33.189880890546945
+        ]
+      },
+      "properties": {
+        "OBJECTID": 228,
+        "AmenityName": "Park Entrance - Goldmine Trailhead",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "San Tan Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 229,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.59775212204487,
+          33.44409974302002
+        ]
+      },
+      "properties": {
+        "OBJECTID": 229,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 230,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.58084342450604,
+          33.4583780998264
+        ]
+      },
+      "properties": {
+        "OBJECTID": 230,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "Usery Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 231,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.32300629653557,
+          33.369831851106944
+        ]
+      },
+      "properties": {
+        "OBJECTID": 231,
+        "AmenityName": "Park Entrance - Competitive Track",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 232,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6836089403962,
+          33.72708215697983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 232,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 233,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.78733516765178,
+          33.69503220495879
+        ]
+      },
+      "properties": {
+        "OBJECTID": 233,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 234,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.78629844893184,
+          33.64010591289072
+        ]
+      },
+      "properties": {
+        "OBJECTID": 234,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.78733587282927,
+          33.68434187620159
+        ]
+      },
+      "properties": {
+        "OBJECTID": 235,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.78735126905492,
+          33.662514741878965
+        ]
+      },
+      "properties": {
+        "OBJECTID": 236,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 237,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.78734810159526,
+          33.72517056051819
+        ]
+      },
+      "properties": {
+        "OBJECTID": 237,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 238,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.40078019792789,
+          33.32895500712569
+        ]
+      },
+      "properties": {
+        "OBJECTID": 238,
+        "AmenityName": "Park Entrance - Walk-through gate",
+        "AmenityType": "Iron Ranger",
+        "ParkName": "Estrella Mountain Regional Park",
+        "AmenityComment": "Park entry fee at self-pay station."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 239,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50419045535871,
+          33.592683865048066
+        ]
+      },
+      "properties": {
+        "OBJECTID": 239,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 240,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.29316151934225,
+          33.87448452734049
+        ]
+      },
+      "properties": {
+        "OBJECTID": 240,
+        "AmenityName": "Restaurant",
+        "AmenityType": "Restaurant",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Open to all park users."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 241,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.25424783613069,
+          33.86030047926375
+        ]
+      },
+      "properties": {
+        "OBJECTID": 241,
+        "AmenityName": "Honeymoon Cove Trail",
+        "AmenityType": "Barrier-Free Trail",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Desert outdoor center use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 242,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70101592893154,
+          33.67220367635977
+        ]
+      },
+      "properties": {
+        "OBJECTID": 242,
+        "AmenityName": "Horse Camp (Four Peaks Staging Area)",
+        "AmenityType": "Horse Camp",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69888016278398,
+          33.667514005392476
+        ]
+      },
+      "properties": {
+        "OBJECTID": 243,
+        "AmenityName": "Pump Track",
+        "AmenityType": "Pump Track",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 244,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01917887099687,
+          33.823617896225066
+        ]
+      },
+      "properties": {
+        "OBJECTID": 244,
+        "AmenityName": "Family Campground (New sites)",
+        "AmenityType": "Campground",
+        "ParkName": "Cave Creek Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 245,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70268823805435,
+          33.71073062725263
+        ]
+      },
+      "properties": {
+        "OBJECTID": 245,
+        "AmenityName": "Tent Sites - Ironwood",
+        "AmenityType": "Tent",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30195746866812,
+          33.862179998781585
+        ]
+      },
+      "properties": {
+        "OBJECTID": 246,
+        "AmenityName": "Tent sites",
+        "AmenityType": "Tent",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 247,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30094348451138,
+          33.86118505532803
+        ]
+      },
+      "properties": {
+        "OBJECTID": 247,
+        "AmenityName": "Tent sites",
+        "AmenityType": "Tent",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30193204095568,
+          33.86091720518692
+        ]
+      },
+      "properties": {
+        "OBJECTID": 248,
+        "AmenityName": "Tent sites",
+        "AmenityType": "Tent",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 249,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69236130705774,
+          33.71587877787086
+        ]
+      },
+      "properties": {
+        "OBJECTID": 249,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": "Youth group area use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 250,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.95204266828209,
+          33.88624570057274
+        ]
+      },
+      "properties": {
+        "OBJECTID": 250,
+        "AmenityName": "Trailhead Staging Area",
+        "AmenityType": "Staging Area",
+        "ParkName": "Spur Cross Ranch Conservation Area",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70026863751468,
+          33.67171886687707
+        ]
+      },
+      "properties": {
+        "OBJECTID": 251,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "McDowell Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 252,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.65581155668603,
+          33.18988025004315
+        ]
+      },
+      "properties": {
+        "OBJECTID": 252,
+        "AmenityName": "Portable Restroom",
+        "AmenityType": "Outhouse",
+        "ParkName": "San Tan Mountain Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.95112458736678,
+          33.88749167331697
+        ]
+      },
+      "properties": {
+        "OBJECTID": 253,
+        "AmenityName": "Park Entrance",
+        "AmenityType": "Pay Station",
+        "ParkName": "Spur Cross Ranch Conservation Area",
+        "AmenityComment": "Park entry fee."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 254,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.6945549642959,
+          33.932775187914984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 254,
+        "AmenityName": "Nature Center - Hassayampa",
+        "AmenityType": "Nature Center",
+        "ParkName": "Hassayampa River Preserve",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.6950094318796,
+          33.93320483372616
+        ]
+      },
+      "properties": {
+        "OBJECTID": 255,
+        "AmenityName": "Restroom",
+        "AmenityType": "Restroom",
+        "ParkName": "Hassayampa River Preserve",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 256,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.27796506373554,
+          33.8474803175167
+        ]
+      },
+      "properties": {
+        "OBJECTID": 256,
+        "AmenityName": "Playground",
+        "AmenityType": "Playground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 257,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.29603200857753,
+          33.85508829903299
+        ]
+      },
+      "properties": {
+        "OBJECTID": 257,
+        "AmenityName": "Spillway Overlook Primitive Camp - Tents",
+        "AmenityType": "Tent",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 258,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.29610065064502,
+          33.855429049669794
+        ]
+      },
+      "properties": {
+        "OBJECTID": 258,
+        "AmenityName": "Spillway Overlook Primitive Camp - Trailers",
+        "AmenityType": "Campground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 259,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.29508906229515,
+          33.85460666103287
+        ]
+      },
+      "properties": {
+        "OBJECTID": 259,
+        "AmenityName": "Dirt Spillway Primitive Camp Area - Trailers",
+        "AmenityType": "Campground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 260,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.29507862836311,
+          33.85486609362631
+        ]
+      },
+      "properties": {
+        "OBJECTID": 260,
+        "AmenityName": "Dirt Spillway Primitive Camp Area - Tents",
+        "AmenityType": "Tent",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 261,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.29536987205971,
+          33.854093725784715
+        ]
+      },
+      "properties": {
+        "OBJECTID": 261,
+        "AmenityName": "South Park Primitive Camp Area - Trailers",
+        "AmenityType": "Campground",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 262,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.29506913227225,
+          33.85391260758806
+        ]
+      },
+      "properties": {
+        "OBJECTID": 262,
+        "AmenityName": "South Park Primitive Camp Area - Tents",
+        "AmenityType": "Tent",
+        "ParkName": "Lake Pleasant Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 263,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50478950049919,
+          33.59393145566633
+        ]
+      },
+      "properties": {
+        "OBJECTID": 263,
+        "AmenityName": "Willow Canyon Campground (Tent sites)",
+        "AmenityType": "Tent",
+        "ParkName": "White Tank Mountain Regional Park",
+        "AmenityComment": "Reservations required."
+      }
+    }
+  ]
+}

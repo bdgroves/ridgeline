@@ -18,10 +18,14 @@ model     = "python src/analysis/wui_model.py"
 weather   = "python src/analysis/weather_pull.py"
 analyze   = { depends-on = ["stats", "model"] }
 
+# ── GIS ────────────────────────────────────────────────────────────────────
+gis       = "python src/ingest/fetch_gis.py"
+map       = "python src/viz/build_map.py"
+
 # ── Site ───────────────────────────────────────────────────────────────────
 build     = "python src/viz/build_site.py"
 serve     = "python -m http.server 8080 --directory site"
-deploy    = { depends-on = ["pipeline", "analyze", "build"] }
+deploy    = { depends-on = ["pipeline", "gis", "map", "analyze", "build"] }
 
 # ── Dev ────────────────────────────────────────────────────────────────────
 notebook  = "jupyter lab notebooks/"

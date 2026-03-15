@@ -1,0 +1,3800 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.63522156490953,
+          33.16666060707623
+        ]
+      },
+      "properties": {
+        "OBJECTID": 1,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "San Tan",
+        "ParkName": "San Tan Mountain Regional Park",
+        "Elevation_Feet": 1680,
+        "Elevation_Meter": 512,
+        "Restroom": "Yes",
+        "RestroomComment": "At nature center.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30359978753516,
+          33.878643793219794
+        ]
+      },
+      "properties": {
+        "OBJECTID": 2,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Pipeline Canyon",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1888,
+        "Elevation_Meter": 575,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.31705651276202,
+          33.89787663500209
+        ]
+      },
+      "properties": {
+        "OBJECTID": 3,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Cottonwood",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1783,
+        "Elevation_Meter": 543,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.2527037507349,
+          33.860133569871635
+        ]
+      },
+      "properties": {
+        "OBJECTID": 4,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Honeymoon Cove Kiosk",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1804,
+        "Elevation_Meter": 550,
+        "Restroom": "Yes",
+        "RestroomComment": "For patrons of desert outdoor center only.",
+        "Parking": "Yes",
+        "ParkingComment": "For patrons of desert outdoor center only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28684256930943,
+          33.85290522484178
+        ]
+      },
+      "properties": {
+        "OBJECTID": 5,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Roadrunner (10-Lane)",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1728,
+        "Elevation_Meter": 527,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.27698773802894,
+          33.84744694945458
+        ]
+      },
+      "properties": {
+        "OBJECTID": 6,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Roadrunner (Discovery Center)",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1822,
+        "Elevation_Meter": 555,
+        "Restroom": "Yes",
+        "RestroomComment": "At discovery center.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5100605145491,
+          33.600163655095564
+        ]
+      },
+      "properties": {
+        "OBJECTID": 7,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Ford Canyon Spur",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1569,
+        "Elevation_Meter": 478,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50546775009826,
+          33.56880986662045
+        ]
+      },
+      "properties": {
+        "OBJECTID": 8,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Goat Camp",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1501,
+        "Elevation_Meter": 457,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50262008256276,
+          33.565096071776026
+        ]
+      },
+      "properties": {
+        "OBJECTID": 9,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "South",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1457,
+        "Elevation_Meter": 444,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50167949705296,
+          33.58455205113816
+        ]
+      },
+      "properties": {
+        "OBJECTID": 10,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Black Rock - Main Trailhead",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1471,
+        "Elevation_Meter": 448,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50763510280785,
+          33.58962924818425
+        ]
+      },
+      "properties": {
+        "OBJECTID": 11,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Waterfall",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1509,
+        "Elevation_Meter": 460,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5124896498072,
+          33.598629065245795
+        ]
+      },
+      "properties": {
+        "OBJECTID": 12,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Waddell Spur",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1577,
+        "Elevation_Meter": 481,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.4997747272908,
+          33.58735629341023
+        ]
+      },
+      "properties": {
+        "OBJECTID": 13,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Mesquite Canyon",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1459,
+        "Elevation_Meter": 445,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49938313998035,
+          33.58732596486115
+        ]
+      },
+      "properties": {
+        "OBJECTID": 14,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Ford Canyon",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1456,
+        "Elevation_Meter": 444,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50077370868398,
+          33.60875032732849
+        ]
+      },
+      "properties": {
+        "OBJECTID": 15,
+        "TrailheadType": "Track Trailhead",
+        "TrailName": "Sonoran Loop Competitive Track",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1506,
+        "Elevation_Meter": 459,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50014320813553,
+          33.575179332165696
+        ]
+      },
+      "properties": {
+        "OBJECTID": 16,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Bajada Spur 2",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1445,
+        "Elevation_Meter": 440,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.51117252915785,
+          33.59267201438877
+        ]
+      },
+      "properties": {
+        "OBJECTID": 17,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Waddell",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1538,
+        "Elevation_Meter": 469,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5011535334541,
+          33.57334017184195
+        ]
+      },
+      "properties": {
+        "OBJECTID": 18,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Bajada Spur 3",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1458,
+        "Elevation_Meter": 444,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6076374412478,
+          33.46603335547555
+        ]
+      },
+      "properties": {
+        "OBJECTID": 19,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Blevins (West)",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1895,
+        "Elevation_Meter": 578,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby, reached by a short trail.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60712396512973,
+          33.46581806929813
+        ]
+      },
+      "properties": {
+        "OBJECTID": 20,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Blevins (East)",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1895,
+        "Elevation_Meter": 578,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby, reached by a short trail.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60696344247665,
+          33.46643229703512
+        ]
+      },
+      "properties": {
+        "OBJECTID": 21,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Pass Mountain Spur",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1901,
+        "Elevation_Meter": 579,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby, reached by a short trail.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60706449935286,
+          33.46537716347412
+        ]
+      },
+      "properties": {
+        "OBJECTID": 22,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Noso",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1889,
+        "Elevation_Meter": 576,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby, reached by a short trail.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60723018372555,
+          33.47408149801794
+        ]
+      },
+      "properties": {
+        "OBJECTID": 23,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Wind Cave",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 2028,
+        "Elevation_Meter": 618,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61304388441165,
+          33.46669533896724
+        ]
+      },
+      "properties": {
+        "OBJECTID": 24,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Blevins Spur",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1901,
+        "Elevation_Meter": 579,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61522622820668,
+          33.451501120573305
+        ]
+      },
+      "properties": {
+        "OBJECTID": 25,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "Crismon Road",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1770,
+        "Elevation_Meter": 539,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60876745450157,
+          33.45146293743576
+        ]
+      },
+      "properties": {
+        "OBJECTID": 26,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "103rd St",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1767,
+        "Elevation_Meter": 539,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60454380151279,
+          33.451506908303244
+        ]
+      },
+      "properties": {
+        "OBJECTID": 27,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "106th St",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1769,
+        "Elevation_Meter": 539,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.59776895557498,
+          33.447720881424424
+        ]
+      },
+      "properties": {
+        "OBJECTID": 28,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "Signal Wash (Jensen St)",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1735,
+        "Elevation_Meter": 529,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.59780171623507,
+          33.44410604545274
+        ]
+      },
+      "properties": {
+        "OBJECTID": 29,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "Signal Wash (McLellan Rd)",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1715,
+        "Elevation_Meter": 523,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.58081613817929,
+          33.446061661176806
+        ]
+      },
+      "properties": {
+        "OBJECTID": 30,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "Ruidoso",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1734,
+        "Elevation_Meter": 528,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.58083343434177,
+          33.45836290317957
+        ]
+      },
+      "properties": {
+        "OBJECTID": 31,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "Meridian",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1834,
+        "Elevation_Meter": 559,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.58095901073365,
+          33.46593956824553
+        ]
+      },
+      "properties": {
+        "OBJECTID": 32,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Pass Mountain (Forest Service)",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1922,
+        "Elevation_Meter": 586,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.60825701379083,
+          33.471099945234556
+        ]
+      },
+      "properties": {
+        "OBJECTID": 33,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Merkle Barrier Free (North)",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1965,
+        "Elevation_Meter": 599,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61088723512866,
+          33.46613034697586
+        ]
+      },
+      "properties": {
+        "OBJECTID": 34,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Merkle Barrier Free (South)",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1891,
+        "Elevation_Meter": 576,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.71760271698494,
+          33.689920017847584
+        ]
+      },
+      "properties": {
+        "OBJECTID": 35,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Hilltop",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1867,
+        "Elevation_Meter": 569,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.71845356528945,
+          33.69037172743851
+        ]
+      },
+      "properties": {
+        "OBJECTID": 36,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Pemberton",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1870,
+        "Elevation_Meter": 570,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70185882534916,
+          33.709556200094816
+        ]
+      },
+      "properties": {
+        "OBJECTID": 37,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Lousley",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1776,
+        "Elevation_Meter": 541,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70532723323754,
+          33.710289158391056
+        ]
+      },
+      "properties": {
+        "OBJECTID": 38,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Nursery Tank Barrier-Free",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1804,
+        "Elevation_Meter": 550,
+        "Restroom": "Yes",
+        "RestroomComment": "Elsewhere in picnic area.",
+        "Parking": "Yes",
+        "ParkingComment": "Elsewhere in picnic area."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73098509135069,
+          33.69423117792569
+        ]
+      },
+      "properties": {
+        "OBJECTID": 39,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Wagner",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1985,
+        "Elevation_Meter": 605,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69639884708596,
+          33.719187039451555
+        ]
+      },
+      "properties": {
+        "OBJECTID": 40,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "North",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1748,
+        "Elevation_Meter": 533,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.68938815475852,
+          33.72196830736722
+        ]
+      },
+      "properties": {
+        "OBJECTID": 41,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Eagle (midway b/w 2 trailheads)",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1696,
+        "Elevation_Meter": 517,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet, group campground use only.",
+        "Parking": "Yes",
+        "ParkingComment": "Group campround use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.68858941233377,
+          33.72162373541064
+        ]
+      },
+      "properties": {
+        "OBJECTID": 42,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Scout  (midway b/w 2 trailheads)",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1696,
+        "Elevation_Meter": 517,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet, group campground use only.",
+        "Parking": "Yes",
+        "ParkingComment": "Group campround use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73914275173459,
+          33.726960113860706
+        ]
+      },
+      "properties": {
+        "OBJECTID": 43,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "158th St Spur",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 2125,
+        "Elevation_Meter": 648,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.76851812954756,
+          33.63568592961214
+        ]
+      },
+      "properties": {
+        "OBJECTID": 44,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Dixie Mine",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 2135,
+        "Elevation_Meter": 651,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37025654231479,
+          33.38168895190734
+        ]
+      },
+      "properties": {
+        "OBJECTID": 45,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Gila Barrier-Free - Baseline",
+        "ParkName": "Estrella Mountain Regional Park",
+        "Elevation_Feet": 932,
+        "Elevation_Meter": 284,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37253991064668,
+          33.37039398603751
+        ]
+      },
+      "properties": {
+        "OBJECTID": 46,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Rainbow Valley (W)-Toothaker",
+        "ParkName": "Estrella Mountain Regional Park",
+        "Elevation_Feet": 1019,
+        "Elevation_Meter": 311,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.36876227119646,
+          33.37024580703452
+        ]
+      },
+      "properties": {
+        "OBJECTID": 47,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Rainbow Valley (East)",
+        "ParkName": "Estrella Mountain Regional Park",
+        "Elevation_Feet": 994,
+        "Elevation_Meter": 303,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.31917819961414,
+          33.36434888792428
+        ]
+      },
+      "properties": {
+        "OBJECTID": 48,
+        "TrailheadType": "Track Trailhead",
+        "TrailName": "Estrella Competitive Track",
+        "ParkName": "Estrella Mountain Regional Park",
+        "Elevation_Feet": 1045,
+        "Elevation_Meter": 319,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01887273502949,
+          33.827291888775534
+        ]
+      },
+      "properties": {
+        "OBJECTID": 49,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Clay Mine",
+        "ParkName": "Cave Creek Regional Park",
+        "Elevation_Feet": 1949,
+        "Elevation_Meter": 594,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00667200099522,
+          33.82875354388809
+        ]
+      },
+      "properties": {
+        "OBJECTID": 50,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Overton Spur",
+        "ParkName": "Cave Creek Regional Park",
+        "Elevation_Feet": 2058,
+        "Elevation_Meter": 627,
+        "Restroom": "Yes",
+        "RestroomComment": "At nature center.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.001076533431,
+          33.832737969993445
+        ]
+      },
+      "properties": {
+        "OBJECTID": 51,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Go John East",
+        "ParkName": "Cave Creek Regional Park",
+        "Elevation_Feet": 2127,
+        "Elevation_Meter": 648,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01298385793055,
+          33.83719660773381
+        ]
+      },
+      "properties": {
+        "OBJECTID": 52,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "West Boundary Overton Spur",
+        "ParkName": "Cave Creek Regional Park",
+        "Elevation_Feet": 2095,
+        "Elevation_Meter": 639,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50418791851635,
+          33.60508116851997
+        ]
+      },
+      "properties": {
+        "OBJECTID": 53,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Ironwood (Group Campground Spur)",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1523,
+        "Elevation_Meter": 464,
+        "Restroom": "Yes",
+        "RestroomComment": "At group campground.",
+        "Parking": "Yes",
+        "ParkingComment": "Group campround use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50492864774006,
+          33.60217751288372
+        ]
+      },
+      "properties": {
+        "OBJECTID": 54,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Ironwood (Family Camground Spur)",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1529,
+        "Elevation_Meter": 466,
+        "Restroom": "Yes",
+        "RestroomComment": "At campground.",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50087158732072,
+          33.59896264546221
+        ]
+      },
+      "properties": {
+        "OBJECTID": 55,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Ironwood  (Youth Campground Spur",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1492,
+        "Elevation_Meter": 455,
+        "Restroom": "Yes",
+        "RestroomComment": "At youth area.",
+        "Parking": "Yes",
+        "ParkingComment": "Group campround use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.01186685138379,
+          33.827040437927906
+        ]
+      },
+      "properties": {
+        "OBJECTID": 56,
+        "TrailheadType": "Horse Concession",
+        "TrailName": "Overton (Horse rental access)",
+        "ParkName": "Cave Creek Regional Park",
+        "Elevation_Feet": 2023,
+        "Elevation_Meter": 617,
+        "Restroom": "Yes",
+        "RestroomComment": "For horse renters only.",
+        "Parking": "Yes",
+        "ParkingComment": "For horse renters only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70205191193128,
+          33.66919662807853
+        ]
+      },
+      "properties": {
+        "OBJECTID": 57,
+        "TrailheadType": "Track Trailhead",
+        "TrailName": "McDowell Competitive Track",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1676,
+        "Elevation_Meter": 511,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.7021172760463,
+          33.66883292496237
+        ]
+      },
+      "properties": {
+        "OBJECTID": 58,
+        "TrailheadType": "Track Trailhead",
+        "TrailName": "McDowell Competitive Track",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1673,
+        "Elevation_Meter": 510,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.69909201517238,
+          33.66707592486248
+        ]
+      },
+      "properties": {
+        "OBJECTID": 59,
+        "TrailheadType": "Track Trailhead",
+        "TrailName": "McDowell Competitive Track",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1644,
+        "Elevation_Meter": 501,
+        "Restroom": "Yes",
+        "RestroomComment": "Near other end of parking.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73623294323932,
+          33.694639916059266
+        ]
+      },
+      "properties": {
+        "OBJECTID": 60,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Granite (Campground Spur)",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 2033,
+        "Elevation_Meter": 620,
+        "Restroom": "Yes",
+        "RestroomComment": "At campground.",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73825590883497,
+          33.69304727887508
+        ]
+      },
+      "properties": {
+        "OBJECTID": 61,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Granite (Campground Spur)",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 2050,
+        "Elevation_Meter": 625,
+        "Restroom": "Yes",
+        "RestroomComment": "At campground.",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73519399939242,
+          33.69676925784619
+        ]
+      },
+      "properties": {
+        "OBJECTID": 62,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Wagner (Campground Spur)",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 2027,
+        "Elevation_Meter": 618,
+        "Restroom": "Yes",
+        "RestroomComment": "At campground.",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73110831235991,
+          33.69536320176242
+        ]
+      },
+      "properties": {
+        "OBJECTID": 63,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Wagner (Group Campground Spur)",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1989,
+        "Elevation_Meter": 606,
+        "Restroom": "Yes",
+        "RestroomComment": "At group campground.",
+        "Parking": "Yes",
+        "ParkingComment": "Group campround use only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.25093693525096,
+          33.86135510386244
+        ]
+      },
+      "properties": {
+        "OBJECTID": 64,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Boat Dock Access",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1782,
+        "Elevation_Meter": 543,
+        "Restroom": "Yes",
+        "RestroomComment": "For patrons of desert outdoor center only.",
+        "Parking": "Yes",
+        "ParkingComment": "For patrons of desert outdoor center only."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.63666072438517,
+          33.12976141577959
+        ]
+      },
+      "properties": {
+        "OBJECTID": 65,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Rock Peak",
+        "ParkName": "San Tan Mountain Regional Park",
+        "Elevation_Feet": 1638,
+        "Elevation_Meter": 499,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70227877876133,
+          33.672946193535914
+        ]
+      },
+      "properties": {
+        "OBJECTID": 66,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Shallmo Wash",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1696,
+        "Elevation_Meter": 517,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.65597451557015,
+          33.18960689281333
+        ]
+      },
+      "properties": {
+        "OBJECTID": 67,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Goldmine",
+        "ParkName": "San Tan Mountain Regional Park",
+        "Elevation_Feet": 1591,
+        "Elevation_Meter": 485,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.99558832381337,
+          33.8113186579123
+        ]
+      },
+      "properties": {
+        "OBJECTID": 68,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Flume",
+        "ParkName": "Cave Creek Regional Park",
+        "Elevation_Feet": 1924,
+        "Elevation_Meter": 586,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00124091255157,
+          33.83244875417221
+        ]
+      },
+      "properties": {
+        "OBJECTID": 69,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Overton",
+        "ParkName": "Cave Creek Regional Park",
+        "Elevation_Feet": 2123,
+        "Elevation_Meter": 647,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.75661394465992,
+          33.726928560630746
+        ]
+      },
+      "properties": {
+        "OBJECTID": 70,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "150th St Spur",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 2259,
+        "Elevation_Meter": 689,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.68361966538237,
+          33.727118774140344
+        ]
+      },
+      "properties": {
+        "OBJECTID": 71,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Rio Verde ?",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1662,
+        "Elevation_Meter": 507,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.27882239787638,
+          33.84817601831341
+        ]
+      },
+      "properties": {
+        "OBJECTID": 72,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Discovery Center Trail (RR CG)",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1795,
+        "Elevation_Meter": 547,
+        "Restroom": "Yes",
+        "RestroomComment": "At campground.",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.00131310026948,
+          33.83014914225772
+        ]
+      },
+      "properties": {
+        "OBJECTID": 73,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Slate",
+        "ParkName": "Cave Creek Regional Park",
+        "Elevation_Feet": 2081,
+        "Elevation_Meter": 634,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37559664489488,
+          33.3817315846599
+        ]
+      },
+      "properties": {
+        "OBJECTID": 74,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Baseline Connector",
+        "ParkName": "Estrella Mountain Regional Park",
+        "Elevation_Feet": 919,
+        "Elevation_Meter": 280,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.499237580565,
+          33.586937090523726
+        ]
+      },
+      "properties": {
+        "OBJECTID": 75,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Mule Deer",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1452,
+        "Elevation_Meter": 443,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.95068769711825,
+          33.888549786734984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 76,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Spur Cross - Tortuga",
+        "ParkName": "Spur Cross Ranch Conservation Area",
+        "Elevation_Feet": 2355,
+        "Elevation_Meter": 718,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.95506865050318,
+          33.88395079280502
+        ]
+      },
+      "properties": {
+        "OBJECTID": 77,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Dragonfly",
+        "ParkName": "Spur Cross Ranch Conservation Area",
+        "Elevation_Feet": 2317,
+        "Elevation_Meter": 706,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.71756000209318,
+          33.727025682799635
+        ]
+      },
+      "properties": {
+        "OBJECTID": 78,
+        "TrailheadType": "Local Access Trailhead",
+        "TrailName": "168th St Spur",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1937,
+        "Elevation_Meter": 590,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.63595046242261,
+          33.1676982304071
+        ]
+      },
+      "properties": {
+        "OBJECTID": 79,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "San Tan",
+        "ParkName": "San Tan Mountain Regional Park",
+        "Elevation_Feet": 1679,
+        "Elevation_Meter": 512,
+        "Restroom": "Yes",
+        "RestroomComment": "At nature center.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49916987633866,
+          33.58705511026992
+        ]
+      },
+      "properties": {
+        "OBJECTID": 80,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Wildlife",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1454,
+        "Elevation_Meter": 443,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.72885286546365,
+          33.693119772370494
+        ]
+      },
+      "properties": {
+        "OBJECTID": 81,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Tortoise",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1965,
+        "Elevation_Meter": 599,
+        "Restroom": "Yes",
+        "RestroomComment": "At nature center.",
+        "Parking": "Yes",
+        "ParkingComment": "At nature center."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50387550242684,
+          33.57283614064061
+        ]
+      },
+      "properties": {
+        "OBJECTID": 82,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Picnic 2 RR",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1482,
+        "Elevation_Meter": 452,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.62101160321522,
+          33.48106669561744
+        ]
+      },
+      "properties": {
+        "OBJECTID": 83,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Lost Sheep",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 2027,
+        "Elevation_Meter": 618,
+        "Restroom": "Yes",
+        "RestroomComment": "At nature center.",
+        "Parking": "Yes",
+        "ParkingComment": "At nature center."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61999711240867,
+          33.473625981270885
+        ]
+      },
+      "properties": {
+        "OBJECTID": 84,
+        "TrailheadType": "Campground Access Trailhead",
+        "TrailName": "Buckhorn Campground Nature Trail",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 1968,
+        "Elevation_Meter": 600,
+        "Restroom": "Yes",
+        "RestroomComment": "At campground.",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49769563944778,
+          33.566569004774735
+        ]
+      },
+      "properties": {
+        "OBJECTID": 85,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Library",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1419,
+        "Elevation_Meter": 432,
+        "Restroom": "Yes",
+        "RestroomComment": "At library.",
+        "Parking": "Yes",
+        "ParkingComment": "At library."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.49903442027527,
+          33.57596978495238
+        ]
+      },
+      "properties": {
+        "OBJECTID": 86,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Bajada Spur 1",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1430,
+        "Elevation_Meter": 436,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.50058053047371,
+          33.583412008620556
+        ]
+      },
+      "properties": {
+        "OBJECTID": 87,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Mule Deer Spur 1",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1464,
+        "Elevation_Meter": 446,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61509676570287,
+          33.478516515225614
+        ]
+      },
+      "properties": {
+        "OBJECTID": 88,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Wildlife Pond",
+        "ParkName": "Usery Mountain Regional Park",
+        "Elevation_Feet": 2030,
+        "Elevation_Meter": 619,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.27570031747948,
+          33.8316146250833
+        ]
+      },
+      "properties": {
+        "OBJECTID": 89,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Beardsley CSR",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1442,
+        "Elevation_Meter": 440,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.32199812897028,
+          33.90747170392697
+        ]
+      },
+      "properties": {
+        "OBJECTID": 90,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Brown's",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1785,
+        "Elevation_Meter": 544,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.38033350899877,
+          33.38194407600849
+        ]
+      },
+      "properties": {
+        "OBJECTID": 91,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Quail",
+        "ParkName": "Estrella Mountain Regional Park",
+        "Elevation_Feet": 922,
+        "Elevation_Meter": 281,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet nearby.",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.70205579624657,
+          33.673031341273855
+        ]
+      },
+      "properties": {
+        "OBJECTID": 92,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Escondido",
+        "ParkName": "McDowell Mountain Regional Park",
+        "Elevation_Feet": 1695,
+        "Elevation_Meter": 517,
+        "Restroom": "Yes",
+        "RestroomComment": "Portable toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.28811794973912,
+          33.85278433301105
+        ]
+      },
+      "properties": {
+        "OBJECTID": 93,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Frog Tanks",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1731,
+        "Elevation_Meter": 528,
+        "Restroom": "Yes",
+        "RestroomComment": "At 10-lane.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30741191241083,
+          33.860871217091095
+        ]
+      },
+      "properties": {
+        "OBJECTID": 94,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Wild Burro",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1725,
+        "Elevation_Meter": 527,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Very limited."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.19108200371544,
+          33.97916727826408
+        ]
+      },
+      "properties": {
+        "OBJECTID": 95,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Agua Fria",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1773,
+        "Elevation_Meter": 540,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.32129704509501,
+          33.36844285775541
+        ]
+      },
+      "properties": {
+        "OBJECTID": 96,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Desert Rose (Competitive Track)",
+        "ParkName": "Estrella Mountain Regional Park",
+        "Elevation_Feet": 987,
+        "Elevation_Meter": 301,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30384739736344,
+          33.86360031146301
+        ]
+      },
+      "properties": {
+        "OBJECTID": 97,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Wild Burro Day-use Area",
+        "ParkName": "Lake Pleasant Regional Park",
+        "Elevation_Feet": 1722,
+        "Elevation_Meter": 525,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.6945609587538,
+          33.93266057756934
+        ]
+      },
+      "properties": {
+        "OBJECTID": 98,
+        "TrailheadType": "Major Trailhead",
+        "TrailName": "Hassayampa River Preserve",
+        "ParkName": "Hassayampa River Preserve",
+        "Elevation_Feet": 1959,
+        "Elevation_Meter": 597,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.38006444829979,
+          33.383433907228266
+        ]
+      },
+      "properties": {
+        "OBJECTID": 99,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Nature Center",
+        "ParkName": "Estrella Mountain Regional Park",
+        "Elevation_Feet": 917,
+        "Elevation_Meter": 280,
+        "Restroom": "Yes",
+        "RestroomComment": "At nature center.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.5014101246386,
+          33.58350390463796
+        ]
+      },
+      "properties": {
+        "OBJECTID": 100,
+        "TrailheadType": "Minor Trailhead",
+        "TrailName": "Black Rock - Area 4",
+        "ParkName": "White Tank Mountain Regional Park",
+        "Elevation_Feet": 1470,
+        "Elevation_Meter": 481,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0881611484514,
+          33.84401547399299
+        ]
+      },
+      "properties": {
+        "OBJECTID": 101,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Anthem",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1869,
+        "Elevation_Meter": 616,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.05744115794812,
+          33.86418433604292
+        ]
+      },
+      "properties": {
+        "OBJECTID": 102,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Andy Kunasek at Spear S Ranch",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 2046,
+        "Elevation_Meter": 624,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.16952941321306,
+          33.81226521211158
+        ]
+      },
+      "properties": {
+        "OBJECTID": 103,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "(Unnamed)",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1633,
+        "Elevation_Meter": 498,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.8206790966758,
+          33.934463990429144
+        ]
+      },
+      "properties": {
+        "OBJECTID": 104,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Bronco",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 3730,
+        "Elevation_Meter": 1137,
+        "Restroom": "Yes",
+        "RestroomComment": "Pit toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.6693083476729,
+          33.23628709575027
+        ]
+      },
+      "properties": {
+        "OBJECTID": 105,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Desert Wells",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1370,
+        "Elevation_Meter": 418,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.644269603962,
+          33.21988064986914
+        ]
+      },
+      "properties": {
+        "OBJECTID": 106,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Horseshoe",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1394,
+        "Elevation_Meter": 425,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.2546442698521,
+          33.39086264546081
+        ]
+      },
+      "properties": {
+        "OBJECTID": 107,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "Tres Rios",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 971,
+        "Elevation_Meter": 296,
+        "Restroom": "Yes",
+        "RestroomComment": "Pit toilet.",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.13175510370056,
+          33.317966448230685
+        ]
+      },
+      "properties": {
+        "OBJECTID": 108,
+        "TrailheadType": "Sun Circle/Regional Trailhead Access Point",
+        "TrailName": "Bajada",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1301,
+        "Elevation_Meter": 397,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.14411318484335,
+          33.33029690417003
+        ]
+      },
+      "properties": {
+        "OBJECTID": 109,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "San Juan",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1340,
+        "Elevation_Meter": 408,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.0736294371718,
+          33.32967187806392
+        ]
+      },
+      "properties": {
+        "OBJECTID": 110,
+        "TrailheadType": "Sun Circle/Regional Trailhead Access Point",
+        "TrailName": "Telegraph Pass",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1990,
+        "Elevation_Meter": 607,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.04410535404332,
+          33.34281631075322
+        ]
+      },
+      "properties": {
+        "OBJECTID": 111,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "Buena Vista",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 2352,
+        "Elevation_Meter": 717,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.98588237122321,
+          33.3629223299853
+        ]
+      },
+      "properties": {
+        "OBJECTID": 112,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "Pima Canyon",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1392,
+        "Elevation_Meter": 424,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.96238223677814,
+          33.36359033080331
+        ]
+      },
+      "properties": {
+        "OBJECTID": 113,
+        "TrailheadType": "Sun Circle/Regional Trailhead Access Point",
+        "TrailName": "Guadalupe",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1246,
+        "Elevation_Meter": 380,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.93128072458717,
+          33.356358948485415
+        ]
+      },
+      "properties": {
+        "OBJECTID": 114,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "MacDonald",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1187,
+        "Elevation_Meter": 362,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.87280165363912,
+          33.358320115356676
+        ]
+      },
+      "properties": {
+        "OBJECTID": 115,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "Palo Verde",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1201,
+        "Elevation_Meter": 366,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.8171779227374,
+          33.35704613903093
+        ]
+      },
+      "properties": {
+        "OBJECTID": 116,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "McQueen",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1222,
+        "Elevation_Meter": 372,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.77073607806888,
+          33.35895814958743
+        ]
+      },
+      "properties": {
+        "OBJECTID": 117,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "Freestone",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1249,
+        "Elevation_Meter": 381,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.76268877212438,
+          33.389034204816014
+        ]
+      },
+      "properties": {
+        "OBJECTID": 118,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "Harmony",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1258,
+        "Elevation_Meter": 383,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.81426484257786,
+          33.44587798159672
+        ]
+      },
+      "properties": {
+        "OBJECTID": 119,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "Hohokam Canal",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1259,
+        "Elevation_Meter": 384,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.9266531459275,
+          33.50070888234956
+        ]
+      },
+      "properties": {
+        "OBJECTID": 120,
+        "TrailheadType": "Sun Circle Trailhead",
+        "TrailName": "Soleri",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1278,
+        "Elevation_Meter": 390,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "No",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.95776712763293,
+          33.490501529594056
+        ]
+      },
+      "properties": {
+        "OBJECTID": 121,
+        "TrailheadType": "Sun Circle Trailhead",
+        "TrailName": "Arizona Falls",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1269,
+        "Elevation_Meter": 387,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.03626879016952,
+          33.5317566405326
+        ]
+      },
+      "properties": {
+        "OBJECTID": 122,
+        "TrailheadType": "Sun Circle Trailhead",
+        "TrailName": "Granada",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1262,
+        "Elevation_Meter": 385,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.13329419895491,
+          33.570814091385905
+        ]
+      },
+      "properties": {
+        "OBJECTID": 123,
+        "TrailheadType": "Sun Circle Trailhead",
+        "TrailName": "Cortez",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1230,
+        "Elevation_Meter": 375,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.18743354469801,
+          33.609748658079646
+        ]
+      },
+      "properties": {
+        "OBJECTID": 124,
+        "TrailheadType": "Sun Circle Trailhead",
+        "TrailName": "Thunderbird",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1217,
+        "Elevation_Meter": 371,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.2418509998699,
+          33.617876441666766
+        ]
+      },
+      "properties": {
+        "OBJECTID": 125,
+        "TrailheadType": "Sun Circle Trailhead",
+        "TrailName": "Rio Vista",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1171,
+        "Elevation_Meter": 357,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.85793408293604,
+          33.64919302417372
+        ]
+      },
+      "properties": {
+        "OBJECTID": 126,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Gateway",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1724,
+        "Elevation_Meter": 525,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.40848014601329,
+          33.68673621858833
+        ]
+      },
+      "properties": {
+        "OBJECTID": 127,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Trilby",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1345,
+        "Elevation_Meter": 410,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61735390861834,
+          33.50480079209008
+        ]
+      },
+      "properties": {
+        "OBJECTID": 128,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Bulldog",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 2037,
+        "Elevation_Meter": 621,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.68216203474783,
+          33.51413298885929
+        ]
+      },
+      "properties": {
+        "OBJECTID": 129,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Granite Reef",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1324,
+        "Elevation_Meter": 404,
+        "Restroom": "Yes",
+        "RestroomComment": "Pit toilet.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.78941143208986,
+          33.770322913535786
+        ]
+      },
+      "properties": {
+        "OBJECTID": 130,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Granite Mountain",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 2584,
+        "Elevation_Meter": 788,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 131,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.37456018578806,
+          33.386464576098646
+        ]
+      },
+      "properties": {
+        "OBJECTID": 131,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "El Rio Beaver",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 919,
+        "Elevation_Meter": 280,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 132,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.79511594434982,
+          33.74625541278987
+        ]
+      },
+      "properties": {
+        "OBJECTID": 132,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Fraesfield",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 2547,
+        "Elevation_Meter": 776,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 133,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.82934727053399,
+          33.85036973113269
+        ]
+      },
+      "properties": {
+        "OBJECTID": 133,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Tonto",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 2692,
+        "Elevation_Meter": 0,
+        "Restroom": "Yes",
+        "RestroomComment": "At ranger station.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 134,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.30769918914712,
+          33.37869794303892
+        ]
+      },
+      "properties": {
+        "OBJECTID": 134,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Monument Hill",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 945,
+        "Elevation_Meter": 288,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 135,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.25738655153003,
+          33.7982971008983
+        ]
+      },
+      "properties": {
+        "OBJECTID": 135,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Old Carefree Hwy & Waddell Canal",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1529,
+        "Elevation_Meter": 466,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 136,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.31640445264675,
+          33.714809066765945
+        ]
+      },
+      "properties": {
+        "OBJECTID": 136,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "119th Ave",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1333,
+        "Elevation_Meter": 406,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 137,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.24962169297883,
+          33.779308904981825
+        ]
+      },
+      "properties": {
+        "OBJECTID": 137,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "C.A.P",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1526,
+        "Elevation_Meter": 465,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 138,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.47141436130727,
+          33.55138275914297
+        ]
+      },
+      "properties": {
+        "OBJECTID": 138,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Northern",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1241,
+        "Elevation_Meter": 378,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 139,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.47869761147506,
+          33.51512572125216
+        ]
+      },
+      "properties": {
+        "OBJECTID": 139,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Missouri",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1191,
+        "Elevation_Meter": 363,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 140,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.47886956788507,
+          33.493769074466634
+        ]
+      },
+      "properties": {
+        "OBJECTID": 140,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Indian School",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1165,
+        "Elevation_Meter": 355,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 141,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.86465763507113,
+          33.62668031250503
+        ]
+      },
+      "properties": {
+        "OBJECTID": 141,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "McDowell Mountain Ranch Park",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1535,
+        "Elevation_Meter": 468,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 142,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.24690322474079,
+          33.84366346909217
+        ]
+      },
+      "properties": {
+        "OBJECTID": 142,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "87th Ave",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1746,
+        "Elevation_Meter": 532,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 143,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.23242463982707,
+          33.83998209576609
+        ]
+      },
+      "properties": {
+        "OBJECTID": 143,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "New River Road",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1702,
+        "Elevation_Meter": 519,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 144,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.15778909181304,
+          33.827677788379184
+        ]
+      },
+      "properties": {
+        "OBJECTID": 144,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Sheriffs Pistol Range Rd",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1686,
+        "Elevation_Meter": 514,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 145,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.79550028584917,
+          33.885809814059904
+        ]
+      },
+      "properties": {
+        "OBJECTID": 145,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "FH 1058",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 3285,
+        "Elevation_Meter": 1001,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 146,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.67433047269355,
+          33.517279664910475
+        ]
+      },
+      "properties": {
+        "OBJECTID": 146,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Saguaro",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1329,
+        "Elevation_Meter": 405,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 147,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.22229828915867,
+          33.37762836603085
+        ]
+      },
+      "properties": {
+        "OBJECTID": 147,
+        "TrailheadType": "Sun Circle/Regional Trailhead Access Point",
+        "TrailName": "Baseline",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 989,
+        "Elevation_Meter": 301,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 148,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.89683539095623,
+          33.57162995884453
+        ]
+      },
+      "properties": {
+        "OBJECTID": 148,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Mountain View",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1345,
+        "Elevation_Meter": 410,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 149,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.39198208276386,
+          33.413505482517984
+        ]
+      },
+      "properties": {
+        "OBJECTID": 149,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Yuma Road & Estrella Parkway",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 940,
+        "Elevation_Meter": 287,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 150,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.42742226913093,
+          33.435247592510784
+        ]
+      },
+      "properties": {
+        "OBJECTID": 150,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Yuma Rd & Cotton Ln",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 965,
+        "Elevation_Meter": 294,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 151,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.68657887762501,
+          33.264279935671176
+        ]
+      },
+      "properties": {
+        "OBJECTID": 151,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Queen Creek & Power",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1348,
+        "Elevation_Meter": 411,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 152,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.72032297376876,
+          33.263044001159145
+        ]
+      },
+      "properties": {
+        "OBJECTID": 152,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "Queen Creek & Higley",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1323,
+        "Elevation_Meter": 403,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 153,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.80470072319129,
+          33.30799107972314
+        ]
+      },
+      "properties": {
+        "OBJECTID": 153,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Tibshraeny",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1236,
+        "Elevation_Meter": 377,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 154,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.73897077915491,
+          33.2928838721686
+        ]
+      },
+      "properties": {
+        "OBJECTID": 154,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Discovery",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1287,
+        "Elevation_Meter": 392,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 155,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.23617060378206,
+          33.62228956452303
+        ]
+      },
+      "properties": {
+        "OBJECTID": 155,
+        "TrailheadType": "Sun Circle Trailhead",
+        "TrailName": "Skunk Creek (Equestrian)",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 1184,
+        "Elevation_Meter": 361,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 156,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.61908583802827,
+          33.51659172225102
+        ]
+      },
+      "properties": {
+        "OBJECTID": 156,
+        "TrailheadType": "Regional Trailhead Access Point",
+        "TrailName": "(Unnamed)",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1883,
+        "Elevation_Meter": 574,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 157,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.90823837879738,
+          33.53719094128229
+        ]
+      },
+      "properties": {
+        "OBJECTID": 157,
+        "TrailheadType": "Sun Circle/Regional Trailhead Access Point",
+        "TrailName": "Nature Area",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1285,
+        "Elevation_Meter": 392,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 158,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.24772847555124,
+          33.748469906278764
+        ]
+      },
+      "properties": {
+        "OBJECTID": 158,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Paloma",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1445,
+        "Elevation_Meter": 440,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 159,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.16276082583784,
+          33.31949102639481
+        ]
+      },
+      "properties": {
+        "OBJECTID": 159,
+        "TrailheadType": "Sun Circle/Regional Trailhead Access Point",
+        "TrailName": "SR 202",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1105,
+        "Elevation_Meter": 337,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": "Undeveloped."
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 160,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.93670839314453,
+          33.36541235759388
+        ]
+      },
+      "properties": {
+        "OBJECTID": 160,
+        "TrailheadType": "Sun Circle/Regional Trailhead",
+        "TrailName": "Kiwanis",
+        "ParkName": "Sun Circle & Maricopa Trails",
+        "Elevation_Feet": 1189,
+        "Elevation_Meter": 362,
+        "Restroom": "Yes",
+        "RestroomComment": "Nearby.",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 161,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.440156816243,
+          33.32307128199327
+        ]
+      },
+      "properties": {
+        "OBJECTID": 161,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Westar",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1000,
+        "Elevation_Meter": 305,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 162,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.46969149769521,
+          33.638018613217675
+        ]
+      },
+      "properties": {
+        "OBJECTID": 162,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Sun Valley",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1365,
+        "Elevation_Meter": 416,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 163,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.85698189298937,
+          33.6264393375727
+        ]
+      },
+      "properties": {
+        "OBJECTID": 163,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Quartz",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1587,
+        "Elevation_Meter": 484,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 164,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.32428321577933,
+          33.46128970857718
+        ]
+      },
+      "properties": {
+        "OBJECTID": 164,
+        "TrailheadType": "Sun Circle Trailhead",
+        "TrailName": "Friendship",
+        "ParkName": "Sun Circle Trail",
+        "Elevation_Feet": 987,
+        "Elevation_Meter": 301,
+        "Restroom": "Yes",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 165,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.68429939720167,
+          33.51092800050046
+        ]
+      },
+      "properties": {
+        "OBJECTID": 165,
+        "TrailheadType": "Regional Trailhead",
+        "TrailName": "Bush Highway",
+        "ParkName": "Maricopa Trail",
+        "Elevation_Feet": 1370,
+        "Elevation_Meter": 418,
+        "Restroom": "No",
+        "RestroomComment": "",
+        "Parking": "Yes",
+        "ParkingComment": ""
+      }
+    }
+  ]
+}

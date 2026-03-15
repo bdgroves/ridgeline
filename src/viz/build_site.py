@@ -150,6 +150,11 @@ def write_index(summary: dict) -> None:
     <div class="sys-label">▶ RIDGELINE // Wildland-Urban Interface SAR Analysis</div>
     <h1>Ridge<span>line</span></h1>
     <div class="subtitle">Search &amp; Rescue call volume at the urban–wilderness edge · Phoenix · Tucson · Arizona</div>
+    <div style="margin-top:12px;">
+      <a href="map.html" style="font-family:monospace;font-size:11px;letter-spacing:2px;
+         color:var(--ember);text-decoration:none;border:1px solid var(--ember);
+         padding:5px 12px;text-transform:uppercase;">▶ OPEN INTERACTIVE MAP</a>
+    </div>
   </header>
 
   <div class="kpi-row">

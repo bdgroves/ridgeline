@@ -1,0 +1,10 @@
+layer,features,status
+maricopa_parks,263,ok
+maricopa_trailheads,165,ok
+maricopa_trails,16,ok
+phoenix_parks,253,ok
+phoenix_trails,0,failed
+pima_trailheads,500,ok
+pima_trails,2000,ok
+pima_protected_lands,2000,ok
+trailheads_combined,918,ok
