@@ -29,3 +29,9 @@ Thumbs.db
 # Secrets
 .env
 *.key
+
+docs/*.png
+docs/*.csv
+data/raw/manifest.json
+data/processed/*.csv
+data/processed/*.parquet
