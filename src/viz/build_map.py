@@ -57,38 +57,95 @@ CLUSTER_LABELS = {
 
 
 def load_incidents() -> pd.DataFrame:
+    """Load real data from all available cities. Seed data retired."""
     frames = []
 
-    # 1. Seed / NSAR data
-    for path in [PROC_DIR / "sar_incidents_clean.parquet",
-                 PROC_DIR / "sar_incidents_clean.csv"]:
-        if path.exists():
-            df = pd.read_parquet(path) if path.suffix == ".parquet" else pd.read_csv(path, low_memory=False)
-            df["data_source_label"] = "seed"
-            frames.append(df)
-            break
+    # ── Phoenix ───────────────────────────────────────────────────────────
+    phx_geo = PROC_DIR / "phoenix_fire_sar_geocoded.parquet"
+    phx_raw = PROC_DIR / "phoenix_fire_sar_clean.parquet"
+    if phx_geo.exists():
+        df = pd.read_parquet(phx_geo)
+        df["city"] = df.get("city", "Phoenix")
+        df["data_source_label"] = "phoenix_fire"
+        if "behavioral_cluster" not in df.columns:
+            df["behavioral_cluster"] = "recreational_underequipped"
+        frames.append(df)
+        console.print(f"  [green]✓[/green] Phoenix: [cyan]{len(df):,}[/cyan] geocoded incidents")
+    elif phx_raw.exists():
+        df = pd.read_parquet(phx_raw)
+        df["city"] = "Phoenix"
+        df["data_source_label"] = "phoenix_fire_ungeocoded"
+        if "behavioral_cluster" not in df.columns:
+            df["behavioral_cluster"] = "recreational_underequipped"
+        frames.append(df)
+        console.print(f"  [yellow]⚠[/yellow] Phoenix: ungeocoded — run `pixi run geocode`")
 
-    # 2. Real Phoenix Fire geocoded data — shown as separate layer
-    geocoded = PROC_DIR / "phoenix_fire_sar_geocoded.parquet"
-    if geocoded.exists():
-        real = pd.read_parquet(geocoded)
-        real["data_source_label"] = "phoenix_fire_real"
-        # Ensure behavioral_cluster exists
-        if "behavioral_cluster" not in real.columns:
-            real["behavioral_cluster"] = "recreational_underequipped"
-        frames.append(real)
-        console.print(f"  [green]✓[/green] Real Phoenix Fire data: [cyan]{len(real):,}[/cyan] geocoded incidents")
+    # ── Los Angeles ───────────────────────────────────────────────────────
+    la_geo  = PROC_DIR / "la_fire_sar_geocoded.parquet"
+    la_raw  = PROC_DIR / "la_fire_sar_clean.parquet"
+    if la_geo.exists():
+        df = pd.read_parquet(la_geo)
+        df["city"] = df.get("city", "Los Angeles")
+        df["data_source_label"] = "lafd"
+        if "behavioral_cluster" not in df.columns:
+            df["behavioral_cluster"] = "recreational_underequipped"
+        frames.append(df)
+        console.print(f"  [green]✓[/green] LA: [cyan]{len(df):,}[/cyan] geocoded incidents")
+    elif la_raw.exists():
+        df = pd.read_parquet(la_raw)
+        df["city"] = df.get("city", "Los Angeles")
+        df["data_source_label"] = "lafd_ungeocoded"
+        if "behavioral_cluster" not in df.columns:
+            df["behavioral_cluster"] = "recreational_underequipped"
+        frames.append(df)
+        console.print(f"  [yellow]⚠[/yellow] LA: ungeocoded — run `pixi run geocode`")
 
     if not frames:
-        console.print("[yellow]No incident data — map will show GIS layers only[/yellow]")
+        console.print("[yellow]No real data — run `pixi run phoenix` and `pixi run la`[/yellow]")
         return pd.DataFrame()
 
     combined = pd.concat(frames, ignore_index=True)
     combined = combined.dropna(subset=["latitude","longitude"])
     combined = combined[
-        combined["latitude"].between(31.0, 37.0) &
-        combined["longitude"].between(-115.0, -109.0)
+        combined["latitude"].between(30.0, 42.0) &
+        combined["longitude"].between(-120.0, -109.0)
     ].copy()
+
+    # ── Filter to SAR-priority incidents only ─────────────────────────────
+    # Full dataset (80k+) produces a 130MB map file — too large for Pages.
+    # Keep: mountain rescue, water rescue, flood, crisis care, WUI-address matches
+    # Drop: alarm indication, debris fire, vehicle fire, dumpster fire etc.
+    # Strict SAR-only filter — explicit rescue/mountain/water calls only
+    # Strips out the 69k blank-code address matches, alarm calls, debris fires etc.
+    SAR_STRICT = [
+        "mountain rescue",
+        "water rescue",
+        "swift water",
+        "technical rescue",
+        "cliff rescue",
+        "trail rescue",
+        "heat exhaustion",
+        "heat stroke",
+        "lost person",
+        "search and rescue",
+        "check flooding condition",
+        "flood rescue",
+        "stranded",
+    ]
+    if "incident_type" in combined.columns:
+        nature = combined["incident_type"].fillna("").str.lower()
+        sar_mask = pd.Series(False, index=combined.index)
+        for term in SAR_STRICT:
+            sar_mask |= nature.str.contains(term, na=False)
+        filtered = combined[sar_mask].copy()
+        console.print(
+            f"  [green]✓[/green] Strict SAR: [cyan]{len(filtered):,}[/cyan] "
+            f"explicit rescue calls (of {len(combined):,} geocoded)"
+        )
+        combined = filtered
+
+    n_cities = combined["city"].nunique() if "city" in combined.columns else "?"
+    console.print(f"  [green]✓[/green] Map dataset: [cyan]{len(combined):,}[/cyan] incidents · {n_cities} cities")
     return combined
 
 
@@ -106,8 +163,8 @@ def load_geojson(path: Path) -> dict | None:
 def build_map(df: pd.DataFrame) -> folium.Map:
     # Centre on AZ WUI corridor midpoint
     m = folium.Map(
-        location=[33.45, -112.05],   # Phoenix metro
-        zoom_start=10,
+        location=[34.5, -116.5],     # midpoint PHX-LA corridor
+        zoom_start=7,
         tiles=None,
         prefer_canvas=True,
     )
@@ -185,7 +242,7 @@ def build_map(df: pd.DataFrame) -> folium.Map:
     # Pima open space
     pima_open = load_geojson(EXT_DIR / "pima_open_space.geojson")
     if pima_open:
-        fg_open = folium.FeatureGroup(name="Pima Open Space", show=False)
+        fg_open = folium.FeatureGroup(name="Pima Open Space (coming soon)", show=False)
         folium.GeoJson(
             pima_open,
             style_function=lambda _: {
@@ -220,20 +277,29 @@ def build_map(df: pd.DataFrame) -> folium.Map:
             coords = feat.get("geometry", {}).get("coordinates", [])
             if len(coords) < 2:
                 continue
-            props = feat.get("properties", {})
-            name  = props.get("name", "Trailhead")
+            props  = feat.get("properties", {})
+            name   = props.get("name", "Trailhead")
+            county = props.get("county", "")
+            # Phoenix only for now — skip Pima trailheads until Tucson data lands
+            if str(county).strip().title() == "Pima":
+                continue
+            # Only show if within Maricopa bbox (lat 33.0-34.2, lon -113.5 to -111.0)
+            lat, lon = coords[1], coords[0]
+            if not (33.0 <= lat <= 34.2 and -113.5 <= lon <= -111.0):
+                continue
             folium.CircleMarker(
-                location=[coords[1], coords[0]],
-                radius=4,
-                color="#e8793a",
+                location=[lat, lon],
+                radius=3,
+                color="#c8a96e",
                 fill=True,
-                fill_color="#e8793a",
-                fill_opacity=0.9,
-                weight=1,
-                tooltip=name,
+                fill_color="#c8a96e",
+                fill_opacity=0.7,
+                weight=0,
+                tooltip=f"🏔 {name}",
+                # No popup — keeps clicks clean for incident dots
             ).add_to(fg_th)
         fg_th.add_to(m)
-        console.print(f"  [green]✓[/green] Trailheads layer")
+        console.print(f"  [green]✓[/green] Trailheads layer (Maricopa only)")
 
     # ── Incident layers ────────────────────────────────────────────────────
     if not df.empty:
@@ -269,14 +335,18 @@ def build_map(df: pd.DataFrame) -> folium.Map:
                     f"🏃 {row.get('activity_at_onset','')}"
                     f"</div>"
                 )
+                # Small jitter so incidents don't stack exactly on trailhead pins
+                import random as _rnd
+                lat_j = row["latitude"]  + _rnd.gauss(0, 0.003)
+                lon_j = row["longitude"] + _rnd.gauss(0, 0.003)
                 folium.CircleMarker(
-                    location=[row["latitude"], row["longitude"]],
-                    radius=7,
+                    location=[lat_j, lon_j],
+                    radius=9,
                     color=color,
                     fill=True,
                     fill_color=color,
-                    fill_opacity=0.82,
-                    weight=0,
+                    fill_opacity=0.88,
+                    weight=1.5,
                     popup=folium.Popup(popup_html, max_width=230),
                     tooltip=f"{label} — {row.get('incident_type','')}",
                 ).add_to(fg)

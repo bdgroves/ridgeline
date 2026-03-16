@@ -82,6 +82,7 @@ def geocode_address(address: str, client: httpx.Client) -> tuple[float, float] |
             "SingleLine": address + ", Phoenix, AZ",
             "outFields":  "Score",
             "maxLocations": 1,
+            "outSR": "4326",   # return decimal degrees, not Web Mercator
             "f": "json",
         }
         r = client.get(GEOCODE_URL, params=params, timeout=10)
@@ -97,13 +98,59 @@ def geocode_address(address: str, client: httpx.Client) -> tuple[float, float] |
     return None
 
 
-def main() -> None:
-    console.rule("[bold]RIDGELINE — Geocoding Phoenix Fire SAR Incidents[/bold]")
+LA_PRESERVE_FALLBACKS = {
+    "runyon":          (34.1089, -118.3617),
+    "griffith":        (34.1184, -118.3004),
+    "topanga":         (34.0868, -118.5983),
+    "malibu":          (34.0259, -118.7798),
+    "fryman":          (34.1247, -118.3956),
+    "temescal":        (34.0468, -118.5280),
+    "mulholland":      (34.1139, -118.4068),
+    "will rogers":     (34.0459, -118.5258),
+    "eaton":           (34.1950, -118.0820),
+    "altadena":        (34.1901, -118.1310),
+    "angeles crest":   (34.2290, -118.1560),
+    "palos verdes":    (33.7444, -118.3870),
+    "la canada":       (34.1992, -118.1996),
+    "canyon":          (34.0928, -118.3287),
+}
 
+LA_GEOCODE_URL = "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress"
+
+
+def geocode_la_address(address: str, client: httpx.Client) -> tuple[float, float] | None:
+    """Geocode LA address using preserve fallbacks + Census geocoder."""
+    if not isinstance(address, str) or not address.strip():
+        return None
+    addr_lower = address.lower()
+    for keyword, coords in LA_PRESERVE_FALLBACKS.items():
+        if keyword in addr_lower:
+            return coords
+    try:
+        params = {
+            "address":    address + ", Los Angeles, CA",
+            "benchmark":  "Public_AR_Current",
+            "format":     "json",
+        }
+        r = client.get(LA_GEOCODE_URL, params=params, timeout=10)
+        r.raise_for_status()
+        data = r.json()
+        matches = data.get("result", {}).get("addressMatches", [])
+        if matches:
+            coords = matches[0]["coordinates"]
+            return (coords["y"], coords["x"])
+    except Exception:
+        pass
+    return None
+
+
+def main() -> None:
+    console.rule("[bold]RIDGELINE — Geocoding SAR Incidents (PHX + LA)[/bold]")
+
+    # ── Phoenix ────────────────────────────────────────────────────────────
     parquet = PROC_DIR / "phoenix_fire_sar_clean.parquet"
     if not parquet.exists():
-        console.print("[red]Run `pixi run phoenix` first.[/red]")
-        return
+        console.print("[yellow]No Phoenix data — run `pixi run phoenix` first.[/yellow]")
 
     df = pd.read_parquet(parquet)
     console.print(f"  Loaded: [cyan]{len(df):,}[/cyan] incidents")
@@ -172,7 +219,50 @@ def main() -> None:
         for name, count in top.items():
             console.print(f"  {str(name):<45} {count:>5}")
 
-    console.rule("[green]Geocoding done[/green]")
+    # ── Los Angeles ────────────────────────────────────────────────────────
+    la_parquet = PROC_DIR / "la_fire_sar_clean.parquet"
+    if la_parquet.exists():
+        console.print("\n")
+        console.rule("[bold]Geocoding LA Fire data[/bold]")
+        la_df = pd.read_parquet(la_parquet)
+
+        # Prioritise: mountain rescue + WUI address matches
+        la_priority = la_df[
+            la_df.get("filter_method", pd.Series(dtype=str)).isin(["wui_address","both"]) |
+            la_df.get("incident_type", pd.Series(dtype=str)).str.lower().str.contains("rescue|mountain|trail", na=False)
+        ].copy()
+
+        la_unique = la_priority["location_name"].dropna().unique()
+        console.print(f"  LA priority subset: [cyan]{len(la_priority):,}[/cyan] incidents, [cyan]{len(la_unique):,}[/cyan] unique addresses")
+
+        la_cache: dict = {}
+        with httpx.Client() as client:
+            with Progress(SpinnerColumn(), TextColumn("{task.description}"),
+                          BarColumn(), MofNCompleteColumn(), TimeElapsedColumn(),
+                          console=console) as prog:
+                task = prog.add_task("Geocoding LA…", total=len(la_unique))
+                for addr in la_unique:
+                    if addr not in la_cache:
+                        la_cache[addr] = geocode_la_address(addr, client)
+                        time.sleep(0.05)
+                    prog.advance(task)
+
+        la_hits = sum(1 for v in la_cache.values() if v is not None)
+        console.print(f"  LA geocoded: [green]{la_hits:,}[/green] / {len(la_cache):,}")
+
+        la_priority["latitude"]  = la_priority["location_name"].map(
+            lambda a: la_cache.get(a, (None,None))[0] if la_cache.get(a) else None)
+        la_priority["longitude"] = la_priority["location_name"].map(
+            lambda a: la_cache.get(a, (None,None))[1] if la_cache.get(a) else None)
+
+        la_geocoded = la_priority.dropna(subset=["latitude","longitude"])
+        la_out = PROC_DIR / "la_fire_sar_geocoded.parquet"
+        la_geocoded.to_parquet(la_out, index=False)
+        console.print(f"  [green]✓[/green] LA geocoded → {la_out.name} ({len(la_geocoded):,} incidents)")
+    else:
+        console.print("[yellow]No LA data — run `pixi run la` to fetch[/yellow]")
+
+    console.rule("[green]Geocoding done — PHX + LA[/green]")
 
 
 if __name__ == "__main__":
