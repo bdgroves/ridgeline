@@ -32,51 +32,121 @@ console = Console()
 
 
 def load_summary() -> dict:
-    """Pull key stats from the cleaned dataset."""
-    csv = PROC_DIR / "sar_incidents_clean.csv"
-    if not csv.exists():
+    """Pull key stats from real Phoenix Fire data."""
+    # Priority: geocoded → clean → nothing
+    for path in [
+        PROC_DIR / "phoenix_fire_sar_geocoded.parquet",
+        PROC_DIR / "phoenix_fire_sar_clean.parquet",
+    ]:
+        if path.exists():
+            df = pd.read_parquet(path)
+            break
+    else:
+        console.print("  [yellow]⚠[/yellow] No processed data — KPIs will be empty")
         return {}
 
-    df = pd.read_csv(csv, parse_dates=["date"], low_memory=False)
-    df = df[df["year"].between(2015, 2024)]
+    # Normalise date
+    if "date" not in df.columns and "datetime" in df.columns:
+        df["date"] = pd.to_datetime(df["datetime"], errors="coerce")
+    else:
+        df["date"] = pd.to_datetime(df.get("date"), errors="coerce")
+
+    if "year" not in df.columns:
+        df["year"] = df["date"].dt.year
+    if "month" not in df.columns:
+        df["month"] = df["date"].dt.month
+
+    df = df[df["year"].between(2019, 2025)].copy()
+
+    # Incident type
+    incident = df.get("incident_type", pd.Series("", index=df.index)).fillna("").str.lower()
+
+    # SAR-strict subset for KPI calculations
+    SAR_STRICT = [
+        "mountain rescue", "water rescue", "swift water",
+        "technical rescue", "heat exhaustion", "heat stroke",
+        "lost person", "check flooding condition", "stranded",
+    ]
+    sar_mask = pd.Series(False, index=df.index)
+    for term in SAR_STRICT:
+        sar_mask |= incident.str.contains(term, na=False)
+    sar = df[sar_mask]
+
+    # Heat-related
+    heat_mask = incident.str.contains("heat", na=False)
+    pct_heat = round(heat_mask[sar_mask].mean() * 100, 1) if len(sar) else 0
+
+    # Weekend
+    if "is_weekend" in df.columns:
+        pct_weekend = round(df.loc[sar_mask, "is_weekend"].mean() * 100, 1)
+    elif "date" in df.columns:
+        pct_weekend = round((df.loc[sar_mask, "date"].dt.dayofweek >= 5).mean() * 100, 1)
+    else:
+        pct_weekend = 0
+
+    # Top SAR locations
+    top_locs = []
+    if "location_name" in sar.columns:
+        top_locs = (
+            sar.groupby("location_name")
+               .size()
+               .sort_values(ascending=False)
+               .head(8)
+               .reset_index()
+               .rename(columns={0: "count"})
+               .to_dict(orient="records")
+        )
+
+    # Annual counts — strict SAR only
+    annual = (
+        sar.groupby("year")
+           .size()
+           .reset_index(name="count")
+           .to_dict(orient="records")
+    )
+
+    # Monthly counts
+    monthly = (
+        sar.groupby("month")
+           .size()
+           .reset_index(name="count")
+           .to_dict(orient="records")
+    )
+
+    # Top incident types
+    by_type = (
+        sar.groupby("incident_type")
+           .size()
+           .sort_values(ascending=False)
+           .head(8)
+           .reset_index()
+           .rename(columns={0: "count"})
+           .to_dict(orient="records")
+    )
+
+    yr_min = int(df["year"].min())
+    yr_max = int(df["year"].max())
 
     summary = {
-        "total_incidents":  len(df),
-        "year_range":       f"{df['year'].min()}–{df['year'].max()}",
-        "counties":         sorted(df["county"].dropna().unique().tolist()),
-        "top_locations":    (
-            df.groupby("location_name")
-              .size()
-              .sort_values(ascending=False)
-              .head(8)
-              .reset_index()
-              .rename(columns={0: "count"})
-              .to_dict(orient="records")
-        ),
-        "by_type": (
-            df.groupby("incident_type")
-              .size()
-              .sort_values(ascending=False)
-              .head(8)
-              .reset_index()
-              .rename(columns={0: "count"})
-              .to_dict(orient="records")
-        ),
-        "annual": (
-            df.groupby("year")
-              .size()
-              .reset_index(name="count")
-              .to_dict(orient="records")
-        ),
-        "monthly": (
-            df.groupby("month")
-              .size()
-              .reset_index(name="count")
-              .to_dict(orient="records")
-        ),
-        "pct_heat":     round(df.get("is_heat_incident", pd.Series(dtype=bool)).mean() * 100, 1),
-        "pct_weekend":  round(df.get("is_weekend", pd.Series(dtype=bool)).mean() * 100, 1),
+        "total_incidents": len(sar),
+        "year_range":      f"{yr_min}–{yr_max}",
+        "total_all":       len(df),
+        "counties":        ["Maricopa"],
+        "top_locations":   top_locs,
+        "by_type":         by_type,
+        "annual":          annual,
+        "monthly":         monthly,
+        "pct_heat":        pct_heat,
+        "pct_weekend":     pct_weekend,
+        "mountain_rescue": int(incident[sar_mask].str.contains("mountain rescue").sum()),
+        "water_rescue":    int(incident[sar_mask].str.contains("water rescue|check flooding").sum()),
     }
+
+    console.print(
+        f"  [green]✓[/green] Summary: "
+        f"[cyan]{summary['total_incidents']:,}[/cyan] SAR incidents · "
+        f"heat {pct_heat}% · weekend {pct_weekend}%"
+    )
     return summary
 
 
@@ -149,7 +219,7 @@ def write_index(summary: dict) -> None:
   <header>
     <div class="sys-label">▶ RIDGELINE // Wildland-Urban Interface SAR Analysis</div>
     <h1>Ridge<span>line</span></h1>
-    <div class="subtitle">Search &amp; Rescue call volume at the urban–wilderness edge · Phoenix · Tucson · Arizona</div>
+    <div class="subtitle">Search &amp; Rescue call volume at the wildland-urban interface · Phoenix · Arizona · 2019–2025</div>
     <div style="margin-top:12px;">
       <a href="map.html" style="font-family:monospace;font-size:11px;letter-spacing:2px;
          color:var(--ember);text-decoration:none;border:1px solid var(--ember);
@@ -192,7 +262,7 @@ def write_index(summary: dict) -> None:
   <div class="section">
     <div class="section-title">Data</div>
     <p style="font-size:13px;color:var(--muted);line-height:1.8;">
-      Raw sources: NSAR incident database · Arizona DEMA SAR logs · Phoenix Fire Dept annual reports.<br>
+      Source: Phoenix Fire Department open data · phoenixopendata.com · Creative Commons Attribution<br>
       Processed dataset: <a href="assets/sar_incidents_clean.csv">Download CSV</a> ·
       Pipeline: <code style="color:var(--ember)">pixi run pipeline</code>
     </p>
