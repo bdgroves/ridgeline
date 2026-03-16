@@ -30,20 +30,20 @@ jobs:
           pixi-version: v0.41.4
           cache: false
 
-      - name: Ingest raw data
-        run: pixi run ingest
+      - name: Fetch Phoenix Fire data
+        run: pixi run phoenix
 
-      - name: Clean & normalize
-        run: pixi run clean
+      - name: Geocode incidents
+        run: pixi run geocode
+
+      - name: Fetch GIS layers
+        run: pixi run gis
 
       - name: Statistical analysis
         run: pixi run stats
 
       - name: WUI model
         run: pixi run model
-
-      - name: Fetch GIS data
-        run: pixi run gis
 
       - name: Build interactive map
         run: pixi run map
