@@ -33,9 +33,6 @@ jobs:
       - name: Fetch Phoenix Fire data
         run: pixi run phoenix
 
-      - name: Geocode incidents
-        run: pixi run geocode
-
       - name: Fetch GIS layers
         run: pixi run gis
 

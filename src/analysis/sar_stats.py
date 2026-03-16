@@ -120,7 +120,7 @@ def apply_theme(fig: plt.Figure, ax_or_axes) -> None:
 
 def styled_fig(w: float = 12, h: float = 6,
                title: str = "", subtitle: str = "",
-               caption: str = "RIDGELINE project · seed data",
+               caption: str = "RIDGELINE project · Phoenix Fire Dept open data 2019–2025",
                nrows: int = 1, ncols: int = 1,
                **kwargs):
     """Create a dark-themed figure with title/subtitle/caption."""
@@ -152,17 +152,66 @@ def save(fig: plt.Figure, name: str) -> None:
 # ── Data loading ───────────────────────────────────────────────────────────
 
 def load_data() -> pd.DataFrame:
+    """Load real Phoenix Fire data preferentially, seed as last resort."""
+    frames = []
+
+    # 1. Geocoded real data (best)
+    geocoded = PROC_DIR / "phoenix_fire_sar_geocoded.parquet"
+    if geocoded.exists():
+        df = pd.read_parquet(geocoded)
+        if "behavioral_cluster" not in df.columns:
+            df["behavioral_cluster"] = "recreational_underequipped"
+        df["data_source_label"] = "phoenix_fire_real"
+        frames.append(df)
+        console.print(f"  [green]✓[/green] Geocoded Phoenix Fire: [cyan]{len(df):,}[/cyan] incidents")
+
+    # 2. Ungeocoded real data — good for all stats, coords not needed for plots
+    clean_real = PROC_DIR / "phoenix_fire_sar_clean.parquet"
+    if clean_real.exists() and not frames:
+        df = pd.read_parquet(clean_real)
+        if "behavioral_cluster" not in df.columns:
+            df["behavioral_cluster"] = "recreational_underequipped"
+        df["data_source_label"] = "phoenix_fire_ungeocoded"
+        frames.append(df)
+        console.print(f"  [green]✓[/green] Phoenix Fire (ungeocoded): [cyan]{len(df):,}[/cyan] incidents")
+
+    # 3. Last resort: seed data
+    if not frames:
+        for path in [PROC_DIR / "sar_incidents_clean.parquet",
+                     PROC_DIR / "sar_incidents_clean.csv"]:
+            if path.exists():
+                df = pd.read_parquet(path) if path.suffix == ".parquet"                      else pd.read_csv(path, low_memory=False)
+                df["data_source_label"] = "seed"
+                frames.append(df)
+                console.print(f"  [yellow]⚠[/yellow] Using seed data — run `pixi run phoenix && pixi run geocode`")
+                break
+
+    if not frames:
+        raise FileNotFoundError(
+            "No data found. Run `pixi run phoenix` first."
+        )
+
+    combined = pd.concat(frames, ignore_index=True) if len(frames) > 1 else frames[0]
+
+    # Filter to years 2019+ for real data consistency
+    if "year" in combined.columns:
+        combined = combined[combined["year"] >= 2019].copy()
+
+    return combined
+
+def _compat_load() -> pd.DataFrame:
+    """Shim — kept for compatibility."""
+    return load_data()
+
+def _unused():
     parquet = PROC_DIR / "sar_incidents_clean.parquet"
     csv     = PROC_DIR / "sar_incidents_clean.csv"
-
     if parquet.exists():
         df = pd.read_parquet(parquet)
     elif csv.exists():
         df = pd.read_csv(csv, low_memory=False)
     else:
-        raise FileNotFoundError(
-            "No processed data found. Run `pixi run pipeline` first."
-        )
+        raise FileNotFoundError("No processed data found.")
 
     df["date"]  = pd.to_datetime(df["date"], errors="coerce")
     df["year"]  = df["date"].dt.year
@@ -185,8 +234,58 @@ def load_data() -> pd.DataFrame:
           .fillna(df.get("cluster_label", "Unknown"))
     )
 
-    df = df[df["year"].between(2015, 2024)].copy()
+    df = df[df["year"].between(2019, 2025)].copy()
     return df
+
+
+def normalise_df(df: pd.DataFrame) -> pd.DataFrame:
+    """Normalise both real Phoenix Fire and seed schemas to common columns."""
+    df = df.copy()
+
+    # Date
+    if "datetime" in df.columns and "date" not in df.columns:
+        df["date"] = pd.to_datetime(df["datetime"], errors="coerce")
+    else:
+        df["date"] = pd.to_datetime(df.get("date"), errors="coerce")
+
+    df["year"]     = df["date"].dt.year
+    df["month"]    = df["date"].dt.month
+    df["hour"]     = pd.to_numeric(df.get("hour", pd.Series(dtype=float)), errors="coerce")
+    df["month_name"] = df["month"].apply(lambda m: MONTH_ABBR[int(m)-1] if pd.notna(m) else None)
+    df["season"]   = df["month"].map({
+        12:"Winter", 1:"Winter",  2:"Winter",
+        3:"Spring",  4:"Spring",  5:"Spring",
+        6:"Summer",  7:"Summer",  8:"Summer",
+        9:"Monsoon/Fall", 10:"Monsoon/Fall", 11:"Monsoon/Fall",
+    })
+    df["dow_name"]  = df["date"].dt.day_name()
+    df["is_weekend"] = df["date"].dt.dayofweek >= 5
+
+    # Incident type — real data uses NATURE_TEXT
+    if "incident_type" not in df.columns:
+        df["incident_type"] = df.get("nature_text", df.get("NATURE_TEXT", "Unknown"))
+
+    # County — real data is all Maricopa
+    if "county" not in df.columns:
+        df["county"] = "Maricopa"
+
+    # Cluster label
+    df["cluster_label"] = (
+        df.get("behavioral_cluster", pd.Series(dtype=str))
+          .map(CLUSTER_LABELS)
+          .fillna("Unknown")
+    )
+
+    # Time of day bucket
+    if "time_of_day_bucket" not in df.columns:
+        df["time_of_day_bucket"] = df["hour"].apply(
+            lambda h: ("dawn"  if  5 <= h <  9 else
+                       "day"   if  9 <= h < 17 else
+                       "dusk"  if 17 <= h < 21 else
+                       "night") if pd.notna(h) else "day"
+        )
+
+    return df[df["year"].between(2019, 2025)].copy()
 
 
 # ── Plot 01 — Annual volume ────────────────────────────────────────────────
@@ -696,14 +795,17 @@ def write_summary_csv(df: pd.DataFrame) -> None:
 # ── Main ───────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    console.rule("[bold]RIDGELINE — Behavioral Cluster Analysis[/bold]")
+    console.rule("[bold]RIDGELINE — Phoenix Fire Real Data Analysis[/bold]")
 
     df = load_data()
+    df = normalise_df(df)
+
+    src = df["data_source_label"].iloc[0] if "data_source_label" in df.columns else "unknown"
     n_years = df["year"].nunique()
     console.print(
         f"  [cyan]{len(df):,}[/cyan] records · "
         f"[cyan]{n_years}[/cyan] years · "
-        f"[cyan]{df['cluster_label'].nunique()}[/cyan] clusters\n"
+        f"source: [cyan]{src}[/cyan]\n"
     )
 
     plot_annual_volume(df)

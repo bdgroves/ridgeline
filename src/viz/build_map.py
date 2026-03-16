@@ -83,7 +83,8 @@ def load_incidents() -> pd.DataFrame:
     # LA data coming soon — FOIA in progress
 
     if not frames:
-        console.print("[yellow]No real data — run `pixi run phoenix` and `pixi run la`[/yellow]")
+        console.print("[yellow]No geocoded data — map will show GIS layers only[/yellow]")
+        console.print("[dim]Run `pixi run geocode` locally to add incident dots[/dim]")
         return pd.DataFrame()
 
     combined = pd.concat(frames, ignore_index=True)
