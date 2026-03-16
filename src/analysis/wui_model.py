@@ -71,21 +71,31 @@ def apply_theme(fig, axes) -> None:
 
 
 def load_data() -> pd.DataFrame:
-    parquet = PROC_DIR / "sar_incidents_clean.parquet"
-    csv     = PROC_DIR / "sar_incidents_clean.csv"
-    if parquet.exists():
-        df = pd.read_parquet(parquet)
-    elif csv.exists():
-        df = pd.read_csv(csv, low_memory=False)
+    # Priority: geocoded → clean → error
+    for path in [
+        PROC_DIR / "phoenix_fire_sar_geocoded.parquet",
+        PROC_DIR / "phoenix_fire_sar_clean.parquet",
+    ]:
+        if path.exists():
+            df = pd.read_parquet(path)
+            break
     else:
-        raise FileNotFoundError("Run `pixi run pipeline` first.")
+        raise FileNotFoundError("Run `pixi run phoenix` first.")
 
-    df["date"]  = pd.to_datetime(df["date"], errors="coerce")
-    df["year"]  = df["date"].dt.year
-    df["month"] = df["date"].dt.month
-    df["hour"]  = pd.to_numeric(df.get("hour", pd.Series(dtype=float)), errors="coerce")
+    if "date" not in df.columns and "datetime" in df.columns:
+        df["date"] = pd.to_datetime(df["datetime"], errors="coerce")
+    else:
+        df["date"] = pd.to_datetime(df.get("date"), errors="coerce")
+
+    df["year"]       = df["date"].dt.year
+    df["month"]      = df["date"].dt.month
+    df["hour"]       = pd.to_numeric(df.get("hour", pd.Series(dtype=float)), errors="coerce")
     df["is_weekend"] = df["date"].dt.dayofweek >= 5
-    return df[df["year"].between(2015, 2024)].copy()
+
+    if "behavioral_cluster" not in df.columns:
+        df["behavioral_cluster"] = "recreational_underequipped"
+
+    return df[df["year"].between(2019, 2025)].copy()
 
 
 def build_model_df(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
