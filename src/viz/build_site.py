@@ -72,9 +72,10 @@ def load_summary() -> dict:
         sar_mask |= incident.str.contains(term, na=False)
     sar = df[sar_mask]
 
-    # Heat-related
-    heat_mask = incident.str.contains("heat", na=False)
-    pct_heat = round(heat_mask[sar_mask].mean() * 100, 1) if len(sar) else 0
+    # Heat-related — Phoenix Fire codes as "heat exhaustion", "heat emergency", "heat stroke"
+    heat_mask = incident.str.contains("heat exhaust|heat stroke|heat emerg|hypertherm", na=False)
+    # Also check against full df not just sar subset
+    pct_heat = round(heat_mask.sum() / len(df) * 100, 1) if len(df) else 0
 
     # Weekend
     if "is_weekend" in df.columns:
