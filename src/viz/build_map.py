@@ -283,18 +283,55 @@ def build_map(df: pd.DataFrame) -> folium.Map:
 
             fg = folium.FeatureGroup(name=f"⬤ {label}", show=True)
             for _, row in sub.iterrows():
-                popup_html = (
-                    f"<div style='font-family:monospace;font-size:11px;min-width:190px;"
-                    f"line-height:1.6;background:#0d0f0c;color:#d4cbb8;"
-                    f"padding:8px;border:1px solid {color};'>"
-                    f"<span style='color:{color};font-weight:bold;'>{label}</span><br>"
-                    f"<b>{row.get('location_name','')}</b><br>"
-                    f"<span style='color:#c8a96e;'>{row.get('incident_type','')}</span><br>"
-                    f"📅 {str(row.get('date',''))[:10]} &nbsp;🕐 {row.get('time_of_day_bucket','')}<br>"
-                    f"📞 {row.get('caller_context','')}<br>"
-                    f"🏃 {row.get('activity_at_onset','')}"
-                    f"</div>"
-                )
+                # ── Sitrep fields ──────────────────────────────────────────
+                date_str     = str(row.get("date", ""))[:10]
+                hour         = row.get("hour", None)
+                hour_str     = f"{int(hour):02d}:00" if pd.notna(hour) else "—"
+                tod          = str(row.get("time_of_day_bucket", "")).upper()
+                location     = str(row.get("location_name", "")).strip()
+                inc_type     = str(row.get("incident_type", "")).upper()
+                cluster_lbl  = label.upper()
+                year         = str(row.get("year", ""))
+                weekend      = row.get("is_weekend", False)
+                dow          = "WEEKEND" if weekend else "WEEKDAY"
+                MONTHS = ["","JAN","FEB","MAR","APR","MAY","JUN",
+                           "JUL","AUG","SEP","OCT","NOV","DEC"]
+                # Derive month from date string — always available
+                try:
+                    month_str = MONTHS[int(str(row.get("date",""))[:7].split("-")[1])]
+                except (ValueError, IndexError, AttributeError):
+                    month_num = row.get("month", None)
+                    try:
+                        month_str = MONTHS[int(float(month_num))]
+                    except Exception:
+                        month_str = "—"
+
+                popup_html = f"""
+<div style='font-family:monospace;font-size:10px;width:260px;
+            line-height:1.7;background:#0d0f0c;color:#d4cbb8;
+            padding:10px 12px;border:1px solid {color};
+            box-shadow:0 2px 8px rgba(0,0,0,0.8);'>
+
+  <div style='color:{color};font-size:9px;letter-spacing:2px;
+              margin-bottom:6px;border-bottom:1px solid #2e3429;padding-bottom:4px;'>
+    ▶ RIDGELINE // SITREP
+  </div>
+
+  <div style='color:#c8a96e;font-weight:bold;font-size:11px;margin-bottom:2px;'>
+    {inc_type}
+  </div>
+
+  <div style='color:#d4cbb8;margin-bottom:6px;'>
+    {location}
+  </div>
+
+<div style='border-top:1px solid #2e3429;margin-top:6px;padding-top:6px;'><div style='color:#6b6a5e;font-size:9px;'>DATE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TIME</div><div style='color:{color};margin-bottom:4px;'>{date_str} &nbsp;&nbsp; {hour_str} {tod}</div><div style='color:#6b6a5e;font-size:9px;'>DOW &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MONTH</div><div style='color:#d4cbb8;margin-bottom:4px;'>{dow} &nbsp;&nbsp; {month_str} {year}</div><div style='color:#6b6a5e;font-size:9px;'>CLUSTER</div><div style='color:{color};font-size:9px;margin-bottom:2px;'>{cluster_lbl}</div><div style='color:#6b6a5e;font-size:9px;'>CITY</div><div style='color:#d4cbb8;font-size:9px;'>PHOENIX · AZ</div></div>
+
+  <div style='color:#6b6a5e;font-size:8px;margin-top:6px;
+              border-top:1px solid #2e3429;padding-top:4px;'>
+    SOURCE: PHOENIX FIRE DEPT OPEN DATA
+  </div>
+</div>"""
                 # Small jitter so incidents don't stack exactly on trailhead pins
                 import random as _rnd
                 lat_j = row["latitude"]  + _rnd.gauss(0, 0.003)
@@ -307,7 +344,7 @@ def build_map(df: pd.DataFrame) -> folium.Map:
                     fill_color=color,
                     fill_opacity=0.88,
                     weight=1.5,
-                    popup=folium.Popup(popup_html, max_width=230),
+                    popup=folium.Popup(popup_html, max_width=280),
                     tooltip=f"{label} — {row.get('incident_type','')}",
                 ).add_to(fg)
             fg.add_to(m)
