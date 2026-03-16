@@ -101,29 +101,36 @@ def load_data() -> pd.DataFrame:
 def build_model_df(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
     """
     Build feature matrix X and binary target y.
-    Target: 1 = full rescue required, 0 = self-rescue / false alarm / refused transport
+    Target: 1 = mountain rescue required, 0 = flood/water/other
+    Based on real Phoenix Fire incident_type field.
     """
-    rescue_outcomes = {"Rescued / Evacuated", "Fatality"}
     df = df.copy()
-    df["target"] = df["outcome"].isin(rescue_outcomes).astype(int)
 
-    # Numeric features
-    num_cols = ["hour", "month", "is_weekend", "subjects_total",
-                "distance_from_trailhead_m", "duration_hours"]
+    # Target: mountain rescue = 1, everything else = 0
+    incident = df.get("incident_type", pd.Series("", index=df.index)).fillna("").str.lower()
+    df["target"] = incident.str.contains("mountain rescue", na=False).astype(int)
+
+    # Numeric features available in real data
+    num_cols = ["hour", "month", "is_weekend"]
     for c in num_cols:
         if c not in df.columns:
             df[c] = np.nan
 
-    # One-hot: behavioral_cluster, edge_type
-    cat_cols = ["behavioral_cluster", "edge_type"]
+    # One-hot: behavioral_cluster
     dummies = []
-    for c in cat_cols:
-        if c in df.columns:
-            d = pd.get_dummies(df[c].fillna("unknown"), prefix=c, drop_first=True)
-            dummies.append(d)
+    if "behavioral_cluster" in df.columns:
+        d = pd.get_dummies(df["behavioral_cluster"].fillna("unknown"),
+                           prefix="cluster", drop_first=True)
+        dummies.append(d)
+
+    # Time of day bucket
+    if "time_of_day_bucket" in df.columns:
+        d = pd.get_dummies(df["time_of_day_bucket"].fillna("day"),
+                           prefix="tod", drop_first=True)
+        dummies.append(d)
 
     X = pd.concat(
-        [df[num_cols].fillna(df[num_cols].median())] + dummies,
+        [df[num_cols].fillna(0)] + dummies,
         axis=1
     ).astype(float)
     y = df["target"]
