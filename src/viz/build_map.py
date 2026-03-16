@@ -57,79 +57,56 @@ CLUSTER_LABELS = {
 
 
 def load_incidents() -> pd.DataFrame:
-    """Load real data from all available cities. Seed data retired."""
-    frames = []
+    """
+    Load SAR incidents from pre-exported GeoJSON (tracked in git).
+    Falls back to geocoded parquet if available locally.
+    GeoJSON ensures production map always has incident dots.
+    """
+    import json
 
-    # ── Phoenix ───────────────────────────────────────────────────────────
+    # ── Primary: pre-exported GeoJSON (tracked in git, works in CI) ───────
+    geojson_path = EXT_DIR / "phoenix_sar_incidents.geojson"
+    if geojson_path.exists():
+        with open(geojson_path) as f:
+            gj = json.load(f)
+        rows = []
+        for feat in gj.get("features", []):
+            props = feat.get("properties", {})
+            coords = feat.get("geometry", {}).get("coordinates", [None, None])
+            rows.append({**props,
+                         "longitude": coords[0],
+                         "latitude":  coords[1]})
+        df = pd.DataFrame(rows)
+        console.print(f"  [green]✓[/green] Phoenix: [cyan]{len(df):,}[/cyan] SAR incidents (GeoJSON)")
+        return df
+
+    # ── Fallback: geocoded parquet (local only) ────────────────────────────
     phx_geo = PROC_DIR / "phoenix_fire_sar_geocoded.parquet"
-    phx_raw = PROC_DIR / "phoenix_fire_sar_clean.parquet"
     if phx_geo.exists():
         df = pd.read_parquet(phx_geo)
-        df["city"] = df.get("city", "Phoenix")
-        df["data_source_label"] = "phoenix_fire"
         if "behavioral_cluster" not in df.columns:
             df["behavioral_cluster"] = "recreational_underequipped"
-        frames.append(df)
-        console.print(f"  [green]✓[/green] Phoenix: [cyan]{len(df):,}[/cyan] geocoded incidents")
-    elif phx_raw.exists():
-        df = pd.read_parquet(phx_raw)
-        df["city"] = "Phoenix"
-        df["data_source_label"] = "phoenix_fire_ungeocoded"
-        if "behavioral_cluster" not in df.columns:
-            df["behavioral_cluster"] = "recreational_underequipped"
-        frames.append(df)
-        console.print(f"  [yellow]⚠[/yellow] Phoenix: ungeocoded — run `pixi run geocode`")
+        incident = df["incident_type"].fillna("").str.lower()
+        SAR_STRICT = ["mountain rescue","water rescue","swift water","technical rescue",
+                      "heat exhaustion","heat stroke","lost person",
+                      "check flooding condition","stranded"]
+        mask = pd.Series(False, index=df.index)
+        for term in SAR_STRICT:
+            mask |= incident.str.contains(term, na=False)
+        df = df[mask].dropna(subset=["latitude","longitude"]).copy()
+        console.print(f"  [green]✓[/green] Phoenix: [cyan]{len(df):,}[/cyan] SAR incidents (parquet)")
+        return df
 
-    # LA data coming soon — FOIA in progress
+    console.print("[yellow]No incident data — map will show GIS layers only[/yellow]")
+    return pd.DataFrame()
 
-    if not frames:
-        console.print("[yellow]No geocoded data — map will show GIS layers only[/yellow]")
-        console.print("[dim]Run `pixi run geocode` locally to add incident dots[/dim]")
-        return pd.DataFrame()
-
-    combined = pd.concat(frames, ignore_index=True)
-    combined = combined.dropna(subset=["latitude","longitude"])
+    combined = pd.DataFrame()  # unreachable — keeps linter happy
     combined = combined[
         combined["latitude"].between(30.0, 42.0) &
         combined["longitude"].between(-120.0, -109.0)
     ].copy()
 
-    # ── Filter to SAR-priority incidents only ─────────────────────────────
-    # Full dataset (80k+) produces a 130MB map file — too large for Pages.
-    # Keep: mountain rescue, water rescue, flood, crisis care, WUI-address matches
-    # Drop: alarm indication, debris fire, vehicle fire, dumpster fire etc.
-    # Strict SAR-only filter — explicit rescue/mountain/water calls only
-    # Strips out the 69k blank-code address matches, alarm calls, debris fires etc.
-    SAR_STRICT = [
-        "mountain rescue",
-        "water rescue",
-        "swift water",
-        "technical rescue",
-        "cliff rescue",
-        "trail rescue",
-        "heat exhaustion",
-        "heat stroke",
-        "lost person",
-        "search and rescue",
-        "check flooding condition",
-        "flood rescue",
-        "stranded",
-    ]
-    if "incident_type" in combined.columns:
-        nature = combined["incident_type"].fillna("").str.lower()
-        sar_mask = pd.Series(False, index=combined.index)
-        for term in SAR_STRICT:
-            sar_mask |= nature.str.contains(term, na=False)
-        filtered = combined[sar_mask].copy()
-        console.print(
-            f"  [green]✓[/green] Strict SAR: [cyan]{len(filtered):,}[/cyan] "
-            f"explicit rescue calls (of {len(combined):,} geocoded)"
-        )
-        combined = filtered
 
-    n_cities = combined["city"].nunique() if "city" in combined.columns else "?"
-    console.print(f"  [green]✓[/green] Map dataset: [cyan]{len(combined):,}[/cyan] incidents · {n_cities} cities")
-    return combined
 
 
 def load_geojson(path: Path) -> dict | None:
