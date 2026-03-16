@@ -80,25 +80,7 @@ def load_incidents() -> pd.DataFrame:
         frames.append(df)
         console.print(f"  [yellow]⚠[/yellow] Phoenix: ungeocoded — run `pixi run geocode`")
 
-    # ── Los Angeles ───────────────────────────────────────────────────────
-    la_geo  = PROC_DIR / "la_fire_sar_geocoded.parquet"
-    la_raw  = PROC_DIR / "la_fire_sar_clean.parquet"
-    if la_geo.exists():
-        df = pd.read_parquet(la_geo)
-        df["city"] = df.get("city", "Los Angeles")
-        df["data_source_label"] = "lafd"
-        if "behavioral_cluster" not in df.columns:
-            df["behavioral_cluster"] = "recreational_underequipped"
-        frames.append(df)
-        console.print(f"  [green]✓[/green] LA: [cyan]{len(df):,}[/cyan] geocoded incidents")
-    elif la_raw.exists():
-        df = pd.read_parquet(la_raw)
-        df["city"] = df.get("city", "Los Angeles")
-        df["data_source_label"] = "lafd_ungeocoded"
-        if "behavioral_cluster" not in df.columns:
-            df["behavioral_cluster"] = "recreational_underequipped"
-        frames.append(df)
-        console.print(f"  [yellow]⚠[/yellow] LA: ungeocoded — run `pixi run geocode`")
+    # LA data coming soon — FOIA in progress
 
     if not frames:
         console.print("[yellow]No real data — run `pixi run phoenix` and `pixi run la`[/yellow]")

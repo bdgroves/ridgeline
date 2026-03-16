@@ -219,50 +219,7 @@ def main() -> None:
         for name, count in top.items():
             console.print(f"  {str(name):<45} {count:>5}")
 
-    # ── Los Angeles ────────────────────────────────────────────────────────
-    la_parquet = PROC_DIR / "la_fire_sar_clean.parquet"
-    if la_parquet.exists():
-        console.print("\n")
-        console.rule("[bold]Geocoding LA Fire data[/bold]")
-        la_df = pd.read_parquet(la_parquet)
-
-        # Prioritise: mountain rescue + WUI address matches
-        la_priority = la_df[
-            la_df.get("filter_method", pd.Series(dtype=str)).isin(["wui_address","both"]) |
-            la_df.get("incident_type", pd.Series(dtype=str)).str.lower().str.contains("rescue|mountain|trail", na=False)
-        ].copy()
-
-        la_unique = la_priority["location_name"].dropna().unique()
-        console.print(f"  LA priority subset: [cyan]{len(la_priority):,}[/cyan] incidents, [cyan]{len(la_unique):,}[/cyan] unique addresses")
-
-        la_cache: dict = {}
-        with httpx.Client() as client:
-            with Progress(SpinnerColumn(), TextColumn("{task.description}"),
-                          BarColumn(), MofNCompleteColumn(), TimeElapsedColumn(),
-                          console=console) as prog:
-                task = prog.add_task("Geocoding LA…", total=len(la_unique))
-                for addr in la_unique:
-                    if addr not in la_cache:
-                        la_cache[addr] = geocode_la_address(addr, client)
-                        time.sleep(0.05)
-                    prog.advance(task)
-
-        la_hits = sum(1 for v in la_cache.values() if v is not None)
-        console.print(f"  LA geocoded: [green]{la_hits:,}[/green] / {len(la_cache):,}")
-
-        la_priority["latitude"]  = la_priority["location_name"].map(
-            lambda a: la_cache.get(a, (None,None))[0] if la_cache.get(a) else None)
-        la_priority["longitude"] = la_priority["location_name"].map(
-            lambda a: la_cache.get(a, (None,None))[1] if la_cache.get(a) else None)
-
-        la_geocoded = la_priority.dropna(subset=["latitude","longitude"])
-        la_out = PROC_DIR / "la_fire_sar_geocoded.parquet"
-        la_geocoded.to_parquet(la_out, index=False)
-        console.print(f"  [green]✓[/green] LA geocoded → {la_out.name} ({len(la_geocoded):,} incidents)")
-    else:
-        console.print("[yellow]No LA data — run `pixi run la` to fetch[/yellow]")
-
-    console.rule("[green]Geocoding done — PHX + LA[/green]")
+    console.rule("[green]Geocoding done — Phoenix[/green]")
 
 
 if __name__ == "__main__":

@@ -8,12 +8,10 @@ platforms = ["win-64", "linux-64"]
 
 [tasks]
 # ── Data pipeline ──────────────────────────────────────────────────────────
-ingest    = "python src/ingest/fetch_nsar.py"
 phoenix   = "python src/ingest/fetch_phoenix_fire.py"
-la        = "python src/ingest/fetch_la_fire.py"
 geocode   = "python src/ingest/geocode_phoenix.py"
 clean     = "python src/ingest/clean_incidents.py"
-pipeline  = { depends-on = ["ingest", "clean"] }
+pipeline  = { depends-on = ["phoenix", "geocode"] }
 
 # ── Analysis ───────────────────────────────────────────────────────────────
 stats     = "python src/analysis/sar_stats.py"
