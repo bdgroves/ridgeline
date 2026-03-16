@@ -160,7 +160,7 @@ def write_index(summary: dict) -> None:
   <div class="kpi-row">
     <div class="kpi">
       <div class="kpi-label">Total Incidents</div>
-      <div class="kpi-value">{summary.get('total_incidents', '—'):,}</div>
+      <div class="kpi-value">{summary.get('total_incidents', 0):,}</div>
       <div class="kpi-sub">{summary.get('year_range','')}</div>
     </div>
     <div class="kpi">
