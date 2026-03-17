@@ -123,13 +123,14 @@ def load_geojson(path: Path) -> dict | None:
 def build_map(df: pd.DataFrame) -> folium.Map:
     # Centre on AZ WUI corridor midpoint
     m = folium.Map(
-        location=[34.5, -116.5],     # midpoint PHX-LA corridor
-        zoom_start=7,
+        location=[33.52, -112.00],   # Phoenix WUI core — Camelback/South Mtn
+        zoom_start=11,
         tiles=None,
         prefer_canvas=True,
     )
 
     # ── Base tiles — dark first so it's the default ────────────────────────
+    # Dark CARTO — default (first tile layer = active on load)
     folium.TileLayer(
         tiles="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
         attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
@@ -137,6 +138,15 @@ def build_map(df: pd.DataFrame) -> folium.Map:
         max_zoom=19,
     ).add_to(m)
 
+    # OpenStreetMap
+    folium.TileLayer(
+        tiles="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        name="OpenStreetMap",
+        max_zoom=19,
+    ).add_to(m)
+
+    # Satellite
     folium.TileLayer(
         tiles="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
         attr="Esri",
@@ -149,7 +159,7 @@ def build_map(df: pd.DataFrame) -> folium.Map:
     # Maricopa parks polygons
     maricopa_parks = load_geojson(EXT_DIR / "maricopa_parks.geojson")
     if maricopa_parks:
-        fg_parks_m = folium.FeatureGroup(name="Maricopa County Parks", show=True)
+        fg_parks_m = folium.FeatureGroup(name="Maricopa County Parks", show=False)
         folium.GeoJson(
             maricopa_parks,
             style_function=lambda _: {
