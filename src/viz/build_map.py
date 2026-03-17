@@ -35,24 +35,27 @@ console = Console()
 
 # ── Palette — matches sar_stats.py ────────────────────────────────────────
 CLUSTER_COLORS = {
-    "dog_walker":                   "#c8a96e",
-    "casual_proximity":             "#4a8fa8",
-    "party_spillover":              "#d94f1e",
-    "youth_incident":               "#7a9e7e",
-    "homeless_medical":             "#6b6a5e",
     "recreational_underequipped":   "#e8793a",
-    "flash_flood_stranded":         "#5ba3c0",
-    "unknown":                      "#3a4535",
+    "flash_flood_stranded":         "#4a9fd4",
+    "unhoused_encampment":          "#95a5a6",
+    "wildland_fire":                "#d94f1e",
+    "dog_walker":                   "#f5a623",
+    "casual_proximity":             "#7ed321",
+    "party_social_spillover":       "#c8a96e",
+    "youth_teen":                   "#9b59b6",
+    "unknown":                      "#555555",
 }
 
 CLUSTER_LABELS = {
+    "recreational_underequipped":   "Recreational - Underequipped",
+    "flash_flood_stranded":         "Flash Flood Stranded",
+    "unhoused_encampment":          "Crisis / Behavioral Health",
+    "wildland_fire":                "Wildland Fire",
     "dog_walker":                   "Dog Walker",
     "casual_proximity":             "Casual Proximity",
-    "party_spillover":              "Party / Social Spillover",
-    "youth_incident":               "Youth / Teen",
-    "homeless_medical":             "Unhoused / Encampment",
-    "recreational_underequipped":   "Recreational — Underequipped",
-    "flash_flood_stranded":         "Flash Flood Stranded",
+    "party_social_spillover":       "Party / Social Spillover",
+    "youth_teen":                   "Youth / Teen",
+    "unknown":                      "Unknown",
 }
 
 
@@ -275,7 +278,7 @@ def build_map(df: pd.DataFrame) -> folium.Map:
     if not df.empty:
 
         # Heatmap (all incidents, off by default)
-        fg_heat = folium.FeatureGroup(name="🔥 Incident Heatmap", show=False)
+        fg_heat = folium.FeatureGroup(name="Incident Heatmap", show=False)
         HeatMap(
             df[["latitude","longitude"]].dropna().values.tolist(),
             radius=14, blur=18, max_zoom=13,
@@ -285,13 +288,15 @@ def build_map(df: pd.DataFrame) -> folium.Map:
 
         # One CircleMarker FeatureGroup per cluster — colors render correctly
         cluster_col = "behavioral_cluster"
+        if cluster_col in df.columns:
+            console.print(f"  Cluster distribution: {df[cluster_col].value_counts().to_dict()}")
         for cluster_key, color in CLUSTER_COLORS.items():
             label = CLUSTER_LABELS.get(cluster_key, cluster_key)
             sub   = df[df[cluster_col] == cluster_key] if cluster_col in df.columns else pd.DataFrame()
             if sub.empty:
                 continue
 
-            fg = folium.FeatureGroup(name=f"⬤ {label}", show=True)
+            fg = folium.FeatureGroup(name=label, show=True)
             for _, row in sub.iterrows():
                 # ── Sitrep fields ──────────────────────────────────────────
                 date_str     = str(row.get("date", ""))[:10]
@@ -366,8 +371,17 @@ def build_map(df: pd.DataFrame) -> folium.Map:
     legend_html = _build_legend()
     m.get_root().html.add_child(folium.Element(legend_html))
 
-    # ── Layer control ──────────────────────────────────────────────────────
+    # ── Layer control — collapsed by default, scrollable when open ─────────
     folium.LayerControl(collapsed=False, position="topright").add_to(m)
+    m.get_root().header.add_child(folium.Element(
+        "<style>"
+        ".leaflet-control-layers{"
+        "max-height:calc(100vh - 100px) !important;"
+        "overflow-y:auto !important;"
+        "scrollbar-width:thin;"
+        "}"
+        "</style>"
+    ))
 
     return m
 
@@ -427,7 +441,9 @@ def main() -> None:
     m = build_map(df)
 
     out = SITE_DIR / "map.html"
-    m.save(str(out))
+    # Save with explicit UTF-8 to prevent Windows cp1252 encoding drops
+    html_content = m.get_root().render()
+    out.write_text(html_content, encoding="utf-8")
     console.print(f"\n  [green]✓[/green] map.html ({out.stat().st_size:,} bytes)")
     console.rule("[green]Map build done[/green]")
 

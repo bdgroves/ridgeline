@@ -15,10 +15,49 @@ EXT_DIR  = ROOT / "data" / "external"
 df = pd.read_parquet(PROC_DIR / "phoenix_fire_sar_geocoded.parquet")
 
 SAR_STRICT = [
-    "mountain rescue", "water rescue", "swift water",
-    "technical rescue", "heat exhaustion", "heat stroke",
-    "lost person", "check flooding condition", "stranded",
+    # Mountain / terrain
+    "mountain rescue",
+    "tree rescue",
+    "confined space rescue",
+    "trench rescue",
+    "rescue service call",
+    "rescue response",
+    "rescue call",
+    "rescue assignment",
+    "heavy rescue assignment",
+    # Water / flood
+    "water rescue",
+    "swift water",
+    "check flooding condition",
+    # Heat
+    "heat exhaustion",
+    "heat stroke",
+    "heat emergency",
+    # Lost / search
+    "lost person",
+    "stranded",
+    # Crisis / behavioral health
+    "crisis care",
+    "police crisis care",
+    # Wildland fire
+    "grass fire",
+    "brush fire",
+    "field fire",
 ]
+
+def assign_cluster(inc: str) -> str:
+    t = str(inc).lower()
+    if any(x in t for x in ["mountain rescue","tree rescue","confined space","trench","heavy rescue"]):
+        return "recreational_underequipped"
+    if any(x in t for x in ["water rescue","swift water","check flooding","stranded"]):
+        return "flash_flood_stranded"
+    if any(x in t for x in ["crisis care","police crisis"]):
+        return "unhoused_encampment"
+    if any(x in t for x in ["grass fire","brush fire","field fire"]):
+        return "wildland_fire"
+    if any(x in t for x in ["heat exhaustion","heat stroke","heat emergency"]):
+        return "recreational_underequipped"
+    return "recreational_underequipped"
 incident = df["incident_type"].fillna("").str.lower()
 mask = pd.Series(False, index=df.index)
 for term in SAR_STRICT:
@@ -50,7 +89,7 @@ for _, row in sar.iterrows():
         },
         "properties": {
             "incident_type":       str(row.get("incident_type", "")),
-            "behavioral_cluster":  str(row.get("behavioral_cluster", "")),
+            "behavioral_cluster":  assign_cluster(row.get("incident_type","")),
             "date":                str(row.get("date", "")),
             "hour":                int(row["hour"]) if pd.notna(row.get("hour")) else None,
             "time_of_day_bucket":  str(row.get("time_of_day_bucket", "")),
