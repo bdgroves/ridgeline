@@ -133,11 +133,13 @@ def build_map(df: pd.DataFrame) -> folium.Map:
     )
 
     # ── Base tiles — dark first so it's the default ────────────────────────
-    # Dark CARTO — default (first tile layer = active on load)
+    # Dark Esri Gray Canvas — default (first tile layer = active on load).
+    # Replaced CARTO dark_all, which now watermarks tiles without an API key.
     folium.TileLayer(
-        tiles="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
-        attr='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
-        name="Dark (CARTO)",
+        tiles="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+        attr="Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors",
+        name="Dark (Esri)",
+        max_native_zoom=16,
         max_zoom=19,
     ).add_to(m)
 
