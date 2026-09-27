@@ -420,7 +420,8 @@ def _build_legend() -> str:
       </div>
       {items}
       <div style="color:#6b6a5e;font-size:9px;margin-top:8px;border-top:1px solid #2e3429;padding-top:6px;">
-        bdgroves.github.io/ridgeline
+        <a href="index.html" style="color:#c8a96e;text-decoration:none;">&larr; Ridgeline report</a>
+        &middot; <a href="https://brooksgroves.com/" style="color:#c8a96e;text-decoration:none;">brooksgroves.com</a>
       </div>
     </div>
     """

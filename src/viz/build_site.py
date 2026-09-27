@@ -218,6 +218,7 @@ def write_index(summary: dict) -> None:
 <body>
 <div class="container">
   <header>
+    <a href="https://brooksgroves.com/" style="display:inline-block;margin-bottom:10px;font-family:monospace;font-size:11px;letter-spacing:1px;color:inherit;opacity:.65;text-decoration:none;">&larr; brooksgroves.com</a>
     <div class="sys-label">▶ RIDGELINE // Wildland-Urban Interface SAR Analysis</div>
     <h1>Ridge<span>line</span></h1>
     <div class="subtitle">Search &amp; Rescue call volume at the wildland-urban interface · Phoenix · Arizona · 2019–2025</div>
