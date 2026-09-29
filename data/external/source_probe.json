@@ -1,0 +1,3549 @@
+{
+ "san_diego_2025": {
+  "url": "https://seshat.datasd.org/fire_ems_incidents/fd_incidents_2025_datasd.csv",
+  "rows": 185920,
+  "fields": [
+   "agency_type",
+   "call_category",
+   "address_city",
+   "jurisdiction",
+   "problem",
+   "date_response",
+   "address_state",
+   "address_zip",
+   "day_response",
+   "month_response",
+   "year_response"
+  ],
+  "sample": [
+   {
+    "agency_type": "Fire",
+    "call_category": "FIRE",
+    "address_city": "SAN DIEGO",
+    "jurisdiction": "San Diego",
+    "problem": "FIRE",
+    "date_response": "2025-12-30 23:59:04",
+    "address_state": "CA",
+    "address_zip": "92130",
+    "day_response": "30",
+    "month_response": "12",
+    "year_response": "2025"
+   },
+   {
+    "agency_type": "Fire",
+    "call_category": "Urgent Response",
+    "address_city": "SAN DIEGO",
+    "jurisdiction": "San Diego",
+    "problem": "Urgent Response",
+    "date_response": "2025-12-30 23:59:02",
+    "address_state": "CA",
+    "address_zip": "92115",
+    "day_response": "30",
+    "month_response": "12",
+    "year_response": "2025"
+   },
+   {
+    "agency_type": "Fire",
+    "call_category": "Life-Threatening Emergency Response",
+    "address_city": "SAN DIEGO",
+    "jurisdiction": "San Diego",
+    "problem": "Life-Threatening Emergency Response",
+    "date_response": "2025-12-30 23:52:11",
+    "address_state": "CA",
+    "address_zip": "92128",
+    "day_response": "30",
+    "month_response": "12",
+    "year_response": "2025"
+   }
+  ],
+  "values:agency_type": {
+   "distinct": 1,
+   "rescue_like": {},
+   "top": [
+    [
+     "Fire",
+     185920
+    ]
+   ]
+  },
+  "values:call_category": {
+   "distinct": 9,
+   "rescue_like": {
+    "RESCUE": 1398
+   },
+   "top": [
+    [
+     "Life-Threatening Emergency Response",
+     109655
+    ],
+    [
+     "Urgent Response",
+     29680
+    ],
+    [
+     "Non-Life-Threatening Response",
+     20261
+    ],
+    [
+     "HAZARD",
+     15577
+    ],
+    [
+     "FIRE",
+     6261
+    ],
+    [
+     "OTHER",
+     1710
+    ],
+    [
+     "RESCUE",
+     1398
+    ],
+    [
+     "SERVICE",
+     1293
+    ],
+    [
+     "EVENTS",
+     85
+    ]
+   ]
+  },
+  "values:problem": {
+   "distinct": 9,
+   "rescue_like": {
+    "RESCUE": 1398
+   },
+   "top": [
+    [
+     "Life-Threatening Emergency Response",
+     109655
+    ],
+    [
+     "Urgent Response",
+     29680
+    ],
+    [
+     "Non-Life-Threatening Response",
+     20261
+    ],
+    [
+     "HAZARD",
+     15577
+    ],
+    [
+     "FIRE",
+     6261
+    ],
+    [
+     "OTHER",
+     1710
+    ],
+    [
+     "RESCUE",
+     1398
+    ],
+    [
+     "SERVICE",
+     1293
+    ],
+    [
+     "EVENTS",
+     85
+    ]
+   ]
+  }
+ },
+ "scottsdale_fire_cfs": {
+  "hub": "https://data.scottsdaleaz.gov",
+  "id": "187dd861ed1c4aecb392fce2ee901c05_20",
+  "service": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/20",
+  "record_count": 193985,
+  "name": "Fire Department Calls for Service",
+  "license": "custom",
+  "modified": 1790499747000,
+  "fields": [
+   [
+    "IncidentKey",
+    "esriFieldTypeOID"
+   ],
+   [
+    "IncidentNumber",
+    "esriFieldTypeString"
+   ],
+   [
+    "IncidentDate",
+    "esriFieldTypeDate"
+   ],
+   [
+    "Description",
+    "esriFieldTypeString"
+   ],
+   [
+    "TypeGroup",
+    "esriFieldTypeString"
+   ],
+   [
+    "SortOrder",
+    "esriFieldTypeString"
+   ],
+   [
+    "IncidentAddress",
+    "esriFieldTypeString"
+   ],
+   [
+    "City",
+    "esriFieldTypeString"
+   ],
+   [
+    "IncidentResponse",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "IncidentType",
+    "esriFieldTypeString"
+   ],
+   [
+    "OBJECTID",
+    "esriFieldTypeDouble"
+   ]
+  ],
+  "geometryType": null,
+  "sample": [
+   {
+    "IncidentKey": 33906,
+    "IncidentNumber": "2254384",
+    "IncidentDate": 1670976000000,
+    "Description": " EMS call, excluding vehicle accident with injury",
+    "TypeGroup": "FALLA",
+    "SortOrder": "Intersection",
+    "IncidentAddress": "E SWEETWATER AV / North 104TH Street",
+    "City": "SCOTTSDALE",
+    "IncidentResponse": 366,
+    "IncidentType": "321 ",
+    "OBJECTID": 1
+   },
+   {
+    "IncidentKey": 33907,
+    "IncidentNumber": "2254385",
+    "IncidentDate": 1670976000000,
+    "Description": " Alarm system sounded due to malfunction",
+    "TypeGroup": "ALARM",
+    "SortOrder": "Street address",
+    "IncidentAddress": "9755 North 90TH Street",
+    "City": "SCOTTSDALE",
+    "IncidentResponse": 190,
+    "IncidentType": "735 ",
+    "OBJECTID": 2
+   },
+   {
+    "IncidentKey": 33910,
+    "IncidentNumber": "2254385",
+    "IncidentDate": 1670976000000,
+    "Description": null,
+    "TypeGroup": "962",
+    "SortOrder": "Street address",
+    "IncidentAddress": "7900 East MOUNTAIN VIEW Road",
+    "City": "SCOTTSDALE",
+    "IncidentResponse": 308,
+    "IncidentType": null,
+    "OBJECTID": 3
+   }
+  ],
+  "values:IncidentNumber": {
+   "distinct": 1000,
+   "rescue_like": {},
+   "top": [
+    [
+     "2636578",
+     8
+    ],
+    [
+     "2613136",
+     6
+    ],
+    [
+     "2600762",
+     6
+    ],
+    [
+     "2623713",
+     6
+    ],
+    [
+     "2620929",
+     6
+    ],
+    [
+     "2623891",
+     6
+    ],
+    [
+     "2550954",
+     6
+    ],
+    [
+     "2603267",
+     6
+    ],
+    [
+     "2556316",
+     6
+    ],
+    [
+     "2553723",
+     6
+    ],
+    [
+     "2308071",
+     5
+    ],
+    [
+     "2630531",
+     4
+    ],
+    [
+     "2617213",
+     4
+    ],
+    [
+     "2623706",
+     4
+    ],
+    [
+     "2619498",
+     4
+    ],
+    [
+     "2638752",
+     4
+    ],
+    [
+     "2620203",
+     4
+    ],
+    [
+     "2555845",
+     4
+    ],
+    [
+     "2613267",
+     4
+    ],
+    [
+     "2608700",
+     4
+    ],
+    [
+     "2634473",
+     4
+    ],
+    [
+     "2625629",
+     4
+    ],
+    [
+     "2603392",
+     4
+    ],
+    [
+     "2635118",
+     4
+    ],
+    [
+     "2612788",
+     4
+    ]
+   ]
+  },
+  "values:Description": {
+   "distinct": 80,
+   "rescue_like": {
+    "EMS Call, Fall Victim, including lift assist for ground level fa": 7572,
+    " Search for person on land": 457,
+    "EMS Call, Heat/Cold Exposure": 398,
+    "Search for person on land": 96,
+    " Water problem, other": 70,
+    " Swift water rescue": 45,
+    "EMS Call, Drowning": 32,
+    "Water problem, other": 16,
+    "Swift water rescue": 12,
+    " Confined space rescue": 2,
+    " Trench/below-grade rescue": 1,
+    " Rescue or EMS standby": 1,
+    " Water leak (includes open hydrant)": 1,
+    " High-angle rescue": 1
+   },
+   "top": [
+    [
+     " EMS call, excluding vehicle accident with injury",
+     97002
+    ],
+    [
+     "None",
+     52396
+    ],
+    [
+     "EMS Call, Fall Victim, including lift assist for ground level fa",
+     7572
+    ],
+    [
+     " Animal problem",
+     5866
+    ],
+    [
+     "EMS Call, Sick Person",
+     5700
+    ],
+    [
+     "EMS Call, Unconscious Problem/ALOC",
+     4056
+    ],
+    [
+     "EMS Call, Chest Pain",
+     2936
+    ],
+    [
+     "Animal problem",
+     2174
+    ],
+    [
+     "EMS Call, Breathing Problems including choking",
+     2146
+    ],
+    [
+     "EMS Call, Traumatic Injury",
+     1378
+    ],
+    [
+     "EMS Call, Abdominal Pain",
+     856
+    ],
+    [
+     "EMS Call, Convulsions/Seizure",
+     850
+    ],
+    [
+     " Public service",
+     642
+    ],
+    [
+     " Motor vehicle/pedestrian accident (MV Ped)",
+     628
+    ],
+    [
+     "EMS Call, Stroke/CVA",
+     598
+    ],
+    [
+     "EMS Call, Hemorrhage/Laceration",
+     556
+    ],
+    [
+     " Lock-out",
+     532
+    ],
+    [
+     " EMS Call, Assault",
+     528
+    ],
+    [
+     " Removal of victim(s) from stalled elevator",
+     523
+    ],
+    [
+     "EMS Call, Cardiac Arrest",
+     488
+    ],
+    [
+     " Building fire",
+     467
+    ],
+    [
+     " Passenger vehicle fire",
+     462
+    ],
+    [
+     " Search for person on land",
+     457
+    ],
+    [
+     "EMS Call, Heat/Cold Exposure",
+     398
+    ],
+    [
+     "EMS Call, Unknown Problem/Person Down",
+     378
+    ]
+   ]
+  },
+  "values:TypeGroup": {
+   "distinct": 205,
+   "rescue_like": {
+    "FALL": 20218,
+    "FALLA": 4951,
+    "FALLM": 1396,
+    "HEAT": 693,
+    "MTNRES": 467,
+    "WATER": 39
+   },
+   "top": [
+    [
+     "None",
+     41642
+    ],
+    [
+     "FALL",
+     20218
+    ],
+    [
+     "ALARM",
+     15096
+    ],
+    [
+     "ILL",
+     11119
+    ],
+    [
+     "ALOC",
+     10993
+    ],
+    [
+     "DB",
+     7808
+    ],
+    [
+     "ILLA",
+     7320
+    ],
+    [
+     "SNAKE",
+     6118
+    ],
+    [
+     "HA",
+     5039
+    ],
+    [
+     "FALLA",
+     4951
+    ],
+    [
+     "INJ",
+     4634
+    ],
+    [
+     "CP",
+     4586
+    ],
+    [
+     "962",
+     3755
+    ],
+    [
+     "CKWELF",
+     3502
+    ],
+    [
+     "UNC",
+     3401
+    ],
+    [
+     "SEIZA",
+     2300
+    ],
+    [
+     "ABD",
+     2007
+    ],
+    [
+     "SERV",
+     1980
+    ],
+    [
+     "MEDALM",
+     1978
+    ],
+    [
+     "CVA",
+     1870
+    ],
+    [
+     "962A",
+     1590
+    ],
+    [
+     "OD",
+     1439
+    ],
+    [
+     "FALLM",
+     1396
+    ],
+    [
+     "INTB",
+     1331
+    ],
+    [
+     "UNKM",
+     1315
+    ]
+   ]
+  },
+  "values:IncidentAddress": {
+   "distinct": 1000,
+   "rescue_like": {
+    "10203 East MCDOWELL MTN RANCH Road": 39,
+    "8502 East TETHER Trail": 8,
+    "E MOUNTAIN VIEW RD S /  A101 ": 6,
+    "E MOUNTAIN VIEW RD / North 104TH Street": 5,
+    "7480 East SWEETWATER Avenue": 5,
+    "4440 North SADDLEBAG Trail": 4,
+    "10918 East MOUNTAIN SPRING Road": 4,
+    "8240 East TETHER Trail": 4,
+    "11513 East BUCKSKIN Trail": 4,
+    "N MARSHALL WY / North GOLDWATER Boulevard": 4,
+    "10906 East BUCKSKIN Trail": 3,
+    "8952 East MOUNTAIN SPRING Road": 3,
+    "7014 East SWEETWATER Avenue": 3,
+    "8770 East WHISPER ROCK Trail": 3,
+    "N LEGEND TRAIL PW / North DESERT RIDGE Drive": 2,
+    "6811 East HORNED OWL Trail": 2,
+    "26024 North HORSESHOE Trail": 2,
+    "10941 East BUCKSKIN Trail": 2,
+    "12555 East SADDLE HORN Trail": 2,
+    "11337 East CINDER CONE Trail": 2,
+    "E SWEETWATER AV / North 91ST Street": 2,
+    "10789 East FALLING STAR Drive": 2,
+    "9898 East CACTUS Trail": 2,
+    "26450 North PASO Trail": 2,
+    "6013 East SMOKEHOUSE Trail": 2,
+    "E TROON MOUNTAIN DR / North 115TH Street": 2,
+    "SCOTTSDALE EB EO /  A202 RED MTN ": 2,
+    "9357 East TRAILSIDE VIEW ": 1,
+    "E MOUNTAIN VIEW RD / North 52ND Street": 1,
+    "N DRINKWATER BL / North BROWN Avenue": 1,
+    "10121 East OLD TRAIL Road": 1
+   },
+   "top": [
+    [
+     "17020 North HAYDEN Road",
+     821
+    ],
+    [
+     "7014 East CAMELBACK Road",
+     630
+    ],
+    [
+     "7370 East GOLD DUST Avenue",
+     525
+    ],
+    [
+     "7575 East PRINCESS Drive",
+     417
+    ],
+    [
+     "7408 East OSBORN Road",
+     275
+    ],
+    [
+     "6599 East THOMAS Road",
+     256
+    ],
+    [
+     "2929 North 70TH Street",
+     226
+    ],
+    [
+     "5001 North SCOTTSDALE Road",
+     156
+    ],
+    [
+     "10330 North SCOTTSDALE Road",
+     109
+    ],
+    [
+     "7373 North SCOTTSDALE Road",
+     91
+    ],
+    [
+     "7114 East STETSON Drive",
+     88
+    ],
+    [
+     "7920 East CHAPARRAL Road",
+     81
+    ],
+    [
+     "7819 East SAN CARLOS Road",
+     75
+    ],
+    [
+     "1201 North GALVIN Parkway",
+     73
+    ],
+    [
+     "7110 East CONTINENTAL Drive",
+     61
+    ],
+    [
+     "9550 East THUNDERBIRD Road",
+     60
+    ],
+    [
+     "7221 East GRANADA Road",
+     58
+    ],
+    [
+     "9551 East REDFIELD Road",
+     56
+    ],
+    [
+     "E FRANK LLOYD WRIGHT BL /  A101 ",
+     54
+    ],
+    [
+     "15802 North 71ST Street",
+     54
+    ],
+    [
+     "6349 North 78TH Street",
+     43
+    ],
+    [
+     "920 North 82ND Street",
+     40
+    ],
+    [
+     "8712 East VIA DE COMMERCIO ",
+     40
+    ],
+    [
+     "7350 North VIA PASEO DEL SUR ",
+     40
+    ],
+    [
+     "7650 East WILLIAMS Drive",
+     40
+    ]
+   ]
+  },
+  "values:IncidentType": {
+   "distinct": 80,
+   "rescue_like": {
+    "EMS Call, Fall Victim, including lift assist for ground level fa": 7572,
+    "EMS Call, Heat/Cold Exposure": 398,
+    "Search for person on land": 96,
+    "EMS Call, Drowning": 32,
+    "Water problem, other": 16,
+    "Swift water rescue": 12
+   },
+   "top": [
+    [
+     "321 ",
+     97002
+    ],
+    [
+     "None",
+     52396
+    ],
+    [
+     "EMS Call, Fall Victim, including lift assist for ground level fa",
+     7572
+    ],
+    [
+     "541 ",
+     5866
+    ],
+    [
+     "EMS Call, Sick Person",
+     5700
+    ],
+    [
+     "EMS Call, Unconscious Problem/ALOC",
+     4056
+    ],
+    [
+     "EMS Call, Chest Pain",
+     2936
+    ],
+    [
+     "Animal problem",
+     2174
+    ],
+    [
+     "EMS Call, Breathing Problems including choking",
+     2146
+    ],
+    [
+     "EMS Call, Traumatic Injury",
+     1378
+    ],
+    [
+     "EMS Call, Abdominal Pain",
+     856
+    ],
+    [
+     "EMS Call, Convulsions/Seizure",
+     850
+    ],
+    [
+     "553 ",
+     642
+    ],
+    [
+     "323 ",
+     628
+    ],
+    [
+     "EMS Call, Stroke/CVA",
+     598
+    ],
+    [
+     "EMS Call, Hemorrhage/Laceration",
+     556
+    ],
+    [
+     "511 - Lock",
+     532
+    ],
+    [
+     " EMS Call, Assault",
+     528
+    ],
+    [
+     "353 ",
+     523
+    ],
+    [
+     "EMS Call, Cardiac Arrest",
+     488
+    ],
+    [
+     "111 ",
+     467
+    ],
+    [
+     "131 ",
+     462
+    ],
+    [
+     "341 ",
+     457
+    ],
+    [
+     "EMS Call, Heat/Cold Exposure",
+     398
+    ],
+    [
+     "EMS Call, Unknown Problem/Person Down",
+     378
+    ]
+   ]
+  },
+  "span:IncidentDate": {
+   "lo": 1670976000000,
+   "hi": 1790467200000
+  }
+ },
+ "boulder_fire_unit_response": {
+  "hub": "https://open-data.bouldercolorado.gov",
+  "id": "6ae16fc5d05b46189800f189a587a223_0",
+  "service": "https://maps.bouldercolorado.gov/arcgis/rest/services/fire/FireUnitResponseOpenData/MapServer/0",
+  "record_count": 278906,
+  "name": "Unit Response For Boulder Fire-Rescue",
+  "license": "CC0-1.0",
+  "modified": 1600396457000,
+  "fields": [
+   [
+    "OBJECTID",
+    "esriFieldTypeOID"
+   ],
+   [
+    "ID",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "MASTERINCIDENTNUMBER",
+    "esriFieldTypeString"
+   ],
+   [
+    "RESPONSEDATE",
+    "esriFieldTypeDate"
+   ],
+   [
+    "RESPONSEHOUR",
+    "esriFieldTypeSmallInteger"
+   ],
+   [
+    "RESPONSEDOW",
+    "esriFieldTypeSmallInteger"
+   ],
+   [
+    "RESPONSEYEAR",
+    "esriFieldTypeSmallInteger"
+   ],
+   [
+    "RESPONSEPLAN",
+    "esriFieldTypeString"
+   ],
+   [
+    "INCIDENTTYPE",
+    "esriFieldTypeString"
+   ],
+   [
+    "PROBLEM",
+    "esriFieldTypeString"
+   ],
+   [
+    "PROGRAMAREA",
+    "esriFieldTypeString"
+   ],
+   [
+    "CALLTYPE",
+    "esriFieldTypeString"
+   ],
+   [
+    "DETERMINANT",
+    "esriFieldTypeString"
+   ],
+   [
+    "SEVERITY",
+    "esriFieldTypeString"
+   ],
+   [
+    "VEHICLENUM",
+    "esriFieldTypeString"
+   ],
+   [
+    "LOCATIONATASSIGNTIME",
+    "esriFieldTypeString"
+   ],
+   [
+    "LONGATASSIGNTIME",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "LATATASSIGNTIME",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "TIMEPHONEPICKUP",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMECALLCLOSED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEASSIGNED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEENROUTE",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEARRIVED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "FHSHIFT",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHINCIDENTTYPE",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHINCIDENTDESCRIPTION",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHINCIDENTCATEGORY",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHRESPONSECODE",
+    "esriFieldTypeString"
+   ],
+   [
+    "CALLTAKING",
+    "esriFieldTypeString"
+   ],
+   [
+    "TURNOUT",
+    "esriFieldTypeString"
+   ],
+   [
+    "TRAVELTIME",
+    "esriFieldTypeString"
+   ],
+   [
+    "RESPONSETIME",
+    "esriFieldTypeString"
+   ],
+   [
+    "VEHICLEHELLO2HELLO",
+    "esriFieldTypeString"
+   ],
+   [
+    "FIRSTHELLO2HELLO",
+    "esriFieldTypeString"
+   ],
+   [
+    "TURNOUTMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "TRAVELTIMEMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "RESPONSETIMEMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "VEHICLEHELLO2HELLOMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "FIRSTHELLO2HELLOMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "UNITCLEARED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "COMMITTIME",
+    "esriFieldTypeString"
+   ],
+   [
+    "COMMITTIMEMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "TRANSPORTLOCATION",
+    "esriFieldTypeString"
+   ],
+   [
+    "TRANSPORTMODE",
+    "esriFieldTypeString"
+   ],
+   [
+    "TRANSPORTDEPART",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TRANSPORTARRIVED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "SHAPE",
+    "esriFieldTypeGeometry"
+   ]
+  ],
+  "geometryType": "esriGeometryPoint",
+  "sample": [
+   {
+    "OBJECTID": 1,
+    "ID": 2888824,
+    "MASTERINCIDENTNUMBER": "BFD151213-013148",
+    "RESPONSEDATE": 1450040085000,
+    "RESPONSEHOUR": 13,
+    "RESPONSEDOW": 6,
+    "RESPONSEYEAR": 2015,
+    "RESPONSEPLAN": "MED",
+    "INCIDENTTYPE": "FD-H,AMB-H",
+    "PROBLEM": "zStroke (L1)",
+    "PROGRAMAREA": "EMS",
+    "CALLTYPE": "Cardiac and Stroke",
+    "DETERMINANT": null,
+    "SEVERITY": "C",
+    "VEHICLENUM": "2501",
+    "LOCATIONATASSIGNTIME": "Station 1",
+    "LONGATASSIGNTIME": 105280272,
+    "LATATASSIGNTIME": 40022858,
+    "TIMEPHONEPICKUP": null,
+    "TIMECALLCLOSED": 1450043691000,
+    "TIMEASSIGNED": 1450040254000,
+    "TIMEENROUTE": 1450040348000,
+    "TIMEARRIVED": 1450040406000,
+    "FHSHIFT": "B",
+    "FHINCIDENTTYPE": "321 ",
+    "FHINCIDENTDESCRIPTION": "EMS call, excluding vehicle accident with injury",
+    "FHINCIDENTCATEGORY": "EMS",
+    "FHRESPONSECODE": "Emergent",
+    "CALLTAKING": "00:03:08",
+    "TURNOUT": "00:01:34",
+    "TRAVELTIME": "00:00:58",
+    "RESPONSETIME": "00:02:32",
+    "VEHICLEHELLO2HELLO": "00:05:40",
+    "FIRSTHELLO2HELLO": "00:05:40",
+    "TURNOUTMIN": 1.56666667,
+    "TRAVELTIMEMIN": 0.96666667,
+    "RESPONSETIMEMIN": 2.53333333,
+    "VEHICLEHELLO2HELLOMIN": 5.66666667,
+    "FIRSTHELLO2HELLOMIN": 5.66666667,
+    "UNITCLEARED": 1450041020000,
+    "COMMITTIME": "00:10:14",
+    "COMMITTIMEMIN": 10.23333333,
+    "TRANSPORTLOCATION": null,
+    "TRANSPORTMODE": null,
+    "TRANSPORTDEPART": null,
+    "TRANSPORTARRIVED": null
+   },
+   {
+    "OBJECTID": 2,
+    "ID": 2887102,
+    "MASTERINCIDENTNUMBER": "BFD151212-013108",
+    "RESPONSEDATE": 1449915684000,
+    "RESPONSEHOUR": 3,
+    "RESPONSEDOW": 5,
+    "RESPONSEYEAR": 2015,
+    "RESPONSEPLAN": "MED",
+    "INCIDENTTYPE": "FD-C,AMB-C",
+    "PROBLEM": "zPsych/Suicide (L2)",
+    "PROGRAMAREA": "EMS",
+    "CALLTYPE": "Overdose and Psychiatric",
+    "DETERMINANT": null,
+    "SEVERITY": "B",
+    "VEHICLENUM": "AMR7",
+    "LOCATIONATASSIGNTIME": "BROADWAY / BASELINE RD",
+    "LONGATASSIGNTIME": 105263518,
+    "LATATASSIGNTIME": 40000070,
+    "TIMEPHONEPICKUP": null,
+    "TIMECALLCLOSED": 1449917798000,
+    "TIMEASSIGNED": 1449915819000,
+    "TIMEENROUTE": 1449915865000,
+    "TIMEARRIVED": 1449916067000,
+    "FHSHIFT": "A",
+    "FHINCIDENTTYPE": "3211",
+    "FHINCIDENTDESCRIPTION": "EMS call - medical check non-emergent",
+    "FHINCIDENTCATEGORY": "EMS",
+    "FHRESPONSECODE": "Non Emergent",
+    "CALLTAKING": "00:03:06",
+    "TURNOUT": "00:00:46",
+    "TRAVELTIME": "00:03:22",
+    "RESPONSETIME": "00:04:08",
+    "VEHICLEHELLO2HELLO": "00:07:14",
+    "FIRSTHELLO2HELLO": "00:07:14",
+    "TURNOUTMIN": 0.76666667,
+    "TRAVELTIMEMIN": 3.36666667,
+    "RESPONSETIMEMIN": 4.13333333,
+    "VEHICLEHELLO2HELLOMIN": 7.23333333,
+    "FIRSTHELLO2HELLOMIN": 7.23333333,
+    "UNITCLEARED": 1449917798000,
+    "COMMITTIME": "00:28:51",
+    "COMMITTIMEMIN": 28.85,
+    "TRANSPORTLOCATION": null,
+    "TRANSPORTMODE": null,
+    "TRANSPORTDEPART": null,
+    "TRANSPORTARRIVED": null
+   },
+   {
+    "OBJECTID": 3,
+    "ID": 2887108,
+    "MASTERINCIDENTNUMBER": "BFD151212-013109",
+    "RESPONSEDATE": 1449916331000,
+    "RESPONSEHOUR": 3,
+    "RESPONSEDOW": 5,
+    "RESPONSEYEAR": 2015,
+    "RESPONSEPLAN": "MED",
+    "INCIDENTTYPE": "MED",
+    "PROBLEM": "EMSF-All Medical Calls",
+    "PROGRAMAREA": "EMS",
+    "CALLTYPE": "Illness and Other",
+    "DETERMINANT": null,
+    "SEVERITY": null,
+    "VEHICLENUM": "2502",
+    "LOCATIONATASSIGNTIME": "BASELINE RD\\BROADWAY",
+    "LONGATASSIGNTIME": 105264311,
+    "LATATASSIGNTIME": 40000092,
+    "TIMEPHONEPICKUP": null,
+    "TIMECALLCLOSED": 1449920984000,
+    "TIMEASSIGNED": 1449916353000,
+    "TIMEENROUTE": 1449916515000,
+    "TIMEARRIVED": 1449916876000,
+    "FHSHIFT": "B",
+    "FHINCIDENTTYPE": "3211",
+    "FHINCIDENTDESCRIPTION": "EMS call - medical check non-emergent",
+    "FHINCIDENTCATEGORY": "EMS",
+    "FHRESPONSECODE": "Non Emergent",
+    "CALLTAKING": "00:01:27",
+    "TURNOUT": "00:02:42",
+    "TRAVELTIME": "00:06:01",
+    "RESPONSETIME": "00:08:43",
+    "VEHICLEHELLO2HELLO": "00:10:10",
+    "FIRSTHELLO2HELLO": "00:10:10",
+    "TURNOUTMIN": 2.7,
+    "TRAVELTIMEMIN": 6.01666667,
+    "RESPONSETIMEMIN": 8.71666667,
+    "VEHICLEHELLO2HELLOMIN": 10.16666667,
+    "FIRSTHELLO2HELLOMIN": 10.16666667,
+    "UNITCLEARED": 1449917759000,
+    "COMMITTIME": "00:14:43",
+    "COMMITTIMEMIN": 14.71666667,
+    "TRANSPORTLOCATION": null,
+    "TRANSPORTMODE": null,
+    "TRANSPORTDEPART": null,
+    "TRANSPORTARRIVED": null
+   }
+  ],
+  "values:MASTERINCIDENTNUMBER": {
+   "distinct": 1000,
+   "rescue_like": {},
+   "top": [
+    [
+     "BFD191007-011445",
+     9
+    ],
+    [
+     "BFD230426-004919",
+     8
+    ],
+    [
+     "BFD220808-009706",
+     8
+    ],
+    [
+     "BFD190627-006849",
+     7
+    ],
+    [
+     "BFD161220-014592",
+     7
+    ],
+    [
+     "BFD171024-012600",
+     7
+    ],
+    [
+     "BFD230830-010736",
+     7
+    ],
+    [
+     "BFD190829-009567",
+     7
+    ],
+    [
+     "BFD221105-014069",
+     6
+    ],
+    [
+     "BFD170401-003635",
+     6
+    ],
+    [
+     "BFD150610-005827",
+     6
+    ],
+    [
+     "BFD200815-008376",
+     6
+    ],
+    [
+     "BFD170908-010240",
+     6
+    ],
+    [
+     "BFD231202-015478",
+     5
+    ],
+    [
+     "BFD151106-011697",
+     5
+    ],
+    [
+     "BFD200906-009296",
+     5
+    ],
+    [
+     "BFD161021-012017",
+     4
+    ],
+    [
+     "BFD160607-006087",
+     4
+    ],
+    [
+     "BFD230714-008482",
+     4
+    ],
+    [
+     "BFD230328-003634",
+     4
+    ],
+    [
+     "BFD230921-011948",
+     4
+    ],
+    [
+     "BFD201016-011147",
+     4
+    ],
+    [
+     "BFD150923-009763",
+     4
+    ],
+    [
+     "BFD211230-015331",
+     4
+    ],
+    [
+     "BFD221012-012875",
+     4
+    ]
+   ]
+  },
+  "values:INCIDENTTYPE": {
+   "distinct": 46,
+   "rescue_like": {},
+   "top": [
+    [
+     "FD-H,AMB-H",
+     96665
+    ],
+    [
+     "MED",
+     54599
+    ],
+    [
+     "1E",
+     35340
+    ],
+    [
+     "AMB-C",
+     21484
+    ],
+    [
+     "1E, 1AM",
+     19765
+    ],
+    [
+     "FD-C,AMB-C",
+     16190
+    ],
+    [
+     "4E, 1L, 1BC,1AM",
+     7809
+    ],
+    [
+     "2E,1BC",
+     6891
+    ],
+    [
+     "FD-C",
+     3741
+    ],
+    [
+     "2E,1L,1BC,1AM",
+     3120
+    ],
+    [
+     "2E-H, AMB-H",
+     2620
+    ],
+    [
+     "1AM",
+     2498
+    ],
+    [
+     "Extrication",
+     1038
+    ],
+    [
+     "4E, 1L, 2BC,1AM",
+     939
+    ],
+    [
+     "CARE",
+     935
+    ],
+    [
+     "1E,1BC",
+     929
+    ],
+    [
+     "2E,1DV,1BC,1AM",
+     763
+    ],
+    [
+     "1E,1B, 1WL, 1BC",
+     724
+    ],
+    [
+     "AARETECF",
+     511
+    ],
+    [
+     "AAFISTRF",
+     349
+    ],
+    [
+     "AASMOKEF",
+     299
+    ],
+    [
+     "AAEMSF",
+     262
+    ],
+    [
+     "2E,1BC,1AM",
+     231
+    ],
+    [
+     "AAINJACC2F",
+     211
+    ],
+    [
+     "AAFIWILF",
+     171
+    ]
+   ]
+  },
+  "values:PROBLEM": {
+   "distinct": 183,
+   "rescue_like": {
+    "zFall (L1)": 11108,
+    "zFall (L2)": 4537,
+    "zFall (L3)": 3755,
+    "zFall (L4)": 3712,
+    "REWATF-All Water Rescues": 757,
+    "AutoAid: Tech Rescue": 511,
+    "zHeat/Cold Exposure (L2)": 299,
+    "zHeat/Cold Exposure (L1)": 207,
+    "RESCUEF-Special Rescue": 175,
+    "zHeat/Cold Exposure (L3)": 73,
+    "zFall (L1a)": 65,
+    "AutoAid: Rescue Lost Pers": 49,
+    "AutoAid: Water Rescue": 20,
+    "zDrowning/Diving/SCUBA (L1)": 19,
+    "zDrowning/Diving/SCUBA (L1a)": 9,
+    "zDrowning/Diving/SCUBA (L10)": 9,
+    "zFall (L10a)": 7,
+    "zDrowning/Diving/SCUBA (L1a/pd": 6,
+    "zDrowning/Diving/SCUBA (L2)": 3,
+    "zDrown/Dive/SCBA Med Chk (L3)": 1
+   },
+   "top": [
+    [
+     "EMSF-All Medical Calls",
+     54598
+    ],
+    [
+     "FIALAF-Fire Alarm",
+     14364
+    ],
+    [
+     "zSick (L1)",
+     13892
+    ],
+    [
+     "FIREAF-Fire Assist",
+     13548
+    ],
+    [
+     "zUnconscious/Fainting (L1)",
+     12074
+    ],
+    [
+     "zFall (L1)",
+     11108
+    ],
+    [
+     "FISTRF-Struct Fire/Smoke insi",
+     10736
+    ],
+    [
+     "zBreathing Problem (L1)",
+     9162
+    ],
+    [
+     "INJACC2F-Injury Accident J/O",
+     8871
+    ],
+    [
+     "UNACCF-Unknown if injury acc",
+     8382
+    ],
+    [
+     "zSick (L3)",
+     6245
+    ],
+    [
+     "GASF-Gas smell inside a bldg",
+     5899
+    ],
+    [
+     "zChest Pain (L1)",
+     5138
+    ],
+    [
+     "zField EMS Request (L3)",
+     4969
+    ],
+    [
+     "zFall (L2)",
+     4537
+    ],
+    [
+     "FINONF - Non Struct Fire",
+     4507
+    ],
+    [
+     "ALMEDF-Medical Alarm",
+     4130
+    ],
+    [
+     "zBleeding (L1)",
+     3967
+    ],
+    [
+     "zConvulsions/Seizure (L1)",
+     3886
+    ],
+    [
+     "zFall (L3)",
+     3755
+    ],
+    [
+     "zFall (L4)",
+     3712
+    ],
+    [
+     "zPsych/Suicide (L2)",
+     3440
+    ],
+    [
+     "zConvulsions/Seizure (L2)",
+     3350
+    ],
+    [
+     "zStroke (L1)",
+     3094
+    ],
+    [
+     "zOverdose/Poisoning (L1)",
+     3024
+    ]
+   ]
+  },
+  "values:CALLTYPE": {
+   "distinct": 32,
+   "rescue_like": {
+    "Fall and Injury": 34557,
+    "Water Rescue": 751,
+    "Auto-Aid Tech Rescue": 511,
+    "Rescue": 231,
+    "Auto-Aid Fall and Injury": 163,
+    "Auto-Aid Rescue": 49,
+    "Auto-Aid Water Rescue": 20
+   },
+   "top": [
+    [
+     "Illness and Other",
+     90159
+    ],
+    [
+     "Fall and Injury",
+     34557
+    ],
+    [
+     "Seizure and Unconsciousness",
+     22555
+    ],
+    [
+     "Fire Other",
+     20612
+    ],
+    [
+     "MVC",
+     18533
+    ],
+    [
+     "Missing CT",
+     15725
+    ],
+    [
+     "Cardiac and Stroke",
+     15640
+    ],
+    [
+     "Fire Alarm",
+     14347
+    ],
+    [
+     "Structure Fire",
+     10692
+    ],
+    [
+     "Difficulty Breathing",
+     10679
+    ],
+    [
+     "Overdose and Psychiatric",
+     9642
+    ],
+    [
+     "Hazmat",
+     7142
+    ],
+    [
+     "Medical Alarm",
+     4111
+    ],
+    [
+     "Outside Fire",
+     926
+    ],
+    [
+     "Water Rescue",
+     751
+    ],
+    [
+     "Auto-Aid Tech Rescue",
+     511
+    ],
+    [
+     "Mutual Aid",
+     396
+    ],
+    [
+     "Auto-Aid Structure Fire",
+     346
+    ],
+    [
+     "Auto-Aid Smoke Report",
+     299
+    ],
+    [
+     "Auto-Aid Illness and Other",
+     262
+    ],
+    [
+     "Rescue",
+     231
+    ],
+    [
+     "Auto-Aid MVC",
+     211
+    ],
+    [
+     "Auto-Aid Outside Fire",
+     171
+    ],
+    [
+     "Auto-Aid Fall and Injury",
+     163
+    ],
+    [
+     "Transfer",
+     75
+    ]
+   ]
+  },
+  "values:FHINCIDENTTYPE": {
+   "distinct": 161,
+   "rescue_like": {},
+   "top": [
+    [
+     "321 ",
+     28955
+    ],
+    [
+     "    ",
+     27960
+    ],
+    [
+     "311 ",
+     22488
+    ],
+    [
+     "3111",
+     18339
+    ],
+    [
+     "611 ",
+     17507
+    ],
+    [
+     "3210",
+     9555
+    ],
+    [
+     "3211",
+     4746
+    ],
+    [
+     "622 ",
+     4675
+    ],
+    [
+     "324 ",
+     4656
+    ],
+    [
+     "554 ",
+     2680
+    ],
+    [
+     "322 ",
+     2587
+    ],
+    [
+     "412 ",
+     2559
+    ],
+    [
+     "651 ",
+     1868
+    ],
+    [
+     "745 ",
+     1705
+    ],
+    [
+     "111 ",
+     1378
+    ],
+    [
+     "743 ",
+     1330
+    ],
+    [
+     "531 ",
+     1275
+    ],
+    [
+     "671 ",
+     949
+    ],
+    [
+     "323 ",
+     944
+    ],
+    [
+     "735 ",
+     937
+    ],
+    [
+     "522 ",
+     905
+    ],
+    [
+     "113 ",
+     864
+    ],
+    [
+     "744 ",
+     780
+    ],
+    [
+     "733 ",
+     777
+    ],
+    [
+     "353 ",
+     730
+    ]
+   ]
+  },
+  "values:FHINCIDENTDESCRIPTION": {
+   "distinct": 160,
+   "rescue_like": {
+    "Water or steam leak": 905,
+    "Rescue or EMS standby": 574,
+    "Overheated motor": 295,
+    "Excessive heat, scorch burns with no ignition": 275,
+    "Heat from short circuit (wiring), defective/worn": 157,
+    "Swift water rescue": 101,
+    "Search for person in water": 72,
+    "Search for person on land": 69,
+    "Ice rescue": 62,
+    "Heat detector activation due to malfunction": 43,
+    "Water & ice-related rescue, other": 42,
+    "Animal rescue": 41,
+    "High-angle rescue": 41,
+    "Water evacuation": 36,
+    "Swimming/recreational water areas rescue": 28,
+    "Extrication, rescue, Other": 24,
+    "Trench/below-grade rescue": 13,
+    "Overpressure rupture, explosion, overheat other": 7,
+    "Confined space rescue": 3,
+    "Water vehicle fire": 2,
+    "Search for lost person, other": 2
+   },
+   "top": [
+    [
+     "EMS call, excluding vehicle accident with injury",
+     28955
+    ],
+    [
+     "Medical assist, assist EMS crew",
+     22488
+    ],
+    [
+     "Medical, no patient contact",
+     18339
+    ],
+    [
+     "Dispatched & cancelled en route",
+     17507
+    ],
+    [
+     "EMS call - medical check emergent",
+     9555
+    ],
+    [
+     "EMS call - medical check non-emergent",
+     4746
+    ],
+    [
+     "No Incident found on arrival at dispatch address",
+     4675
+    ],
+    [
+     "Motor Vehicle Accident with no injuries",
+     4656
+    ],
+    [
+     "Assist invalid",
+     2680
+    ],
+    [
+     "Motor vehicle accident with injuries",
+     2587
+    ],
+    [
+     "Gas leak (natural gas or LPG)",
+     2559
+    ],
+    [
+     "Smoke scare, odor of smoke",
+     1868
+    ],
+    [
+     "Alarm system activation, no fire - unintentional",
+     1705
+    ],
+    [
+     "Building fire",
+     1378
+    ],
+    [
+     "Smoke detector activation, no fire - unintentional",
+     1330
+    ],
+    [
+     "Smoke or odor removal",
+     1275
+    ],
+    [
+     "HazMat release investigation w/no HazMat",
+     949
+    ],
+    [
+     "Motor vehicle/pedestrian accident (MV Ped)",
+     944
+    ],
+    [
+     "Alarm system sounded due to malfunction",
+     937
+    ],
+    [
+     "Water or steam leak",
+     905
+    ],
+    [
+     "Cooking fire, confined to container",
+     864
+    ],
+    [
+     "Detector activation, no fire - unintentional",
+     780
+    ],
+    [
+     "Smoke detector activation due to malfunction",
+     777
+    ],
+    [
+     "Removal of victim(s) from stalled elevator",
+     730
+    ],
+    [
+     "Carbon monoxide detector activation, no CO",
+     669
+    ]
+   ]
+  },
+  "values:FHINCIDENTCATEGORY": {
+   "distinct": 11,
+   "rescue_like": {},
+   "top": [
+    [
+     "EMS",
+     94274
+    ],
+    [
+     "Good Intent",
+     25603
+    ],
+    [
+     "Public Service",
+     8614
+    ],
+    [
+     "False Alarms",
+     7710
+    ],
+    [
+     "Hazmat",
+     5700
+    ],
+    [
+     "Fire",
+     4930
+    ],
+    [
+     "Explosion/Ruptures",
+     355
+    ],
+    [
+     "Special",
+     69
+    ],
+    [
+     "Severe Weather",
+     44
+    ],
+    [
+     "No Type",
+     1
+    ],
+    [
+     "None",
+     0
+    ]
+   ]
+  },
+  "values:CALLTAKING": {
+   "distinct": 1000,
+   "rescue_like": {},
+   "top": [
+    [
+     "00:00:10",
+     5525
+    ],
+    [
+     "00:00:11",
+     5317
+    ],
+    [
+     "00:00:12",
+     5243
+    ],
+    [
+     "00:00:09",
+     5185
+    ],
+    [
+     "00:00:13",
+     4991
+    ],
+    [
+     "00:00:14",
+     4730
+    ],
+    [
+     "00:00:08",
+     4693
+    ],
+    [
+     "00:00:15",
+     4301
+    ],
+    [
+     "00:00:07",
+     4006
+    ],
+    [
+     "00:00:16",
+     3951
+    ],
+    [
+     "",
+     3659
+    ],
+    [
+     "00:00:17",
+     3601
+    ],
+    [
+     "00:00:18",
+     3405
+    ],
+    [
+     "00:00:19",
+     3108
+    ],
+    [
+     "00:00:06",
+     2790
+    ],
+    [
+     "00:00:20",
+     2710
+    ],
+    [
+     "00:00:21",
+     2701
+    ],
+    [
+     "00:00:22",
+     2419
+    ],
+    [
+     "00:00:23",
+     2189
+    ],
+    [
+     "00:00:25",
+     1880
+    ],
+    [
+     "00:00:26",
+     1653
+    ],
+    [
+     "00:00:05",
+     1528
+    ],
+    [
+     "00:00:28",
+     1526
+    ],
+    [
+     "00:00:27",
+     1502
+    ],
+    [
+     "00:00:30",
+     1462
+    ]
+   ]
+  },
+  "span:RESPONSEDATE": {
+   "lo": 1420070779000,
+   "hi": 1783537675000
+  },
+  "span:TIMEPHONEPICKUP": {
+   "lo": 1456441762000,
+   "hi": 1783537567000
+  },
+  "span:TIMECALLCLOSED": {
+   "lo": 1420071516000,
+   "hi": 1783522342000
+  },
+  "span:TIMEASSIGNED": {
+   "lo": 1420070868000,
+   "hi": 1783537760000
+  },
+  "span:TIMEENROUTE": {
+   "lo": 1420070941000,
+   "hi": 1783537763000
+  },
+  "span:TIMEARRIVED": {
+   "lo": 1420071103000,
+   "hi": 1783538061000
+  },
+  "span:UNITCLEARED": {
+   "lo": 1420071400000,
+   "hi": 1783522342000
+  },
+  "span:TRANSPORTDEPART": {
+   "lo": 1483229822000,
+   "hi": 1743264294000
+  },
+  "span:TRANSPORTARRIVED": {
+   "lo": 1483230314000,
+   "hi": 1743264987000
+  }
+ },
+ "boulder_response_times": {
+  "hub": "https://open-data.bouldercolorado.gov",
+  "id": "18c58aed5261498980e61b1e58eed376_0",
+  "service": "https://maps.bouldercolorado.gov/arcgis/rest/services/fire/FireResponseTimesOpenData/MapServer/0",
+  "record_count": 166502,
+  "name": "Response Times For Boulder Fire-Rescue",
+  "license": "CC0-1.0",
+  "modified": 1659387179000,
+  "fields": [
+   [
+    "OBJECTID",
+    "esriFieldTypeOID"
+   ],
+   [
+    "MASTERINCIDENTNUMBER",
+    "esriFieldTypeString"
+   ],
+   [
+    "RESPONSEDATE",
+    "esriFieldTypeDate"
+   ],
+   [
+    "RESPONSEHOUR",
+    "esriFieldTypeSmallInteger"
+   ],
+   [
+    "RESPONSEDOW",
+    "esriFieldTypeSmallInteger"
+   ],
+   [
+    "RESPONSEYEAR",
+    "esriFieldTypeSmallInteger"
+   ],
+   [
+    "AGENCYTYPE",
+    "esriFieldTypeString"
+   ],
+   [
+    "RESPONSEPLAN",
+    "esriFieldTypeString"
+   ],
+   [
+    "INCIDENTTYPE",
+    "esriFieldTypeString"
+   ],
+   [
+    "PROBLEM",
+    "esriFieldTypeString"
+   ],
+   [
+    "PROGRAMAREA",
+    "esriFieldTypeString"
+   ],
+   [
+    "CALLTYPE",
+    "esriFieldTypeString"
+   ],
+   [
+    "DETERMINANT",
+    "esriFieldTypeString"
+   ],
+   [
+    "SEVERITY",
+    "esriFieldTypeString"
+   ],
+   [
+    "TIMEPHONEPICKUP",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMECALLCLOSED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEFIRSTUNITASSIGNED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEFIRSTFIREASSIGNED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "VEHICLENUMBERFIRE",
+    "esriFieldTypeString"
+   ],
+   [
+    "LOCATIONATASSIGNFIRE",
+    "esriFieldTypeString"
+   ],
+   [
+    "LONGATASSIGNFIRE",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "LATATASSIGNFIRE",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "TIMEFIRSTAMRASSIGNED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "VEHICLENUMBERAMR",
+    "esriFieldTypeString"
+   ],
+   [
+    "LOCATIONATASSIGNAMR",
+    "esriFieldTypeString"
+   ],
+   [
+    "LONGATASSIGNAMR",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "LATATASSIGNAMR",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "TIMEFIRSTUNITENROUTE",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEFIRSTFIREENROUTE",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEFIRSTAMRENROUTE",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEFIRSTUNITARRIVED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEFIRSTFIREARRIVED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "TIMEFIRSTAMRARRIVED",
+    "esriFieldTypeDate"
+   ],
+   [
+    "ELAPSEDCALLRCVD2FIRSTASSIGN",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDASSIGNED2FIRSTENROUTE",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDENROUTE2FIRSTATSCENE",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDCALLRCVD2CALLCLOSED",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDASSIGNED1STSCENE",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDHELLO2HELLO",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDASSIGNED2ENROUTEFIRE",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDASSIGNED2ENROUTEAMR",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDENROUTE1STSCENEFIRE",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDENROUTE1STSCENEAMR",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDASSIGNED1STSCENEFIRE",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDASSIGNED1STSCENEAMR",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHINCIDENTTYPE",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHINCIDENTDESCRIPTION",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHINCIDENTCATEGORY",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHSHIFT",
+    "esriFieldTypeString"
+   ],
+   [
+    "FHRESPONSECODE",
+    "esriFieldTypeString"
+   ],
+   [
+    "ELAPSEDCALLRCVD2FIRSTASSIGNMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDASSIGNED2FIRSTENROUTEMI",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDENROUTE2FIRSTATSCENEMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDCALLRCVD2CALLCLOSEDMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDASSIGNED1STSCENEMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDHELLO2HELLOMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDASSIGNED2ENROUTEFIREMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDASSIGNED2ENROUTEAMRMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDENROUTE1STSCENEFIREMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDENROUTE1STSCENEAMRMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDASSIGNED1STSCENEFIREMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ELAPSEDASSIGNED1STSCENEAMRMIN",
+    "esriFieldTypeDouble"
+   ],
+   [
+    "ID",
+    "esriFieldTypeInteger"
+   ],
+   [
+    "SHAPE",
+    "esriFieldTypeGeometry"
+   ]
+  ],
+  "geometryType": "esriGeometryPoint",
+  "sample": [
+   {
+    "OBJECTID": 1,
+    "MASTERINCIDENTNUMBER": "BFD161203-013876",
+    "RESPONSEDATE": 1480807684000,
+    "RESPONSEHOUR": 16,
+    "RESPONSEDOW": 5,
+    "RESPONSEYEAR": 2016,
+    "AGENCYTYPE": "BFD",
+    "RESPONSEPLAN": "MED",
+    "INCIDENTTYPE": "MED",
+    "PROBLEM": "EMSF-All Medical Calls",
+    "PROGRAMAREA": "EMS",
+    "CALLTYPE": "Illness and Other",
+    "DETERMINANT": null,
+    "SEVERITY": null,
+    "TIMEPHONEPICKUP": 1480807651000,
+    "TIMECALLCLOSED": 1480808028000,
+    "TIMEFIRSTUNITASSIGNED": 1480807706000,
+    "TIMEFIRSTFIREASSIGNED": 1480807706000,
+    "VEHICLENUMBERFIRE": "2501",
+    "LOCATIONATASSIGNFIRE": "Station 1",
+    "LONGATASSIGNFIRE": 105280272,
+    "LATATASSIGNFIRE": 40022858,
+    "TIMEFIRSTAMRASSIGNED": 1480807706000,
+    "VEHICLENUMBERAMR": "AMR6",
+    "LOCATIONATASSIGNAMR": "US HIGHWAY 36 OFF RAMP\\HWY 36 WB ON RP @ BASELINE EB",
+    "LONGATASSIGNAMR": 105256115,
+    "LATATASSIGNAMR": 39999033,
+    "TIMEFIRSTUNITENROUTE": 1480807719000,
+    "TIMEFIRSTFIREENROUTE": 1480807765000,
+    "TIMEFIRSTAMRENROUTE": 1480807719000,
+    "TIMEFIRSTUNITARRIVED": 1480807916000,
+    "TIMEFIRSTFIREARRIVED": 1480807916000,
+    "TIMEFIRSTAMRARRIVED": null,
+    "ELAPSEDCALLRCVD2FIRSTASSIGN": "00:00:55",
+    "ELAPSEDASSIGNED2FIRSTENROUTE": "00:00:13",
+    "ELAPSEDENROUTE2FIRSTATSCENE": "00:03:17",
+    "ELAPSEDCALLRCVD2CALLCLOSED": "00:06:17",
+    "ELAPSEDASSIGNED1STSCENE": "00:03:30",
+    "ELAPSEDHELLO2HELLO": "00:04:25",
+    "ELAPSEDASSIGNED2ENROUTEFIRE": "00:00:59",
+    "ELAPSEDASSIGNED2ENROUTEAMR": "00:00:13",
+    "ELAPSEDENROUTE1STSCENEFIRE": "00:02:31",
+    "ELAPSEDENROUTE1STSCENEAMR": null,
+    "ELAPSEDASSIGNED1STSCENEFIRE": "00:03:30",
+    "ELAPSEDASSIGNED1STSCENEAMR": null,
+    "FHINCIDENTTYPE": null,
+    "FHINCIDENTDESCRIPTION": null,
+    "FHINCIDENTCATEGORY": null,
+    "FHSHIFT": null,
+    "FHRESPONSECODE": null,
+    "ELAPSEDCALLRCVD2FIRSTASSIGNMIN": 0.91666667,
+    "ELAPSEDASSIGNED2FIRSTENROUTEMI": 0.21666667,
+    "ELAPSEDENROUTE2FIRSTATSCENEMIN": 3.28333333,
+    "ELAPSEDCALLRCVD2CALLCLOSEDMIN": 6.28333333,
+    "ELAPSEDASSIGNED1STSCENEMIN": 3.5,
+    "ELAPSEDHELLO2HELLOMIN": 4.41666667,
+    "ELAPSEDASSIGNED2ENROUTEFIREMIN": 0.98333333,
+    "ELAPSEDASSIGNED2ENROUTEAMRMIN": 0.21666667,
+    "ELAPSEDENROUTE1STSCENEFIREMIN": 2.51666667,
+    "ELAPSEDENROUTE1STSCENEAMRMIN": null,
+    "ELAPSEDASSIGNED1STSCENEFIREMIN": 3.5,
+    "ELAPSEDASSIGNED1STSCENEAMRMIN": null,
+    "ID": 3500320
+   },
+   {
+    "OBJECTID": 2,
+    "MASTERINCIDENTNUMBER": "BFD161203-013878",
+    "RESPONSEDATE": 1480809184000,
+    "RESPONSEHOUR": 16,
+    "RESPONSEDOW": 5,
+    "RESPONSEYEAR": 2016,
+    "AGENCYTYPE": "BFD",
+    "RESPONSEPLAN": "1AM",
+    "INCIDENTTYPE": "1AM",
+    "PROBLEM": "AMNONF-Blood draw/noncode amb",
+    "PROGRAMAREA": "EMS",
+    "CALLTYPE": "Illness and Other",
+    "DETERMINANT": null,
+    "SEVERITY": null,
+    "TIMEPHONEPICKUP": 1480809184000,
+    "TIMECALLCLOSED": 1480812072000,
+    "TIMEFIRSTUNITASSIGNED": 1480809201000,
+    "TIMEFIRSTFIREASSIGNED": null,
+    "VEHICLENUMBERFIRE": null,
+    "LOCATIONATASSIGNFIRE": null,
+    "LONGATASSIGNFIRE": null,
+    "LATATASSIGNFIRE": null,
+    "TIMEFIRSTAMRASSIGNED": 1480809281000,
+    "VEHICLENUMBERAMR": "AMR6",
+    "LOCATIONATASSIGNAMR": "BROADWAY\\BASELINE RD",
+    "LONGATASSIGNAMR": 105263103,
+    "LATATASSIGNAMR": 39999469,
+    "TIMEFIRSTUNITENROUTE": 1480809285000,
+    "TIMEFIRSTFIREENROUTE": null,
+    "TIMEFIRSTAMRENROUTE": 1480809285000,
+    "TIMEFIRSTUNITARRIVED": 1480809764000,
+    "TIMEFIRSTFIREARRIVED": null,
+    "TIMEFIRSTAMRARRIVED": 1480809764000,
+    "ELAPSEDCALLRCVD2FIRSTASSIGN": "00:00:17",
+    "ELAPSEDASSIGNED2FIRSTENROUTE": "00:01:24",
+    "ELAPSEDENROUTE2FIRSTATSCENE": "00:07:59",
+    "ELAPSEDCALLRCVD2CALLCLOSED": "00:48:08",
+    "ELAPSEDASSIGNED1STSCENE": "00:09:23",
+    "ELAPSEDHELLO2HELLO": "00:09:40",
+    "ELAPSEDASSIGNED2ENROUTEFIRE": null,
+    "ELAPSEDASSIGNED2ENROUTEAMR": "00:00:04",
+    "ELAPSEDENROUTE1STSCENEFIRE": null,
+    "ELAPSEDENROUTE1STSCENEAMR": "00:07:59",
+    "ELAPSEDASSIGNED1STSCENEFIRE": null,
+    "ELAPSEDASSIGNED1STSCENEAMR": "00:08:03",
+    "FHINCIDENTTYPE": null,
+    "FHINCIDENTDESCRIPTION": null,
+    "FHINCIDENTCATEGORY": null,
+    "FHSHIFT": null,
+    "FHRESPONSECODE": null,
+    "ELAPSEDCALLRCVD2FIRSTASSIGNMIN": 0.28333333,
+    "ELAPSEDASSIGNED2FIRSTENROUTEMI": 1.4,
+    "ELAPSEDENROUTE2FIRSTATSCENEMIN": 7.98333333,
+    "ELAPSEDCALLRCVD2CALLCLOSEDMIN": 48.13333333,
+    "ELAPSEDASSIGNED1STSCENEMIN": 9.38333333,
+    "ELAPSEDHELLO2HELLOMIN": 9.66666667,
+    "ELAPSEDASSIGNED2ENROUTEFIREMIN": null,
+    "ELAPSEDASSIGNED2ENROUTEAMRMIN": 0.06666667,
+    "ELAPSEDENROUTE1STSCENEFIREMIN": null,
+    "ELAPSEDENROUTE1STSCENEAMRMIN": 7.98333333,
+    "ELAPSEDASSIGNED1STSCENEFIREMIN": null,
+    "ELAPSEDASSIGNED1STSCENEAMRMIN": 8.05,
+    "ID": 3500359
+   },
+   {
+    "OBJECTID": 3,
+    "MASTERINCIDENTNUMBER": "BFD161203-013880",
+    "RESPONSEDATE": 1480809646000,
+    "RESPONSEHOUR": 17,
+    "RESPONSEDOW": 5,
+    "RESPONSEYEAR": 2016,
+    "AGENCYTYPE": "BFD",
+    "RESPONSEPLAN": "1E",
+    "INCIDENTTYPE": "1E",
+    "PROBLEM": "FINONF - Non Struct Fire",
+    "PROGRAMAREA": "Fire",
+    "CALLTYPE": "Fire Other",
+    "DETERMINANT": null,
+    "SEVERITY": null,
+    "TIMEPHONEPICKUP": 1480809646000,
+    "TIMECALLCLOSED": 1480810134000,
+    "TIMEFIRSTUNITASSIGNED": 1480809665000,
+    "TIMEFIRSTFIREASSIGNED": 1480809665000,
+    "VEHICLENUMBERFIRE": "2505",
+    "LOCATIONATASSIGNFIRE": "Station 5",
+    "LONGATASSIGNFIRE": 105272762,
+    "LATATASSIGNFIRE": 40053333,
+    "TIMEFIRSTAMRASSIGNED": null,
+    "VEHICLENUMBERAMR": null,
+    "LOCATIONATASSIGNAMR": null,
+    "LONGATASSIGNAMR": null,
+    "LATATASSIGNAMR": null,
+    "TIMEFIRSTUNITENROUTE": 1480809760000,
+    "TIMEFIRSTFIREENROUTE": 1480809760000,
+    "TIMEFIRSTAMRENROUTE": null,
+    "TIMEFIRSTUNITARRIVED": 1480809956000,
+    "TIMEFIRSTFIREARRIVED": 1480809956000,
+    "TIMEFIRSTAMRARRIVED": null,
+    "ELAPSEDCALLRCVD2FIRSTASSIGN": "00:00:19",
+    "ELAPSEDASSIGNED2FIRSTENROUTE": "00:01:35",
+    "ELAPSEDENROUTE2FIRSTATSCENE": "00:03:16",
+    "ELAPSEDCALLRCVD2CALLCLOSED": "00:08:08",
+    "ELAPSEDASSIGNED1STSCENE": "00:04:51",
+    "ELAPSEDHELLO2HELLO": "00:05:10",
+    "ELAPSEDASSIGNED2ENROUTEFIRE": "00:01:35",
+    "ELAPSEDASSIGNED2ENROUTEAMR": null,
+    "ELAPSEDENROUTE1STSCENEFIRE": "00:03:16",
+    "ELAPSEDENROUTE1STSCENEAMR": null,
+    "ELAPSEDASSIGNED1STSCENEFIRE": "00:04:51",
+    "ELAPSEDASSIGNED1STSCENEAMR": null,
+    "FHINCIDENTTYPE": null,
+    "FHINCIDENTDESCRIPTION": null,
+    "FHINCIDENTCATEGORY": null,
+    "FHSHIFT": null,
+    "FHRESPONSECODE": null,
+    "ELAPSEDCALLRCVD2FIRSTASSIGNMIN": 0.31666667,
+    "ELAPSEDASSIGNED2FIRSTENROUTEMI": 1.58333333,
+    "ELAPSEDENROUTE2FIRSTATSCENEMIN": 3.26666667,
+    "ELAPSEDCALLRCVD2CALLCLOSEDMIN": 8.13333333,
+    "ELAPSEDASSIGNED1STSCENEMIN": 4.85,
+    "ELAPSEDHELLO2HELLOMIN": 5.16666667,
+    "ELAPSEDASSIGNED2ENROUTEFIREMIN": 1.58333333,
+    "ELAPSEDASSIGNED2ENROUTEAMRMIN": null,
+    "ELAPSEDENROUTE1STSCENEFIREMIN": 3.26666667,
+    "ELAPSEDENROUTE1STSCENEAMRMIN": null,
+    "ELAPSEDASSIGNED1STSCENEFIREMIN": 4.85,
+    "ELAPSEDASSIGNED1STSCENEAMRMIN": null,
+    "ID": 3500369
+   }
+  ],
+  "values:MASTERINCIDENTNUMBER": {
+   "distinct": 1000,
+   "rescue_like": {},
+   "top": [
+    [
+     "BFD150811-008086",
+     1
+    ],
+    [
+     "BFD220225-002452",
+     1
+    ],
+    [
+     "BFD221025-013538",
+     1
+    ],
+    [
+     "BFD171116-013674",
+     1
+    ],
+    [
+     "BFD181111-013005",
+     1
+    ],
+    [
+     "BFD190824-009319",
+     1
+    ],
+    [
+     "BFD220125-001111",
+     1
+    ],
+    [
+     "BFD230412-004295",
+     1
+    ],
+    [
+     "BFD240224-002427",
+     1
+    ],
+    [
+     "BFD161127-013631",
+     1
+    ],
+    [
+     "BFD160302-002270",
+     1
+    ],
+    [
+     "BFD200908-009343",
+     1
+    ],
+    [
+     "BFD250929-012668",
+     1
+    ],
+    [
+     "BFD160914-010318",
+     1
+    ],
+    [
+     "BFD190823-009259",
+     1
+    ],
+    [
+     "BFD201218-013429",
+     1
+    ],
+    [
+     "BFD220406-004082",
+     1
+    ],
+    [
+     "BFD211010-011756",
+     1
+    ],
+    [
+     "BFD170904-010027",
+     1
+    ],
+    [
+     "BFD171207-014426",
+     1
+    ],
+    [
+     "BFD180908-010147",
+     1
+    ],
+    [
+     "BFD191008-011496",
+     1
+    ],
+    [
+     "BFD210512-005020",
+     1
+    ],
+    [
+     "BFD220320-003413",
+     1
+    ],
+    [
+     "BFD230210-001686",
+     1
+    ]
+   ]
+  },
+  "values:AGENCYTYPE": {
+   "distinct": 1,
+   "rescue_like": {},
+   "top": [
+    [
+     "BFD",
+     166520
+    ]
+   ]
+  },
+  "values:INCIDENTTYPE": {
+   "distinct": 55,
+   "rescue_like": {},
+   "top": [
+    [
+     "FD-H,AMB-H",
+     52433
+    ],
+    [
+     "1E",
+     32098
+    ],
+    [
+     "MED",
+     29336
+    ],
+    [
+     "AMB-C",
+     18290
+    ],
+    [
+     "1E, 1AM",
+     10577
+    ],
+    [
+     "FD-C,AMB-C",
+     8616
+    ],
+    [
+     "FD-C",
+     3103
+    ],
+    [
+     "2E,1BC",
+     2688
+    ],
+    [
+     "1AM",
+     2244
+    ],
+    [
+     "2E-H, AMB-H",
+     1202
+    ],
+    [
+     "4E, 1L, 1BC,1AM",
+     1117
+    ],
+    [
+     "2E,1L,1BC,1AM",
+     948
+    ],
+    [
+     "CARE",
+     926
+    ],
+    [
+     "1E,1BC",
+     457
+    ],
+    [
+     "AARETECF",
+     431
+    ],
+    [
+     "Extrication",
+     280
+    ],
+    [
+     "1E,1B, 1WL, 1BC",
+     252
+    ],
+    [
+     "AAEMSF",
+     162
+    ],
+    [
+     "AAINJACC2F",
+     160
+    ],
+    [
+     "2E,1DV,1BC,1AM",
+     159
+    ],
+    [
+     "AAFISTRF",
+     156
+    ],
+    [
+     "AAUNACCF",
+     140
+    ],
+    [
+     "AASMOKEF",
+     123
+    ],
+    [
+     "AAFIWILF",
+     91
+    ],
+    [
+     "4E, 1L, 2BC,1AM",
+     78
+    ]
+   ]
+  },
+  "values:PROBLEM": {
+   "distinct": 197,
+   "rescue_like": {
+    "zFall (L1)": 6144,
+    "zFall (L3)": 3094,
+    "zFall (L4)": 3083,
+    "zFall (L2)": 2511,
+    "AutoAid: Tech Rescue": 431,
+    "zHeat/Cold Exposure (L2)": 160,
+    "REWATF-All Water Rescues": 157,
+    "zHeat/Cold Exposure (L1)": 110,
+    "zHeat/Cold Exposure (L3)": 69,
+    "RESCUEF-Special Rescue": 67,
+    "AutoAid: Rescue Lost Pers": 39,
+    "zFall (L1a)": 31,
+    "zDrowning/Diving/SCUBA (L1)": 13,
+    "USARF-Urban Search/Resuce": 9,
+    "AutoAid: Water Rescue": 7,
+    "zDrowning/Diving/SCUBA (L1a)": 5,
+    "zDrowning/Diving/SCUBA (L10)": 4,
+    "zDrowning/Diving/SCUBA (L2)": 3,
+    "zFall (L10a)": 3,
+    "zDrowning/Diving/SCUBA (L1a/pd": 2,
+    "AutoAid: Urban Search/Rescue": 1,
+    "zDrown/Dive/SCBA Med Chk (L3)": 1
+   },
+   "top": [
+    [
+     "EMSF-All Medical Calls",
+     29335
+    ],
+    [
+     "FIALAF-Fire Alarm",
+     13337
+    ],
+    [
+     "FIREAF-Fire Assist",
+     12206
+    ],
+    [
+     "zSick (L1)",
+     7443
+    ],
+    [
+     "zUnconscious/Fainting (L1)",
+     6402
+    ],
+    [
+     "zFall (L1)",
+     6144
+    ],
+    [
+     "zSick (L3)",
+     5458
+    ],
+    [
+     "zBreathing Problem (L1)",
+     5033
+    ],
+    [
+     "zField EMS Request (L3)",
+     4314
+    ],
+    [
+     "INJACC2F-Injury Accident J/O",
+     4305
+    ],
+    [
+     "UNACCF-Unknown if injury acc",
+     4231
+    ],
+    [
+     "FINONF - Non Struct Fire",
+     4042
+    ],
+    [
+     "zFall (L3)",
+     3094
+    ],
+    [
+     "zFall (L4)",
+     3083
+    ],
+    [
+     "zChest Pain (L1)",
+     2719
+    ],
+    [
+     "zFall (L2)",
+     2511
+    ],
+    [
+     "GASF-Gas smell inside a bldg",
+     2268
+    ],
+    [
+     "ALMEDF-Medical Alarm",
+     2251
+    ],
+    [
+     "AMNONF-Blood draw/noncode amb",
+     2246
+    ],
+    [
+     "ODORF-Odors invests/gas outsid",
+     2228
+    ],
+    [
+     "zBleeding (L1)",
+     2163
+    ],
+    [
+     "STAGEF-Non-Emer/Stage",
+     2041
+    ],
+    [
+     "FISTRF-Struct Fire/Smoke insi",
+     1993
+    ],
+    [
+     "zConvulsions/Seizure (L1)",
+     1985
+    ],
+    [
+     "zUnknown Problem (L1)",
+     1920
+    ]
+   ]
+  },
+  "values:CALLTYPE": {
+   "distinct": 31,
+   "rescue_like": {
+    "Fall and Injury": 21685,
+    "Auto-Aid Tech Rescue": 431,
+    "Water Rescue": 157,
+    "Auto-Aid Fall and Injury": 140,
+    "Rescue": 110,
+    "Auto-Aid Rescue": 39,
+    "Auto-Aid Water Rescue": 7
+   },
+   "top": [
+    [
+     "Illness and Other",
+     52675
+    ],
+    [
+     "Fall and Injury",
+     21685
+    ],
+    [
+     "Fire Other",
+     18501
+    ],
+    [
+     "Fire Alarm",
+     13337
+    ],
+    [
+     "Seizure and Unconsciousness",
+     11979
+    ],
+    [
+     "Missing CT",
+     10747
+    ],
+    [
+     "MVC",
+     8878
+    ],
+    [
+     "Cardiac and Stroke",
+     8321
+    ],
+    [
+     "Difficulty Breathing",
+     5827
+    ],
+    [
+     "Overdose and Psychiatric",
+     5194
+    ],
+    [
+     "Hazmat",
+     2844
+    ],
+    [
+     "Medical Alarm",
+     2251
+    ],
+    [
+     "Structure Fire",
+     1993
+    ],
+    [
+     "Auto-Aid Tech Rescue",
+     431
+    ],
+    [
+     "Outside Fire",
+     322
+    ],
+    [
+     "Mutual Aid",
+     288
+    ],
+    [
+     "Auto-Aid Illness and Other",
+     162
+    ],
+    [
+     "Auto-Aid MVC",
+     160
+    ],
+    [
+     "Water Rescue",
+     157
+    ],
+    [
+     "Auto-Aid Structure Fire",
+     156
+    ],
+    [
+     "Auto-Aid Fall and Injury",
+     140
+    ],
+    [
+     "Auto-Aid Smoke Report",
+     123
+    ],
+    [
+     "Rescue",
+     110
+    ],
+    [
+     "Auto-Aid Outside Fire",
+     91
+    ],
+    [
+     "Transfer",
+     49
+    ]
+   ]
+  },
+  "values:ELAPSEDCALLRCVD2FIRSTASSIGN": {
+   "distinct": 1000,
+   "rescue_like": {},
+   "top": [
+    [
+     "00:00:09",
+     2692
+    ],
+    [
+     "00:00:07",
+     2101
+    ],
+    [
+     "00:00:17",
+     1727
+    ],
+    [
+     "00:00:19",
+     1475
+    ],
+    [
+     "00:00:21",
+     1264
+    ],
+    [
+     "00:00:30",
+     666
+    ],
+    [
+     "00:01:56",
+     645
+    ],
+    [
+     "00:02:03",
+     627
+    ],
+    [
+     "00:02:05",
+     602
+    ],
+    [
+     "00:02:13",
+     586
+    ],
+    [
+     "00:01:45",
+     580
+    ],
+    [
+     "00:02:31",
+     504
+    ],
+    [
+     "00:00:37",
+     444
+    ],
+    [
+     "00:01:25",
+     433
+    ],
+    [
+     "00:00:39",
+     416
+    ],
+    [
+     "00:01:23",
+     407
+    ],
+    [
+     "00:02:47",
+     387
+    ],
+    [
+     "00:01:14",
+     378
+    ],
+    [
+     "00:00:53",
+     371
+    ],
+    [
+     "00:02:46",
+     367
+    ],
+    [
+     "00:01:12",
+     366
+    ],
+    [
+     "00:02:56",
+     326
+    ],
+    [
+     "00:01:04",
+     326
+    ],
+    [
+     "00:01:02",
+     318
+    ],
+    [
+     "00:03:03",
+     294
+    ]
+   ]
+  },
+  "values:ELAPSEDCALLRCVD2CALLCLOSED": {
+   "distinct": 1000,
+   "rescue_like": {},
+   "top": [
+    [
+     "00:16:05",
+     73
+    ],
+    [
+     "00:16:13",
+     71
+    ],
+    [
+     "00:16:42",
+     64
+    ],
+    [
+     "00:12:11",
+     63
+    ],
+    [
+     "00:15:33",
+     63
+    ],
+    [
+     "00:11:31",
+     63
+    ],
+    [
+     "00:14:44",
+     61
+    ],
+    [
+     "00:15:49",
+     61
+    ],
+    [
+     "00:15:03",
+     61
+    ],
+    [
+     "00:18:53",
+     60
+    ],
+    [
+     "00:20:13",
+     60
+    ],
+    [
+     "00:18:30",
+     60
+    ],
+    [
+     "00:44:40",
+     60
+    ],
+    [
+     "00:12:41",
+     59
+    ],
+    [
+     "00:17:36",
+     59
+    ],
+    [
+     "00:17:30",
+     59
+    ],
+    [
+     "00:16:45",
+     59
+    ],
+    [
+     "00:12:20",
+     59
+    ],
+    [
+     "00:15:50",
+     58
+    ],
+    [
+     "00:13:42",
+     58
+    ],
+    [
+     "00:17:28",
+     58
+    ],
+    [
+     "00:17:09",
+     57
+    ],
+    [
+     "00:13:46",
+     57
+    ],
+    [
+     "00:13:34",
+     57
+    ],
+    [
+     "00:16:02",
+     57
+    ]
+   ]
+  },
+  "values:FHINCIDENTTYPE": {
+   "distinct": 152,
+   "rescue_like": {},
+   "top": [
+    [
+     "    ",
+     9640
+    ],
+    [
+     "311 ",
+     7862
+    ],
+    [
+     "321 ",
+     7346
+    ],
+    [
+     "3111",
+     6513
+    ],
+    [
+     "611 ",
+     4052
+    ],
+    [
+     "3210",
+     2080
+    ],
+    [
+     "622 ",
+     1619
+    ],
+    [
+     "554 ",
+     1307
+    ],
+    [
+     "324 ",
+     1270
+    ],
+    [
+     "3211",
+     1000
+    ],
+    [
+     "745 ",
+     891
+    ],
+    [
+     "412 ",
+     696
+    ],
+    [
+     "743 ",
+     613
+    ],
+    [
+     "735 ",
+     537
+    ],
+    [
+     "322 ",
+     520
+    ],
+    [
+     "522 ",
+     520
+    ],
+    [
+     "733 ",
+     416
+    ],
+    [
+     "353 ",
+     414
+    ],
+    [
+     "651 ",
+     388
+    ],
+    [
+     "744 ",
+     387
+    ],
+    [
+     "510 ",
+     325
+    ],
+    [
+     "671 ",
+     284
+    ],
+    [
+     "746 ",
+     279
+    ],
+    [
+     "531 ",
+     251
+    ],
+    [
+     "555 ",
+     246
+    ]
+   ]
+  },
+  "values:FHINCIDENTDESCRIPTION": {
+   "distinct": 151,
+   "rescue_like": {
+    "Water or steam leak": 520,
+    "Rescue or EMS standby": 158,
+    "Excessive heat, scorch burns with no ignition": 44,
+    "Overheated motor": 38,
+    "Heat from short circuit (wiring), defective/worn": 25,
+    "Heat detector activation due to malfunction": 22,
+    "Search for person on land": 20,
+    "Animal rescue": 18,
+    "Swift water rescue": 15,
+    "Water evacuation": 15,
+    "High-angle rescue": 13,
+    "Ice rescue": 10,
+    "Extrication, rescue, Other": 10,
+    "Water & ice-related rescue, other": 8,
+    "Search for person in water": 6,
+    "Swimming/recreational water areas rescue": 4,
+    "Trench/below-grade rescue": 3,
+    "Search for lost person, other": 2,
+    "Confined space rescue": 2,
+    "Water vehicle fire": 1,
+    "Overpressure rupture, explosion, overheat other": 1
+   },
+   "top": [
+    [
+     "Medical assist, assist EMS crew",
+     7862
+    ],
+    [
+     "EMS call, excluding vehicle accident with injury",
+     7346
+    ],
+    [
+     "Medical, no patient contact",
+     6513
+    ],
+    [
+     "Dispatched & cancelled en route",
+     4052
+    ],
+    [
+     "EMS call - medical check emergent",
+     2080
+    ],
+    [
+     "No Incident found on arrival at dispatch address",
+     1619
+    ],
+    [
+     "Assist invalid",
+     1307
+    ],
+    [
+     "Motor Vehicle Accident with no injuries",
+     1270
+    ],
+    [
+     "EMS call - medical check non-emergent",
+     1000
+    ],
+    [
+     "Alarm system activation, no fire - unintentional",
+     891
+    ],
+    [
+     "Gas leak (natural gas or LPG)",
+     696
+    ],
+    [
+     "Smoke detector activation, no fire - unintentional",
+     613
+    ],
+    [
+     "Alarm system sounded due to malfunction",
+     537
+    ],
+    [
+     "Motor vehicle accident with injuries",
+     520
+    ],
+    [
+     "Water or steam leak",
+     520
+    ],
+    [
+     "Smoke detector activation due to malfunction",
+     416
+    ],
+    [
+     "Removal of victim(s) from stalled elevator",
+     414
+    ],
+    [
+     "Smoke scare, odor of smoke",
+     388
+    ],
+    [
+     "Detector activation, no fire - unintentional",
+     387
+    ],
+    [
+     "Person in distress, Other",
+     325
+    ],
+    [
+     "HazMat release investigation w/no HazMat",
+     284
+    ],
+    [
+     "Carbon monoxide detector activation, no CO",
+     279
+    ],
+    [
+     "Smoke or odor removal",
+     251
+    ],
+    [
+     "Defective elevator, no occupants",
+     246
+    ],
+    [
+     "CO detector activation due to malfunction",
+     244
+    ]
+   ]
+  },
+  "values:FHINCIDENTCATEGORY": {
+   "distinct": 11,
+   "rescue_like": {},
+   "top": [
+    [
+     "EMS",
+     27556
+    ],
+    [
+     "Good Intent",
+     6480
+    ],
+    [
+     "Public Service",
+     3876
+    ],
+    [
+     "False Alarms",
+     3874
+    ],
+    [
+     "Hazmat",
+     1624
+    ],
+    [
+     "Fire",
+     896
+    ],
+    [
+     "Explosion/Ruptures",
+     64
+    ],
+    [
+     "Special",
+     47
+    ],
+    [
+     "Severe Weather",
+     15
+    ],
+    [
+     "No Type",
+     1
+    ],
+    [
+     "None",
+     0
+    ]
+   ]
+  },
+  "span:RESPONSEDATE": {
+   "lo": 1420070779000,
+   "hi": 1790680226000
+  },
+  "span:TIMEPHONEPICKUP": {
+   "lo": 1420070669000,
+   "hi": 1790680180000
+  },
+  "span:TIMECALLCLOSED": {
+   "lo": 1420071516000,
+   "hi": 1790680656000
+  },
+  "span:TIMEFIRSTUNITASSIGNED": {
+   "lo": 1420070868000,
+   "hi": 1790680425000
+  },
+  "span:TIMEFIRSTFIREASSIGNED": {
+   "lo": 1420070868000,
+   "hi": 1772290244000
+  },
+  "span:TIMEFIRSTAMRASSIGNED": {
+   "lo": 1420070868000,
+   "hi": 1767198093000
+  },
+  "span:TIMEFIRSTUNITENROUTE": {
+   "lo": 1420070941000,
+   "hi": 1790680428000
+  },
+  "span:TIMEFIRSTFIREENROUTE": {
+   "lo": 1420070968000,
+   "hi": 1772290244000
+  },
+  "span:TIMEFIRSTAMRENROUTE": {
+   "lo": 1420070941000,
+   "hi": 1767198147000
+  },
+  "span:TIMEFIRSTUNITARRIVED": {
+   "lo": 1420071103000,
+   "hi": 1790681049000
+  },
+  "span:TIMEFIRSTFIREARRIVED": {
+   "lo": 1420071103000,
+   "hi": 1772290516000
+  },
+  "span:TIMEFIRSTAMRARRIVED": {
+   "lo": 1420071133000,
+   "hi": 1767198374000
+  }
+ }
+}
