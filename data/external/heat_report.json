@@ -96,8 +96,8 @@
   }
  ],
  "watches": {
-  "rows": 0,
-  "upgraded_no_interval": 0
+  "rows": 56,
+  "upgraded_no_interval": 56
  },
  "days_110_by_year": {
   "2019": 13,
