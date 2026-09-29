@@ -463,8 +463,11 @@ def heat_section(h: dict) -> str:
 def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report: dict | None = None) -> None:
     heat = heat_section(heat_report or {})
     phx = next(s for c, s, _ in cities if c["key"] == "phoenix")
-    ann = phx["annual"]
-    drop = round(100 * (1 - (ann.get(2023, 0) + ann.get(2024, 0) + ann.get(2025, 0)) / 3 / max(ann.get(2019, 1), 1)))
+    # The trend uses every mountain-rescue call, located or not. Located-only counts
+    # drift with geocoding success (Cholla's address change in 2022 is one example).
+    ann = {int(y): sum(v.values()) for y, v in (heat_report or {}).get("all_by_year", {}).items()} or phx["annual"]
+    late = round((ann.get(2023, 0) + ann.get(2024, 0) + ann.get(2025, 0)) / 3)
+    drop = round(100 * (1 - late / max(ann.get(2019, 1), 1)))
     echo = next((n for a, n in phx["top_locations"] if a == "49XX E MCDONALD DR"), 0)
     echo_pct = round(100 * echo / max(len(phx["mountain"]), 1))
 
@@ -617,7 +620,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
       <p><b>Phoenix mountain rescues start at one trailhead.</b> Echo Canyon on Camelback accounts for {echo:,} of the
       {len(phx['mountain']):,} located calls ({echo_pct}%). Add Piestewa Peak, Pima Canyon and Cholla and you have most of the city.</p></div>
     <div class="finding"><div class="big">&minus;{drop}%</div>
-      <p><b>Phoenix rescues are down about a third.</b> {ann.get(2019, 0)} in 2019, about {round((ann.get(2023, 0) + ann.get(2024, 0) + ann.get(2025, 0)) / 3)} a year from 2023 to 2025.
+      <p><b>Phoenix rescues are down about a fifth.</b> {ann.get(2019, 0)} mountain-rescue calls in 2019, about {late} a year from 2023 to 2025, counting every call whether or not it could be mapped.
       Heat closures only cover about a month of days a year, so they can't be most of it. <a href="#heat">See the heat analysis</a>.</p></div>
     <div class="finding"><div class="big">3 seasons</div>
       <p><b>Each city has its own calendar.</b> Boulder peaks in July. Scottsdale peaks in February and goes quiet in summer.

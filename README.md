@@ -8,7 +8,7 @@ Ridgeline collects every mountain, technical and water rescue call that three fi
 
 | City | Agency | Coverage | Mountain & technical rescues located |
 |---|---|---|---|
-| Phoenix, AZ | Phoenix Fire Department | 2019–2025 | 1,159 of 1,619 (72%) |
+| Phoenix, AZ | Phoenix Fire Department | 2019–2025 | 1,197 of 1,619 (74%) |
 | Scottsdale, AZ | Scottsdale Fire Department | Dec 2022 – present | 360 (466 of 522 rescue calls located, 89%) |
 | Boulder, CO | Boulder Fire-Rescue | 2015 – present | 581 (published points, 100%) |
 
@@ -38,7 +38,7 @@ These are descriptive patterns in dispatch counts. None of them is a causal clai
 
 **A few trailheads account for most of the calls.** In Phoenix, Echo Canyon on Camelback Mountain (dispatch address `49XX E MCDONALD DR`) accounts for 310 of the 1,197 located mountain rescues, about 26%. Piestewa Peak, Cholla on Camelback, Pima Canyon on South Mountain and the South Mountain Park entrance make up most of the rest. In Boulder, 243 of 581 technical rescues sit at Chautauqua Park, the main entry to the Flatirons.
 
-**Phoenix mountain rescues have fallen by about a third.** There were 206 in 2019 and about 131 a year in 2023–2025. Those years overlap Phoenix's heat-triggered trail closures, but the closures can't be most of the explanation (next paragraph). Other changes over the same years (visitation, dispatch coding, the pandemic) could produce the same shape.
+**Phoenix mountain rescues have fallen by about a fifth.** Counting every call, located or not, there were 255 in 2019 and about 203 a year in 2023–2025. (An earlier version said "about a third", from located calls only; that overstated the drop, because which calls could be located changed over time.) Those years overlap Phoenix's heat-triggered trail closures, but the closures can't be most of the explanation (next paragraph). Other changes over the same years (visitation, dispatch coding, the pandemic) could produce the same shape.
 
 **Heat closures: a signal on warning days, too small to explain the long drop.** Since 2021 Phoenix closes the Echo Canyon, Cholla and Piestewa Peak trails from 9 a.m. to 5 p.m. whenever the National Weather Service has a heat warning in effect. `src/analysis/heat.py` lines up all 1,619 mountain-rescue calls (trail assigned from the dispatch address, so unlocated calls count) with every NWS heat warning for zone AZZ543, Central Phoenix, and Open-Meteo daily highs at Sky Harbor. The warning-day count matches the city's own 2024 program review within one day a year (20, 17, 42, 45 vs 20, 18, 42, 45 for 2021–2024).
 
@@ -116,9 +116,9 @@ For Phoenix mountain rescues, the 1,619 calls resolve like this:
 | Outcome | Calls |
 |---|---:|
 | Geocoder match, score ≥ 80 | 275 |
-| Same-street near miss, score 70–80 | 704 |
-| Preserve representative point | 180 |
-| Not located | 460 |
+| Same-street near miss, score 70–80 (same direction and street type) | 683 |
+| Preserve representative point | 239 |
+| Not located | 422 |
 | **Total** (1,619 unique incident IDs) | **1,619** |
 
 ### 3. Publish
@@ -254,6 +254,7 @@ ridgeline/
 
 - **Opposite-direction matches.** A Scottsdale call on *East* Indian School Road had been matched with a high score to *West* Indian School Road, 15 miles away. Matches on the right street with the opposite direction are now rejected (7 of about 1,300).
 - **Cholla's new address.** Since the Cholla Trail reopened in 2022, Phoenix Fire logs its calls at `51XX N INVERGORDON RD`, the trailhead corner in Paradise Valley, instead of `62XX E CHOLLA LN`. Those 59 rescues had failed to geocode, and the first run of the heat analysis counted them as "other trails", which overstated the closure-trail decline. Both are fixed.
+- **Trend from all calls.** The "down about a third" headline used located calls only. Because the Cholla calls became unlocatable from 2022, that overstated the decline. Trends now use all 1,619 calls: down about a fifth.
 - **Wrong street type.** Near-miss matches must now also have the same street type. This rejected six wrong matches, including `7XX E DESERT FOOTHILLS PW` → Desert Flower Ln (21 South Mountain rescues, now unplaced rather than misplaced) and Invergordon Rd → Invergordon Pl, three miles north.
 
 ---
