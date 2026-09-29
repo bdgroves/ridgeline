@@ -65,6 +65,34 @@ def _clean(part: str) -> str:
     return part
 
 
+_DIR_LETTER = {"N": "N", "S": "S", "E": "E", "W": "W",
+               "NORTH": "N", "SOUTH": "S", "EAST": "E", "WEST": "W"}
+
+
+def _dir_names(text: str) -> dict[str, str]:
+    """{street-name word: direction letter} for each 'E INDIAN SCHOOL'-style run."""
+    out = {}
+    for part in re.split(r"[&,]", text.upper()):
+        words = re.findall(r"[A-Z0-9]+", part)
+        for i, w in enumerate(words[:-1]):
+            if w in _DIR_LETTER:
+                nxt = words[i + 1]
+                if nxt not in _DIR_LETTER and nxt not in _TYPES:
+                    out.setdefault(nxt, _DIR_LETTER[w])
+                break
+    return out
+
+
+def direction_conflict(query: str, match_addr: str) -> bool:
+    """
+    True when the geocoder matched the right street name with the opposite
+    direction: 'E INDIAN SCHOOL RD' landing on 'W Indian School Rd' is a
+    different place 15 miles away, whatever the score says.
+    """
+    q, m = _dir_names(query), _dir_names(str(match_addr or ""))
+    return any(name in m and m[name] != d for name, d in q.items())
+
+
 def street_words(query: str) -> list[set[str]]:
     """
     The distinctive words of each street in a query, used to check that a

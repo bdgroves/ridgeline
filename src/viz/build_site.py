@@ -528,7 +528,18 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
     {{maxZoom:16, attribution:'Tiles &copy; Esri'}}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{{z}}/{{y}}/{{x}}',
     {{maxZoom:16}}).addTo(map);
-  const layers = {{}};
+  const layers = {{}}, points = {{}};
+
+  // Frame the calls actually shown. The outer 3% on each side is trimmed so a
+  // few mutual-aid calls across the valley don't zoom the whole map out.
+  function fit(key) {{
+    const all = [];
+    for (const c of visible) all.push(...((points[key] || {{}})[c] || []));
+    if (all.length < 3) {{ map.setView(CITIES[key].center, CITIES[key].zoom); return; }}
+    const q = (arr, p) => arr[Math.min(arr.length - 1, Math.max(0, Math.round(p * (arr.length - 1))))];
+    const ys = all.map(p => p[0]).sort((a, b) => a - b), xs = all.map(p => p[1]).sort((a, b) => a - b);
+    map.fitBounds([[q(ys, .03), q(xs, .03)], [q(ys, .97), q(xs, .97)]], {{padding:[28, 28], maxZoom:13}});
+  }}
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}}[c]));
 
   function build(key, gj) {{
@@ -550,6 +561,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
       if (p.date < g.first) g.first = p.date; if (p.date > g.last) g.last = p.date;
     }}
     const lg = {{mountain:L.layerGroup(), water:L.layerGroup(), search:L.layerGroup()}};
+    const pts = {{mountain:[], water:[], search:[]}};
     const sorted = [...groups.values()].sort((a, b) => (a.cat === 'mountain') - (b.cat === 'mountain') || b.n - a.n);
     for (const g of sorted) {{
       const r = Math.min(4 + Math.sqrt(g.n) * 2.2, 26);
@@ -559,8 +571,10 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
           + `<br><span class="k">${{esc(g.first === g.last ? g.first : g.first + ' → ' + g.last)}}</span>`
           + `<br><span class="k">Location: ${{esc(PREC[g.p.precision] || g.p.precision || 'not recorded')}}</span>`)
         .addTo(lg[g.cat]);
+      for (let i = 0; i < g.n; i++) pts[g.cat].push([g.y, g.x]);
     }}
     layers[key] = lg;
+    points[key] = pts;
   }}
 
   let current = 'phoenix';
@@ -572,11 +586,11 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
   document.querySelectorAll('.tog').forEach(b => b.addEventListener('click', () => {{
     const c = b.dataset.cat, on = !visible.has(c);
     on ? visible.add(c) : visible.delete(c);
-    b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); draw();
+    b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); draw(); fit(current);
   }}));
   function show(key) {{
     current = key; draw();
-    map.setView(CITIES[key].center, CITIES[key].zoom);
+    fit(key);
     document.querySelectorAll('.city').forEach(s => s.hidden = s.dataset.city !== key);
     document.querySelectorAll('.tab').forEach(t => {{
       const on = t.dataset.city === key; t.classList.toggle('on', on); t.setAttribute('aria-selected', on);

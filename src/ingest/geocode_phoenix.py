@@ -25,7 +25,7 @@ import httpx
 import pandas as pd
 from rich.console import Console
 
-from addresses import normalize, preserve_site, street_words
+from addresses import direction_conflict, normalize, preserve_site, street_words
 from rich.progress import (
     BarColumn, MofNCompleteColumn, Progress,
     SpinnerColumn, TextColumn, TimeElapsedColumn,
@@ -43,7 +43,7 @@ CACHE_COLS  = ["address", "query", "precision", "latitude", "longitude",
 
 # Bump when matching logic changes; cached misses from older versions are
 # re-queried, cached hits are kept.
-GEOCODER_VERSION = 2
+GEOCODER_VERSION = 3
 
 # Scores 70-80 on these match types are usually the right street with an
 # out-of-range house number (hundred-block midpoints often don't exist).
@@ -108,12 +108,15 @@ def geocode_address(address: str, client: httpx.Client, city: str = "Phoenix") -
             atype = attrs.get("Addr_type")
             row.update(score=score, match_addr=match, addr_type=atype)
             loc = cand["location"]
-            if score >= 80:
+            if direction_conflict(query, match):
+                pass                      # right street, wrong side of town
+            elif score >= 80:
                 row.update(latitude=loc["y"], longitude=loc["x"], method="geocoder")
                 return row
             same_street = all(ws & set(match.upper().replace(",", " ").split())
                               for ws in street_words(query))
-            if score >= NEAR_MISS_MIN and atype in NEAR_MISS_TYPES and same_street:
+            if (score >= NEAR_MISS_MIN and atype in NEAR_MISS_TYPES and same_street
+                    and not direction_conflict(query, match)):
                 row.update(latitude=loc["y"], longitude=loc["x"], method="geocoder_street")
                 return row
     except Exception:
@@ -138,7 +141,10 @@ def load_cache() -> dict[str, dict]:
     if "version" not in c.columns:
         c["version"] = 1
     stale_miss = c["method"].isin(["failed", "error"]) & (c["version"].fillna(1) < GEOCODER_VERSION)
-    c = c[(c["method"] != "error") & ~stale_miss]
+    # Hits made before the direction check existed are re-validated.
+    bad_dir = c["method"].isin(["geocoder", "geocoder_street"]) & c.apply(
+        lambda r: direction_conflict(str(r.get("query") or ""), str(r.get("match_addr") or "")), axis=1)
+    c = c[(c["method"] != "error") & ~stale_miss & ~bad_dir]
     return {r["address"]: r for r in c.to_dict(orient="records")}
 
 
