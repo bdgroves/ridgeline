@@ -36,9 +36,19 @@ The pipeline reruns every Monday and whenever the code changes. The counts in th
 
 These are descriptive patterns in dispatch counts. None of them is a causal claim.
 
-**A few trailheads account for most of the calls.** In Phoenix, Echo Canyon on Camelback Mountain (dispatch address `49XX E MCDONALD DR`) accounts for 310 of the 1,159 located mountain rescues, about 27%. Piestewa Peak, Pima Canyon on South Mountain, Cholla on Camelback and the South Mountain Park entrance make up most of the rest. In Boulder, 243 of 581 technical rescues sit at Chautauqua Park, the main entry to the Flatirons.
+**A few trailheads account for most of the calls.** In Phoenix, Echo Canyon on Camelback Mountain (dispatch address `49XX E MCDONALD DR`) accounts for 310 of the 1,197 located mountain rescues, about 26%. Piestewa Peak, Cholla on Camelback, Pima Canyon on South Mountain and the South Mountain Park entrance make up most of the rest. In Boulder, 243 of 581 technical rescues sit at Chautauqua Park, the main entry to the Flatirons.
 
-**Phoenix mountain rescues have fallen by about a third.** There were 206 in 2019 and about 131 a year in 2023–2025. Those years overlap Phoenix's heat-triggered trail closures at Echo Canyon and Cholla. That makes the closures an obvious hypothesis to test, not a conclusion. Other changes over the same years (visitation, dispatch coding, the pandemic) could produce the same shape.
+**Phoenix mountain rescues have fallen by about a third.** There were 206 in 2019 and about 131 a year in 2023–2025. Those years overlap Phoenix's heat-triggered trail closures, but the closures can't be most of the explanation (next paragraph). Other changes over the same years (visitation, dispatch coding, the pandemic) could produce the same shape.
+
+**Heat closures: a signal on warning days, too small to explain the long drop.** Since 2021 Phoenix closes the Echo Canyon, Cholla and Piestewa Peak trails from 9 a.m. to 5 p.m. whenever the National Weather Service has a heat warning in effect. `src/analysis/heat.py` lines up all 1,619 mountain-rescue calls (trail assigned from the dispatch address, so unlocated calls count) with every NWS heat warning for zone AZZ543, Central Phoenix, and Open-Meteo daily highs at Sky Harbor. The warning-day count matches the city's own 2024 program review within one day a year (20, 17, 42, 45 vs 20, 18, 42, 45 for 2021–2024).
+
+| Rescues per 100 days, May–Sep | 2019–20 warning | 2019–20 ordinary | 2021 on warning | 2021 on ordinary | Net change (95% range) |
+|---|---|---|---|---|---|
+| Closure trails | 28 | 34 | 14 | 26 | 0.68 (0.34–1.33) |
+| South Mountain | 12 | 10 | 9 | 7 | 1.06 (0.39–2.91) |
+| Other Phoenix trails | 36 | 33 | 29 | 26 | 1.02 (0.58–1.79) |
+
+Warning days got relatively quieter only at the closed trails, which is what working closures would look like, but the counts are small (19 and 21 calls) and the interval includes no effect. The closure trails' long decline (119 rescues in 2019, about 74 a year in 2023–2025) is year-round, and with about 31 warning days a year the closures could account for about 4 rescues a year at most. Rescues per day don't rise with temperature. Since 2021, 21 rescues at the closure trails happened during closed hours on warning days; the site lists them.
 
 **Each city has its own season:**
 
@@ -147,6 +157,9 @@ Everything the site needs is committed, so the site can be rebuilt without re-do
 |---|---|
 | `data/external/{city}_sar_incidents.geojson` | One point per located call |
 | `data/external/geocode_report.json` | Phoenix counts, match rates by method and precision, top unlocated addresses |
+| `data/external/heat_report.json` | Heat analysis: warning days per year, rescue rates by temperature and by warning day, before/after, closed-hour calls |
+| `data/external/phoenix_mountain_calls.csv` | All Phoenix mountain-rescue calls: date, hour, dispatch address |
+| `data/external/phoenix_heat_warnings.csv`, `phoenix_daily_weather.csv` | NWS heat warnings (zone AZZ543) and daily weather at Sky Harbor |
 | `data/external/scottsdale_report.json`, `boulder_report.json` | Per-city counts, categories and date ranges |
 | `data/external/geocode_cache.csv` | Every address ever looked up, and how it resolved |
 | `data/external/source_probe.json` | Schema and vocabulary check of candidate sources |
@@ -182,7 +195,7 @@ GeoJSON feature properties:
 1. **Street names matched as preserves.** The preserve-name fallback matched street names: *McDowell*, *Camelback* and *South Mountain* also matched McDowell Road, Camelback Road and South Mountain Avenue. That pulled ordinary city calls on those arterials into the dataset and pinned them to preserve centroids up to 20 miles away. About 1,560 of the 2,263 old points sat on four such centroids.
 2. **Hundred-block addresses didn't geocode.** The geocoder couldn't score hundred-block addresses or `A/B` intersections, so most real mountain rescues dropped out without any error. Only 474 of 1,619 reached the map.
 
-Both are fixed. Mapped Phoenix mountain rescues rose from 474 to 1,159. The crisis-care and wildland-fire clusters disappeared: 5 crisis calls remain, all at genuine preserve addresses. Every point now records its precision, and match rates are published with each run in `geocode_report.json`. The weekly workflow had also been disabled by GitHub for inactivity, so the map had been a hand-exported snapshot. Geocoding now runs in CI.
+Both are fixed. Mapped Phoenix mountain rescues rose from 474 to 1,159 (1,197 after the follow-up fixes below). The crisis-care and wildland-fire clusters disappeared: 5 crisis calls remain, all at genuine preserve addresses. Every point now records its precision, and match rates are published with each run in `geocode_report.json`. The weekly workflow had also been disabled by GitHub for inactivity, so the map had been a hand-exported snapshot. Geocoding now runs in CI.
 
 ---
 
@@ -235,13 +248,22 @@ ridgeline/
 
 ---
 
+**Follow-up, late September 2026.**
+
+- **Opposite-direction matches.** A Scottsdale call on *East* Indian School Road had been matched with a high score to *West* Indian School Road, 15 miles away. Matches on the right street with the opposite direction are now rejected (7 of about 1,300).
+- **Cholla's new address.** Since the Cholla Trail reopened in 2022, Phoenix Fire logs its calls at `51XX N INVERGORDON RD`, the trailhead corner in Paradise Valley, instead of `62XX E CHOLLA LN`. Those 59 rescues had failed to geocode, and the first run of the heat analysis counted them as "other trails", which overstated the closure-trail decline. Both are fixed.
+- **Wrong street type.** Near-miss matches must now also have the same street type. This rejected six wrong matches, including `7XX E DESERT FOOTHILLS PW` → Desert Flower Ln (21 South Mountain rescues, now unplaced rather than misplaced) and Invergordon Rd → Invergordon Pl, three miles north.
+
+---
+
 ## Roadmap
 
 - [x] Geocoding fix: street-name matches, hundred blocks, near-miss rule (Sept 2026)
 - [x] Geocoding in CI with a committed cache and match report
 - [x] Scottsdale and Boulder
-- [ ] **Closure analysis.** Line up Phoenix's heat-closure dates against Echo Canyon and Cholla calls, with Open-Meteo daily highs as the control
-- [ ] Locate the remaining 460 Phoenix rescues (North Mountain, Papago, Invergordon) with trailhead-specific matching
+- [x] **Closure analysis.** NWS heat-warning days and Open-Meteo daily highs against closure-trail rescues (Sept 2026)
+- [ ] Locate the remaining 422 Phoenix rescues (North Mountain, Papago, Desert Foothills) with trailhead-specific matching
+- [ ] National parks: the NPS FOIA SAR incident lists (2013–2020) give date, type and park for about 20,500 incidents; Lake Mead, Yosemite and Grand Canyon have the most (about 1,600 each). No locations, so a park-level calendar rather than a map
 - [ ] Sheriff and state SAR logs. Requests are pending with Maricopa County Sheriff's Office and Arizona DEMA
 - [ ] More cities with incident-level, located rescue data. Suggestions welcome
 
