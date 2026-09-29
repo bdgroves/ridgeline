@@ -33,9 +33,9 @@
   },
   "by_method": {
     "geocoder": 317,
-    "geocoder_street": 140,
+    "preserve_centroid": 65,
     "failed": 59,
-    "preserve_centroid": 6
+    "geocoder_street": 81
   },
   "date_range": [
     "2022-12-18",

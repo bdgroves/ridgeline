@@ -1,37 +1,33 @@
 {
-  "incidents_in_clean_set": 5476,
-  "priority_subset": 4733,
-  "located": 3240,
+  "incidents_in_clean_set": 5484,
+  "priority_subset": 4741,
+  "located": 3280,
   "by_method": {
-    "failed": 1493,
-    "geocoder_street": 1422,
+    "failed": 1461,
+    "geocoder_street": 1395,
     "geocoder": 1343,
-    "preserve_centroid": 475
+    "preserve_centroid": 542
   },
   "by_precision": {
-    "hundred_block": 3792,
-    "preserve_centroid": 475,
+    "hundred_block": 3733,
+    "preserve_centroid": 542,
     "intersection": 435,
     "address": 31
   },
   "mountain_rescue": {
     "rows": 1619,
     "unique_incident_ids": 1619,
-    "located": 1159,
+    "located": 1197,
     "by_method": {
-      "geocoder_street": 704,
-      "failed": 460,
+      "geocoder_street": 683,
+      "failed": 422,
       "geocoder": 275,
-      "preserve_centroid": 180
+      "preserve_centroid": 239
     },
     "top_unlocated_addresses": [
       [
         "106XX N 7TH ST",
         64
-      ],
-      [
-        "51XX N INVERGORDON RD",
-        59
       ],
       [
         "10XX N GALVIN PW",
@@ -51,6 +47,10 @@
       ],
       [
         "158XX N 16TH ST",
+        21
+      ],
+      [
+        "7XX E DESERT FOOTHILLS PW",
         21
       ],
       [
@@ -129,8 +129,8 @@
   },
   "by_nature_located_pct": {
     " ": 100.0,
-    "check flooding condition": 60.6,
-    "mountain rescue": 71.6,
+    "check flooding condition": 60.3,
+    "mountain rescue": 73.9,
     "water rescue": 68.7
   }
 }
