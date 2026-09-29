@@ -43,10 +43,15 @@ console = Console()
 
 
 def category(type_group: str, desc: str) -> str:
+    """MTNRES is Scottsdale's own mountain-rescue code and is the number to
+    trust. Land searches are kept but counted separately: many are urban
+    missing-person calls, not trail work."""
     t, d = (type_group or "").strip().upper(), (desc or "").lower()
     if t == "WATER" or "swift water" in d:
         return "water"
-    return "mountain"
+    if t == "MTNRES" or "high-angle" in d:
+        return "mountain"
+    return "search"
 
 
 def main() -> None:
