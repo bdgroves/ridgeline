@@ -56,7 +56,8 @@ CLOSE_HOURS = range(9, 17)             # 9 a.m. to 5 p.m.
 # assigned; anything else is "other".
 GROUPS = [
     ("Camelback (Echo Canyon, Cholla)", "closure",
-     r"\bMCDONALD\s+DR\b|ECHO\s+CANYON|CHOLLA\s+(LN|TR|TRL|TRAIL)|CAMELBACK\s+(MOUNTAIN|MTN)"),
+     r"\bMCDONALD\s+DR\b|ECHO\s+CANYON|CHOLLA\s+(LN|TR|TRL|TRAIL)|CAMELBACK\s+(MOUNTAIN|MTN)"
+     r"|\b51XX\s+N\s+INVERGORDON"),   # the Cholla trailhead's address from 2022 on
     ("Piestewa Peak", "closure", r"(PIESTEWA|SQUAW)\s+PEAK"),
     ("South Mountain", "south",
      r"PIMA\s+CANYON|\b1\d{2}XX\s+S\s+CENTRAL|VALLEY\s+VIEW\s+DR|DESERT\s+FOOTHILLS|SOUTH\s+(MOUNTAIN|MTN)\s+(PARK|PRESERVE)|HOLBERT"),

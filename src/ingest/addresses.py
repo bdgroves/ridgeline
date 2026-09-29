@@ -27,7 +27,9 @@ import re
 # Patterns describe the *place*, not a street that borrows its name.
 PRESERVE_SITES: list[tuple[str, str, tuple[float, float]]] = [
     ("Camelback Mountain",     r"camelback\s+(mountain|mtn)|echo\s+canyon",      (33.5194, -111.9749)),
-    ("Cholla Trailhead",       r"cholla\s+(tr|trl|trail|trailhead)\b",           (33.5244, -111.9603)),
+    # Since the trail reopened in 2022 Phoenix Fire logs Cholla calls at the
+    # trailhead corner, 51XX N Invergordon Rd (Paradise Valley), not Cholla Ln.
+    ("Cholla Trailhead",       r"cholla\s+(tr|trl|trail|trailhead)\b|\b51(\d\d|XX)\s+N(orth)?\s+invergordon", (33.5244, -111.9603)),
     ("Piestewa Peak",          r"(piestewa|squaw)\s+peak",                                (33.5307, -112.0197)),
     ("Dreamy Draw",            r"dreamy\s+draw",                                  (33.5460, -112.0260)),
     ("North Mountain",         r"north\s+(mountain|mtn)\s+(park|preserve|trail)", (33.5710, -112.0580)),
@@ -91,6 +93,31 @@ def direction_conflict(query: str, match_addr: str) -> bool:
     """
     q, m = _dir_names(query), _dir_names(str(match_addr or ""))
     return any(name in m and m[name] != d for name, d in q.items())
+
+
+_TYPE_CANON = {"AV": "AVE", "AVENUE": "AVE", "PW": "PKWY", "PARKWAY": "PKWY", "ROAD": "RD",
+               "DRIVE": "DR", "STREET": "ST", "LANE": "LN", "PLACE": "PL", "COURT": "CT",
+               "BOULEVARD": "BLVD", "CIRCLE": "CIR", "TRAIL": "TRL", "TR": "TRL", "TL": "TRL",
+               "HIGHWAY": "HWY", "HW": "HWY", "TERRACE": "TER", "TE": "TER", "BL": "BLVD"}
+
+
+def _street_types(text: str) -> list[str | None]:
+    """The street type of each '&'-separated street, canonicalized, or None."""
+    out = []
+    for part in re.split(r"[&,]", text.upper())[:2] if "&" in text else [text.upper().split(",")[0]]:
+        words = re.findall(r"[A-Z0-9]+", part)
+        t = next((w for w in reversed(words) if w in _TYPES or w in _TYPE_CANON), None)
+        out.append(_TYPE_CANON.get(t, t) if t else None)
+    return out
+
+
+def type_conflict(query: str, match_addr: str) -> bool:
+    """
+    True when the match is on a different kind of street with the same name:
+    '5150 N INVERGORDON RD' landing on 'N Invergordon Pl', three miles north.
+    """
+    q, m = _street_types(query), _street_types(str(match_addr or ""))
+    return any(a and b and a != b for a, b in zip(q, m))
 
 
 def street_words(query: str) -> list[set[str]]:
