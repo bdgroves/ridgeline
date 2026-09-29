@@ -25,7 +25,7 @@ import httpx
 import pandas as pd
 from rich.console import Console
 
-from addresses import normalize, preserve_site
+from addresses import normalize, preserve_site, street_words
 from rich.progress import (
     BarColumn, MofNCompleteColumn, Progress,
     SpinnerColumn, TextColumn, TimeElapsedColumn,
@@ -38,7 +38,19 @@ EXT_DIR  = ROOT / "data" / "external"
 # Committed, so CI and local runs only query addresses they haven't seen.
 CACHE_PATH  = EXT_DIR / "geocode_cache.csv"
 REPORT_PATH = EXT_DIR / "geocode_report.json"
-CACHE_COLS  = ["address", "query", "precision", "latitude", "longitude", "score", "method"]
+CACHE_COLS  = ["address", "query", "precision", "latitude", "longitude",
+               "score", "match_addr", "addr_type", "method", "version"]
+
+# Bump when matching logic changes; cached misses from older versions are
+# re-queried, cached hits are kept.
+GEOCODER_VERSION = 2
+
+# Scores 70-80 on these match types are usually the right street with an
+# out-of-range house number (hundred-block midpoints often don't exist).
+# Accepted only when the matched address contains the street we asked for.
+NEAR_MISS_MIN   = 70
+NEAR_MISS_TYPES = {"PointAddress", "StreetAddress", "StreetAddressExt",
+                   "StreetName", "StreetInt"}
 
 console = Console()
 
@@ -68,7 +80,9 @@ def geocode_address(address: str, client: httpx.Client) -> dict:
     pinned calls on Camelback Rd and McDowell Rd to the preserves.
     """
     row = {"address": address, "query": None, "precision": None,
-           "latitude": None, "longitude": None, "score": None, "method": "failed"}
+           "latitude": None, "longitude": None, "score": None,
+           "match_addr": None, "addr_type": None, "method": "failed",
+           "version": GEOCODER_VERSION}
     if not isinstance(address, str) or not address.strip():
         return row
 
@@ -78,7 +92,7 @@ def geocode_address(address: str, client: httpx.Client) -> dict:
     try:
         params = {
             "SingleLine": query + ", Phoenix, AZ",
-            "outFields":  "Score",
+            "outFields":  "Score,Match_addr,Addr_type",
             "maxLocations": 1,
             "outSR": "4326",   # return decimal degrees, not Web Mercator
             "f": "json",
@@ -87,11 +101,20 @@ def geocode_address(address: str, client: httpx.Client) -> dict:
         r.raise_for_status()
         candidates = r.json().get("candidates", [])
         if candidates:
-            score = candidates[0].get("score", 0)
-            row["score"] = score
+            cand  = candidates[0]
+            score = cand.get("score", 0)
+            attrs = cand.get("attributes", {})
+            match = str(attrs.get("Match_addr") or cand.get("address") or "")
+            atype = attrs.get("Addr_type")
+            row.update(score=score, match_addr=match, addr_type=atype)
+            loc = cand["location"]
             if score >= 80:
-                loc = candidates[0]["location"]
                 row.update(latitude=loc["y"], longitude=loc["x"], method="geocoder")
+                return row
+            same_street = all(ws & set(match.upper().replace(",", " ").split())
+                              for ws in street_words(query))
+            if score >= NEAR_MISS_MIN and atype in NEAR_MISS_TYPES and same_street:
+                row.update(latitude=loc["y"], longitude=loc["x"], method="geocoder_street")
                 return row
     except Exception:
         errored = True
@@ -112,7 +135,10 @@ def load_cache() -> dict[str, dict]:
     if not CACHE_PATH.exists():
         return {}
     c = pd.read_csv(CACHE_PATH, dtype={"address": str})
-    c = c[c["method"] != "error"]
+    if "version" not in c.columns:
+        c["version"] = 1
+    stale_miss = c["method"].isin(["failed", "error"]) & (c["version"].fillna(1) < GEOCODER_VERSION)
+    c = c[(c["method"] != "error") & ~stale_miss]
     return {r["address"]: r for r in c.to_dict(orient="records")}
 
 
