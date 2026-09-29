@@ -165,6 +165,32 @@ def city_stats(city: dict, rows: list[dict]) -> dict:
     }
 
 
+def city_series(city: dict, rows: list[dict]) -> dict:
+    """Per-category counts the page redraws from when the map buttons change."""
+    y0 = min(r["year"] for r in rows)
+    y1 = max(r["year"] for r in rows)
+    fy0, fy1 = city["years_full"]
+    out = {"years": list(range(y0, y1 + 1)), "full": [fy0, fy1],
+           "has_hours": any(r.get("hour") not in (None, "") for r in rows), "cats": {}}
+    for cat in COLORS:
+        rs = [r for r in rows if r["category"] == cat]
+        if not rs:
+            continue
+        ann, mon = Counter(r["year"] for r in rs), Counter(r["month"] for r in rs)
+        hrs, wd = Counter(r["hour"] for r in rs if r.get("hour") not in (None, "")), Counter(r["weekday"] for r in rs)
+        locs = Counter(r.get("place") or r["location_name"] for r in rs if r.get("place") or r.get("location_name"))
+        out["cats"][cat] = {
+            "total":   len(rs),
+            "annual":  [ann.get(y, 0) for y in out["years"]],
+            "months":  [mon.get(m, 0) for m in range(1, 13)],
+            "hours":   [hrs.get(h, 0) for h in range(24)],
+            "weekdays": [wd.get(d, 0) for d in range(7)],
+            "weekend": sum(r["weekday"] >= 5 for r in rs),
+            "top":     [[TRAILHEADS.get(a, a), a if a in TRAILHEADS else "", n] for a, n in locs.most_common(15)],
+        }
+    return out
+
+
 # ── svg charts ───────────────────────────────────────────────────────────────
 
 def bar_chart(values: list[int], labels: list[str], color: str, *, height: int = 150,
@@ -245,8 +271,6 @@ def city_panel(city: dict, s: dict, report: dict) -> str:
                    'named from the coordinates. Many calls share a single point, which likely stands in for a '
                    'trail or open-space area rather than the exact spot.</p>')
 
-    cats = "".join(f'<span class="chip"><i style="background:{COLORS[c]}"></i>{esc(CAT_LABEL[c])} '
-                   f'<b>{s["by_cat"].get(c, 0):,}</b></span>' for c in COLORS if s["by_cat"].get(c))
     located = report.get("located"), report.get("incidents")
     if k == "phoenix":
         mr = report.get("mountain_rescue", {})
@@ -259,21 +283,20 @@ def city_panel(city: dict, s: dict, report: dict) -> str:
 
     return f"""
 <section class="city" id="city-{k}" data-city="{k}" {'hidden' if k != 'phoenix' else ''}>
-  <div class="kpis">
+  <div class="kpis" data-part="kpis">
     {kpi(f'{len(s["mountain"]):,}', "Mountain & technical rescues mapped", f'{y0}–{y1}')}
     {kpi(f'~{s["per_year"]:,}', "Per full year", f'{fy0}–{fy1} average')}
     {kpi(esc(s["busiest_month"]), "Busiest month", f'quietest: {esc(s["quietest_month"])}')}
     {kpi(f'{s["weekend_pct"]}%', "On weekends", "2 of 7 days = 29%")}
   </div>
-  <div class="chips">{cats}</div>
   <div class="grid2">
-    <figure class="chart"><figcaption>Mountain &amp; technical rescues per year{' · faded = partial year' if faded else ''}</figcaption>{annual}</figure>
-    <figure class="chart"><figcaption>By month, all years</figcaption>{months}</figure>
-    {hours_block}
-    <figure class="chart"><figcaption>By day of week</figcaption>{weekdays}</figure>
+    <figure class="chart" data-part="annual"><figcaption>Mountain &amp; technical rescues per year{' · faded = partial year' if faded else ''}</figcaption>{annual}</figure>
+    <figure class="chart" data-part="months"><figcaption>By month, all years</figcaption>{months}</figure>
+    {hours_block.replace('<figure class="chart"', '<figure class="chart" data-part="hours"', 1)}
+    <figure class="chart" data-part="weekdays"><figcaption>By day of week</figcaption>{weekdays}</figure>
   </div>
   <h3>Where the calls come from</h3>
-  {places}
+  <div data-part="places">{places}</div>
   <p class="source">Source: <a href="{esc(city['source_url'])}">{esc(city['source_name'])}</a> · {esc(city['license'])} ·
      {esc(city['location_note'])} {esc(loc_line)}.</p>
 </section>"""
@@ -297,6 +320,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
         f'<td>{esc(s["busiest_month"])}</td><td>{esc(s["quietest_month"])}</td><td class="num">{s["weekend_pct"]}%</td></tr>'
         for c, s, _ in cities)
     city_cfg = json.dumps({c["key"]: {"center": c["center"], "zoom": c["zoom"], "name": c["name"]} for c, _, _ in cities})
+    series = json.dumps({c["key"]: city_series(c, s["rows"]) for c, s, _ in cities}, separators=(",", ":"))
     colors = json.dumps(COLORS)
     labels = json.dumps(CAT_LABEL)
 
@@ -351,6 +375,9 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
   .tog {{ background:var(--panel); border:1px solid var(--line); color:var(--muted); padding:6px 10px; cursor:pointer;
           font:400 12px/1.4 'IBM Plex Mono', monospace; border-radius:2px; }}
   .tog.on {{ color:var(--text); border-color:#4a5143; }}
+  .tog b {{ font-weight:500; color:var(--soft); margin-left:4px; }}
+  .tog[hidden] {{ display:none; }}
+  .legend .lead {{ color:var(--sand); }}
   .tog:not(.on) i {{ opacity:.3; }}
   .tog:focus-visible {{ outline:2px solid var(--ember); outline-offset:2px; }}
   .legend .hint {{ align-self:center; }}
@@ -441,10 +468,11 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
   <div class="tabs" role="tablist">{tabs}</div>
   <div id="map" role="region" aria-label="Map of rescue calls"></div>
   <div class="legend" role="group" aria-label="Show on map">
-    <button class="tog on" data-cat="mountain" aria-pressed="true"><i style="background:{COLORS['mountain']}"></i>Mountain &amp; technical rescue</button>
-    <button class="tog" data-cat="water" aria-pressed="false"><i style="background:{COLORS['water']}"></i>Flood &amp; water rescue</button>
-    <button class="tog" data-cat="search" aria-pressed="false"><i style="background:{COLORS['search']}"></i>Land search (Scottsdale)</button>
-    <span class="hint">Bigger circle = more calls at that spot · tap a circle for details</span>
+    <span class="hint lead">Show:</span>
+    <button class="tog on" data-cat="mountain" aria-pressed="true"><i style="background:{COLORS['mountain']}"></i>Mountain &amp; technical rescue <b data-count="mountain"></b></button>
+    <button class="tog" data-cat="water" aria-pressed="false"><i style="background:{COLORS['water']}"></i>Flood &amp; water rescue <b data-count="water"></b></button>
+    <button class="tog" data-cat="search" aria-pressed="false"><i style="background:{COLORS['search']}"></i>Land search <b data-count="search"></b></button>
+    <span class="hint">These buttons drive the map, the numbers and the charts below · bigger circle = more calls at that spot</span>
   </div>
   {panels}
 </div></section>
@@ -585,11 +613,106 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
   }}
   document.querySelectorAll('.tog').forEach(b => b.addEventListener('click', () => {{
     const c = b.dataset.cat, on = !visible.has(c);
+    if (!on && visible.size === 1) return;          // keep at least one category on
     on ? visible.add(c) : visible.delete(c);
-    b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); draw(); fit(current);
+    b.classList.toggle('on', on); b.setAttribute('aria-pressed', on);
+    draw(); fit(current); panel(current);
   }}));
+
+  // ── charts, numbers and tables follow the same buttons ──
+  const SERIES = {series};
+  const ORDER = ['mountain', 'water', 'search'];
+  const MONTHS = ['J','F','M','A','M','J','J','A','S','O','N','D'];
+  const MONTHS_L = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+  const fmt = n => n.toLocaleString('en-US');
+
+  function bars(parts, labels, opts = {{}}) {{
+    // parts: [{{color, values}}] stacked bottom-up in ORDER
+    const n = labels.length, w = 600, H = 150, pb = 22, pt = 18, h = H - pb - pt;
+    const gap = n < 16 ? 4 : 2, bw = (w - gap * (n - 1)) / n;
+    const tot = labels.map((_, i) => parts.reduce((s, p) => s + p.values[i], 0));
+    const vmax = Math.max(1, ...tot);
+    let out = `<svg viewBox="0 0 ${{w}} ${{H}}" role="img" aria-label="${{esc(opts.title || '')}}" preserveAspectRatio="none">`
+            + `<line x1="0" y1="${{pt + h}}" x2="${{w}}" y2="${{pt + h}}" class="axis"/>`;
+    for (let i = 0; i < n; i++) {{
+      const x = i * (bw + gap); let y = pt + h;
+      const op = (opts.faded || []).includes(i) ? .35 : 1;
+      for (const p of parts) {{
+        const bh = h * p.values[i] / vmax; y -= bh;
+        if (bh > 0) out += `<rect x="${{x.toFixed(1)}}" y="${{y.toFixed(1)}}" width="${{bw.toFixed(1)}}" height="${{bh.toFixed(1)}}" fill="${{p.color}}" opacity="${{op}}"><title>${{esc(labels[i])}}: ${{fmt(p.values[i])}}</title></rect>`;
+      }}
+      if (opts.values !== false && n <= 14 && tot[i]) out += `<text x="${{(x + bw / 2).toFixed(1)}}" y="${{(y - 5).toFixed(1)}}" class="val">${{fmt(tot[i])}}</text>`;
+      if (i % (opts.every || 1) === 0) out += `<text x="${{(x + bw / 2).toFixed(1)}}" y="${{H - 6}}" class="lab">${{esc(labels[i])}}</text>`;
+    }}
+    return out + '</svg>';
+  }}
+
+  function panel(key) {{
+    const S = SERIES[key], sec = document.getElementById('city-' + key);
+    if (!S || !sec) return;
+    const cats = ORDER.filter(c => visible.has(c) && S.cats[c]);
+    document.querySelectorAll('.tog').forEach(b => {{
+      const c = S.cats[b.dataset.cat];
+      b.hidden = !c;
+      b.querySelector('[data-count]').textContent = c ? fmt(c.total) : '';
+    }});
+    const sum = f => {{ const len = S.cats[cats[0]] ? S.cats[cats[0]][f].length : 0;
+      return Array.from({{length: len}}, (_, i) => cats.reduce((s, c) => s + S.cats[c][f][i], 0)); }};
+    const parts = f => cats.map(c => ({{color: COLORS[c], values: S.cats[c][f]}}));
+    const PLURAL = {{mountain:'Mountain & technical rescues', water:'Flood & water rescues', search:'Land searches'}};
+    const SHORT = {{mountain:'mountain', water:'water', search:'search'}};
+    const what = cats.length === 1 ? PLURAL[cats[0]] : (cats.map(c => SHORT[c]).join(' + ') + ' calls').replace(/^./, m => m.toUpperCase());
+    if (!cats.length) return;
+
+    const annual = sum('annual'), months = sum('months'), wk = cats.reduce((s, c) => s + S.cats[c].weekend, 0);
+    const total = cats.reduce((s, c) => s + S.cats[c].total, 0);
+    const full = S.years.map((y, i) => [y, annual[i]]).filter(([y]) => y >= S.full[0] && y <= S.full[1]);
+    const perYear = Math.round(full.reduce((s, [, v]) => s + v, 0) / Math.max(1, full.length));
+    const busiest = months.indexOf(Math.max(...months)), quietest = months.indexOf(Math.min(...months));
+    const faded = S.years.map((y, i) => (y < S.full[0] || y > S.full[1]) ? i : -1).filter(i => i >= 0);
+
+    sec.querySelector('[data-part=kpis]').innerHTML =
+      `<div class="kpi"><div class="kpi-v">${{fmt(total)}}</div><div class="kpi-l">${{esc(what)}} mapped</div><div class="kpi-s">${{S.years[0]}}–${{S.years[S.years.length - 1]}}</div></div>`
+    + `<div class="kpi"><div class="kpi-v">~${{fmt(perYear)}}</div><div class="kpi-l">Per full year</div><div class="kpi-s">${{S.full[0]}}–${{S.full[1]}} average</div></div>`
+    + `<div class="kpi"><div class="kpi-v">${{MONTHS_L[busiest]}}</div><div class="kpi-l">Busiest month</div><div class="kpi-s">quietest: ${{MONTHS_L[quietest]}}</div></div>`
+    + `<div class="kpi"><div class="kpi-v">${{(100 * wk / Math.max(1, total)).toFixed(1)}}%</div><div class="kpi-l">On weekends</div><div class="kpi-s">2 of 7 days = 29%</div></div>`;
+
+    const cap = (el, text) => el.querySelector('figcaption').textContent = text;
+    const A = sec.querySelector('[data-part=annual]');
+    A.innerHTML = `<figcaption></figcaption>` + bars(parts('annual'), S.years.map(String), {{faded, every: S.years.length > 12 ? 2 : 1, title: what + ' per year'}});
+    cap(A, what + ' per year' + (faded.length ? ' · faded = partial year' : ''));
+    const M = sec.querySelector('[data-part=months]');
+    M.innerHTML = `<figcaption></figcaption>` + bars(parts('months'), MONTHS, {{title: what + ' by month'}});
+    cap(M, 'By month, all years');
+    const D = sec.querySelector('[data-part=weekdays]');
+    D.innerHTML = `<figcaption></figcaption>` + bars(parts('weekdays'), DAYS, {{title: what + ' by weekday'}});
+    cap(D, 'By day of week');
+    const Hh = sec.querySelector('[data-part=hours]');
+    if (S.has_hours) {{
+      Hh.classList.remove('muted-box');
+      Hh.innerHTML = `<figcaption></figcaption>` + bars(parts('hours'), [...Array(24).keys()].map(h => String(h).padStart(2, '0')), {{every: 3, values: false, title: what + ' by hour'}});
+      cap(Hh, 'By hour of the call');
+    }}
+
+    const merged = new Map();
+    for (const c of cats) for (const [label, addr, n] of S.cats[c].top) {{
+      const k = label + '|' + addr; merged.set(k, [label, addr, (merged.get(k) || [0, 0, 0])[2] + n]);
+    }}
+    const top = [...merged.values()].sort((a, b) => b[2] - a[2]).slice(0, 8);
+    const P = sec.querySelector('[data-part=places]');
+    const note = key === 'boulder' ? P.querySelector('.source') : null;
+    P.innerHTML = top.length ? `<table class="places"><thead><tr><th>Dispatch location</th><th class="num">Calls</th><th></th></tr></thead><tbody>`
+      + top.map(([l, a, n]) => `<tr><td><span class="loc">${{esc(l)}}</span>${{a ? `<span class="addr">${{esc(a)}}</span>` : ''}}</td><td class="num">${{fmt(n)}}</td><td class="barcell"><span style="width:${{(100 * n / top[0][2]).toFixed(0)}}%"></span></td></tr>`).join('')
+      + '</tbody></table>' : '<p class="muted">No locations recorded.</p>';
+    if (note) P.appendChild(note);
+  }}
   function show(key) {{
-    current = key; draw();
+    current = key;
+    // a category the city doesn't have (land search outside Scottsdale) can't be the only one on
+    if (![...visible].some(c => SERIES[key].cats[c])) {{ visible.clear(); visible.add('mountain');
+      document.querySelectorAll('.tog').forEach(b => {{ const on = b.dataset.cat === 'mountain'; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); }}); }}
+    draw(); panel(key);
     fit(key);
     document.querySelectorAll('.city').forEach(s => s.hidden = s.dataset.city !== key);
     document.querySelectorAll('.tab').forEach(t => {{
