@@ -1,0 +1,2039 @@
+address,query,precision,latitude,longitude,score,method
+100XX N 55TH PL,10050 N 55TH PL,hundred_block,,,,failed
+100XX N 7TH ST,10050 N 7TH ST,hundred_block,,,,failed
+100XX N CENTRAL AV,10050 N CENTRAL AV,hundred_block,,,77.5,failed
+100XX N METRO PW E,10050 N METRO PW E,hundred_block,33.578055,-112.1198445,100.0,geocoder
+100XX S 15TH AV,10050 S 15TH AV,hundred_block,,,,failed
+100XX S CENTRAL AV,10050 S CENTRAL AV,hundred_block,,,77.5,failed
+100XX W PAYSON RD,10050 W PAYSON RD,hundred_block,,,,failed
+102XX N 12TH PL,10250 N 12TH PL,hundred_block,,,,failed
+102XX N 33RD AV,10250 N 33RD AV,hundred_block,,,,failed
+102XX N 54TH PL,10250 N 54TH PL,hundred_block,,,,failed
+102XX S CENTRAL AV,10250 S CENTRAL AV,hundred_block,,,77.5,failed
+102XX W CHIPMAN RD,10250 W CHIPMAN RD,hundred_block,,,,failed
+103XX W SUPERIOR AV,10350 W SUPERIOR AV,hundred_block,,,,failed
+104XX N 11TH PL,10450 N 11TH PL,hundred_block,,,,failed
+104XX N 32ND LN,10450 N 32ND LN,hundred_block,,,,failed
+104XX N 7TH AV,10450 N 7TH AV,hundred_block,,,,failed
+104XX N CENTRAL AV,10450 N CENTRAL AV,hundred_block,,,,failed
+104XX S 40TH PL,10450 S 40TH PL,hundred_block,,,,failed
+104XX S 51ST ST,10450 S 51ST ST,hundred_block,,,,failed
+104XX S CENTRAL AV,10450 S CENTRAL AV,hundred_block,,,77.5,failed
+104XX W ILLINI ST,10450 W ILLINI ST,hundred_block,,,,failed
+105XX S 19TH AV,10550 S 19TH AV,hundred_block,,,,failed
+106XX N 15TH WY,10650 N 15TH WY,hundred_block,33.583743,-112.0915665,97.77,geocoder
+106XX N 7TH ST,10650 N 7TH ST,hundred_block,,,,failed
+106XX S 48TH ST,10650 S 48TH ST,hundred_block,,,,failed
+106XX S CENTRAL AV,10650 S CENTRAL AV,hundred_block,,,77.5,failed
+107XX N 7TH AV,10750 N 7TH AV,hundred_block,,,,failed
+107XX S 19TH AV,10750 S 19TH AV,hundred_block,,,,failed
+107XX W CAMELBACK RD,10750 W CAMELBACK RD,hundred_block,,,,failed
+107XX W HIGHLAND AV,10750 W HIGHLAND AV,hundred_block,,,,failed
+108XX N 10TH DR,10850 N 10TH DR,hundred_block,33.586011,-112.0609395,97.77,geocoder
+108XX N 16TH AV,10850 N 16TH AV,hundred_block,,,,failed
+108XX N 32ND ST,10850 N 32ND ST,hundred_block,33.584481,-112.0144275,100.0,geocoder
+108XX N 43RD AV,10850 N 43RD AV,hundred_block,,,,failed
+108XX N 7TH AV,10850 N 7TH AV,hundred_block,,,,failed
+108XX N CAVE CREEK RD,10850 N CAVE CREEK RD,hundred_block,,,79.23,failed
+108XX N TATUM BL,10850 N TATUM BL,hundred_block,,,75.45,failed
+108XX S 48TH ST,10850 S 48TH ST,hundred_block,33.347214,-111.9808125,100.0,geocoder
+108XX S SUMMIT RD,10850 S SUMMIT RD,hundred_block,,,,failed
+108XX W ELM ST,10850 W ELM ST,hundred_block,,,,failed
+109XX S CENTRAL AV,10950 S CENTRAL AV,hundred_block,,,77.5,failed
+109XX S LOS LOMITAS DR,10950 S LOS LOMITAS DR,hundred_block,,,,failed
+109XX W TAFT ST,10950 W TAFT ST,hundred_block,,,,failed
+10XX E CAMPBELL AV,1050 E CAMPBELL AV,hundred_block,,,77.5,failed
+10XX E DIANA AV,1050 E DIANA AV,hundred_block,,,,failed
+10XX E EL CAMINITO DR,1050 E EL CAMINITO DR,hundred_block,,,79.23,failed
+10XX E EL CAMINO DR,1050 E EL CAMINO DR,hundred_block,,,77.5,failed
+10XX E HIGHLAND AV,1050 E HIGHLAND AV,hundred_block,,,77.5,failed
+10XX E OREGON AV,1050 E OREGON AV,hundred_block,,,,failed
+10XX E PUEBLO RD,1050 E PUEBLO RD,hundred_block,33.551739,-112.059675,100.0,geocoder
+10XX E SHANGRI LA RD,1050 E SHANGRI LA RD,hundred_block,,,78.4,failed
+10XX N 22ND AV,1050 N 22ND AV,hundred_block,,,,failed
+10XX N 22ND PL,1050 N 22ND PL,hundred_block,,,,failed
+10XX N 43RD AV,1050 N 43RD AV,hundred_block,,,,failed
+10XX N 44TH ST,1050 N 44TH ST,hundred_block,,,,failed
+10XX N 48TH ST,1050 N 48TH ST,hundred_block,,,,failed
+10XX N GALVIN PW,1050 N GALVIN PW,hundred_block,,,,failed
+10XX S 3RD ST,1050 S 3RD ST,hundred_block,,,,failed
+10XX S 8TH AV,1050 S 8TH AV,hundred_block,33.4377,-112.0839615,100.0,geocoder
+10XX W MISSOURI AV,1050 W MISSOURI AV,hundred_block,,,,failed
+10XX W SAN MIGUEL AV,1050 W SAN MIGUEL AV,hundred_block,,,78.4,failed
+10XX W TONTO ST,1050 W TONTO ST,hundred_block,,,,failed
+110XX N 23RD AV,11050 N 23RD AV,hundred_block,,,,failed
+110XX N 23RD DR,11050 N 23RD DR,hundred_block,,,,failed
+110XX N 28TH DR,11050 N 28TH DR,hundred_block,,,,failed
+110XX N 7TH AV,11050 N 7TH AV,hundred_block,,,,failed
+110XX N 7TH ST,11050 N 7TH ST,hundred_block,,,,failed
+110XX N BILTMORE DR,11050 N BILTMORE DR,hundred_block,33.588027,-112.1181885,100.0,geocoder
+110XX S 51ST ST,11050 S 51ST ST,hundred_block,,,,failed
+111XX N 7TH AV,11150 N 7TH AV,hundred_block,,,,failed
+111XX N 7TH ST,11150 N 7TH ST,hundred_block,,,,failed
+112XX N 28TH DR,11250 N 28TH DR,hundred_block,,,,failed
+112XX N 44TH CT,11250 N 44TH CT,hundred_block,33.589728,-111.9857355,97.77,geocoder
+112XX N BLACK CANYON AC,11250 N BLACK CANYON AC,hundred_block,,,,failed
+112XX S 27TH AV,11250 S 27TH AV,hundred_block,,,,failed
+112XX S 51ST ST,11250 S 51ST ST,hundred_block,,,,failed
+113XX N 15TH AV,11350 N 15TH AV,hundred_block,,,,failed
+114XX N 28TH DR,11450 N 28TH DR,hundred_block,,,,failed
+116XX N 28TH DR,11650 N 28TH DR,hundred_block,,,,failed
+116XX N 40TH WY,11650 N 40TH WY,hundred_block,33.593868,-111.9932055,97.77,geocoder
+116XX N CAVE CREEK RD,11650 N CAVE CREEK RD,hundred_block,,,79.23,failed
+116XX N TATUM BL,11650 N TATUM BL,hundred_block,,,75.45,failed
+116XX S HALF MOON DR,11650 S HALF MOON DR,hundred_block,,,78.4,failed
+118XX N 19TH AV,11850 N 19TH AV,hundred_block,33.595029,-112.1007105,100.0,geocoder
+118XX N 25TH PL,11850 N 25TH PL,hundred_block,,,,failed
+118XX N 28TH DR,11850 N 28TH DR,hundred_block,33.594867,-112.1206275,100.0,geocoder
+118XX S MAGIC STONE DR,11850 S MAGIC STONE DR,hundred_block,33.340357965784,-111.978274301181,80.0,geocoder
+118XX S MONTEZUMA CT,11850 S MONTEZUMA CT,hundred_block,,,79.23,failed
+11XX E BELMONT AV,1150 E BELMONT AV,hundred_block,33.548562,-112.0576095,100.0,geocoder
+11XX E CORAL GABLES DR,1150 E CORAL GABLES DR,hundred_block,,,,failed
+11XX E GROVERS AV,1150 E GROVERS AV,hundred_block,,,70.91,failed
+11XX E MONROE ST,1150 E MONROE ST,hundred_block,,,75.45,failed
+11XX E SIERRA VISTA DR,1150 E SIERRA VISTA DR,hundred_block,33.532181864067,-112.056579844205,80.0,geocoder
+11XX E SOUTHERN AV,1150 E SOUTHERN AV,hundred_block,,,77.5,failed
+11XX N 16TH ST,1150 N 16TH ST,hundred_block,,,,failed
+11XX N 21ST AV,1150 N 21ST AV,hundred_block,,,,failed
+11XX N 22ND AV,1150 N 22ND AV,hundred_block,,,,failed
+11XX N 44TH ST,1150 N 44TH ST,hundred_block,,,,failed
+11XX W BELL RD,1150 W BELL RD,hundred_block,33.64083,-112.058514,93.77,geocoder
+11XX W HILTON AV,1150 W HILTON AV,hundred_block,,,76.66,failed
+11XX W MCDOWELL RD,1150 W MCDOWELL RD,hundred_block,,,,failed
+11XX W MONTEROSA ST,1150 W MONTEROSA ST,hundred_block,,,78.4,failed
+11XX W NORTH LN,1150 W NORTH LN,hundred_block,,,,failed
+120XX N 19TH AV,12050 N 19TH AV,hundred_block,,,,failed
+120XX N 23RD AV,12050 N 23RD AV,hundred_block,,,,failed
+122XX N 19TH ST,12250 N 19TH ST,hundred_block,,,,failed
+122XX N PARADISE VILLAGE PW,12250 N PARADISE VILLAGE PW,hundred_block,33.599180712596,-111.975487505138,82.36,geocoder
+124XX N 19TH AV,12450 N 19TH AV,hundred_block,,,,failed
+124XX N 28TH DR,12450 N 28TH DR,hundred_block,33.600465,-112.0221315,97.77,geocoder
+126XX N 17TH AV,12650 N 17TH AV,hundred_block,,,,failed
+126XX S HONAHLEE CT,12650 S HONAHLEE CT,hundred_block,,,78.4,failed
+127XX S TV RD,12750 S TV RD,hundred_block,,,,failed
+128XX N 19TH AV,12850 N 19TH AV,hundred_block,33.602805,-112.100409,100.0,geocoder
+128XX N 41ST DR,12850 N 41ST DR,hundred_block,,,,failed
+128XX N 8TH AV,12850 N 8TH AV,hundred_block,,,,failed
+128XX N CAVE CREEK RD,12850 N CAVE CREEK RD,hundred_block,,,79.23,failed
+128XX N CENTRAL AV,12850 N CENTRAL AV,hundred_block,,,,failed
+128XX N PARADISE VILLAGE PW W,12850 N PARADISE VILLAGE PW W,hundred_block,33.603637706541,-111.988148205934,83.64,geocoder
+128XX S WARPAINT DR,12850 S WARPAINT DR,hundred_block,,,78.4,failed
+129XX N 7TH ST,12950 N 7TH ST,hundred_block,33.598575,-112.0667175,100.0,geocoder
+129XX S 48TH ST,12950 S 48TH ST,hundred_block,,,,failed
+12XX E BETHANY HOME RD,1250 E BETHANY HOME RD,hundred_block,33.524658,-112.054194,100.0,geocoder
+12XX E CHRISTY DR,1250 E CHRISTY DR,hundred_block,,,76.52,failed
+12XX E FREMONT RD,1250 E FREMONT RD,hundred_block,,,76.52,failed
+12XX E LAWRENCE LN,1250 E LAWRENCE LN,hundred_block,,,,failed
+12XX E TOWNLEY AV,1250 E TOWNLEY AV,hundred_block,,,,failed
+12XX N 28TH PL,1250 N 28TH PL,hundred_block,,,,failed
+12XX N 36TH ST,1250 N 36TH ST,hundred_block,,,,failed
+12XX N 40TH ST,1250 N 40TH ST,hundred_block,33.460929,-112.000176,100.0,geocoder
+12XX N CENTRAL AV,1250 N CENTRAL AV,hundred_block,,,76.52,failed
+12XX S 14TH AV,1250 S 14TH AV,hundred_block,,,,failed
+12XX S 7TH AV,1250 S 7TH AV,hundred_block,33.435396,-112.083228,100.0,geocoder
+12XX W CAROL ANN WY,1250 W CAROL ANN WY,hundred_block,,,,failed
+12XX W MAGNOLIA ST,1250 W MAGNOLIA ST,hundred_block,,,77.5,failed
+12XX W MOUNTAIN VIEW RD,1250 W MOUNTAIN VIEW RD,hundred_block,33.575113795352,-112.088802109012,80.71,geocoder
+12XX W PALO VERDE DR,1250 W PALO VERDE DR,hundred_block,,,78.4,failed
+12XX W PIERCE ST,1250 W PIERCE ST,hundred_block,,,75.45,failed
+130XX N CENTRAL AV,13050 N CENTRAL AV,hundred_block,,,77.5,failed
+130XX S 48TH ST,13050 S 48TH ST,hundred_block,,,,failed
+130XX S WARPAINT DR,13050 S WARPAINT DR,hundred_block,,,,failed
+132XX N 47TH PL,13250 N 47TH PL,hundred_block,,,,failed
+132XX N JOAN DE ARC AV,13250 N JOAN DE ARC AV,hundred_block,,,79.23,failed
+132XX S 48TH ST,13250 S 48TH ST,hundred_block,,,,failed
+132XX S WAKIAL LP,13250 S WAKIAL LP,hundred_block,,,76.52,failed
+134XX N 32ND ST,13450 N 32ND ST,hundred_block,,,,failed
+134XX N 43RD AV,13450 N 43RD AV,hundred_block,,,,failed
+134XX N 44TH ST,13450 N 44TH ST,hundred_block,,,,failed
+136XX N 18TH ST,13650 N 18TH ST,hundred_block,,,,failed
+136XX N 43RD ST,13650 N 43RD ST,hundred_block,,,,failed
+136XX N CAVE CREEK RD,13650 N CAVE CREEK RD,hundred_block,33.610752,-112.036347,100.0,geocoder
+136XX N SCOTTSDALE RD,13650 N SCOTTSDALE RD,hundred_block,33.610149,-111.926205,97.96,geocoder
+136XX N TATUM BL,13650 N TATUM BL,hundred_block,,,,failed
+136XX S 48TH ST,13650 S 48TH ST,hundred_block,,,,failed
+136XX S CANYON DR,13650 S CANYON DR,hundred_block,,,76.52,failed
+138XX N 19TH AV,13850 N 19TH AV,hundred_block,33.613281,-112.1008815,100.0,geocoder
+138XX N 32ND ST,13850 N 32ND ST,hundred_block,,,,failed
+138XX N 43RD ST,13850 N 43RD ST,hundred_block,,,,failed
+138XX N 68TH ST,13850 N 68TH ST,hundred_block,33.613146,-111.934782,97.96,geocoder
+138XX S 44TH ST,13850 S 44TH ST,hundred_block,,,,failed
+13XX E ANGELA DR,1350 E ANGELA DR,hundred_block,33.645789,-112.053303,100.0,geocoder
+13XX E CHANDLER BL,1350 E CHANDLER BL,hundred_block,,,77.5,failed
+13XX E CINNABAR AV,1350 E CINNABAR AV,hundred_block,,,,failed
+13XX E CULVER ST,1350 E CULVER ST,hundred_block,,,,failed
+13XX E GIBSON LN,1350 E GIBSON LN,hundred_block,,,75.45,failed
+13XX E GLENN DR,1350 E GLENN DR,hundred_block,33.540633,-112.050927,100.0,geocoder
+13XX E GRANADA RD,1350 E GRANADA RD,hundred_block,,,,failed
+13XX E MOUNTAIN VIEW RD,1350 E MOUNTAIN VIEW RD,hundred_block,33.575094,-112.0525965,100.0,geocoder
+13XX E ROESER RD,1350 E ROESER RD,hundred_block,33.399612,-112.090284,93.77,geocoder
+13XX E RUTH AV,1350 E RUTH AV,hundred_block,,,,failed
+13XX E WILDWOOD DR,1350 E WILDWOOD DR,hundred_block,33.297948,-112.0519215,100.0,geocoder
+13XX N 24TH ST,1350 N 24TH ST,hundred_block,,,,failed
+13XX N 27TH AV,1350 N 27TH AV,hundred_block,,,,failed
+13XX N 2ND ST,1350 N 2ND ST,hundred_block,,,,failed
+13XX W CHARLESTON AV,1350 W CHARLESTON AV,hundred_block,,,70.13,failed
+13XX W DOVE VALLEY RD,1350 W DOVE VALLEY RD,hundred_block,,,79.23,failed
+13XX W HARRISON ST,1350 W HARRISON ST,hundred_block,,,77.5,failed
+13XX W MONROE ST,1350 W MONROE ST,hundred_block,,,75.45,failed
+13XX W PECAN RD,1350 W PECAN RD,hundred_block,,,,failed
+13XX W VAN BUREN ST,1350 W VAN BUREN ST,hundred_block,33.452334,-112.089384,100.0,geocoder
+140XX N 32ND ST,14050 N 32ND ST,hundred_block,,,,failed
+140XX N 8TH PL,14050 N 8TH PL,hundred_block,,,,failed
+142XX N 14TH PL,14250 N 14TH PL,hundred_block,33.616449,-112.052169,97.77,geocoder
+142XX N 19TH AV,14250 N 19TH AV,hundred_block,,,,failed
+142XX N 5TH ST,14250 N 5TH ST,hundred_block,,,,failed
+142XX S DESERT FOOTHILLS PW,14250 S DESERT FOOTHILLS PW,hundred_block,33.316261934628,-112.05771617888,83.13,geocoder
+144XX N 14TH ST,14450 N 14TH ST,hundred_block,33.617979,-112.052169,100.0,geocoder
+144XX N 18TH ST,14450 N 18TH ST,hundred_block,,,,failed
+144XX N CAVE CREEK RD,14450 N CAVE CREEK RD,hundred_block,,,79.23,failed
+144XX S 48TH ST,14450 S 48TH ST,hundred_block,,,,failed
+146XX N 19TH AV,14650 N 19TH AV,hundred_block,,,,failed
+146XX S 1ST ST,14650 S 1ST ST,hundred_block,,,,failed
+146XX S DESERT FOOTHILLS PW,14650 S DESERT FOOTHILLS PW,hundred_block,33.309720357365,-112.054747702269,83.13,geocoder
+148XX N 25TH DR,14850 N 25TH DR,hundred_block,,,,failed
+148XX N 60TH ST,14850 N 60TH ST,hundred_block,,,,failed
+148XX N BLACK CANYON AC,14850 N BLACK CANYON AC,hundred_block,,,,failed
+148XX N BLACK CANYON HW,14850 N BLACK CANYON HW,hundred_block,33.620717969022,-112.117197293916,80.71,geocoder
+14XX E BELL RD,1450 E BELL RD,hundred_block,33.64254,-112.051557,100.0,geocoder
+14XX E BETHANY HOME RD,1450 E BETHANY HOME RD,hundred_block,33.52473,-112.0510305,100.0,geocoder
+14XX E CARSON RD,1450 E CARSON RD,hundred_block,,,75.45,failed
+14XX E CINNABAR AV,1450 E CINNABAR AV,hundred_block,,,77.5,failed
+14XX E DUNLAP AV,1450 E DUNLAP AV,hundred_block,,,75.45,failed
+14XX E GARY WY,1450 E GARY WY,hundred_block,,,,failed
+14XX E MCKINLEY ST,1450 E MCKINLEY ST,hundred_block,33.457068,-112.0498965,100.0,geocoder
+14XX E TAYLOR ST,1450 E TAYLOR ST,hundred_block,,,,failed
+14XX N 34TH ST,1450 N 34TH ST,hundred_block,,,,failed
+14XX N 43RD AV,1450 N 43RD AV,hundred_block,33.46425,-112.152465,100.0,geocoder
+14XX N 80TH DR,1450 N 80TH DR,hundred_block,33.464205,-112.232997,97.77,geocoder
+14XX N 81ST DR,1450 N 81ST DR,hundred_block,,,,failed
+14XX S 23RD ST,1450 S 23RD ST,hundred_block,,,,failed
+14XX S 7TH AV,1450 S 7TH AV,hundred_block,,,,failed
+14XX W MONTOYA LN,1450 W MONTOYA LN,hundred_block,33.673437,-112.0905,100.0,geocoder
+14XX W NORTHERN AV,1450 W NORTHERN AV,hundred_block,,,77.5,failed
+14XX W OSBORN RD,1450 W OSBORN RD,hundred_block,,,75.45,failed
+14XX W PEORIA AV,1450 W PEORIA AV,hundred_block,33.582672,-112.0504815,93.77,geocoder
+14XX W RENEE DR,1450 W RENEE DR,hundred_block,,,,failed
+14XX W SWEETWATER AV,1450 W SWEETWATER AV,hundred_block,,,79.23,failed
+150XX N 9TH ST,15050 N 9TH ST,hundred_block,,,,failed
+152XX S 50TH ST,15250 S 50TH ST,hundred_block,,,,failed
+154XX N 28TH ST,15450 N 28TH ST,hundred_block,33.627942,-112.0226085,100.0,geocoder
+154XX N 32ND ST,15450 N 32ND ST,hundred_block,,,,failed
+154XX N 45TH ST,15450 N 45TH ST,hundred_block,,,,failed
+154XX S 19TH AV,15450 S 19TH AV,hundred_block,,,,failed
+156XX N 25TH AV,15650 N 25TH AV,hundred_block,,,,failed
+156XX N 29TH ST,15650 N 29TH ST,hundred_block,33.629823,-112.018338,97.77,geocoder
+156XX N 35TH AV,15650 N 35TH AV,hundred_block,,,,failed
+156XX N 71ST ST,15650 N 71ST ST,hundred_block,,,,failed
+156XX N BLACK CANYON AC,15650 N BLACK CANYON AC,hundred_block,33.629634,-112.1173695,97.77,geocoder
+156XX S 37TH WY,15650 S 37TH WY,hundred_block,,,,failed
+156XX S DESERT FOOTHILLS PW,15650 S DESERT FOOTHILLS PW,hundred_block,33.302744801159,-112.057545104559,83.13,geocoder
+158XX N 16TH ST,15850 N 16TH ST,hundred_block,,,,failed
+158XX N 5TH DR,15850 N 5TH DR,hundred_block,,,,failed
+158XX S 42ND ST,15850 S 42ND ST,hundred_block,,,,failed
+158XX S 45TH ST,15850 S 45TH ST,hundred_block,,,,failed
+158XX S LAKEWOOD PW W,15850 S LAKEWOOD PW W,hundred_block,,,,failed
+15XX E APOLLO RD,1550 E APOLLO RD,hundred_block,,,75.45,failed
+15XX E CAMPBELL AV,1550 E CAMPBELL AV,hundred_block,33.502437,-112.0485465,100.0,geocoder
+15XX E CHERYL DR,1550 E CHERYL DR,hundred_block,,,75.45,failed
+15XX E CULVER ST,1550 E CULVER ST,hundred_block,,,,failed
+15XX E GRANT ST,1550 E GRANT ST,hundred_block,,,,failed
+15XX E INDIAN SCHOOL RD,1550 E INDIAN SCHOOL RD,hundred_block,33.494885864067,-112.049148647897,80.71,geocoder
+15XX E LAS PALMARITAS DR,1550 E LAS PALMARITAS DR,hundred_block,,,75.5,failed
+15XX E MARYLAND AV,1550 E MARYLAND AV,hundred_block,33.531309,-112.048101,100.0,geocoder
+15XX E MCDOWELL RD,1550 E MCDOWELL RD,hundred_block,,,77.5,failed
+15XX E OSBORN RD,1550 E OSBORN RD,hundred_block,,,75.45,failed
+15XX E ROOSEVELT ST,1550 E ROOSEVELT ST,hundred_block,,,,failed
+15XX E SONRISAS ST,1550 E SONRISAS ST,hundred_block,,,,failed
+15XX E SUNLAND AV,1550 E SUNLAND AV,hundred_block,,,,failed
+15XX E THUNDERBIRD RD,1550 E THUNDERBIRD RD,hundred_block,33.602202,-112.047939,100.0,geocoder
+15XX E WASHINGTON ST,1550 E WASHINGTON ST,hundred_block,33.44868,-112.0484745,100.0,geocoder
+15XX E WHITTON AV,1550 E WHITTON AV,hundred_block,,,75.72,failed
+15XX N 15TH AV,1550 N 15TH AV,hundred_block,,,,failed
+15XX N 48TH ST,1550 N 48TH ST,hundred_block,,,,failed
+15XX N 81ST LN,1550 N 81ST LN,hundred_block,,,,failed
+15XX N CENTRAL AV,1550 N CENTRAL AV,hundred_block,,,76.52,failed
+15XX S 91ST AV,1550 S 91ST AV,hundred_block,,,,failed
+15XX W DESERT COVE AV,1550 W DESERT COVE AV,hundred_block,33.585984,-112.092948,100.0,geocoder
+15XX W GLENDALE AV,1550 W GLENDALE AV,hundred_block,,,77.5,failed
+15XX W GRAND AV,1550 W GRAND AV,hundred_block,,,,failed
+15XX W HAZELWOOD ST,1550 W HAZELWOOD ST,hundred_block,,,78.4,failed
+15XX W HIGHLAND AV,1550 W HIGHLAND AV,hundred_block,,,77.5,failed
+15XX W MISSOURI AV,1550 W MISSOURI AV,hundred_block,33.516684,-112.0479435,93.77,geocoder
+15XX W PEORIA AV,1550 W PEORIA AV,hundred_block,,,75.45,failed
+15XX W PIERSON ST,1550 W PIERSON ST,hundred_block,,,76.52,failed
+15XX W ROOSEVELT ST,1550 W ROOSEVELT ST,hundred_block,,,,failed
+15XX W SAHUARO DR,1550 W SAHUARO DR,hundred_block,,,76.52,failed
+15XX W THUNDERBIRD RD,1550 W THUNDERBIRD RD,hundred_block,33.602202,-112.047939,93.77,geocoder
+15XX W WINDSOR AV,1550 W WINDSOR AV,hundred_block,33.478911,-112.093578,100.0,geocoder
+160XX N 25TH ST,16050 N 25TH ST,hundred_block,33.631488,-112.114854,97.77,geocoder
+160XX S DESERT FOOTHILLS PW,16050 S DESERT FOOTHILLS PW,hundred_block,33.300039237902,-112.059327412519,83.13,geocoder
+161XX S 50TH ST,16150 S 50TH ST,hundred_block,,,,failed
+162XX N 30TH ST,16250 N 30TH ST,hundred_block,,,,failed
+162XX N 30TH TE,16250 N 30TH TE,hundred_block,,,,failed
+162XX N 47TH PL,16250 N 47TH PL,hundred_block,,,,failed
+162XX N 9TH PL,16250 N 9TH PL,hundred_block,,,,failed
+164XX N 31ST ST,16450 N 31ST ST,hundred_block,,,,failed
+165XX S 40TH ST,16550 S 40TH ST,hundred_block,,,,failed
+166XX N 25TH ST,16650 N 25TH ST,hundred_block,33.638616,-112.028994,100.0,geocoder
+166XX N 28TH PL,16650 N 28TH PL,hundred_block,33.293178,-112.0224465,93.77,geocoder
+166XX N 33RD ST,16650 N 33RD ST,hundred_block,,,,failed
+166XX N 38TH ST,16650 N 38TH ST,hundred_block,33.294087,-112.001346,93.77,geocoder
+166XX N 40TH ST,16650 N 40TH ST,hundred_block,,,,failed
+166XX N 43RD AV,16650 N 43RD AV,hundred_block,33.638661,-111.9889935,97.77,geocoder
+166XX N CAVE CREEK RD,16650 N CAVE CREEK RD,hundred_block,,,,failed
+166XX S 3RD PL,16650 S 3RD PL,hundred_block,33.294996,-112.068324,100.0,geocoder
+168XX N 14TH ST,16850 N 14TH ST,hundred_block,,,,failed
+168XX N 29TH ST,16850 N 29TH ST,hundred_block,,,,failed
+168XX N 31ST ST,16850 N 31ST ST,hundred_block,,,,failed
+168XX N 42ND AV,16850 N 42ND AV,hundred_block,,,,failed
+168XX N 49TH ST,16850 N 49TH ST,hundred_block,,,,failed
+168XX N 58TH ST,16850 N 58TH ST,hundred_block,,,,failed
+168XX N 7TH ST,16850 N 7TH ST,hundred_block,,,,failed
+168XX S 12TH WY,16850 S 12TH WY,hundred_block,,,,failed
+16XX E BUTLER DR,1650 E BUTLER DR,hundred_block,,,75.45,failed
+16XX E DEER VALLEY RD,1650 E DEER VALLEY RD,hundred_block,,,79.23,failed
+16XX E GEORGIA AV,1650 E GEORGIA AV,hundred_block,33.515082,-112.045599,100.0,geocoder
+16XX E HIGHLAND AV,1650 E HIGHLAND AV,hundred_block,,,77.5,failed
+16XX E OCOTILLO RD,1650 E OCOTILLO RD,hundred_block,33.53508,-112.045464,100.0,geocoder
+16XX E ORCHID LN,1650 E ORCHID LN,hundred_block,,,75.45,failed
+16XX E SONORAN DESERT DR,1650 E SONORAN DESERT DR,hundred_block,33.763637993505,-112.049142312138,81.38,geocoder
+16XX E THOMAS RD,1650 E THOMAS RD,hundred_block,,,75.45,failed
+16XX E WOOD ST,1650 E WOOD ST,hundred_block,,,,failed
+16XX N 45TH AV,1650 N 45TH AV,hundred_block,,,,failed
+16XX N CENTRAL AV,1650 N CENTRAL AV,hundred_block,,,76.52,failed
+16XX N PALMCROFT DR SE,1650 N PALMCROFT DR SE,hundred_block,,,,failed
+16XX S 17TH AV,1650 S 17TH AV,hundred_block,,,,failed
+16XX S 43RD AV,1650 S 43RD AV,hundred_block,,,,failed
+16XX S CENTRAL AV,1650 S CENTRAL AV,hundred_block,,,76.52,failed
+16XX W BURGESS LN,1650 W BURGESS LN,hundred_block,,,,failed
+16XX W CALAVAR RD,1650 W CALAVAR RD,hundred_block,,,,failed
+16XX W CAMELBACK RD,1650 W CAMELBACK RD,hundred_block,33.509907,-112.095279,100.0,geocoder
+16XX W CAMPBELL AV,1650 W CAMPBELL AV,hundred_block,33.502509,-112.095351,100.0,geocoder
+16XX W DEER VALLEY RD,1650 W DEER VALLEY RD,hundred_block,,,79.23,failed
+16XX W GLENDALE AV,1650 W GLENDALE AV,hundred_block,33.540165,-112.09428,100.0,geocoder
+16XX W HIGHLAND AV,1650 W HIGHLAND AV,hundred_block,,,77.5,failed
+16XX W PEORIA AV,1650 W PEORIA AV,hundred_block,,,75.45,failed
+16XX W PIERSON ST,1650 W PIERSON ST,hundred_block,,,76.52,failed
+16XX W SHANGRI LA RD,1650 W SHANGRI LA RD,hundred_block,,,78.4,failed
+170XX N 11TH AV,17050 N 11TH AV,hundred_block,,,,failed
+170XX N 12TH ST,17050 N 12TH ST,hundred_block,,,,failed
+171XX N 23RD ST,17150 N 23RD ST,hundred_block,33.642189,-112.033575,100.0,geocoder
+172XX N 47TH ST,17250 N 47TH ST,hundred_block,,,,failed
+172XX N 7TH ST,17250 N 7TH ST,hundred_block,,,,failed
+172XX N CENTRAL AV,17250 N CENTRAL AV,hundred_block,,,77.5,failed
+173XX N CAVE CREEK RD,17350 N CAVE CREEK RD,hundred_block,,,79.23,failed
+174XX N 19TH AV,17450 N 19TH AV,hundred_block,,,,failed
+174XX N 36TH LN,17450 N 36TH LN,hundred_block,,,,failed
+174XX N 7TH ST,17450 N 7TH ST,hundred_block,,,,failed
+176XX N 36TH ST,17650 N 36TH ST,hundred_block,,,,failed
+176XX N 56TH WY,17650 N 56TH WY,hundred_block,,,,failed
+176XX N 7TH ST,17650 N 7TH ST,hundred_block,,,,failed
+176XX N 9TH ST,17650 N 9TH ST,hundred_block,,,,failed
+176XX N CAVE CREEK RD,17650 N CAVE CREEK RD,hundred_block,,,79.23,failed
+176XX N CENTRAL AV,17650 N CENTRAL AV,hundred_block,,,77.5,failed
+178XX N 19TH AV,17850 N 19TH AV,hundred_block,,,,failed
+178XX N 68TH ST,17850 N 68TH ST,hundred_block,33.648075,-111.935214,100.0,geocoder
+178XX N BLACK CANYON AC,17850 N BLACK CANYON AC,hundred_block,,,,failed
+17XX E BELMONT AV,1750 E BELMONT AV,hundred_block,,,76.52,failed
+17XX E BUENA VISTA RD,1750 E BUENA VISTA RD,hundred_block,,,,failed
+17XX E CARTER RD,1750 E CARTER RD,hundred_block,,,77.58,failed
+17XX E COLTER ST,1750 E COLTER ST,hundred_block,,,75.45,failed
+17XX E FLOWER ST,1750 E FLOWER ST,hundred_block,,,,failed
+17XX E HIDALGO AV,1750 E HIDALGO AV,hundred_block,33.394005,-112.0429395,100.0,geocoder
+17XX E JACKSON ST,1750 E JACKSON ST,hundred_block,,,,failed
+17XX E MCKINLEY ST,1750 E MCKINLEY ST,hundred_block,,,77.5,failed
+17XX E SOUTHERN AV,1750 E SOUTHERN AV,hundred_block,33.39315,-112.042836,100.0,geocoder
+17XX E THUNDERBIRD RD,1750 E THUNDERBIRD RD,hundred_block,33.612993,-112.096998,93.77,geocoder
+17XX E TUCKEY LN,1750 E TUCKEY LN,hundred_block,33.533676,-112.043439,100.0,geocoder
+17XX W CORTEZ ST,1750 W CORTEZ ST,hundred_block,,,,failed
+17XX W GLENDALE AV,1750 W GLENDALE AV,hundred_block,33.53877,-112.0442625,93.77,geocoder
+17XX W MISSOURI AV,1750 W MISSOURI AV,hundred_block,,,77.5,failed
+17XX W MONTECITO AV,1750 W MONTECITO AV,hundred_block,,,,failed
+17XX W MOUNTAIN VIEW RD,1750 W MOUNTAIN VIEW RD,hundred_block,33.575066864067,-112.097222957253,80.71,geocoder
+17XX W NORTHERN AV,1750 W NORTHERN AV,hundred_block,,,,failed
+17XX W PIERSON ST,1750 W PIERSON ST,hundred_block,,,76.52,failed
+17XX W ROESER RD,1750 W ROESER RD,hundred_block,,,,failed
+17XX W TUCKEY LN,1750 W TUCKEY LN,hundred_block,33.533676,-112.043439,93.77,geocoder
+17XX W VAN BUREN ST,1750 W VAN BUREN ST,hundred_block,,,77.5,failed
+17XX W VOGEL AV,1750 W VOGEL AV,hundred_block,,,,failed
+17XX W WILLIAMS DR,1750 W WILLIAMS DR,hundred_block,,,77.5,failed
+180XX N 17TH WY,18050 N 17TH WY,hundred_block,,,,failed
+180XX N 40TH PL,18050 N 40TH PL,hundred_block,,,,failed
+182XX N 25TH AV,18250 N 25TH AV,hundred_block,33.651441,-112.112577,100.0,geocoder
+182XX N 35TH AV,18250 N 35TH AV,hundred_block,,,,failed
+182XX N 68TH ST,18250 N 68TH ST,hundred_block,,,,failed
+182XX N CAVE CREEK RD,18250 N CAVE CREEK RD,hundred_block,33.65271,-112.03227,100.0,geocoder
+184XX N 25TH AV,18450 N 25TH AV,hundred_block,,,,failed
+184XX N 27TH AV,18450 N 27TH AV,hundred_block,,,,failed
+184XX N 68TH ST,18450 N 68TH ST,hundred_block,,,,failed
+184XX N CAVE CREEK RD,18450 N CAVE CREEK RD,hundred_block,,,79.23,failed
+186XX N CAVE CREEK RD,18650 N CAVE CREEK RD,hundred_block,,,,failed
+188XX N 12TH PL,18850 N 12TH PL,hundred_block,,,,failed
+188XX N 2ND AV,18850 N 2ND AV,hundred_block,,,,failed
+188XX N 3RD AV,18850 N 3RD AV,hundred_block,,,,failed
+18XX E BELL RD,1850 E BELL RD,hundred_block,,,,failed
+18XX E CLARENDON AV,1850 E CLARENDON AV,hundred_block,,,,failed
+18XX E FRIER DR,1850 E FRIER DR,hundred_block,33.55038,-112.098933,93.77,geocoder
+18XX E MCKINLEY ST,1850 E MCKINLEY ST,hundred_block,,,77.5,failed
+18XX E MORTEN AV,1850 E MORTEN AV,hundred_block,33.54453,-112.04109,100.0,geocoder
+18XX E PALMAIRE AV,1850 E PALMAIRE AV,hundred_block,,,77.5,failed
+18XX E ROOSEVELT ST,1850 E ROOSEVELT ST,hundred_block,,,78.4,failed
+18XX E SOUTHERN AV,1850 E SOUTHERN AV,hundred_block,,,77.5,failed
+18XX N 35TH AV,1850 N 35TH AV,hundred_block,,,,failed
+18XX N 45TH AV,1850 N 45TH AV,hundred_block,,,,failed
+18XX N 51ST ST,1850 N 51ST ST,hundred_block,33.469056,-111.972114,100.0,geocoder
+18XX N 60TH LN,1850 N 60TH LN,hundred_block,,,,failed
+18XX N 83RD AV,1850 N 83RD AV,hundred_block,,,,failed
+18XX S 7TH ST,1850 S 7TH ST,hundred_block,33.429744,-112.0657095,100.0,geocoder
+18XX W ACOMA DR,1850 W ACOMA DR,hundred_block,,,,failed
+18XX W BELL RD,1850 W BELL RD,hundred_block,,,,failed
+18XX W CARSON RD,1850 W CARSON RD,hundred_block,,,,failed
+18XX W CHOLLA ST,1850 W CHOLLA ST,hundred_block,,,75.45,failed
+18XX W CORTEZ ST,1850 W CORTEZ ST,hundred_block,,,,failed
+18XX W GLENDALE AV,1850 W GLENDALE AV,hundred_block,33.538968,-112.099176,100.0,geocoder
+18XX W HIGHLAND AV,1850 W HIGHLAND AV,hundred_block,,,,failed
+18XX W NORTHERN AV,1850 W NORTHERN AV,hundred_block,,,,failed
+18XX W OCOTILLO RD,1850 W OCOTILLO RD,hundred_block,,,77.5,failed
+18XX W SAHUARO DR,1850 W SAHUARO DR,hundred_block,,,76.52,failed
+18XX W TUCKEY LN,1850 W TUCKEY LN,hundred_block,,,75.45,failed
+18XX W VOGEL AV,1850 W VOGEL AV,hundred_block,,,,failed
+190XX N 22ND ST,19050 N 22ND ST,hundred_block,,,,failed
+192XX N 16TH ST,19250 N 16TH ST,hundred_block,,,,failed
+192XX N 27TH AV,19250 N 27TH AV,hundred_block,,,,failed
+192XX N 47TH DR,19250 N 47TH DR,hundred_block,33.661476,-112.1605695,86.16,geocoder
+192XX N CAVE CREEK RD,19250 N CAVE CREEK RD,hundred_block,,,79.23,failed
+192XX N TATUM BL,19250 N TATUM BL,hundred_block,,,75.45,failed
+196XX N 31ST AV,19650 N 31ST AV,hundred_block,,,,failed
+196XX N 32ND ST,19650 N 32ND ST,hundred_block,,,,failed
+196XX N 7TH ST,19650 N 7TH ST,hundred_block,,,,failed
+196XX N CAVE CREEK RD,19650 N CAVE CREEK RD,hundred_block,33.666336,-112.032558,100.0,geocoder
+198XX N 13TH AV,19850 N 13TH AV,hundred_block,,,,failed
+198XX N 27TH AV,19850 N 27TH AV,hundred_block,33.667812,-112.0242735,97.77,geocoder
+198XX N 7TH ST,19850 N 7TH ST,hundred_block,,,,failed
+199XX N 23RD AV,19950 N 23RD AV,hundred_block,,,,failed
+19XX E BELL RD,1950 E BELL RD,hundred_block,,,,failed
+19XX E CAMELBACK RD,1950 E CAMELBACK RD,hundred_block,33.509646,-112.0392045,100.0,geocoder
+19XX E FLYNN LN,1950 E FLYNN LN,hundred_block,,,,failed
+19XX E INDIAN SCHOOL RD,1950 E INDIAN SCHOOL RD,hundred_block,33.495111,-112.0392315,100.0,geocoder
+19XX E JANICE WY,1950 E JANICE WY,hundred_block,33.623973,-112.041117,100.0,geocoder
+19XX E LUDLOW DR,1950 E LUDLOW DR,hundred_block,,,,failed
+19XX E OSBORN RD,1950 E OSBORN RD,hundred_block,,,,failed
+19XX E PARKSIDE LN,1950 E PARKSIDE LN,hundred_block,33.695793,-112.0400145,100.0,geocoder
+19XX E POLK ST,1950 E POLK ST,hundred_block,33.453207,-112.0400595,100.0,geocoder
+19XX E RONALD RD,1950 E RONALD RD,hundred_block,,,75.45,failed
+19XX E SHARON DR,1950 E SHARON DR,hundred_block,,,,failed
+19XX N 77TH LN,1950 N 77TH LN,hundred_block,,,,failed
+19XX N 99TH AV,1950 N 99TH AV,hundred_block,,,,failed
+19XX W BASELINE RD,1950 W BASELINE RD,hundred_block,33.380082,-112.1004585,100.0,geocoder
+19XX W CHIMNEY ROCK RD,1950 W CHIMNEY ROCK RD,hundred_block,,,,failed
+19XX W COCOPAH ST,1950 W COCOPAH ST,hundred_block,33.432309,-112.1020425,100.0,geocoder
+19XX W DESERT VISTA TL,1950 W DESERT VISTA TL,hundred_block,33.717186,-112.1015025,87.08,geocoder
+19XX W DUNLAP AV,1950 W DUNLAP AV,hundred_block,33.570045,-112.1012505,100.0,geocoder
+19XX W INDIAN SCHOOL RD,1950 W INDIAN SCHOOL RD,hundred_block,33.495363,-112.101687,100.0,geocoder
+19XX W LAS PALMARITAS DR,1950 W LAS PALMARITAS DR,hundred_block,,,,failed
+19XX W SWEETWATER AV,1950 W SWEETWATER AV,hundred_block,,,79.23,failed
+19XX W THUNDERBIRD RD,1950 W THUNDERBIRD RD,hundred_block,33.611248139112,-112.101305796227,80.0,geocoder
+1XX E CAMELBACK RD,150 E CAMELBACK RD,hundred_block,,,77.5,failed
+1XX E GREENWAY PW,150 E GREENWAY PW,hundred_block,,,,failed
+1XX E LAMAR RD,150 E LAMAR RD,hundred_block,33.536196,-112.0695615,100.0,geocoder
+1XX N 12TH AV,150 N 12TH AV,hundred_block,33.445719,-112.0577085,86.83,geocoder
+1XX N 18TH ST,150 N 18TH ST,hundred_block,33.449949,-112.099176,97.77,geocoder
+1XX N 1ST ST,150 N 1ST ST,hundred_block,,,,failed
+1XX N 24TH ST,150 N 24TH ST,hundred_block,,,,failed
+1XX N 40TH ST,150 N 40TH ST,hundred_block,,,,failed
+1XX N 7TH ST,150 N 7TH ST,hundred_block,,,,failed
+1XX N DUPONT CI,150 N DUPONT CI,hundred_block,,,,failed
+1XX S 12TH ST,150 S 12TH ST,hundred_block,33.445719,-112.0577085,100.0,geocoder
+1XX S 41ST AV,150 S 41ST AV,hundred_block,,,,failed
+1XX W DOBBINS RD,150 W DOBBINS RD,hundred_block,,,75.45,failed
+1XX W INDIAN SCHOOL RD,150 W INDIAN SCHOOL RD,hundred_block,,,75.6,failed
+1XX W MARYLAND AV,150 W MARYLAND AV,hundred_block,,,76.52,failed
+1XX W MOON VALLEY DR,150 W MOON VALLEY DR,hundred_block,,,78.4,failed
+1XX W PAPAGO ST,150 W PAPAGO ST,hundred_block,,,,failed
+1XX W TAM O SHANTER DR,150 W TAM O SHANTER DR,hundred_block,33.613218,-112.078035,100.0,geocoder
+200XX N 23RD AV,20050 N 23RD AV,hundred_block,,,,failed
+202XX N 29TH AV,20250 N 29TH AV,hundred_block,,,,failed
+204XX N 19TH AV,20450 N 19TH AV,hundred_block,,,,failed
+204XX N 7TH ST,20450 N 7TH ST,hundred_block,,,,failed
+206XX N 40TH ST,20650 N 40TH ST,hundred_block,,,,failed
+208XX N 19TH AV,20850 N 19TH AV,hundred_block,,,,failed
+208XX N 1ST DR,20850 N 1ST DR,hundred_block,,,,failed
+208XX N 27TH AV,20850 N 27TH AV,hundred_block,,,,failed
+208XX N TATUM BL,20850 N TATUM BL,hundred_block,,,75.45,failed
+20XX E CAMPBELL AV,2050 E CAMPBELL AV,hundred_block,33.502608,-112.1034375,93.77,geocoder
+20XX E JOMAX RD,2050 E JOMAX RD,hundred_block,,,,failed
+20XX E JONES AV,2050 E JONES AV,hundred_block,,,,failed
+20XX E ROSE GARDEN LN,2050 E ROSE GARDEN LN,hundred_block,,,79.23,failed
+20XX E SWEETWATER AV,2050 E SWEETWATER AV,hundred_block,,,79.23,failed
+20XX N 17TH AV,2050 N 17TH AV,hundred_block,,,,failed
+20XX N 3RD ST,2050 N 3RD ST,hundred_block,,,,failed
+20XX N 40TH ST,2050 N 40TH ST,hundred_block,,,,failed
+20XX N 50TH ST,2050 N 50TH ST,hundred_block,,,,failed
+20XX N 51ST ST,2050 N 51ST ST,hundred_block,,,,failed
+20XX S 15TH AV,2050 S 15TH AV,hundred_block,,,,failed
+20XX S 16TH ST,2050 S 16TH ST,hundred_block,33.428331,-112.0497705,100.0,geocoder
+20XX W BUTLER DR,2050 W BUTLER DR,hundred_block,,,75.45,failed
+20XX W COCOPAH ST,2050 W COCOPAH ST,hundred_block,,,76.52,failed
+20XX W COLUMBINE DR,2050 W COLUMBINE DR,hundred_block,,,78.4,failed
+20XX W DESERT HOLLOW DR,2050 W DESERT HOLLOW DR,hundred_block,33.715656,-112.1041035,100.0,geocoder
+20XX W DOBBINS RD,2050 W DOBBINS RD,hundred_block,33.364161,-112.103154,100.0,geocoder
+20XX W DUNLAP AV,2050 W DUNLAP AV,hundred_block,33.569757,-112.102236,100.0,geocoder
+20XX W EUGIE AV,2050 W EUGIE AV,hundred_block,33.608322,-112.103649,100.0,geocoder
+20XX W GEORGIA AV,2050 W GEORGIA AV,hundred_block,,,,failed
+20XX W GLENDALE AV,2050 W GLENDALE AV,hundred_block,,,77.5,failed
+20XX W INDIAN SCHOOL RD,2050 W INDIAN SCHOOL RD,hundred_block,33.495102,-112.0369725,93.77,geocoder
+20XX W MORTEN AV,2050 W MORTEN AV,hundred_block,,,,failed
+20XX W NANCY LN,2050 W NANCY LN,hundred_block,,,,failed
+20XX W NORTHERN AV,2050 W NORTHERN AV,hundred_block,33.554061,-112.10292,100.0,geocoder
+20XX W ORANGEWOOD AV,2050 W ORANGEWOOD AV,hundred_block,,,79.23,failed
+20XX W WHITE PINE DR,2050 W WHITE PINE DR,hundred_block,,,,failed
+210XX N 19TH AV,21050 N 19TH AV,hundred_block,,,,failed
+210XX N 27TH AV,21050 N 27TH AV,hundred_block,,,,failed
+210XX N 56TH ST,21050 N 56TH ST,hundred_block,,,,failed
+211XX N 56TH ST,21150 N 56TH ST,hundred_block,,,,failed
+211XX N TATUM BL,21150 N TATUM BL,hundred_block,33.679359,-111.9785985,100.0,geocoder
+212XX N 17TH PL,21250 N 17TH PL,hundred_block,33.679863,-112.0504365,100.0,geocoder
+214XX N 21ST AV,21450 N 21ST AV,hundred_block,,,,failed
+214XX N 23RD AV,21450 N 23RD AV,hundred_block,33.681474,-112.1091435,100.0,geocoder
+216XX N 23RD AV,21650 N 23RD AV,hundred_block,,,,failed
+216XX N 36TH AV,21650 N 36TH AV,hundred_block,,,,failed
+216XX N 44TH PL,21650 N 44TH PL,hundred_block,33.684219,-111.981807,100.0,geocoder
+216XX N 46TH PL,21650 N 46TH PL,hundred_block,,,,failed
+219XX N 36TH ST,21950 N 36TH ST,hundred_block,,,,failed
+21XX E BELL RD,2150 E BELL RD,hundred_block,33.641595,-112.0358115,100.0,geocoder
+21XX E BETH DR,2150 E BETH DR,hundred_block,,,,failed
+21XX E BROADWAY RD,2150 E BROADWAY RD,hundred_block,33.408009,-112.0342365,100.0,geocoder
+21XX E CACTUS RD,2150 E CACTUS RD,hundred_block,33.597504,-112.035402,100.0,geocoder
+21XX E EUGIE TE,2150 E EUGIE TE,hundred_block,33.608304,-112.106115,87.57,geocoder
+21XX E LIBERTY LN,2150 E LIBERTY LN,hundred_block,,,76.52,failed
+21XX E MCDOWELL RD,2150 E MCDOWELL RD,hundred_block,,,77.5,failed
+21XX E MICHIGAN AV,2150 E MICHIGAN AV,hundred_block,,,77.5,failed
+21XX E NICOLET AV,2150 E NICOLET AV,hundred_block,,,76.52,failed
+21XX E PARKSIDE LN,2150 E PARKSIDE LN,hundred_block,,,,failed
+21XX E THOMAS RD,2150 E THOMAS RD,hundred_block,33.480621,-112.035015,100.0,geocoder
+21XX E TURNEY AV,2150 E TURNEY AV,hundred_block,,,75.45,failed
+21XX N 40TH DR,2150 N 40TH DR,hundred_block,,,,failed
+21XX N 83RD AV,2150 N 83RD AV,hundred_block,,,,failed
+21XX S 7TH AV,2150 S 7TH AV,hundred_block,,,,failed
+21XX W ALAMEDA RD,2150 W ALAMEDA RD,hundred_block,33.707475,-112.1060115,100.0,geocoder
+21XX W BARWICK DR,2150 W BARWICK DR,hundred_block,,,76.52,failed
+21XX W BUTLER DR,2150 W BUTLER DR,hundred_block,,,75.45,failed
+21XX W FLOWER ST,2150 W FLOWER ST,hundred_block,,,75.45,failed
+21XX W GARDENIA DR,2150 W GARDENIA DR,hundred_block,33.545304,-112.1061825,100.0,geocoder
+21XX W HEATHERBRAE DR,2150 W HEATHERBRAE DR,hundred_block,,,,failed
+21XX W INDIAN SCHOOL RD,2150 W INDIAN SCHOOL RD,hundred_block,33.495237,-112.105962,100.0,geocoder
+21XX W MORTEN AV,2150 W MORTEN AV,hundred_block,33.548571,-112.105719,100.0,geocoder
+21XX W ROYAL PALM RD,2150 W ROYAL PALM RD,hundred_block,,,75.25,failed
+21XX W SHADY GLEN AV,2150 W SHADY GLEN AV,hundred_block,,,78.4,failed
+21XX W THUNDERBIRD RD,2150 W THUNDERBIRD RD,hundred_block,33.611179509973,-112.105460805209,80.0,geocoder
+21XX W VINEYARD RD,2150 W VINEYARD RD,hundred_block,,,77.5,failed
+21XX W WASHINGTON ST,2150 W WASHINGTON ST,hundred_block,,,79.23,failed
+220XX N 43RD AV,22050 N 43RD AV,hundred_block,,,,failed
+221XX N 29TH AV,22150 N 29TH AV,hundred_block,,,,failed
+223XX N 20TH AV,22350 N 20TH AV,hundred_block,33.68898,-112.10265,100.0,geocoder
+226XX N 41ST ST,22650 N 41ST ST,hundred_block,,,,failed
+226XX N 43RD AV,22650 N 43RD AV,hundred_block,,,,failed
+22XX E BEARDSLEY RD,2250 E BEARDSLEY RD,hundred_block,,,78.4,failed
+22XX E CAMPBELL AV,2250 E CAMPBELL AV,hundred_block,,,77.5,failed
+22XX E DEER VALLEY RD,2250 E DEER VALLEY RD,hundred_block,33.689358,-112.0324455,100.0,geocoder
+22XX E DESERT COVE AV,2250 E DESERT COVE AV,hundred_block,33.586263,-112.107087,93.77,geocoder
+22XX E FILLMORE ST,2250 E FILLMORE ST,hundred_block,,,77.5,failed
+22XX E HIGHLAND AV,2250 E HIGHLAND AV,hundred_block,,,77.5,failed
+22XX E MOUNTAIN VIEW RD,2250 E MOUNTAIN VIEW RD,hundred_block,33.574922864067,-112.032970950263,80.71,geocoder
+22XX E PIESTEWA PEAK DR,2250 E PIESTEWA PEAK DR,hundred_block,33.537105,-112.032018,100.0,geocoder
+22XX E ROCKLEDGE RD,2250 E ROCKLEDGE RD,hundred_block,,,,failed
+22XX E UNIVERSITY DR,2250 E UNIVERSITY DR,hundred_block,,,79.23,failed
+22XX N 16TH ST,2250 N 16TH ST,hundred_block,33.472728,-112.048065,100.0,geocoder
+22XX N 36TH ST,2250 N 36TH ST,hundred_block,33.472836,-112.0046445,100.0,geocoder
+22XX N 48TH LN,2250 N 48TH LN,hundred_block,,,,failed
+22XX N 75TH AV,2250 N 75TH AV,hundred_block,,,,failed
+22XX W ASTER DR,2250 W ASTER DR,hundred_block,33.602715,-112.107735,100.0,geocoder
+22XX W AUGUSTA AV,2250 W AUGUSTA AV,hundred_block,33.551703,-112.1080185,100.0,geocoder
+22XX W BEARDSLEY RD,2250 W BEARDSLEY RD,hundred_block,,,,failed
+22XX W BETHANY HOME RD,2250 W BETHANY HOME RD,hundred_block,33.524257928164,-112.106853099733,80.0,geocoder
+22XX W CAMPBELL AV,2250 W CAMPBELL AV,hundred_block,,,,failed
+22XX W DOBBINS RD,2250 W DOBBINS RD,hundred_block,,,76.52,failed
+22XX W HEATHERBRAE DR,2250 W HEATHERBRAE DR,hundred_block,,,,failed
+22XX W INDIAN SCHOOL RD,2250 W INDIAN SCHOOL RD,hundred_block,33.495209864067,-112.107402852224,80.71,geocoder
+22XX W MISSION LN,2250 W MISSION LN,hundred_block,,,76.52,failed
+22XX W NORTHERN AV,2250 W NORTHERN AV,hundred_block,,,77.5,failed
+22XX W ORANGEWOOD AV,2250 W ORANGEWOOD AV,hundred_block,,,79.23,failed
+22XX W PARADISE DR,2250 W PARADISE DR,hundred_block,,,77.5,failed
+22XX W SOUTHERN AV,2250 W SOUTHERN AV,hundred_block,33.392619,-112.106565,100.0,geocoder
+22XX W ST CHARLES AV,2250 W ST CHARLES AV,hundred_block,,,,failed
+22XX W UNION HILLS DR,2250 W UNION HILLS DR,hundred_block,,,79.23,failed
+22XX W WASHINGTON ST,2250 W WASHINGTON ST,hundred_block,,,79.23,failed
+22XX W WELDON AV,2250 W WELDON AV,hundred_block,,,,failed
+237XX N 23RD AV,23750 N 23RD AV,hundred_block,,,,failed
+238XX N 58TH AV,23850 N 58TH AV,hundred_block,33.703245,-112.185783,86.16,geocoder
+239XX N 19TH AV,23950 N 19TH AV,hundred_block,,,,failed
+23XX E HIGHLAND AV,2350 E HIGHLAND AV,hundred_block,,,77.5,failed
+23XX E PIESTEWA PEAK DR,2350 E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+23XX E WINSTON DR,2350 E WINSTON DR,hundred_block,,,,failed
+23XX N 34TH DR,2350 N 34TH DR,hundred_block,,,,failed
+23XX N 48TH AV,2350 N 48TH AV,hundred_block,33.427044,-112.1627115,93.77,geocoder
+23XX N 52ND ST,2350 N 52ND ST,hundred_block,,,,failed
+23XX W CARTER RD,2350 W CARTER RD,hundred_block,,,,failed
+23XX W COCOPAH ST,2350 W COCOPAH ST,hundred_block,,,,failed
+23XX W COLTER ST,2350 W COLTER ST,hundred_block,,,75.45,failed
+23XX W DAHLIA DR,2350 W DAHLIA DR,hundred_block,,,,failed
+23XX W DUNLAP AV,2350 W DUNLAP AV,hundred_block,,,75.45,failed
+23XX W GLENROSA AV,2350 W GLENROSA AV,hundred_block,,,77.5,failed
+23XX W LONE CACTUS DR,2350 W LONE CACTUS DR,hundred_block,,,79.23,failed
+23XX W LUKE AV,2350 W LUKE AV,hundred_block,,,,failed
+23XX W MYRTLE AV,2350 W MYRTLE AV,hundred_block,,,75.45,failed
+246XX N 23RD AV,24650 N 23RD AV,hundred_block,,,,failed
+248XX N 19TH AV,24850 N 19TH AV,hundred_block,33.711471,-112.1007375,100.0,geocoder
+24XX E GLASS LN,2450 E GLASS LN,hundred_block,33.38487,-112.0274685,100.0,geocoder
+24XX E GRANDVIEW RD,2450 E GRANDVIEW RD,hundred_block,,,78.4,failed
+24XX E MCDOWELL RD,2450 E MCDOWELL RD,hundred_block,,,77.5,failed
+24XX E MONROE ST,2450 E MONROE ST,hundred_block,,,,failed
+24XX E NORTHERN AV,2450 E NORTHERN AV,hundred_block,,,,failed
+24XX E PIESTEWA PEAK DR,2450 E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+24XX E SAN JUAN AV,2450 E SAN JUAN AV,hundred_block,,,,failed
+24XX E THOMAS RD,2450 E THOMAS RD,hundred_block,,,75.45,failed
+24XX E TRACY LN,2450 E TRACY LN,hundred_block,,,,failed
+24XX E VALLEY VIEW DR,2450 E VALLEY VIEW DR,hundred_block,,,79.23,failed
+24XX E WHITTON AV,2450 E WHITTON AV,hundred_block,,,76.52,failed
+24XX S 43RD AV,2450 S 43RD AV,hundred_block,,,,failed
+24XX W BETHANY HOME RD,2450 W BETHANY HOME RD,hundred_block,33.524303908685,-112.111235168279,80.0,geocoder
+24XX W CAMPBELL AV,2450 W CAMPBELL AV,hundred_block,,,77.5,failed
+24XX W DARREL RD,2450 W DARREL RD,hundred_block,33.384159,-112.02759,93.77,geocoder
+24XX W GLENROSA AV,2450 W GLENROSA AV,hundred_block,33.499593,-112.1121945,100.0,geocoder
+24XX W GRENADINE RD,2450 W GRENADINE RD,hundred_block,,,,failed
+24XX W HAYWARD AV,2450 W HAYWARD AV,hundred_block,,,76.52,failed
+24XX W MONTEBELLO AV,2450 W MONTEBELLO AV,hundred_block,,,,failed
+24XX W NORTHERN AV,2450 W NORTHERN AV,hundred_block,,,77.5,failed
+24XX W THOMAS RD,2450 W THOMAS RD,hundred_block,,,75.45,failed
+24XX W UNION HILLS DR,2450 W UNION HILLS DR,hundred_block,,,79.23,failed
+24XX W YAVAPAI ST,2450 W YAVAPAI ST,hundred_block,,,76.52,failed
+253XX N 22ND LN,25350 N 22ND LN,hundred_block,,,,failed
+259XX N 49TH LN,25950 N 49TH LN,hundred_block,,,,failed
+25XX E BELL RD,2550 E BELL RD,hundred_block,33.640857,-112.026861,100.0,geocoder
+25XX E ILLINI ST,2550 E ILLINI ST,hundred_block,,,,failed
+25XX E KAREN DR,2550 E KAREN DR,hundred_block,,,,failed
+25XX E MADISON ST,2550 E MADISON ST,hundred_block,33.446556,-112.1152275,93.77,geocoder
+25XX E OAK ST,2550 E OAK ST,hundred_block,,,,failed
+25XX E ROESER RD,2550 E ROESER RD,hundred_block,33.399873,-112.0249485,100.0,geocoder
+25XX N 32ND ST,2550 N 32ND ST,hundred_block,,,,failed
+25XX N CENTRAL AV,2550 N CENTRAL AV,hundred_block,,,76.52,failed
+25XX S 75TH AV,2550 S 75TH AV,hundred_block,33.425064,-112.221756,100.0,geocoder
+25XX W ALTA VISTA RD,2550 W ALTA VISTA RD,hundred_block,,,,failed
+25XX W CACTUS RD,2550 W CACTUS RD,hundred_block,,,75.45,failed
+25XX W DUNLAP AV,2550 W DUNLAP AV,hundred_block,,,75.45,failed
+25XX W ELM ST,2550 W ELM ST,hundred_block,,,,failed
+25XX W GEORGIA AV,2550 W GEORGIA AV,hundred_block,,,76.52,failed
+25XX W GLENROSA AV,2550 W GLENROSA AV,hundred_block,,,77.5,failed
+25XX W GREENWAY RD,2550 W GREENWAY RD,hundred_block,,,77.5,failed
+25XX W HAPPY VALLEY RD,2550 W HAPPY VALLEY RD,hundred_block,33.715548,-112.1145075,100.0,geocoder
+25XX W LAREDO LN,2550 W LAREDO LN,hundred_block,,,,failed
+25XX W MARYLAND AV,2550 W MARYLAND AV,hundred_block,,,77.5,failed
+25XX W OCOTILLO RD,2550 W OCOTILLO RD,hundred_block,,,77.5,failed
+25XX W PALO VERDE DR,2550 W PALO VERDE DR,hundred_block,,,78.4,failed
+25XX W PEORIA AV,2550 W PEORIA AV,hundred_block,,,75.45,failed
+25XX W ST CATHERINE AV,2550 W ST CATHERINE AV,hundred_block,33.38775567094,-112.114072355195,80.0,geocoder
+268XX N 14TH LN,26850 N 14TH LN,hundred_block,,,,failed
+26XX E CAMELBACK RD,2650 E CAMELBACK RD,hundred_block,33.509961,-112.0240305,100.0,geocoder
+26XX E GREENWAY PW,2650 E GREENWAY PW,hundred_block,,,77.5,failed
+26XX E INDIAN SCHOOL RD,2650 E INDIAN SCHOOL RD,hundred_block,,,,failed
+26XX E MOHAWK LN,2650 E MOHAWK LN,hundred_block,33.674688,-112.026024,100.0,geocoder
+26XX E PORTLAND ST,2650 E PORTLAND ST,hundred_block,33.460605,-112.0246875,100.0,geocoder
+26XX E SOUTH MOUNTAIN AV,2650 E SOUTH MOUNTAIN AV,hundred_block,,,72.33,failed
+26XX E WELDON AV,2650 E WELDON AV,hundred_block,,,75.45,failed
+26XX N 36TH ST,2650 N 36TH ST,hundred_block,33.478155,-112.004703,100.0,geocoder
+26XX N 43RD AV,2650 N 43RD AV,hundred_block,33.478038,-112.152519,100.0,geocoder
+26XX N 44TH ST,2650 N 44TH ST,hundred_block,,,,failed
+26XX N 45TH AV,2650 N 45TH AV,hundred_block,,,,failed
+26XX N 51ST AV,2650 N 51ST AV,hundred_block,,,,failed
+26XX N FOOTE DR,2650 N FOOTE DR,hundred_block,,,,failed
+26XX S 19TH AV,2650 S 19TH AV,hundred_block,33.42294,-112.101606,100.0,geocoder
+26XX S 83RD AV,2650 S 83RD AV,hundred_block,,,,failed
+26XX W BELMONT AV,2650 W BELMONT AV,hundred_block,,,76.52,failed
+26XX W BUTLER DR,2650 W BUTLER DR,hundred_block,,,75.45,failed
+26XX W CLAREMONT ST,2650 W CLAREMONT ST,hundred_block,,,78.4,failed
+26XX W DOBBINS RD,2650 W DOBBINS RD,hundred_block,,,,failed
+26XX W DUNLAP AV,2650 W DUNLAP AV,hundred_block,,,75.45,failed
+26XX W GLENDALE AV,2650 W GLENDALE AV,hundred_block,33.538842,-112.116033,100.0,geocoder
+26XX W HAZELWOOD ST,2650 W HAZELWOOD ST,hundred_block,33.504507,-112.116348,100.0,geocoder
+26XX W INDIAN SCHOOL RD,2650 W INDIAN SCHOOL RD,hundred_block,,,,failed
+26XX W MARIPOSA ST,2650 W MARIPOSA ST,hundred_block,,,77.5,failed
+26XX W MISSOURI AV,2650 W MISSOURI AV,hundred_block,,,77.5,failed
+26XX W OCOTILLO RD,2650 W OCOTILLO RD,hundred_block,,,77.5,failed
+26XX W PIERSON ST,2650 W PIERSON ST,hundred_block,,,76.52,failed
+26XX W UNION HILLS DR,2650 W UNION HILLS DR,hundred_block,33.65649,-112.118724,100.0,geocoder
+275XX N 39TH AV,27550 N 39TH AV,hundred_block,,,,failed
+27XX E ARIZONA BILTMORE CI,2750 E ARIZONA BILTMORE CI,hundred_block,33.525999644061,-112.02245122077,82.58,geocoder
+27XX E CAMBRIDGE AV,2750 E CAMBRIDGE AV,hundred_block,,,78.4,failed
+27XX E ELLIS ST,2750 E ELLIS ST,hundred_block,,,,failed
+27XX E FLOWER ST,2750 E FLOWER ST,hundred_block,,,75.45,failed
+27XX E MINE CREEK RD,2750 E MINE CREEK RD,hundred_block,,,,failed
+27XX E PIESTEWA PEAK DR,2750 E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+27XX E SCHILIRO CI,2750 E SCHILIRO CI,hundred_block,33.64227,-112.022982,100.0,geocoder
+27XX E SQUAW PEAK DR,2750 E SQUAW PEAK DR,hundred_block,,,78.4,failed
+27XX E THOMAS RD,2750 E THOMAS RD,hundred_block,33.480747,-112.1197185,93.77,geocoder
+27XX E TIERRA BUENA LN,2750 E TIERRA BUENA LN,hundred_block,,,,failed
+27XX N 24TH ST,2750 N 24TH ST,hundred_block,,,,failed
+27XX W AGUA FRIA FY,2750 W AGUA FRIA FY,hundred_block,,,,failed
+27XX W AUGUSTA AV,2750 W AUGUSTA AV,hundred_block,,,76.52,failed
+27XX W COUNTRY GABLES DR,2750 W COUNTRY GABLES DR,hundred_block,33.619035218888,-112.117806067885,81.38,geocoder
+27XX W GLENDALE AV,2750 W GLENDALE AV,hundred_block,,,77.5,failed
+27XX W MCLELLAN BL,2750 W MCLELLAN BL,hundred_block,,,77.5,failed
+27XX W SAHUARO DR,2750 W SAHUARO DR,hundred_block,33.584859,-112.119993,100.0,geocoder
+27XX W VAN BUREN ST,2750 W VAN BUREN ST,hundred_block,33.451434,-112.1196645,100.0,geocoder
+27XX W VIRGINIA AV,2750 W VIRGINIA AV,hundred_block,,,77.5,failed
+27XX W YORKSHIRE DR,2750 W YORKSHIRE DR,hundred_block,,,78.4,failed
+280XX N 15TH LN,28050 N 15TH LN,hundred_block,,,,failed
+280XX N 23RD DR,28050 N 23RD DR,hundred_block,,,,failed
+280XX N NORTH VALLEY PW,28050 N NORTH VALLEY PW,hundred_block,33.739835075639,-112.104973075707,80.71,geocoder
+281XX N 15TH DR,28150 N 15TH DR,hundred_block,,,,failed
+282XX N TATUM BL,28250 N TATUM BL,hundred_block,,,75.45,failed
+284XX N BLACK CANYON AC,28450 N BLACK CANYON AC,hundred_block,,,,failed
+28XX E INDIAN SCHOOL RD,2850 E INDIAN SCHOOL RD,hundred_block,33.495245864067,-112.020492674763,80.71,geocoder
+28XX E LE MARCHE AV,2850 E LE MARCHE AV,hundred_block,,,,failed
+28XX E MONTE CRISTO AV,2850 E MONTE CRISTO AV,hundred_block,33.632368025472,-112.020717755721,80.0,geocoder
+28XX E OSBORN RD,2850 E OSBORN RD,hundred_block,,,75.45,failed
+28XX E PARADISE DR,2850 E PARADISE DR,hundred_block,,,,failed
+28XX E ROOSEVELT ST,2850 E ROOSEVELT ST,hundred_block,,,,failed
+28XX E TIERRA BUENA LN,2850 E TIERRA BUENA LN,hundred_block,33.592059,-112.0195125,81.23,geocoder
+28XX E WINCHCOMB DR,2850 E WINCHCOMB DR,hundred_block,,,78.4,failed
+28XX N 45TH AV,2850 N 45TH AV,hundred_block,,,,failed
+28XX N 46TH AV,2850 N 46TH AV,hundred_block,,,,failed
+28XX N 51ST AV,2850 N 51ST AV,hundred_block,,,,failed
+28XX N 52ND ST,2850 N 52ND ST,hundred_block,,,,failed
+28XX N 75TH AV,2850 N 75TH AV,hundred_block,,,,failed
+28XX S 73RD LN,2850 S 73RD LN,hundred_block,,,,failed
+28XX S 7TH AV,2850 S 7TH AV,hundred_block,33.479775,-112.0656105,86.83,geocoder
+28XX W DEER VALLEY RD,2850 W DEER VALLEY RD,hundred_block,,,79.23,failed
+28XX W GLENDALE AV,2850 W GLENDALE AV,hundred_block,33.540471,-112.1217165,89.29,geocoder
+28XX W NORTHERN AV,2850 W NORTHERN AV,hundred_block,,,77.5,failed
+28XX W OSBORN RD,2850 W OSBORN RD,hundred_block,,,75.45,failed
+298XX N TATUM BL,29850 N TATUM BL,hundred_block,33.755994,-111.992544,97.96,geocoder
+29XX E AMBER RIDGE WY,2950 E AMBER RIDGE WY,hundred_block,,,79.23,failed
+29XX E BELL RD,2950 E BELL RD,hundred_block,,,,failed
+29XX E FAIRMOUNT AV,2950 E FAIRMOUNT AV,hundred_block,,,78.4,failed
+29XX E FILLMORE ST,2950 E FILLMORE ST,hundred_block,,,77.5,failed
+29XX E GRANADA RD,2950 E GRANADA RD,hundred_block,33.468768,-112.0174335,100.0,geocoder
+29XX E INDIAN SCHOOL RD,2950 E INDIAN SCHOOL RD,hundred_block,33.495286598342,-112.018420352568,80.71,geocoder
+29XX E OSBORN RD,2950 E OSBORN RD,hundred_block,,,75.45,failed
+29XX E PONTIAC DR,2950 E PONTIAC DR,hundred_block,,,,failed
+29XX E ROOSEVELT ST,2950 E ROOSEVELT ST,hundred_block,,,78.4,failed
+29XX E WASHINGTON ST,2950 E WASHINGTON ST,hundred_block,33.448797,-112.123674,93.77,geocoder
+29XX E WILLETTA ST,2950 E WILLETTA ST,hundred_block,,,,failed
+29XX N 36TH ST,2950 N 36TH ST,hundred_block,,,,failed
+29XX N 38TH ST,2950 N 38TH ST,hundred_block,33.482412,-112.000023,100.0,geocoder
+29XX N 40TH ST,2950 N 40TH ST,hundred_block,,,,failed
+29XX N 52ND ST,2950 N 52ND ST,hundred_block,33.482304,-112.172004,97.77,geocoder
+29XX N 75TH AV,2950 N 75TH AV,hundred_block,,,,failed
+29XX N GREENFIELD RD,2950 N GREENFIELD RD,hundred_block,,,79.23,failed
+29XX W CLARENDON AV,2950 W CLARENDON AV,hundred_block,33.491673,-112.0181805,93.77,geocoder
+29XX W ENCANTO BL,2950 W ENCANTO BL,hundred_block,,,76.52,failed
+29XX W MALDONADO RD,2950 W MALDONADO RD,hundred_block,,,78.4,failed
+29XX W MCDOWELL RD,2950 W MCDOWELL RD,hundred_block,,,77.5,failed
+29XX W MCKINLEY ST,2950 W MCKINLEY ST,hundred_block,,,77.5,failed
+29XX W ROOSEVELT ST,2950 W ROOSEVELT ST,hundred_block,,,78.4,failed
+29XX W SWEETWATER AV,2950 W SWEETWATER AV,hundred_block,,,79.23,failed
+29XX W THUNDERBIRD RD,2950 W THUNDERBIRD RD,hundred_block,33.611006105981,-112.121305887493,80.0,geocoder
+2XX E CATALINA DR,250 E CATALINA DR,hundred_block,,,76.52,failed
+2XX E DUNLAP AV,250 E DUNLAP AV,hundred_block,33.569208,-112.0712175,100.0,geocoder
+2XX E GLENN DR,250 E GLENN DR,hundred_block,,,,failed
+2XX E HATCHER RD,250 E HATCHER RD,hundred_block,,,,failed
+2XX E JEFFERSON ST,250 E JEFFERSON ST,hundred_block,,,77.5,failed
+2XX E ROOSEVELT ST,250 E ROOSEVELT ST,hundred_block,,,77.5,failed
+2XX E RUTH AV,250 E RUTH AV,hundred_block,,,,failed
+2XX E WASHINGTON ST,250 E WASHINGTON ST,hundred_block,,,78.4,failed
+2XX N 47TH AV,250 N 47TH AV,hundred_block,,,,failed
+2XX S 11TH AV,250 S 11TH AV,hundred_block,,,,failed
+2XX W CLARENDON AV,250 W CLARENDON AV,hundred_block,,,77.5,failed
+2XX W JACKSON ST,250 W JACKSON ST,hundred_block,,,75.45,failed
+2XX W JEFFERSON ST,250 W JEFFERSON ST,hundred_block,,,77.5,failed
+2XX W MONROE ST,250 W MONROE ST,hundred_block,,,,failed
+2XX W PINNACLE PEAK RD,250 W PINNACLE PEAK RD,hundred_block,33.698528864067,-112.07777591273,80.0,geocoder
+2XX W SOUTHERN AV,250 W SOUTHERN AV,hundred_block,,,76.52,failed
+2XX W WIER AV,250 W WIER AV,hundred_block,33.403365,-112.0778235,100.0,geocoder
+30XX E BELL RD,3050 E BELL RD,hundred_block,33.640974,-112.0162635,100.0,geocoder
+30XX E FILLMORE ST,3050 E FILLMORE ST,hundred_block,,,77.5,failed
+30XX E SHEA BL,3050 E SHEA BL,hundred_block,,,,failed
+30XX N 24TH ST,3050 N 24TH ST,hundred_block,,,,failed
+30XX N 35TH AV,3050 N 35TH AV,hundred_block,,,,failed
+30XX N 67TH AV,3050 N 67TH AV,hundred_block,,,,failed
+30XX N 7TH ST,3050 N 7TH ST,hundred_block,,,,failed
+30XX N BLACK CANYON AC,3050 N BLACK CANYON AC,hundred_block,,,,failed
+30XX N BLACK CANYON HW,3050 N BLACK CANYON HW,hundred_block,,,,failed
+30XX S 43RD AV,3050 S 43RD AV,hundred_block,,,,failed
+30XX W CLAREMONT ST,3050 W CLAREMONT ST,hundred_block,,,,failed
+30XX W CLARENDON AV,3050 W CLARENDON AV,hundred_block,,,78.4,failed
+30XX W DUNLAP AV,3050 W DUNLAP AV,hundred_block,,,75.45,failed
+30XX W LARKSPUR DR,3050 W LARKSPUR DR,hundred_block,33.601212,-112.0151835,93.77,geocoder
+30XX W LATHAM ST,3050 W LATHAM ST,hundred_block,,,,failed
+30XX W ROBERTA DR,3050 W ROBERTA DR,hundred_block,,,76.52,failed
+30XX W ROSE LN,3050 W ROSE LN,hundred_block,,,,failed
+30XX W SAN JUAN RD,3050 W SAN JUAN RD,hundred_block,,,,failed
+30XX W YORKSHIRE DR,3050 W YORKSHIRE DR,hundred_block,,,78.4,failed
+318XX N 16TH AV,31850 N 16TH AV,hundred_block,,,,failed
+31XX E CHANDLER BL,3150 E CHANDLER BL,hundred_block,,,77.5,failed
+31XX E DARROW ST,3150 E DARROW ST,hundred_block,,,,failed
+31XX E ELWOOD ST,3150 E ELWOOD ST,hundred_block,,,76.66,failed
+31XX E LEGACY DR,3150 E LEGACY DR,hundred_block,,,75.45,failed
+31XX E LINCOLN DR,3150 E LINCOLN DR,hundred_block,,,76.52,failed
+31XX E ORAIBI DR,3150 E ORAIBI DR,hundred_block,,,75.45,failed
+31XX E ROCK WREN RD,3150 E ROCK WREN RD,hundred_block,33.311952,-112.0146075,100.0,geocoder
+31XX E WINDSOR AV,3150 E WINDSOR AV,hundred_block,,,76.52,failed
+31XX N 27TH ST,3150 N 27TH ST,hundred_block,,,,failed
+31XX N 35TH AV,3150 N 35TH AV,hundred_block,33.485877,-112.1351355,100.0,geocoder
+31XX N 38TH DR,3150 N 38TH DR,hundred_block,33.485652,-112.000707,97.77,geocoder
+31XX N 44TH ST,3150 N 44TH ST,hundred_block,,,,failed
+31XX N 7TH AV,3150 N 7TH AV,hundred_block,33.485373,-112.065318,97.77,geocoder
+31XX S 72ND DR,3150 S 72ND DR,hundred_block,,,,failed
+31XX W ALICE AV,3150 W ALICE AV,hundred_block,,,,failed
+31XX W CHERYL DR,3150 W CHERYL DR,hundred_block,,,75.45,failed
+31XX W COCHISE DR,3150 W COCHISE DR,hundred_block,,,76.52,failed
+31XX W MOHAWK LN,3150 W MOHAWK LN,hundred_block,,,78.33,failed
+31XX W NORTHERN AV,3150 W NORTHERN AV,hundred_block,,,77.5,failed
+31XX W OSBORN RD,3150 W OSBORN RD,hundred_block,,,75.45,failed
+31XX W PERSHING AV,3150 W PERSHING AV,hundred_block,,,77.5,failed
+31XX W ST ANNE AV,3150 W ST ANNE AV,hundred_block,,,75.45,failed
+31XX W VOGEL AV,3150 W VOGEL AV,hundred_block,,,,failed
+326XX N NORTH VALLEY PW,32650 N NORTH VALLEY PW,hundred_block,33.779663520348,-112.114653406644,80.71,geocoder
+32XX E BELL RD,3250 E BELL RD,hundred_block,,,,failed
+32XX E CAMELBACK RD,3250 E CAMELBACK RD,hundred_block,,,78.4,failed
+32XX E CHANDLER BL,3250 E CHANDLER BL,hundred_block,,,77.5,failed
+32XX E EQUESTRIAN TL,3250 E EQUESTRIAN TL,hundred_block,,,,failed
+32XX E FILLMORE ST,3250 E FILLMORE ST,hundred_block,,,,failed
+32XX E GLENROSA AV,3250 E GLENROSA AV,hundred_block,,,77.5,failed
+32XX E GREENWAY RD,3250 E GREENWAY RD,hundred_block,33.626196,-112.1301,93.77,geocoder
+32XX E LINCOLN DR,3250 E LINCOLN DR,hundred_block,,,76.52,failed
+32XX E PINCHOT AV,3250 E PINCHOT AV,hundred_block,33.482916,-112.0108275,100.0,geocoder
+32XX E ROOSEVELT ST,3250 E ROOSEVELT ST,hundred_block,33.458922,-112.1281425,93.77,geocoder
+32XX W BELL RD,3250 W BELL RD,hundred_block,,,,failed
+32XX W GLENDALE AV,3250 W GLENDALE AV,hundred_block,,,77.5,failed
+32XX W GREENWAY RD,3250 W GREENWAY RD,hundred_block,33.626196,-112.1301,100.0,geocoder
+32XX W INDIAN SCHOOL RD,3250 W INDIAN SCHOOL RD,hundred_block,33.495336,-112.129623,100.0,geocoder
+32XX W LOWER BUCKEYE RD,3250 W LOWER BUCKEYE RD,hundred_block,33.423786,-112.130163,100.0,geocoder
+32XX W MARK LN,3250 W MARK LN,hundred_block,,,,failed
+32XX W POLK ST,3250 W POLK ST,hundred_block,,,,failed
+32XX W VAN BUREN ST,3250 W VAN BUREN ST,hundred_block,33.451659,-112.1295735,100.0,geocoder
+335XX N DOVE LAKES DR,33550 N DOVE LAKES DR,hundred_block,33.788763,-111.991896,97.96,geocoder
+338XX N 43RD ST,33850 N 43RD ST,hundred_block,33.793947,-111.9883635,97.96,geocoder
+33XX E KACHINA DR,3350 E KACHINA DR,hundred_block,,,76.52,failed
+33XX E ORAIBI DR,3350 E ORAIBI DR,hundred_block,,,75.45,failed
+33XX E SHERIDAN ST,3350 E SHERIDAN ST,hundred_block,,,,failed
+33XX E TONTO DR,3350 E TONTO DR,hundred_block,33.665562,-112.009743,97.77,geocoder
+33XX E UTOPIA RD,3350 E UTOPIA RD,hundred_block,,,75.45,failed
+33XX E VAN BUREN ST,3350 E VAN BUREN ST,hundred_block,,,77.5,failed
+33XX W BROOKWOOD CT,3350 W BROOKWOOD CT,hundred_block,,,78.4,failed
+33XX W CAMELBACK RD,3350 W CAMELBACK RD,hundred_block,,,78.4,failed
+33XX W DANBURY DR,3350 W DANBURY DR,hundred_block,,,,failed
+33XX W DUNLAP AV,3350 W DUNLAP AV,hundred_block,,,75.45,failed
+33XX W MCDOWELL RD,3350 W MCDOWELL RD,hundred_block,,,77.5,failed
+33XX W NORTHERN AV,3350 W NORTHERN AV,hundred_block,,,77.5,failed
+33XX W OSBORN RD,3350 W OSBORN RD,hundred_block,,,75.45,failed
+340XX N 27TH DR,34050 N 27TH DR,hundred_block,,,,failed
+342XX N BLACK MOUNTAIN PW,34250 N BLACK MOUNTAIN PW,hundred_block,,,,failed
+346XX N NORTH VALLEY PW,34650 N NORTH VALLEY PW,hundred_block,33.798805181376,-112.129479443881,80.71,geocoder
+347XX N 30TH DR,34750 N 30TH DR,hundred_block,33.800364,-112.1247585,100.0,geocoder
+348XX N 32ND DR,34850 N 32ND DR,hundred_block,,,,failed
+34XX E AIR LN,3450 E AIR LN,hundred_block,,,,failed
+34XX E CHANDLER BL,3450 E CHANDLER BL,hundred_block,,,,failed
+34XX E ESCUDA RD,3450 E ESCUDA RD,hundred_block,,,,failed
+34XX E MCDOWELL RD,3450 E MCDOWELL RD,hundred_block,33.466689,-112.0068225,100.0,geocoder
+34XX E OSBORN RD,3450 E OSBORN RD,hundred_block,,,75.45,failed
+34XX E PIESTEWA PEAK DR,3450 E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+34XX E SHARON DR,3450 E SHARON DR,hundred_block,33.61176,-112.007871,100.0,geocoder
+34XX E SOUTHERN AV,3450 E SOUTHERN AV,hundred_block,,,77.5,failed
+34XX N 16TH ST,3450 N 16TH ST,hundred_block,,,,failed
+34XX N 32ND ST,3450 N 32ND ST,hundred_block,,,,failed
+34XX N 35TH AV,3450 N 35TH AV,hundred_block,,,,failed
+34XX N 38TH ST,3450 N 38TH ST,hundred_block,,,,failed
+34XX N 39TH AV,3450 N 39TH AV,hundred_block,33.489333,-112.1443425,97.77,geocoder
+34XX N 7TH AV,3450 N 7TH AV,hundred_block,33.487974,-112.065669,97.77,geocoder
+34XX S 96TH AV,3450 S 96TH AV,hundred_block,,,,failed
+34XX W ABRAHAM LN,3450 W ABRAHAM LN,hundred_block,,,76.52,failed
+34XX W BELL RD,3450 W BELL RD,hundred_block,33.640506,-112.1335065,100.0,geocoder
+34XX W DANBURY DR,3450 W DANBURY DR,hundred_block,,,,failed
+34XX W DEER VALLEY RD,3450 W DEER VALLEY RD,hundred_block,,,79.23,failed
+34XX W DUNLAP AV,3450 W DUNLAP AV,hundred_block,33.568083,-112.1335785,100.0,geocoder
+34XX W GLENDALE AV,3450 W GLENDALE AV,hundred_block,,,77.5,failed
+34XX W KALER DR,3450 W KALER DR,hundred_block,33.54858,-112.1336055,100.0,geocoder
+34XX W MALDONADO RD,3450 W MALDONADO RD,hundred_block,,,,failed
+34XX W MISSOURI AV,3450 W MISSOURI AV,hundred_block,33.517512,-112.1337765,100.0,geocoder
+34XX W MORROW DR,3450 W MORROW DR,hundred_block,,,75.45,failed
+34XX W PERSHING AV,3450 W PERSHING AV,hundred_block,,,77.5,failed
+34XX W ROSE LN,3450 W ROSE LN,hundred_block,,,,failed
+34XX W SHUMWAY FARM RD,3450 W SHUMWAY FARM RD,hundred_block,,,,failed
+34XX W WILLETTA ST,3450 W WILLETTA ST,hundred_block,,,77.5,failed
+350XX N NORTH VALLEY PW,35050 N NORTH VALLEY PW,hundred_block,33.80193,-112.1336685,100.0,geocoder
+354XX N 32ND DR,35450 N 32ND DR,hundred_block,,,,failed
+354XX N 34TH AV,35450 N 34TH AV,hundred_block,,,,failed
+35XX E BASELINE RD,3550 E BASELINE RD,hundred_block,,,77.5,failed
+35XX E BELL RD,3550 E BELL RD,hundred_block,33.641046,-112.005324,100.0,geocoder
+35XX E CAMPO BELLO DR,3550 E CAMPO BELLO DR,hundred_block,,,75.39,failed
+35XX E SKY HARBOR BL,3550 E SKY HARBOR BL,hundred_block,,,78.4,failed
+35XX E WAYLAND DR,3550 E WAYLAND DR,hundred_block,,,,failed
+35XX N 63RD AV,3550 N 63RD AV,hundred_block,,,,failed
+35XX W AUGUSTA AV,3550 W AUGUSTA AV,hundred_block,33.551316,-112.136499,100.0,geocoder
+35XX W CACTUS RD,3550 W CACTUS RD,hundred_block,,,76.17,failed
+35XX W CHAMBERS ST,3550 W CHAMBERS ST,hundred_block,,,77.5,failed
+35XX W DUNLAP AV,3550 W DUNLAP AV,hundred_block,33.567939,-112.1365395,100.0,geocoder
+35XX W FILLMORE ST,3550 W FILLMORE ST,hundred_block,,,,failed
+35XX W LAMAR RD,3550 W LAMAR RD,hundred_block,,,,failed
+35XX W LONE CACTUS DR,3550 W LONE CACTUS DR,hundred_block,33.680223,-112.138335,97.96,geocoder
+35XX W MISSOURI AV,3550 W MISSOURI AV,hundred_block,,,77.5,failed
+35XX W NORTHERN AV,3550 W NORTHERN AV,hundred_block,,,77.5,failed
+35XX W PEORIA AV,3550 W PEORIA AV,hundred_block,33.582339,-112.136085,100.0,geocoder
+35XX W TIERRA BUENA LN,3550 W TIERRA BUENA LN,hundred_block,33.629021266986,-112.135401867489,80.0,geocoder
+35XX W VOGEL AV,3550 W VOGEL AV,hundred_block,33.573906,-112.1362605,100.0,geocoder
+36XX E BASELINE RD,3650 E BASELINE RD,hundred_block,,,77.5,failed
+36XX E BROADWAY RD,3650 E BROADWAY RD,hundred_block,33.4071,-112.1360805,93.77,geocoder
+36XX E CROCUS DR,3650 E CROCUS DR,hundred_block,33.616332,-112.0022685,100.0,geocoder
+36XX E HIGHLINE CANAL RD,3650 E HIGHLINE CANAL RD,hundred_block,33.373394638753,-112.004081052165,81.38,geocoder
+36XX E INDIAN SCHOOL RD,3650 E INDIAN SCHOOL RD,hundred_block,33.495344864067,-112.003089444872,80.71,geocoder
+36XX E KACHINA DR,3650 E KACHINA DR,hundred_block,,,76.52,failed
+36XX E LOS GATOS DR,3650 E LOS GATOS DR,hundred_block,33.687387,-112.001535,100.0,geocoder
+36XX E MCDOWELL RD,3650 E MCDOWELL RD,hundred_block,,,77.5,failed
+36XX E RAY RD,3650 E RAY RD,hundred_block,,,,failed
+36XX E SHERIDAN ST,3650 E SHERIDAN ST,hundred_block,,,77.5,failed
+36XX E THOMAS RD,3650 E THOMAS RD,hundred_block,,,75.45,failed
+36XX E VAN BUREN ST,3650 E VAN BUREN ST,hundred_block,,,77.5,failed
+36XX N 16TH ST,3650 N 16TH ST,hundred_block,,,,failed
+36XX N 27TH AV,3650 N 27TH AV,hundred_block,,,,failed
+36XX N 45TH PL,3650 N 45TH PL,hundred_block,,,,failed
+36XX N 48TH AV,3650 N 48TH AV,hundred_block,,,,failed
+36XX N 5TH AV,3650 N 5TH AV,hundred_block,,,,failed
+36XX N 69TH AV,3650 N 69TH AV,hundred_block,,,,failed
+36XX N 90TH DR,3650 N 90TH DR,hundred_block,,,,failed
+36XX N BLACK CANYON AC,3650 N BLACK CANYON AC,hundred_block,,,,failed
+36XX W BETHANY HOME RD,3650 W BETHANY HOME RD,hundred_block,33.524469,-112.137804,100.0,geocoder
+36XX W KRALL ST,3650 W KRALL ST,hundred_block,33.534297,-112.138362,100.0,geocoder
+36XX W LATHAM ST,3650 W LATHAM ST,hundred_block,,,,failed
+36XX W OSBORN RD,3650 W OSBORN RD,hundred_block,,,75.45,failed
+36XX W ROSE LN,3650 W ROSE LN,hundred_block,,,,failed
+36XX W SHARON AV,3650 W SHARON AV,hundred_block,,,,failed
+36XX W THOMAS RD,3650 W THOMAS RD,hundred_block,,,75.45,failed
+37XX E DAKOTA DR,3750 E DAKOTA DR,hundred_block,,,,failed
+37XX E EARLL DR,3750 E EARLL DR,hundred_block,,,75.08,failed
+37XX E MCDOWELL RD,3750 E MCDOWELL RD,hundred_block,33.466275,-112.140018,93.77,geocoder
+37XX E MONTEROSA ST,3750 E MONTEROSA ST,hundred_block,,,,failed
+37XX E PIESTEWA PEAK DR,3750 E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+37XX N 32ND ST,3750 N 32ND ST,hundred_block,33.490791,-112.0132845,100.0,geocoder
+37XX W CAMBRIDGE AV,3750 W CAMBRIDGE AV,hundred_block,,,78.4,failed
+37XX W ECHO LN,3750 W ECHO LN,hundred_block,,,,failed
+37XX W LAMAR RD,3750 W LAMAR RD,hundred_block,,,,failed
+37XX W MARICOPA ST,3750 W MARICOPA ST,hundred_block,,,,failed
+37XX W MARLETTE AV,3750 W MARLETTE AV,hundred_block,,,,failed
+37XX W NORTHERN AV,3750 W NORTHERN AV,hundred_block,,,,failed
+37XX W ST ANNE AV,3750 W ST ANNE AV,hundred_block,,,75.45,failed
+37XX W WHITTON AV,3750 W WHITTON AV,hundred_block,,,76.52,failed
+38XX E BASELINE RD,3850 E BASELINE RD,hundred_block,,,77.5,failed
+38XX E CAMELBACK RD,3850 E CAMELBACK RD,hundred_block,33.509781,-112.142205,93.77,geocoder
+38XX E CLARENDON AV,3850 E CLARENDON AV,hundred_block,,,78.4,failed
+38XX E LAKEWOOD PW E,3850 E LAKEWOOD PW E,hundred_block,,,,failed
+38XX E SKY HARBOR BL,3850 E SKY HARBOR BL,hundred_block,,,78.4,failed
+38XX E VAN BUREN ST,3850 E VAN BUREN ST,hundred_block,,,77.5,failed
+38XX E WIER AV,3850 E WIER AV,hundred_block,,,,failed
+38XX N 21ST AV,3850 N 21ST AV,hundred_block,,,,failed
+38XX N 27TH AV,3850 N 27TH AV,hundred_block,,,,failed
+38XX N 27TH ST,3850 N 27TH ST,hundred_block,,,,failed
+38XX N 28TH ST,3850 N 28TH ST,hundred_block,,,,failed
+38XX N 30TH ST,3850 N 30TH ST,hundred_block,33.492447,-112.0191705,100.0,geocoder
+38XX N 32ND ST,3850 N 32ND ST,hundred_block,,,,failed
+38XX N 33RD AV,3850 N 33RD AV,hundred_block,,,,failed
+38XX N 33RD PL,3850 N 33RD PL,hundred_block,,,,failed
+38XX N 43RD AV,3850 N 43RD AV,hundred_block,,,,failed
+38XX N 60TH PL,3850 N 60TH PL,hundred_block,,,,failed
+38XX N 83RD AV,3850 N 83RD AV,hundred_block,,,,failed
+38XX N 84TH LN,3850 N 84TH LN,hundred_block,,,,failed
+38XX N MARYVALE PW,3850 N MARYVALE PW,hundred_block,,,77.5,failed
+38XX S 7TH ST,3850 S 7TH ST,hundred_block,,,,failed
+38XX W BUCKEYE RD,3850 W BUCKEYE RD,hundred_block,,,76.52,failed
+38XX W CAMINO ACEQUIA,3850 W CAMINO ACEQUIA,hundred_block,33.575319325819,-112.14224707808,80.0,geocoder
+38XX W CLARENDON AV,3850 W CLARENDON AV,hundred_block,,,78.4,failed
+38XX W HELENA DR,3850 W HELENA DR,hundred_block,,,75.45,failed
+38XX W MCDOWELL RD,3850 W MCDOWELL RD,hundred_block,33.466347,-112.142484,100.0,geocoder
+38XX W PINNACLE PEAK RD,3850 W PINNACLE PEAK RD,hundred_block,33.732954,-112.141233,84.79,geocoder
+39XX E BASELINE RD,3950 E BASELINE RD,hundred_block,33.37857,-111.9963555,100.0,geocoder
+39XX E EARLL DR,3950 E EARLL DR,hundred_block,,,75.08,failed
+39XX E EUGIE AV,3950 E EUGIE AV,hundred_block,33.61032,-111.9961665,100.0,geocoder
+39XX E PICCADILLY RD,3950 E PICCADILLY RD,hundred_block,,,79.23,failed
+39XX E PIESTEWA PEAK DR,3950 E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+39XX E ROUGH RIDER RD,3950 E ROUGH RIDER RD,hundred_block,,,79.23,failed
+39XX E THOMAS RD,3950 E THOMAS RD,hundred_block,,,,failed
+39XX S 82ND DR,3950 S 82ND DR,hundred_block,,,,failed
+39XX W ARROYO NORTE DR,3950 W ARROYO NORTE DR,hundred_block,33.882777,-112.144419,97.96,geocoder
+39XX W GARDEN DR,3950 W GARDEN DR,hundred_block,33.588648,-112.144689,100.0,geocoder
+39XX W GRANDVIEW RD,3950 W GRANDVIEW RD,hundred_block,,,78.4,failed
+39XX W GRISWOLD RD,3950 W GRISWOLD RD,hundred_block,,,77.5,failed
+39XX W KALER DR,3950 W KALER DR,hundred_block,,,,failed
+3XX E BASELINE RD,350 E BASELINE RD,hundred_block,,,76.52,failed
+3XX E BUCHANAN ST,350 E BUCHANAN ST,hundred_block,,,,failed
+3XX E HATCHER RD,350 E HATCHER RD,hundred_block,,,75.45,failed
+3XX E HIGHLAND AV,350 E HIGHLAND AV,hundred_block,,,76.52,failed
+3XX E INDIAN SCHOOL RD,350 E INDIAN SCHOOL RD,hundred_block,,,,failed
+3XX E JEFFERSON ST,350 E JEFFERSON ST,hundred_block,,,77.5,failed
+3XX E MONTE VISTA RD,350 E MONTE VISTA RD,hundred_block,33.471495,-112.0671765,100.0,geocoder
+3XX E PIERCE ST,350 E PIERCE ST,hundred_block,33.455691,-111.9331125,97.96,geocoder
+3XX E PORTLAND ST,350 E PORTLAND ST,hundred_block,33.459975,-112.079961,93.77,geocoder
+3XX E ROESER RD,350 E ROESER RD,hundred_block,,,,failed
+3XX E ROOSEVELT ST,350 E ROOSEVELT ST,hundred_block,,,77.5,failed
+3XX E THOMAS RD,350 E THOMAS RD,hundred_block,33.480918,-112.079241,93.77,geocoder
+3XX N 3RD AV,350 N 3RD AV,hundred_block,33.453693,-112.0780935,100.0,geocoder
+3XX N 5TH AV,350 N 5TH AV,hundred_block,,,,failed
+3XX S 29TH ST,350 S 29TH ST,hundred_block,,,,failed
+3XX S 2ND AV,350 S 2ND AV,hundred_block,33.453198,-112.0767345,93.77,geocoder
+3XX W COCOPAH ST,350 W COCOPAH ST,hundred_block,,,75.45,failed
+3XX W FILLMORE ST,350 W FILLMORE ST,hundred_block,,,76.52,failed
+3XX W LAMAR RD,350 W LAMAR RD,hundred_block,,,,failed
+3XX W MONROE ST,350 W MONROE ST,hundred_block,,,,failed
+3XX W MONTE VISTA RD,350 W MONTE VISTA RD,hundred_block,33.471495,-112.0671765,93.77,geocoder
+3XX W OSBORN RD,350 W OSBORN RD,hundred_block,,,,failed
+3XX W PIMA ST,350 W PIMA ST,hundred_block,,,,failed
+3XX W ROMA AV,350 W ROMA AV,hundred_block,,,,failed
+3XX W ROSE LN,350 W ROSE LN,hundred_block,33.527997,-112.0800465,100.0,geocoder
+3XX W SOUTHERN AV,350 W SOUTHERN AV,hundred_block,,,76.52,failed
+3XX W TAM O SHANTER DR,350 W TAM O SHANTER DR,hundred_block,,,79.23,failed
+3XX W WILLETTA ST,350 W WILLETTA ST,hundred_block,,,,failed
+3XX W WINDSOR AV,350 W WINDSOR AV,hundred_block,,,,failed
+40XX E CHANDLER BL,4050 E CHANDLER BL,hundred_block,,,77.5,failed
+40XX E CORTEZ ST,4050 E CORTEZ ST,hundred_block,,,,failed
+40XX E COTTON CENTER BL,4050 E COTTON CENTER BL,hundred_block,33.404535,-111.9933,100.0,geocoder
+40XX E LA SALLE ST,4050 E LA SALLE ST,hundred_block,,,76.52,failed
+40XX E MCDOWELL RD,4050 E MCDOWELL RD,hundred_block,,,77.5,failed
+40XX E RAY RD,4050 E RAY RD,hundred_block,,,,failed
+40XX E ROWEL RD,4050 E ROWEL RD,hundred_block,,,,failed
+40XX E SAN GABRIEL AV,4050 E SAN GABRIEL AV,hundred_block,,,79.23,failed
+40XX E THOMAS RD,4050 E THOMAS RD,hundred_block,,,75.45,failed
+40XX E THUNDERBIRD RD,4050 E THUNDERBIRD RD,hundred_block,33.612034473842,-111.994747996099,80.0,geocoder
+40XX E WESTERN STAR BL,4050 E WESTERN STAR BL,hundred_block,,,,failed
+40XX N 16TH ST,4050 N 16TH ST,hundred_block,,,,failed
+40XX N 40TH ST,4050 N 40TH ST,hundred_block,,,,failed
+40XX N 44TH AV,4050 N 44TH AV,hundred_block,,,,failed
+40XX S 9TH ST,4050 S 9TH ST,hundred_block,33.408738,-112.0606155,100.0,geocoder
+40XX W BELL RD,4050 W BELL RD,hundred_block,33.641154,-111.9935115,93.77,geocoder
+40XX W CAMELBACK RD,4050 W CAMELBACK RD,hundred_block,,,78.4,failed
+40XX W GRISWOLD RD,4050 W GRISWOLD RD,hundred_block,,,,failed
+40XX W OSBORN RD,4050 W OSBORN RD,hundred_block,,,75.45,failed
+40XX W PALOMINO RD,4050 W PALOMINO RD,hundred_block,33.509979,-112.14711,100.0,geocoder
+40XX W PEORIA AV,4050 W PEORIA AV,hundred_block,,,75.45,failed
+40XX W SOLANO DR N,4050 W SOLANO DR N,hundred_block,,,,failed
+40XX W WETHERSFIELD RD,4050 W WETHERSFIELD RD,hundred_block,33.597548186452,-112.145864914274,80.71,geocoder
+41XX E BURGESS LN,4150 E BURGESS LN,hundred_block,,,,failed
+41XX E CALLE REDONDA,4150 E CALLE REDONDA,hundred_block,,,79.23,failed
+41XX E CAMPBELL AV,4150 E CAMPBELL AV,hundred_block,,,77.5,failed
+41XX E DAHLIA DR,4150 E DAHLIA DR,hundred_block,33.603003,-112.149918,93.77,geocoder
+41XX E FRYE RD,4150 E FRYE RD,hundred_block,,,,failed
+41XX E INDIAN SCHOOL RD,4150 E INDIAN SCHOOL RD,hundred_block,33.495200864067,-111.992029190103,80.71,geocoder
+41XX E MALDONADO DR,4150 E MALDONADO DR,hundred_block,33.383745,-112.148721,86.83,geocoder
+41XX E MORELAND ST,4150 E MORELAND ST,hundred_block,,,,failed
+41XX E PECAN RD,4150 E PECAN RD,hundred_block,33.395364,-112.1486985,93.77,geocoder
+41XX E TURNEY AV,4150 E TURNEY AV,hundred_block,33.500898,-112.148037,93.77,geocoder
+41XX N 105TH LN,4150 N 105TH LN,hundred_block,,,,failed
+41XX N 12TH ST,4150 N 12TH ST,hundred_block,33.496434,-112.056804,100.0,geocoder
+41XX N 17TH ST,4150 N 17TH ST,hundred_block,,,,failed
+41XX N 20TH ST,4150 N 20TH ST,hundred_block,,,,failed
+41XX N 21ST ST,4150 N 21ST ST,hundred_block,,,,failed
+41XX N 26TH ST,4150 N 26TH ST,hundred_block,,,,failed
+41XX N 31ST ST,4150 N 31ST ST,hundred_block,,,,failed
+41XX N 42ND ST,4150 N 42ND ST,hundred_block,33.496866,-111.9913875,100.0,geocoder
+41XX N 43RD ST,4150 N 43RD ST,hundred_block,,,,failed
+41XX N 55TH AV,4150 N 55TH AV,hundred_block,,,,failed
+41XX N 63RD DR,4150 N 63RD DR,hundred_block,,,,failed
+41XX N 67TH AV,4150 N 67TH AV,hundred_block,33.496434,-112.203702,100.0,geocoder
+41XX N 9TH ST,4150 N 9TH ST,hundred_block,33.496011,-112.063437,100.0,geocoder
+41XX W GLENDALE AV,4150 W GLENDALE AV,hundred_block,,,77.5,failed
+41XX W MCDOWELL RD,4150 W MCDOWELL RD,hundred_block,,,77.5,failed
+41XX W ORANGEWOOD AV,4150 W ORANGEWOOD AV,hundred_block,,,79.23,failed
+41XX W VAN BUREN ST,4150 W VAN BUREN ST,hundred_block,,,77.5,failed
+42XX E CACTUS RD,4250 E CACTUS RD,hundred_block,,,75.45,failed
+42XX E DESERT VIEW DR,4250 E DESERT VIEW DR,hundred_block,,,,failed
+42XX E FLOWER ST,4250 E FLOWER ST,hundred_block,,,75.45,failed
+42XX E INDIAN SCHOOL RD,4250 E INDIAN SCHOOL RD,hundred_block,33.495128864067,-111.989580369242,80.71,geocoder
+42XX E MCDOWELL RD,4250 E MCDOWELL RD,hundred_block,,,77.5,failed
+42XX E OAK ST,4250 E OAK ST,hundred_block,,,,failed
+42XX E RAY RD,4250 E RAY RD,hundred_block,,,,failed
+42XX E RAYMOND ST,4250 E RAYMOND ST,hundred_block,,,,failed
+42XX E WASHINGTON ST,4250 E WASHINGTON ST,hundred_block,,,79.23,failed
+42XX E WINDROSE DR,4250 E WINDROSE DR,hundred_block,,,77.5,failed
+42XX N 12TH ST,4250 N 12TH ST,hundred_block,,,,failed
+42XX N 19TH AV,4250 N 19TH AV,hundred_block,33.499017,-112.1004945,100.0,geocoder
+42XX N 24TH ST,4250 N 24TH ST,hundred_block,,,,failed
+42XX N 27TH AV,4250 N 27TH AV,hundred_block,33.498261,-112.024152,97.77,geocoder
+42XX N 35TH AV,4250 N 35TH AV,hundred_block,33.498666,-112.007088,97.77,geocoder
+42XX N 45TH AV,4250 N 45TH AV,hundred_block,,,,failed
+42XX N 68TH AV,4250 N 68TH AV,hundred_block,33.497919,-112.2055965,100.0,geocoder
+42XX N 69TH LN,4250 N 69TH LN,hundred_block,,,,failed
+42XX N JOKAKE RD,4250 N JOKAKE RD,hundred_block,,,75.45,failed
+42XX S 24TH ST,4250 S 24TH ST,hundred_block,,,,failed
+42XX S 3RD ST,4250 S 3RD ST,hundred_block,,,,failed
+42XX W DUNLAP AV,4250 W DUNLAP AV,hundred_block,33.567831,-112.15125,100.0,geocoder
+42XX W GROVERS AV,4250 W GROVERS AV,hundred_block,33.399297,-111.990231,80.63,geocoder
+42XX W ROOSEVELT ST,4250 W ROOSEVELT ST,hundred_block,,,78.4,failed
+42XX W SAN JUAN RD,4250 W SAN JUAN RD,hundred_block,,,,failed
+42XX W UNION HILLS DR,4250 W UNION HILLS DR,hundred_block,33.655014,-112.151385,97.96,geocoder
+433XX N NEW RIVER RD,43350 N NEW RIVER RD,hundred_block,,,78.4,failed
+435XX N 48TH DR,43550 N 48TH DR,hundred_block,,,,failed
+43XX E BANNOCK ST,4350 E BANNOCK ST,hundred_block,33.33132,-111.987333,100.0,geocoder
+43XX E BASELINE RD,4350 E BASELINE RD,hundred_block,,,77.5,failed
+43XX E CACTUS RD,4350 E CACTUS RD,hundred_block,33.68331,-111.9836565,86.68,geocoder
+43XX E IRMA LN,4350 E IRMA LN,hundred_block,,,,failed
+43XX E OAK ST,4350 E OAK ST,hundred_block,,,,failed
+43XX E PEARCE RD,4350 E PEARCE RD,hundred_block,,,75.45,failed
+43XX E WASHINGTON ST,4350 E WASHINGTON ST,hundred_block,,,79.23,failed
+43XX N 103RD AV,4350 N 103RD AV,hundred_block,33.498225,-112.282848,100.0,geocoder
+43XX N 13TH PL,4350 N 13TH PL,hundred_block,,,,failed
+43XX N 19TH AV,4350 N 19TH AV,hundred_block,33.500025,-112.1001075,100.0,geocoder
+43XX N 19TH DR,4350 N 19TH DR,hundred_block,33.500232,-112.1011875,100.0,geocoder
+43XX N 21ST DR,4350 N 21ST DR,hundred_block,,,,failed
+43XX N 21ST ST,4350 N 21ST ST,hundred_block,,,,failed
+43XX N 27TH AV,4350 N 27TH AV,hundred_block,33.500043,-112.023531,97.77,geocoder
+43XX N 35TH AV,4350 N 35TH AV,hundred_block,,,,failed
+43XX N 5TH AV,4350 N 5TH AV,hundred_block,33.499917,-112.080672,100.0,geocoder
+43XX N 6TH DR,4350 N 6TH DR,hundred_block,,,,failed
+43XX N 71ST DR,4350 N 71ST DR,hundred_block,,,,failed
+43XX N BLACK CANYON AC,4350 N BLACK CANYON AC,hundred_block,,,,failed
+43XX N LONGVIEW AV,4350 N LONGVIEW AV,hundred_block,,,,failed
+43XX S 7TH AV,4350 S 7TH AV,hundred_block,,,,failed
+43XX W BELL RD,4350 W BELL RD,hundred_block,,,,failed
+43XX W INDIAN SCHOOL RD,4350 W INDIAN SCHOOL RD,hundred_block,33.495192,-111.987405,93.77,geocoder
+43XX W MONTE WY,4350 W MONTE WY,hundred_block,,,,failed
+43XX W THOMAS RD,4350 W THOMAS RD,hundred_block,,,75.45,failed
+43XX W TONTO RD,4350 W TONTO RD,hundred_block,,,,failed
+43XX W WAGONER RD,4350 W WAGONER RD,hundred_block,,,76.52,failed
+44XX E BASELINE RD,4450 E BASELINE RD,hundred_block,,,77.5,failed
+44XX E CAMELBACK RD,4450 E CAMELBACK RD,hundred_block,33.510924,-111.9828735,100.0,geocoder
+44XX E CHANDLER BL,4450 E CHANDLER BL,hundred_block,,,77.5,failed
+44XX E PARADISE VILLAGE PW N,4450 E PARADISE VILLAGE PW N,hundred_block,33.605034946435,-111.985965794712,83.13,geocoder
+44XX E PARADISE VILLAGE PW S,4450 E PARADISE VILLAGE PW S,hundred_block,33.596610248991,-111.98428498536,83.13,geocoder
+44XX E PIMA CANYON RD,4450 E PIMA CANYON RD,hundred_block,,,79.23,failed
+44XX E PUEBLO AV,4450 E PUEBLO AV,hundred_block,33.408027,-111.985227,100.0,geocoder
+44XX E RANCHO CALIENTE DR,4450 E RANCHO CALIENTE DR,hundred_block,33.76728,-111.9853305,97.96,geocoder
+44XX E WOOD ST,4450 E WOOD ST,hundred_block,33.408765,-111.9851505,100.0,geocoder
+44XX E ZENITH LN,4450 E ZENITH LN,hundred_block,,,,failed
+44XX N 102ND DR,4450 N 102ND DR,hundred_block,,,,failed
+44XX N 24TH WY,4450 N 24TH WY,hundred_block,,,,failed
+44XX N 32ND ST,4450 N 32ND ST,hundred_block,,,,failed
+44XX N 36TH ST,4450 N 36TH ST,hundred_block,,,,failed
+44XX N 68TH DR,4450 N 68TH DR,hundred_block,,,,failed
+44XX N 70TH AV,4450 N 70TH AV,hundred_block,,,,failed
+44XX N ARCADIA LN,4450 N ARCADIA LN,hundred_block,,,,failed
+44XX S 12TH ST,4450 S 12TH ST,hundred_block,33.501753,-112.0567185,93.77,geocoder
+44XX S 28TH ST,4450 S 28TH ST,hundred_block,,,,failed
+44XX W MERCER LN,4450 W MERCER LN,hundred_block,,,75.45,failed
+44XX W TARO DR,4450 W TARO DR,hundred_block,,,,failed
+45XX E BASELINE RD,4550 E BASELINE RD,hundred_block,,,77.5,failed
+45XX E BELL RD,4550 E BELL RD,hundred_block,33.641586,-111.9834135,100.0,geocoder
+45XX E BRIARWOOD TE,4550 E BRIARWOOD TE,hundred_block,,,78.4,failed
+45XX E CACTUS RD,4550 E CACTUS RD,hundred_block,33.604011,-111.986451,100.0,geocoder
+45XX E CLARENDON AV,4550 E CLARENDON AV,hundred_block,,,,failed
+45XX E OAK ST,4550 E OAK ST,hundred_block,,,,failed
+45XX E PARADISE VILLAGE PW N,4550 E PARADISE VILLAGE PW N,hundred_block,33.633639,-111.9825,86.33,geocoder
+45XX E PARADISE VILLAGE PW S,4550 E PARADISE VILLAGE PW S,hundred_block,33.633639,-111.9825,86.33,geocoder
+45XX E PIMA CANYON RD,4550 E PIMA CANYON RD,hundred_block,,,79.23,failed
+45XX E THOMAS RD,4550 E THOMAS RD,hundred_block,33.480594,-111.9829005,100.0,geocoder
+45XX N 15TH AV,4550 N 15TH AV,hundred_block,33.50367,-112.0915665,100.0,geocoder
+45XX N 26TH DR,4550 N 26TH DR,hundred_block,,,,failed
+45XX N 32ND ST,4550 N 32ND ST,hundred_block,,,,failed
+45XX N CENTRAL AV,4550 N CENTRAL AV,hundred_block,,,76.52,failed
+45XX W FREMONT RD,4550 W FREMONT RD,hundred_block,,,,failed
+45XX W MELODY DR,4550 W MELODY DR,hundred_block,,,75.45,failed
+45XX W MOSS SPRINGS RD,4550 W MOSS SPRINGS RD,hundred_block,33.86626327868,-112.157518659483,80.0,geocoder
+45XX W PLEASANT LN,4550 W PLEASANT LN,hundred_block,,,,failed
+45XX W POLK ST,4550 W POLK ST,hundred_block,,,,failed
+45XX W THOMAS RD,4550 W THOMAS RD,hundred_block,33.480594,-111.9829005,93.77,geocoder
+46XX E CACTUS RD,4650 E CACTUS RD,hundred_block,,,75.45,failed
+46XX E CALLE VENTURA,4650 E CALLE VENTURA,hundred_block,,,,failed
+46XX E CORTEZ ST,4650 E CORTEZ ST,hundred_block,,,75.45,failed
+46XX E DESERT DR,4650 E DESERT DR,hundred_block,33.714792,-112.1607855,86.13,geocoder
+46XX E FRANCISCO DR,4650 E FRANCISCO DR,hundred_block,,,,failed
+46XX E GOLDFINCH GATE LN,4650 E GOLDFINCH GATE LN,hundred_block,33.324526575516,-111.9837062561,81.38,geocoder
+46XX E MOCKINGBIRD LN,4650 E MOCKINGBIRD LN,hundred_block,33.561297,-111.979512,97.96,geocoder
+46XX E PARADISE VILLAGE PW N,4650 E PARADISE VILLAGE PW N,hundred_block,33.605177517317,-111.981150518215,83.13,geocoder
+46XX E RAY RD,4650 E RAY RD,hundred_block,,,,failed
+46XX E SHEA BL,4650 E SHEA BL,hundred_block,,,,failed
+46XX E THORN TREE DR,4650 E THORN TREE DR,hundred_block,,,,failed
+46XX N 102ND AV,4650 N 102ND AV,hundred_block,,,,failed
+46XX N 15TH AV,4650 N 15TH AV,hundred_block,,,,failed
+46XX N 39TH AV,4650 N 39TH AV,hundred_block,,,,failed
+46XX N 44TH ST,4650 N 44TH ST,hundred_block,,,,failed
+46XX N 47TH AV,4650 N 47TH AV,hundred_block,,,,failed
+46XX N 65TH ST,4650 N 65TH ST,hundred_block,,,,failed
+46XX N CENTRAL AV,4650 N CENTRAL AV,hundred_block,33.505218,-112.0747185,100.0,geocoder
+46XX S 7TH AV,4650 S 7TH AV,hundred_block,,,,failed
+46XX W MCDOWELL RD,4650 W MCDOWELL RD,hundred_block,,,77.5,failed
+46XX W THOMAS RD,4650 W THOMAS RD,hundred_block,33.480891,-112.158657,100.0,geocoder
+46XX W VAN BUREN ST,4650 W VAN BUREN ST,hundred_block,,,77.5,failed
+47XX E BELL RD,4750 E BELL RD,hundred_block,33.64101,-111.977964,100.0,geocoder
+47XX E BROADWAY RD,4750 E BROADWAY RD,hundred_block,33.407739,-111.9793185,100.0,geocoder
+47XX E CALDWELL ST,4750 E CALDWELL ST,hundred_block,,,77.5,failed
+47XX E ELLIOT RD,4750 E ELLIOT RD,hundred_block,,,76.66,failed
+47XX E GREENWAY RD,4750 E GREENWAY RD,hundred_block,,,77.5,failed
+47XX E LAFAYETTE BL,4750 E LAFAYETTE BL,hundred_block,,,,failed
+47XX E MATT DILLON TL,4750 E MATT DILLON TL,hundred_block,,,,failed
+47XX E MORELAND ST,4750 E MORELAND ST,hundred_block,33.460965,-111.979566,100.0,geocoder
+47XX E PARADISE VILLAGE PW N,4750 E PARADISE VILLAGE PW N,hundred_block,33.605162864067,-111.978989685451,83.13,geocoder
+47XX E PIMA CANYON RD,4750 E PIMA CANYON RD,hundred_block,,,79.23,failed
+47XX E VAN BUREN ST,4750 E VAN BUREN ST,hundred_block,,,77.5,failed
+47XX E VILLA MARIA DR,4750 E VILLA MARIA DR,hundred_block,33.651873,-112.16259,82.64,geocoder
+47XX E WARNER RD,4750 E WARNER RD,hundred_block,33.331176,-111.981465,100.0,geocoder
+47XX N 15TH DR,4750 N 15TH DR,hundred_block,,,,failed
+47XX N 15TH ST,4750 N 15TH ST,hundred_block,,,,failed
+47XX N 16TH DR,4750 N 16TH DR,hundred_block,33.507189,-112.0483215,97.77,geocoder
+47XX N 16TH ST,4750 N 16TH ST,hundred_block,33.507189,-112.0483215,100.0,geocoder
+47XX N 17TH AV,4750 N 17TH AV,hundred_block,,,,failed
+47XX N 19TH AV,4750 N 19TH AV,hundred_block,,,,failed
+47XX N 71ST AV,4750 N 71ST AV,hundred_block,,,,failed
+47XX N BLACK CANYON AC,4750 N BLACK CANYON AC,hundred_block,33.507423,-112.113054,100.0,geocoder
+47XX W WINCHCOMB DR,4750 W WINCHCOMB DR,hundred_block,,,,failed
+48XX E DESERT COVE AV,4850 E DESERT COVE AV,hundred_block,33.586821,-111.9748455,97.96,geocoder
+48XX E PAIUTE ST,4850 E PAIUTE ST,hundred_block,,,,failed
+48XX E PIMA CANYON RD,4850 E PIMA CANYON RD,hundred_block,,,,failed
+48XX E RAY RD,4850 E RAY RD,hundred_block,,,,failed
+48XX E ROOSEVELT ST,4850 E ROOSEVELT ST,hundred_block,,,78.4,failed
+48XX E VIRGINIA AV,4850 E VIRGINIA AV,hundred_block,,,77.5,failed
+48XX E WINCHCOMB DR,4850 E WINCHCOMB DR,hundred_block,,,78.4,failed
+48XX N 12TH ST,4850 N 12TH ST,hundred_block,,,,failed
+48XX N 14TH AV,4850 N 14TH AV,hundred_block,,,,failed
+48XX N 19TH AV,4850 N 19TH AV,hundred_block,,,,failed
+48XX N 24TH ST,4850 N 24TH ST,hundred_block,,,,failed
+48XX N 75TH AV,4850 N 75TH AV,hundred_block,,,,failed
+48XX N 89TH AV,4850 N 89TH AV,hundred_block,,,,failed
+48XX N 94TH LN,4850 N 94TH LN,hundred_block,,,,failed
+48XX S 36TH ST,4850 S 36TH ST,hundred_block,,,,failed
+48XX S 38TH ST,4850 S 38TH ST,hundred_block,,,,failed
+48XX W EARLL DR,4850 W EARLL DR,hundred_block,,,,failed
+48XX W MCDOWELL RD,4850 W MCDOWELL RD,hundred_block,,,77.5,failed
+48XX W MCRAE WY,4850 W MCRAE WY,hundred_block,,,,failed
+49XX E CHANDLER BL,4950 E CHANDLER BL,hundred_block,33.305823,-111.976533,100.0,geocoder
+49XX E DESERT COVE AV,4950 E DESERT COVE AV,hundred_block,,,,failed
+49XX E HOLLY ST,4950 E HOLLY ST,hundred_block,,,,failed
+49XX E MCDONALD DR,4950 E MCDONALD DR,hundred_block,,,77.5,failed
+49XX E MCDOWELL RD,4950 E MCDOWELL RD,hundred_block,33.465951,-111.9742965,100.0,geocoder
+49XX E RAY RD,4950 E RAY RD,hundred_block,33.320385,-111.9765915,100.0,geocoder
+49XX E VAN BUREN ST,4950 E VAN BUREN ST,hundred_block,33.452154,-111.975156,100.0,geocoder
+49XX W CYPRESS ST,4950 W CYPRESS ST,hundred_block,,,76.52,failed
+49XX W FALLEN LEAF LN,4950 W FALLEN LEAF LN,hundred_block,,,79.23,failed
+49XX W MCDOWELL RD,4950 W MCDOWELL RD,hundred_block,33.465951,-111.9742965,93.77,geocoder
+49XX W THOMAS RD,4950 W THOMAS RD,hundred_block,33.480387,-111.9744675,93.77,geocoder
+49XX W TONOPAH DR,4950 W TONOPAH DR,hundred_block,33.671835,-112.1667075,97.96,geocoder
+49XX W WIKIEUP LN,4950 W WIKIEUP LN,hundred_block,,,,failed
+4XX E CHARLESTON AV,450 E CHARLESTON AV,hundred_block,,,,failed
+4XX E EARLL DR,450 E EARLL DR,hundred_block,33.484131,-112.081482,94.46,geocoder
+4XX E HIDALGO AV,450 E HIDALGO AV,hundred_block,,,,failed
+4XX E ROESER RD,450 E ROESER RD,hundred_block,,,,failed
+4XX E SUNLAND AV,450 E SUNLAND AV,hundred_block,33.396246,-112.0795515,93.77,geocoder
+4XX N 3RD ST,450 N 3RD ST,hundred_block,,,,failed
+4XX N 47TH AV,450 N 47TH AV,hundred_block,,,,failed
+4XX N CENTRAL AV,450 N CENTRAL AV,hundred_block,,,75.45,failed
+4XX S 50TH ST,450 S 50TH ST,hundred_block,,,,failed
+4XX S 56TH ST,450 S 56TH ST,hundred_block,,,,failed
+4XX W MOUNTAIN SAGE DR,450 W MOUNTAIN SAGE DR,hundred_block,33.310134,-112.08006,100.0,geocoder
+4XX W OSBORN RD,450 W OSBORN RD,hundred_block,,,,failed
+50XX E BEVERLY RD,5050 E BEVERLY RD,hundred_block,,,76.49,failed
+50XX E CHEYENNE DR,5050 E CHEYENNE DR,hundred_block,,,77.5,failed
+50XX E MCDOWELL RD,5050 E MCDOWELL RD,hundred_block,33.466302,-112.1687145,93.77,geocoder
+50XX E THOMAS RD,5050 E THOMAS RD,hundred_block,33.480378,-111.971907,100.0,geocoder
+50XX E VIA MONTOYA DR,5050 E VIA MONTOYA DR,hundred_block,,,79.23,failed
+50XX N 17TH AV,5050 N 17TH AV,hundred_block,,,,failed
+50XX N 18TH ST,5050 N 18TH ST,hundred_block,,,,failed
+50XX N 19TH AV,5050 N 19TH AV,hundred_block,33.510825,-112.10022,100.0,geocoder
+50XX S 100TH DR,5050 S 100TH DR,hundred_block,,,,failed
+50XX S 21ST PL,5050 S 21ST PL,hundred_block,,,,failed
+50XX S 22ND ST,5050 S 22ND ST,hundred_block,,,,failed
+50XX S 40TH ST,5050 S 40TH ST,hundred_block,33.511986,-111.995793,93.77,geocoder
+50XX W ANDREA LN,5050 W ANDREA LN,hundred_block,,,,failed
+50XX W BASELINE RD,5050 W BASELINE RD,hundred_block,33.378165,-112.1675445,97.96,geocoder
+51XX E CHARLESTON AV,5150 E CHARLESTON AV,hundred_block,,,79.23,failed
+51XX E GUADALUPE RD,5150 E GUADALUPE RD,hundred_block,,,78.4,failed
+51XX E LIBBY ST,5150 E LIBBY ST,hundred_block,,,,failed
+51XX E THOMAS RD,5150 E THOMAS RD,hundred_block,,,75.45,failed
+51XX E VAN BUREN ST,5150 E VAN BUREN ST,hundred_block,33.451416,-111.9706335,100.0,geocoder
+51XX N 15TH ST,5150 N 15TH ST,hundred_block,33.512895,-112.0915395,97.77,geocoder
+51XX N 16TH AV,5150 N 16TH AV,hundred_block,33.512175,-112.048173,97.77,geocoder
+51XX N 16TH ST,5150 N 16TH ST,hundred_block,33.512175,-112.048173,100.0,geocoder
+51XX N 20TH ST,5150 N 20TH ST,hundred_block,33.512625,-112.0399875,100.0,geocoder
+51XX N 27TH AV,5150 N 27TH AV,hundred_block,33.400224,-112.116762,93.77,geocoder
+51XX N 32ND ST,5150 N 32ND ST,hundred_block,,,,failed
+51XX N 40TH ST,5150 N 40TH ST,hundred_block,,,,failed
+51XX N 7TH AV,5150 N 7TH AV,hundred_block,33.512679,-112.065246,97.77,geocoder
+51XX N 7TH ST,5150 N 7TH ST,hundred_block,33.512679,-112.065246,100.0,geocoder
+51XX N 99TH AV,5150 N 99TH AV,hundred_block,33.511752,-112.274514,97.96,geocoder
+51XX N INVERGORDON RD,5150 N INVERGORDON RD,hundred_block,,,,failed
+51XX W BASELINE RD,5150 W BASELINE RD,hundred_block,33.378003,-112.1707485,97.96,geocoder
+51XX W ENCANTO BL,5150 W ENCANTO BL,hundred_block,,,76.52,failed
+51XX W LATHAM ST,5150 W LATHAM ST,hundred_block,,,75.45,failed
+51XX W MCDOWELL RD,5150 W MCDOWELL RD,hundred_block,,,77.5,failed
+51XX W MCKINLEY ST,5150 W MCKINLEY ST,hundred_block,,,77.5,failed
+51XX W SOUTHERN AV,5150 W SOUTHERN AV,hundred_block,,,77.5,failed
+51XX W THOMAS RD,5150 W THOMAS RD,hundred_block,,,75.45,failed
+52XX E MONTGOMERY RD,5250 E MONTGOMERY RD,hundred_block,33.763851,-111.966867,97.96,geocoder
+52XX E SHEA BL,5250 E SHEA BL,hundred_block,,,,failed
+52XX E THOMAS RD,5250 E THOMAS RD,hundred_block,,,75.45,failed
+52XX N 22ND DR,5250 N 22ND DR,hundred_block,,,,failed
+52XX N 27TH AV,5250 N 27TH AV,hundred_block,,,,failed
+52XX S 30TH ST,5250 S 30TH ST,hundred_block,,,,failed
+52XX S CENTRAL AV,5250 S CENTRAL AV,hundred_block,33.397821,-112.073661,100.0,geocoder
+52XX W LYNWOOD ST,5250 W LYNWOOD ST,hundred_block,33.465681,-112.17474,100.0,geocoder
+52XX W MELODY LN,5250 W MELODY LN,hundred_block,,,,failed
+52XX W WILLETTA ST,5250 W WILLETTA ST,hundred_block,,,77.5,failed
+53XX E DEER VALLEY DR,5350 E DEER VALLEY DR,hundred_block,33.678252,-111.9651255,100.0,geocoder
+53XX E FRIESS DR,5350 E FRIESS DR,hundred_block,,,,failed
+53XX E POLK ST,5350 E POLK ST,hundred_block,,,,failed
+53XX E TAYLOR ST,5350 E TAYLOR ST,hundred_block,33.454377,-111.966021,100.0,geocoder
+53XX E THOMAS RD,5350 E THOMAS RD,hundred_block,,,75.45,failed
+53XX E VAN BUREN ST,5350 E VAN BUREN ST,hundred_block,,,77.5,failed
+53XX E WASHINGTON ST,5350 E WASHINGTON ST,hundred_block,,,79.23,failed
+53XX N 27TH AV,5350 N 27TH AV,hundred_block,,,,failed
+53XX N 7TH ST,5350 N 7TH ST,hundred_block,,,,failed
+53XX S 27TH DR,5350 S 27TH DR,hundred_block,,,,failed
+53XX W BEAUTIFUL LN,5350 W BEAUTIFUL LN,hundred_block,,,,failed
+53XX W BUCKEYE RD,5350 W BUCKEYE RD,hundred_block,,,76.52,failed
+53XX W GRENADINE RD,5350 W GRENADINE RD,hundred_block,,,,failed
+53XX W OSBORN RD,5350 W OSBORN RD,hundred_block,,,75.45,failed
+54XX E FRIESS DR,5450 E FRIESS DR,hundred_block,,,75.45,failed
+54XX E ROANOKE AV,5450 E ROANOKE AV,hundred_block,33.478002,-111.962646,100.0,geocoder
+54XX E THOMAS RD,5450 E THOMAS RD,hundred_block,,,75.45,failed
+54XX E VALLE VISTA RD,5450 E VALLE VISTA RD,hundred_block,,,79.23,failed
+54XX E VAN BUREN ST,5450 E VAN BUREN ST,hundred_block,33.452226,-112.177656,93.77,geocoder
+54XX E WASHINGTON ST,5450 E WASHINGTON ST,hundred_block,33.447069,-111.9632805,100.0,geocoder
+54XX W CAMBRIDGE AV,5450 W CAMBRIDGE AV,hundred_block,33.4773,-111.9626505,93.77,geocoder
+54XX W HUNTINGTON DR,5450 W HUNTINGTON DR,hundred_block,,,,failed
+54XX W INDIAN SCHOOL RD,5450 W INDIAN SCHOOL RD,hundred_block,33.495191864067,-112.176455352218,80.71,geocoder
+54XX W RED BIRD RD,5450 W RED BIRD RD,hundred_block,,,,failed
+55XX E BLANCHE DR,5550 E BLANCHE DR,hundred_block,,,76.52,failed
+55XX E CAMPO BELLO DR,5550 E CAMPO BELLO DR,hundred_block,,,,failed
+55XX E DEER VALLEY DR,5550 E DEER VALLEY DR,hundred_block,33.676569,-111.9616875,100.0,geocoder
+55XX E INDIAN SCHOOL RD,5550 E INDIAN SCHOOL RD,hundred_block,33.489179864067,-111.961884057972,80.71,geocoder
+55XX E ROANOKE AV,5550 E ROANOKE AV,hundred_block,,,,failed
+55XX E THUNDER HAWK RD,5550 E THUNDER HAWK RD,hundred_block,33.779114864067,-111.962857374272,80.0,geocoder
+55XX N 17TH AV,5550 N 17TH AV,hundred_block,,,,failed
+55XX N 7TH ST,5550 N 7TH ST,hundred_block,,,,failed
+55XX S 14TH PL,5550 S 14TH PL,hundred_block,,,,failed
+55XX W BUCHANAN ST,5550 W BUCHANAN ST,hundred_block,,,,failed
+55XX W ROANOKE AV,5550 W ROANOKE AV,hundred_block,,,76.52,failed
+55XX W ROOSEVELT ST,5550 W ROOSEVELT ST,hundred_block,,,78.4,failed
+56XX E MCDOWELL RD,5650 E MCDOWELL RD,hundred_block,,,77.5,failed
+56XX E OCUPADO DR,5650 E OCUPADO DR,hundred_block,33.781347,-111.958227,97.96,geocoder
+56XX N 16TH ST,5650 N 16TH ST,hundred_block,,,,failed
+56XX N 17TH AV,5650 N 17TH AV,hundred_block,,,,failed
+56XX N 27TH AV,5650 N 27TH AV,hundred_block,,,,failed
+56XX N ECHO CANYON CI,5650 N ECHO CANYON CI,hundred_block,33.519384,-111.977289,97.77,geocoder
+56XX N ECHO CANYON DR,5650 N ECHO CANYON DR,hundred_block,33.519384,-111.977289,100.0,geocoder
+56XX S 13TH AV,5650 S 13TH AV,hundred_block,33.394275,-112.053564,97.77,geocoder
+56XX S 7TH AV,5650 S 7TH AV,hundred_block,33.519933,-112.0653495,86.83,geocoder
+56XX S 7TH ST,5650 S 7TH ST,hundred_block,33.519933,-112.0653495,93.77,geocoder
+56XX W MCDOWELL RD,5650 W MCDOWELL RD,hundred_block,,,77.5,failed
+57XX E MARILYN DR,5750 E MARILYN DR,hundred_block,,,,failed
+57XX N 19TH AV,5750 N 19TH AV,hundred_block,,,,failed
+57XX N ECHO CANYON CI,5750 N ECHO CANYON CI,hundred_block,33.52113,-111.9772755,100.0,geocoder
+57XX N ECHO CANYON DR,5750 N ECHO CANYON DR,hundred_block,33.52113,-111.9772755,97.77,geocoder
+57XX N ECHO CANYON PW,5750 N ECHO CANYON PW,hundred_block,33.52113,-111.9772755,97.77,geocoder
+57XX W ROOSEVELT ST,5750 W ROOSEVELT ST,hundred_block,33.459219,-112.1832405,100.0,geocoder
+57XX W THOMAS RD,5750 W THOMAS RD,hundred_block,33.480837,-112.184316,100.0,geocoder
+58XX E ACOMA DR,5850 E ACOMA DR,hundred_block,,,,failed
+58XX N 5TH AV,5850 N 5TH AV,hundred_block,,,,failed
+58XX N ECHO CANYON CI,5850 N ECHO CANYON CI,hundred_block,33.522894,-111.977325,97.77,geocoder
+58XX N ECHO CANYON LN,5850 N ECHO CANYON LN,hundred_block,33.522894,-111.977325,100.0,geocoder
+58XX S 42ND PL,5850 S 42ND PL,hundred_block,,,,failed
+58XX S 5TH ST,5850 S 5TH ST,hundred_block,,,,failed
+59XX E CALLE DEL PAISANO,5950 E CALLE DEL PAISANO,hundred_block,33.491904279201,-111.953274531258,81.38,geocoder
+59XX N ECHO CANYON DR,5950 N ECHO CANYON DR,hundred_block,33.522831,-111.9759165,100.0,geocoder
+59XX N ECHO CANYON LN,5950 N ECHO CANYON LN,hundred_block,33.522831,-111.9759165,97.77,geocoder
+59XX S 16TH DR,5950 S 16TH DR,hundred_block,,,,failed
+59XX W WOOD ST,5950 W WOOD ST,hundred_block,,,,failed
+5XX E BASELINE RD,550 E BASELINE RD,hundred_block,,,76.52,failed
+5XX E BELL RD,550 E BELL RD,hundred_block,33.64155,-112.0670775,100.0,geocoder
+5XX E CAMELBACK RD,550 E CAMELBACK RD,hundred_block,,,77.5,failed
+5XX E EARLL DR,550 E EARLL DR,hundred_block,33.484113,-112.065624,100.0,geocoder
+5XX E MCDOWELL RD,550 E MCDOWELL RD,hundred_block,33.466113,-112.0822875,93.77,geocoder
+5XX E MOHAVE ST,550 E MOHAVE ST,hundred_block,,,,failed
+5XX E ROOSEVELT ST,550 E ROOSEVELT ST,hundred_block,,,,failed
+5XX E UTOPIA RD,550 E UTOPIA RD,hundred_block,,,,failed
+5XX N 40TH ST,550 N 40TH ST,hundred_block,,,,failed
+5XX N 51ST ST,550 N 51ST ST,hundred_block,,,,failed
+5XX N 5TH AV,550 N 5TH AV,hundred_block,,,,failed
+5XX N 67TH AV,550 N 67TH AV,hundred_block,,,,failed
+5XX S 16TH ST,550 S 16TH ST,hundred_block,33.442776,-112.094613,97.77,geocoder
+5XX W BUCKEYE RD,550 W BUCKEYE RD,hundred_block,,,75.45,failed
+5XX W ROOSEVELT ST,550 W ROOSEVELT ST,hundred_block,,,77.5,failed
+5XX W SAN JUAN AV,550 W SAN JUAN AV,hundred_block,33.51906,-112.0822065,100.0,geocoder
+5XX W THOMAS RD,550 W THOMAS RD,hundred_block,,,,failed
+60XX E BECK LN,6050 E BECK LN,hundred_block,,,,failed
+60XX E CAMELBACK RD,6050 E CAMELBACK RD,hundred_block,,,78.4,failed
+60XX E MCDOWELL RD,6050 E MCDOWELL RD,hundred_block,,,77.5,failed
+60XX E MORELAND ST,6050 E MORELAND ST,hundred_block,,,,failed
+60XX E PEBBLES CT,6050 E PEBBLES CT,hundred_block,,,,failed
+60XX N 43RD AV,6050 N 43RD AV,hundred_block,,,,failed
+60XX S 11TH AV,6050 S 11TH AV,hundred_block,,,,failed
+60XX S 22ND DR,6050 S 22ND DR,hundred_block,33.391224,-112.0346865,97.77,geocoder
+60XX S 3RD ST,6050 S 3RD ST,hundred_block,33.52545,-112.0698765,93.77,geocoder
+60XX S 41ST CI,6050 S 41ST CI,hundred_block,,,,failed
+60XX W VAN BUREN ST,6050 W VAN BUREN ST,hundred_block,,,77.5,failed
+61XX E SHANGRI LA RD,6150 E SHANGRI LA RD,hundred_block,,,,failed
+61XX N 16TH ST,6150 N 16TH ST,hundred_block,33.526998,-112.048128,100.0,geocoder
+61XX N 27TH AV,6150 N 27TH AV,hundred_block,,,,failed
+61XX N 28TH ST,6150 N 28TH ST,hundred_block,33.527475,-112.0261455,100.0,geocoder
+61XX S 91ST AV,6150 S 91ST AV,hundred_block,,,,failed
+61XX W MCDOWELL RD,6150 W MCDOWELL RD,hundred_block,,,77.5,failed
+61XX W PIERCE ST,6150 W PIERCE ST,hundred_block,33.456006,-112.191057,100.0,geocoder
+61XX W THOMAS RD,6150 W THOMAS RD,hundred_block,,,75.45,failed
+62XX E CHOLLA LN,6250 E CHOLLA LN,hundred_block,,,75.45,failed
+62XX N 16TH ST,6250 N 16TH ST,hundred_block,33.529482,-112.094676,97.77,geocoder
+62XX N 19TH AV,6250 N 19TH AV,hundred_block,33.529518,-112.1007465,100.0,geocoder
+62XX N 27TH AV,6250 N 27TH AV,hundred_block,,,,failed
+62XX N 30TH WY,6250 N 30TH WY,hundred_block,,,,failed
+62XX N BLACK CANYON AC,6250 N BLACK CANYON AC,hundred_block,,,,failed
+62XX N BLACK CANYON HW,6250 N BLACK CANYON HW,hundred_block,33.528823871141,-112.112803629758,80.0,geocoder
+62XX S 18TH AV,6250 S 18TH AV,hundred_block,,,,failed
+62XX S 31ST DR,6250 S 31ST DR,hundred_block,,,,failed
+62XX W CLARENDON AV,6250 W CLARENDON AV,hundred_block,,,78.4,failed
+62XX W MCDOWELL RD,6250 W MCDOWELL RD,hundred_block,,,77.5,failed
+62XX W THOMAS RD,6250 W THOMAS RD,hundred_block,,,75.45,failed
+63XX E HELM DR,6350 E HELM DR,hundred_block,,,,failed
+63XX E MONTECITO AV,6350 E MONTECITO AV,hundred_block,,,78.4,failed
+63XX N 12TH ST,6350 N 12TH ST,hundred_block,,,,failed
+63XX N 16TH ST,6350 N 16TH ST,hundred_block,,,,failed
+63XX N 34TH DR,6350 N 34TH DR,hundred_block,,,,failed
+63XX N 39TH AV,6350 N 39TH AV,hundred_block,,,,failed
+63XX W CATALINA DR,6350 W CATALINA DR,hundred_block,,,77.5,failed
+63XX W FILLMORE ST,6350 W FILLMORE ST,hundred_block,,,77.5,failed
+64XX E SWEETWATER AV,6450 E SWEETWATER AV,hundred_block,,,,failed
+64XX S 10TH ST,6450 S 10TH ST,hundred_block,,,,failed
+64XX W GLENROSA AV,6450 W GLENROSA AV,hundred_block,,,77.5,failed
+64XX W MCDOWELL RD,6450 W MCDOWELL RD,hundred_block,33.466194,-112.199274,100.0,geocoder
+64XX W RIVA RD,6450 W RIVA RD,hundred_block,,,,failed
+64XX W VAN BUREN ST,6450 W VAN BUREN ST,hundred_block,,,77.5,failed
+65XX E GREENWAY PW,6550 E GREENWAY PW,hundred_block,,,77.5,failed
+65XX N 10TH PL,6550 N 10TH PL,hundred_block,,,,failed
+65XX N 15TH AV,6550 N 15TH AV,hundred_block,,,,failed
+65XX N 17TH AV,6550 N 17TH AV,hundred_block,,,,failed
+65XX N 19TH AV,6550 N 19TH AV,hundred_block,,,,failed
+65XX N 23RD DR,6550 N 23RD DR,hundred_block,,,,failed
+65XX N 7TH AV,6550 N 7TH AV,hundred_block,33.533028,-112.065345,97.77,geocoder
+65XX S 43RD DR,6550 S 43RD DR,hundred_block,,,,failed
+65XX S 43RD LN,6550 S 43RD LN,hundred_block,,,,failed
+65XX W HAPPY VALLEY RD,6550 W HAPPY VALLEY RD,hundred_block,33.713532,-112.2011235,100.0,geocoder
+65XX W THOMAS RD,6550 W THOMAS RD,hundred_block,,,75.45,failed
+66XX E GREENWAY PW,6650 E GREENWAY PW,hundred_block,,,77.5,failed
+66XX N 17TH AV,6650 N 17TH AV,hundred_block,,,,failed
+66XX N 19TH AV,6650 N 19TH AV,hundred_block,,,,failed
+66XX S 50TH AV,6650 S 50TH AV,hundred_block,,,,failed
+66XX S CENTRAL AV,6650 S CENTRAL AV,hundred_block,,,76.52,failed
+66XX W ADAMS ST,6650 W ADAMS ST,hundred_block,,,,failed
+67XX E GELDING DR,6750 E GELDING DR,hundred_block,33.617394,-111.9362085,97.96,geocoder
+67XX E GREENWAY PW,6750 E GREENWAY PW,hundred_block,,,,failed
+67XX E PHELPS RD,6750 E PHELPS RD,hundred_block,,,75.45,failed
+67XX N 12TH PL,6750 N 12TH PL,hundred_block,,,,failed
+67XX N 17TH AV,6750 N 17TH AV,hundred_block,33.53616,-112.042557,97.77,geocoder
+67XX N 20TH ST,6750 N 20TH ST,hundred_block,,,,failed
+67XX N 23RD DR,6750 N 23RD DR,hundred_block,33.536664,-112.110192,100.0,geocoder
+67XX N 25TH DR,6750 N 25TH DR,hundred_block,33.536664,-112.1142555,100.0,geocoder
+67XX N 35TH AV,6750 N 35TH AV,hundred_block,,,,failed
+67XX W INDIAN SCHOOL RD,6750 W INDIAN SCHOOL RD,hundred_block,33.494993864067,-112.204323137554,80.71,geocoder
+67XX W OSBORN RD,6750 W OSBORN RD,hundred_block,,,75.45,failed
+67XX W TAYLOR ST,6750 W TAYLOR ST,hundred_block,,,75.45,failed
+68XX E KINGS AV,6850 E KINGS AV,hundred_block,,,,failed
+68XX E LUDLOW DR,6850 E LUDLOW DR,hundred_block,,,,failed
+68XX N 15TH AV,6850 N 15TH AV,hundred_block,33.537996,-112.048371,97.77,geocoder
+68XX N 21ST AV,6850 N 21ST AV,hundred_block,,,,failed
+68XX N 23RD PL,6850 N 23RD PL,hundred_block,,,,failed
+68XX N 25TH DR,6850 N 25TH DR,hundred_block,,,,failed
+68XX N 29TH AV,6850 N 29TH AV,hundred_block,,,,failed
+68XX S 32ND ST,6850 S 32ND ST,hundred_block,,,,failed
+68XX S 63RD AV,6850 S 63RD AV,hundred_block,,,,failed
+68XX S 75TH DR,6850 S 75TH DR,hundred_block,,,,failed
+68XX S 7TH LN,6850 S 7TH LN,hundred_block,33.38388,-112.083183,100.0,geocoder
+68XX W BUCKEYE RD,6850 W BUCKEYE RD,hundred_block,33.438843,-112.2070095,100.0,geocoder
+68XX W CARTER RD,6850 W CARTER RD,hundred_block,,,,failed
+69XX E JOAN DE ARC AV,6950 E JOAN DE ARC AV,hundred_block,,,78.4,failed
+69XX E PRINCESS DR,6950 E PRINCESS DR,hundred_block,,,77.5,failed
+69XX N 36TH ST,6950 N 36TH ST,hundred_block,,,,failed
+69XX W BERKELEY RD,6950 W BERKELEY RD,hundred_block,33.46857,-112.208778,100.0,geocoder
+69XX W MCDOWELL RD,6950 W MCDOWELL RD,hundred_block,,,77.5,failed
+69XX W MONTEROSA CI,6950 W MONTEROSA CI,hundred_block,,,74.17,failed
+6XX E INDIAN SCHOOL RD,650 E INDIAN SCHOOL RD,hundred_block,33.495219,-112.066218,100.0,geocoder
+6XX E SIESTA DR,650 E SIESTA DR,hundred_block,,,,failed
+6XX N 1ST AV,650 N 1ST AV,hundred_block,33.456447,-112.075488,100.0,geocoder
+6XX N 2ND AV,650 N 2ND AV,hundred_block,33.45624,-112.0767885,100.0,geocoder
+6XX N 30TH PL,650 N 30TH PL,hundred_block,,,,failed
+6XX N 5TH AV,650 N 5TH AV,hundred_block,33.456564,-112.080555,100.0,geocoder
+6XX N 69TH AV,650 N 69TH AV,hundred_block,,,,failed
+6XX N 9TH AV,650 N 9TH AV,hundred_block,,,,failed
+6XX N 9TH ST,650 N 9TH ST,hundred_block,,,,failed
+6XX N CENTRAL AV,650 N CENTRAL AV,hundred_block,,,75.45,failed
+6XX N GALVIN PW,650 N GALVIN PW,hundred_block,,,,failed
+6XX W DUNLAP AV,650 W DUNLAP AV,hundred_block,,,,failed
+6XX W MARYLAND AV,650 W MARYLAND AV,hundred_block,33.531363,-112.0821165,100.0,geocoder
+70XX E ACOMA DR,7050 E ACOMA DR,hundred_block,,,,failed
+70XX E THUNDERBIRD RD,7050 E THUNDERBIRD RD,hundred_block,,,,failed
+70XX N 14TH ST,7050 N 14TH ST,hundred_block,,,,failed
+70XX N 23RD DR,7050 N 23RD DR,hundred_block,33.540597,-112.1079735,97.77,geocoder
+70XX S 24TH ST,7050 S 24TH ST,hundred_block,33.382098,-112.0331655,100.0,geocoder
+70XX S 43RD PL,7050 S 43RD PL,hundred_block,,,,failed
+70XX S 47TH ST,7050 S 47TH ST,hundred_block,,,,failed
+70XX W INDIAN SCHOOL RD,7050 W INDIAN SCHOOL RD,hundred_block,33.495129,-111.9287745,82.64,geocoder
+70XX W MCDOWELL RD,7050 W MCDOWELL RD,hundred_block,,,77.5,failed
+71XX E KIERLAND BL,7150 E KIERLAND BL,hundred_block,,,,failed
+71XX N 16TH ST,7150 N 16TH ST,hundred_block,33.541659,-112.0479345,100.0,geocoder
+71XX N 19TH AV,7150 N 19TH AV,hundred_block,,,,failed
+71XX N 27TH AV,7150 N 27TH AV,hundred_block,33.541884,-112.117383,100.0,geocoder
+71XX N 28TH DR,7150 N 28TH DR,hundred_block,33.541992,-112.1196735,100.0,geocoder
+71XX S 7TH LN,7150 S 7TH LN,hundred_block,33.541236,-112.065426,86.83,geocoder
+71XX W CAMBRIDGE AV,7150 W CAMBRIDGE AV,hundred_block,,,78.4,failed
+71XX W HAZELWOOD ST,7150 W HAZELWOOD ST,hundred_block,,,78.4,failed
+71XX W INDIAN SCHOOL RD,7150 W INDIAN SCHOOL RD,hundred_block,33.494903864067,-112.212665917092,80.71,geocoder
+71XX W SHEILA LN,7150 W SHEILA LN,hundred_block,,,75.45,failed
+71XX W SUPERIOR AV,7150 W SUPERIOR AV,hundred_block,33.417414,-112.2144525,100.0,geocoder
+72XX N 13TH WY,7250 N 13TH WY,hundred_block,,,,failed
+72XX N 27TH AV,7250 N 27TH AV,hundred_block,,,,failed
+72XX N 34TH AV,7250 N 34TH AV,hundred_block,,,,failed
+72XX N 40TH ST,7250 N 40TH ST,hundred_block,,,,failed
+72XX N 7TH ST,7250 N 7TH ST,hundred_block,,,,failed
+72XX N DREAMY DRAW DR,7250 N DREAMY DRAW DR,preserve_centroid,33.546,-112.026,79.23,preserve:Dreamy Draw
+72XX S 39TH DR,7250 S 39TH DR,hundred_block,,,,failed
+72XX S 40TH AV,7250 S 40TH AV,hundred_block,,,,failed
+72XX S 42ND PL,7250 S 42ND PL,hundred_block,,,,failed
+72XX S 56TH LN,7250 S 56TH LN,hundred_block,,,,failed
+72XX S CENTRAL AV,7250 S CENTRAL AV,hundred_block,33.543585,-112.0748085,93.77,geocoder
+72XX W JONES AV,7250 W JONES AV,hundred_block,,,,failed
+72XX W MCDOWELL RD,7250 W MCDOWELL RD,hundred_block,,,77.5,failed
+73XX N 27TH AV,7350 N 27TH AV,hundred_block,33.545556,-112.117284,100.0,geocoder
+73XX N 36TH ST,7350 N 36TH ST,hundred_block,,,,failed
+73XX N DREAMY DRAW DR,7350 N DREAMY DRAW DR,preserve_centroid,33.546,-112.026,79.23,preserve:Dreamy Draw
+73XX W DARREL RD,7350 W DARREL RD,hundred_block,,,75.45,failed
+74XX S 15TH DR,7450 S 15TH DR,hundred_block,,,,failed
+74XX W ELLIS ST,7450 W ELLIS ST,hundred_block,,,,failed
+74XX W INDIAN SCHOOL RD,7450 W INDIAN SCHOOL RD,hundred_block,33.494849864067,-112.22054014791,80.71,geocoder
+75XX N 12TH ST,7550 N 12TH ST,hundred_block,33.547239,-112.0570425,100.0,geocoder
+75XX N 16TH ST,7550 N 16TH ST,hundred_block,33.546474,-112.0499865,100.0,geocoder
+75XX N DREAMY DRAW DR,7550 N DREAMY DRAW DR,preserve_centroid,33.546,-112.026,79.23,preserve:Dreamy Draw
+75XX S 13TH PL,7550 S 13TH PL,hundred_block,,,,failed
+75XX S 19TH AV,7550 S 19TH AV,hundred_block,33.378687,-112.0996755,100.0,geocoder
+76XX N DREAMY DRAW DR,7650 N DREAMY DRAW DR,preserve_centroid,33.546,-112.026,,preserve:Dreamy Draw
+76XX S 18TH WY,7650 S 18TH WY,hundred_block,,,,failed
+76XX S 36TH ST,7650 S 36TH ST,hundred_block,,,,failed
+76XX S 55TH AV,7650 S 55TH AV,hundred_block,,,,failed
+76XX S 7TH ST,7650 S 7TH ST,hundred_block,,,,failed
+76XX S CENTRAL AV,7650 S CENTRAL AV,hundred_block,,,76.52,failed
+76XX W LOWER BUCKEYE RD,7650 W LOWER BUCKEYE RD,hundred_block,33.423110864067,-112.224450241735,80.71,geocoder
+77XX N 12TH ST,7750 N 12TH ST,hundred_block,33.54993,-112.0579335,100.0,geocoder
+77XX N DREAMY DRAW DR,7750 N DREAMY DRAW DR,preserve_centroid,33.546,-112.026,79.23,preserve:Dreamy Draw
+77XX W BERKELEY RD,7750 W BERKELEY RD,hundred_block,,,,failed
+77XX W MCDOWELL RD,7750 W MCDOWELL RD,hundred_block,,,77.5,failed
+78XX N 14TH PL,7850 N 14TH PL,hundred_block,,,,failed
+78XX N 23RD AV,7850 N 23RD AV,hundred_block,,,,failed
+78XX N 34TH AV,7850 N 34TH AV,hundred_block,,,,failed
+78XX N DREAMY DRAW DR,7850 N DREAMY DRAW DR,preserve_centroid,33.546,-112.026,79.23,preserve:Dreamy Draw
+78XX S 35TH AV,7850 S 35TH AV,hundred_block,,,,failed
+78XX W MCDOWELL RD,7850 W MCDOWELL RD,hundred_block,33.467013,-112.2279255,100.0,geocoder
+79XX S 46TH ST,7950 S 46TH ST,hundred_block,,,,failed
+7XX E BELL RD,750 E BELL RD,hundred_block,,,,failed
+7XX E DESERT FOOTHILLS PW,750 E DESERT FOOTHILLS PW,hundred_block,,,73.9,failed
+7XX E DESERT PARK LN,750 E DESERT PARK LN,hundred_block,,,78.4,failed
+7XX E JEFFERSON ST,750 E JEFFERSON ST,hundred_block,,,77.5,failed
+7XX E MARYLAND AV,750 E MARYLAND AV,hundred_block,,,76.52,failed
+7XX E MCDOWELL RD,750 E MCDOWELL RD,hundred_block,33.466212,-112.0627305,100.0,geocoder
+7XX E MINERAL RD,750 E MINERAL RD,hundred_block,,,75.45,failed
+7XX E ORANGEWOOD AV,750 E ORANGEWOOD AV,hundred_block,,,78.4,failed
+7XX E PALMAIRE AV,750 E PALMAIRE AV,hundred_block,33.540768,-112.0631805,100.0,geocoder
+7XX E SOUTHERN AV,750 E SOUTHERN AV,hundred_block,33.392619,-112.0624425,100.0,geocoder
+7XX E UNION HILLS DR,750 E UNION HILLS DR,hundred_block,,,78.4,failed
+7XX E VOGEL AV,750 E VOGEL AV,hundred_block,,,,failed
+7XX N 4TH ST,750 N 4TH ST,hundred_block,,,,failed
+7XX N 52ND ST,750 N 52ND ST,hundred_block,,,,failed
+7XX W ALTA VISTA RD,750 W ALTA VISTA RD,hundred_block,,,77.5,failed
+7XX W BUCKEYE RD,750 W BUCKEYE RD,hundred_block,33.437367,-112.063068,93.77,geocoder
+7XX W CAMPBELL AV,750 W CAMPBELL AV,hundred_block,,,76.52,failed
+7XX W CAREFREE HW,750 W CAREFREE HW,hundred_block,,,,failed
+7XX W FRIER DR,750 W FRIER DR,hundred_block,,,,failed
+7XX W HATCHER RD,750 W HATCHER RD,hundred_block,,,75.45,failed
+7XX W HIGHLAND AV,750 W HIGHLAND AV,hundred_block,,,76.52,failed
+7XX W INDIAN SCHOOL RD,750 W INDIAN SCHOOL RD,hundred_block,33.495051035554,-112.083851177918,80.0,geocoder
+7XX W PIERCE ST,750 W PIERCE ST,hundred_block,,,,failed
+7XX W PIERSON ST,750 W PIERSON ST,hundred_block,,,75.45,failed
+7XX W TAYLOR ST,750 W TAYLOR ST,hundred_block,,,,failed
+7XX W VOGEL AV,750 W VOGEL AV,hundred_block,,,,failed
+80XX N 19TH DR,8050 N 19TH DR,hundred_block,33.554367,-112.1008815,97.77,geocoder
+80XX N 21ST AV,8050 N 21ST AV,hundred_block,,,,failed
+80XX N 32ND DR,8050 N 32ND DR,hundred_block,33.554817,-112.1281425,100.0,geocoder
+80XX N 7TH AV,8050 N 7TH AV,hundred_block,,,,failed
+80XX S 34TH PL,8050 S 34TH PL,hundred_block,,,,failed
+80XX S 42ND PL,8050 S 42ND PL,hundred_block,,,,failed
+80XX S 46TH ST,8050 S 46TH ST,hundred_block,,,,failed
+80XX S 53RD AV,8050 S 53RD AV,hundred_block,,,,failed
+80XX S ARIZONA GRAND PW,8050 S ARIZONA GRAND PW,hundred_block,,,,failed
+80XX S CENTRAL AV,8050 S CENTRAL AV,hundred_block,,,76.52,failed
+81XX N 11TH ST,8150 N 11TH ST,hundred_block,,,,failed
+81XX N 19TH AV,8150 N 19TH AV,hundred_block,,,,failed
+81XX N 19TH DR,8150 N 19TH DR,hundred_block,,,,failed
+81XX N 32ND AV,8150 N 32ND AV,hundred_block,33.556986,-112.129029,100.0,geocoder
+81XX N 35TH AV,8150 N 35TH AV,hundred_block,,,,failed
+81XX N BLACK CANYON AC,8150 N BLACK CANYON AC,hundred_block,,,,failed
+81XX N DREAMY DRAW DR,8150 N DREAMY DRAW DR,preserve_centroid,33.546,-112.026,79.23,preserve:Dreamy Draw
+81XX W GLENROSA AV,8150 W GLENROSA AV,hundred_block,,,77.5,failed
+81XX W GROOM CREEK RD,8150 W GROOM CREEK RD,hundred_block,33.464277,-112.234086,100.0,geocoder
+81XX W INDIAN SCHOOL RD,8150 W INDIAN SCHOOL RD,hundred_block,33.494543864067,-112.233761148024,80.71,geocoder
+82XX N 16TH ST,8250 N 16TH ST,hundred_block,,,,failed
+82XX N 19TH AV,8250 N 19TH AV,hundred_block,,,,failed
+82XX N 21ST DR,8250 N 21ST DR,hundred_block,,,,failed
+82XX N 27TH AV,8250 N 27TH AV,hundred_block,,,,failed
+82XX S 45TH LN,8250 S 45TH LN,hundred_block,,,,failed
+82XX S 7TH ST,8250 S 7TH ST,hundred_block,,,,failed
+82XX W MCDOWELL RD,8250 W MCDOWELL RD,hundred_block,,,77.5,failed
+82XX W OSBORN RD,8250 W OSBORN RD,hundred_block,,,75.45,failed
+83XX N 19TH AV,8350 N 19TH AV,hundred_block,,,,failed
+83XX N 21ST DR,8350 N 21ST DR,hundred_block,,,,failed
+83XX W CAMELBACK RD,8350 W CAMELBACK RD,hundred_block,,,78.4,failed
+83XX W ELM ST,8350 W ELM ST,hundred_block,33.506397,-112.2400575,100.0,geocoder
+83XX W WATKINS ST,8350 W WATKINS ST,hundred_block,33.426459,-112.2408765,97.96,geocoder
+84XX S 14TH ST,8450 S 14TH ST,hundred_block,,,,failed
+84XX S 24TH ST,8450 S 24TH ST,hundred_block,,,,failed
+84XX W COLUMBUS AV,8450 W COLUMBUS AV,hundred_block,,,77.5,failed
+84XX W THOMAS RD,8450 W THOMAS RD,hundred_block,,,75.45,failed
+84XX W VIRGINIA AV,8450 W VIRGINIA AV,hundred_block,,,77.5,failed
+85XX N 22ND AV,8550 N 22ND AV,hundred_block,,,,failed
+85XX N CENTRAL AV,8550 N CENTRAL AV,hundred_block,33.368913,-112.073679,93.77,geocoder
+85XX W MCDOWELL RD,8550 W MCDOWELL RD,hundred_block,33.466104,-112.2435135,100.0,geocoder
+85XX W PALM LN,8550 W PALM LN,hundred_block,,,,failed
+85XX W WELDON AV,8550 W WELDON AV,hundred_block,,,,failed
+86XX N 17TH PL,8650 N 17TH PL,hundred_block,,,,failed
+86XX N 22ND AV,8650 N 22ND AV,hundred_block,,,,failed
+86XX S 24TH ST,8650 S 24TH ST,hundred_block,,,,failed
+86XX S 51ST ST,8650 S 51ST ST,hundred_block,33.367473,-111.972591,100.0,geocoder
+86XX W ALVARADO RD,8650 W ALVARADO RD,hundred_block,,,,failed
+86XX W MOHAVE ST,8650 W MOHAVE ST,hundred_block,,,,failed
+86XX W WINDSOR AV,8650 W WINDSOR AV,hundred_block,,,,failed
+87XX W LEWIS AV,8750 W LEWIS AV,hundred_block,,,,failed
+87XX W PIERSON ST,8750 W PIERSON ST,hundred_block,,,76.52,failed
+88XX N 22ND AV,8850 N 22ND AV,hundred_block,,,,failed
+88XX N 3RD ST,8850 N 3RD ST,hundred_block,,,,failed
+88XX N 8TH ST,8850 N 8TH ST,hundred_block,,,,failed
+88XX N BLACK CANYON AC,8850 N BLACK CANYON AC,hundred_block,,,,failed
+88XX N BLACK CANYON HW,8850 N BLACK CANYON HW,hundred_block,,,,failed
+88XX W MIAMI ST,8850 W MIAMI ST,hundred_block,,,,failed
+88XX W SELLS DR,8850 W SELLS DR,hundred_block,,,,failed
+89XX N 19TH AV,8950 N 19TH AV,hundred_block,,,,failed
+89XX N 35TH AV,8950 N 35TH AV,hundred_block,,,,failed
+89XX N CENTRAL AV,8950 N CENTRAL AV,hundred_block,33.567381,-112.0743,100.0,geocoder
+8XX E BELL RD,850 E BELL RD,hundred_block,33.640677,-112.0614615,100.0,geocoder
+8XX E COCHISE DR,850 E COCHISE DR,hundred_block,33.580197,-112.06161,100.0,geocoder
+8XX E COLTER ST,850 E COLTER ST,hundred_block,,,,failed
+8XX E JOAN D ARC AV,850 E JOAN D ARC AV,hundred_block,,,75.75,failed
+8XX E JONES AV,850 E JONES AV,hundred_block,33.410916,-112.0606065,100.0,geocoder
+8XX E LAWRENCE LN,850 E LAWRENCE LN,hundred_block,,,,failed
+8XX E MARYLAND AV,850 E MARYLAND AV,hundred_block,,,,failed
+8XX E MCLELLAN BL,850 E MCLELLAN BL,hundred_block,,,76.52,failed
+8XX E MINTON ST,850 E MINTON ST,hundred_block,,,,failed
+8XX E MISSOURI AV,850 E MISSOURI AV,hundred_block,,,76.52,failed
+8XX E MONTECITO AV,850 E MONTECITO AV,hundred_block,,,77.5,failed
+8XX E SIESTA DR,850 E SIESTA DR,hundred_block,,,,failed
+8XX N 2ND ST,850 N 2ND ST,hundred_block,33.458499,-112.0768065,97.77,geocoder
+8XX N 30TH ST,850 N 30TH ST,hundred_block,,,,failed
+8XX N 3RD ST,850 N 3RD ST,hundred_block,,,,failed
+8XX N 40TH AV,850 N 40TH AV,hundred_block,,,,failed
+8XX N 4TH ST,850 N 4TH ST,hundred_block,33.458508,-112.0793085,97.77,geocoder
+8XX N 52ND AV,850 N 52ND AV,hundred_block,,,,failed
+8XX N 52ND ST,850 N 52ND ST,hundred_block,,,,failed
+8XX N 5TH AV,850 N 5TH AV,hundred_block,33.458517,-112.0805415,100.0,geocoder
+8XX N 6TH AV,850 N 6TH AV,hundred_block,33.458526,-112.081734,100.0,geocoder
+8XX N COFCO CENTER CT,850 N COFCO CENTER CT,hundred_block,,,,failed
+8XX S 11TH AV,850 S 11TH AV,hundred_block,,,,failed
+8XX S 25TH AV,850 S 25TH AV,hundred_block,,,,failed
+8XX S 31ST AV,850 S 31ST AV,hundred_block,,,,failed
+8XX S 4TH AV,850 S 4TH AV,hundred_block,33.458508,-112.0793085,93.77,geocoder
+8XX W ALTA VISTA RD,850 W ALTA VISTA RD,hundred_block,,,77.5,failed
+8XX W BROADWAY RD,850 W BROADWAY RD,hundred_block,,,76.52,failed
+8XX W MISSOURI AV,850 W MISSOURI AV,hundred_block,,,76.52,failed
+8XX W OSBORN RD,850 W OSBORN RD,hundred_block,33.488028,-112.0861845,100.0,geocoder
+8XX W PEORIA AV,850 W PEORIA AV,hundred_block,,,,failed
+8XX W TONTO ST,850 W TONTO ST,hundred_block,,,,failed
+90XX N 18TH AV,9050 N 18TH AV,hundred_block,,,,failed
+90XX N 35TH AV,9050 N 35TH AV,hundred_block,,,,failed
+90XX N 40TH ST,9050 N 40TH ST,hundred_block,33.569163,-111.996117,100.0,geocoder
+90XX S 10TH DR,9050 S 10TH DR,hundred_block,,,,failed
+91XX S 59TH AV,9150 S 59TH AV,hundred_block,,,,failed
+92XX N 19TH AV,9250 N 19TH AV,hundred_block,,,,failed
+92XX N 29TH AV,9250 N 29TH AV,hundred_block,33.571872,-112.018797,97.77,geocoder
+92XX N 40TH ST,9250 N 40TH ST,hundred_block,,,,failed
+92XX N 8TH ST,9250 N 8TH ST,hundred_block,,,,failed
+92XX W BERKELEY RD,9250 W BERKELEY RD,hundred_block,33.468183,-112.259331,100.0,geocoder
+93XX S 13TH WY,9350 S 13TH WY,hundred_block,,,,failed
+93XX W HAZELWOOD ST,9350 W HAZELWOOD ST,hundred_block,,,78.4,failed
+93XX W MCDOWELL RD,9350 W MCDOWELL RD,hundred_block,,,77.5,failed
+94XX N 11TH PL,9450 N 11TH PL,hundred_block,,,,failed
+94XX N 17TH AV,9450 N 17TH AV,hundred_block,33.572943,-112.0957065,100.0,geocoder
+94XX N 31ST AV,9450 N 31ST AV,hundred_block,,,,failed
+94XX N 32ND AV,9450 N 32ND AV,hundred_block,,,,failed
+94XX N 9TH AV,9450 N 9TH AV,hundred_block,,,,failed
+94XX S 7TH PL,9450 S 7TH PL,hundred_block,,,,failed
+94XX W ILLINI ST,9450 W ILLINI ST,hundred_block,,,75.45,failed
+95XX N 2ND ST,9550 N 2ND ST,hundred_block,,,,failed
+95XX N 7TH ST,9550 N 7TH ST,hundred_block,,,,failed
+95XX W AGORA LN,9550 W AGORA LN,hundred_block,,,,failed
+95XX W CAMELBACK RD,9550 W CAMELBACK RD,hundred_block,,,78.4,failed
+96XX N 10TH AV,9650 N 10TH AV,hundred_block,,,,failed
+96XX N 11TH AV,9650 N 11TH AV,hundred_block,,,,failed
+96XX N 7TH PL,9650 N 7TH PL,hundred_block,,,,failed
+96XX S 44TH ST,9650 S 44TH ST,hundred_block,,,,failed
+96XX W PAYSON RD,9650 W PAYSON RD,hundred_block,33.420609,-112.267746,97.96,geocoder
+97XX W HEBER RD,9750 W HEBER RD,hundred_block,,,,failed
+98XX N 7TH AV,9850 N 7TH AV,hundred_block,,,,failed
+98XX N 7TH ST,9850 N 7TH ST,hundred_block,,,,failed
+98XX N BLACK CANYON AC,9850 N BLACK CANYON AC,hundred_block,,,,failed
+98XX S 43RD PL,9850 S 43RD PL,hundred_block,33.358455,-111.986136,100.0,geocoder
+98XX W MCDOWELL RD,9850 W MCDOWELL RD,hundred_block,,,77.5,failed
+99XX N 7TH AV,9950 N 7TH AV,hundred_block,,,,failed
+99XX S 48TH ST,9950 S 48TH ST,hundred_block,,,,failed
+99XX W CAMELBACK RD,9950 W CAMELBACK RD,hundred_block,,,78.4,failed
+99XX W LOWER BUCKEYE RD,9950 W LOWER BUCKEYE RD,hundred_block,33.422112,-112.2742935,97.96,geocoder
+9XX E DEVONSHIRE AV,950 E DEVONSHIRE AV,hundred_block,,,78.4,failed
+9XX E ROSS AV,950 E ROSS AV,hundred_block,,,,failed
+9XX E SAN MIGUEL AV,950 E SAN MIGUEL AV,hundred_block,,,,failed
+9XX E VAN BUREN ST,950 E VAN BUREN ST,hundred_block,33.452361,-112.0860225,93.77,geocoder
+9XX N 20TH ST,950 N 20TH ST,hundred_block,,,,failed
+9XX N 2ND AV,950 N 2ND AV,hundred_block,,,,failed
+9XX N 40TH ST,950 N 40TH ST,hundred_block,,,,failed
+9XX N 52ND ST,950 N 52ND ST,hundred_block,,,,failed
+9XX N 7TH ST,950 N 7TH ST,hundred_block,33.458328,-112.0657725,100.0,geocoder
+9XX S 35TH AV,950 S 35TH AV,hundred_block,,,,failed
+9XX W ALTA VISTA RD,950 W ALTA VISTA RD,hundred_block,33.388848,-112.084938,100.0,geocoder
+9XX W CATALINA DR,950 W CATALINA DR,hundred_block,,,,failed
+9XX W COLTER ST,950 W COLTER ST,hundred_block,,,,failed
+9XX W DEER VALLEY RD,950 W DEER VALLEY RD,hundred_block,,,78.4,failed
+A303I17,A303I17,address,,,,failed
+A51/E NORTHERN AV SB OF,A51 & E NORTHERN AV SB OF,intersection,33.558597,-112.038318,83.96,geocoder
+A74MP 28 EB XX,A74MP 28 EB 50,hundred_block,,,,failed
+AGUA FRIA RIVER/W INDIAN SCHOOL RD,AGUA FRIA RIVER & W INDIAN SCHOOL RD,intersection,,,,failed
+CAP CANAL/N NORTH VALLEY PW,CAP CANAL & N NORTH VALLEY PW,intersection,,,,failed
+E BUENA VISTA RD/S TV RD,E BUENA VISTA RD & S TV RD,intersection,,,,failed
+E CACTUS RD/N CAVE CREEK RD,E CACTUS RD & N CAVE CREEK RD,intersection,33.596856,-112.0379265,97.0,geocoder
+E CHOLLA LN/E DUNLAP AV,E CHOLLA LN & E DUNLAP AV,intersection,,,,failed
+E COCONINO ST/S WARPAINT DR,E COCONINO ST & S WARPAINT DR,intersection,33.329772,-112.01148,97.1,geocoder
+E DESERT BROOM WY/S DESERT FOOTHILLS PW,E DESERT BROOM WY & S DESERT FOOTHILLS PW,intersection,33.316767,-112.058046,97.8,geocoder
+E DESERT WILLOW DR/E RAY RD,E DESERT WILLOW DR & E RAY RD,intersection,33.312528,-112.0238595,97.0,geocoder
+E EQUESTRIAN TL/E KACHINA DR,E EQUESTRIAN TL & E KACHINA DR,intersection,33.337836,-112.0000995,82.04,geocoder
+E GARFIELD ST/E INDIAN TL,E GARFIELD ST & E INDIAN TL,intersection,33.457626,-112.0052205,95.3,geocoder
+E GRAYHAWK DR/N SCOTTSDALE RD,E GRAYHAWK DR & N SCOTTSDALE RD,intersection,33.676938,-111.9254085,97.27,geocoder
+E KACHINA DR/S WARPAINT DR,E KACHINA DR & S WARPAINT DR,intersection,33.340932,-112.0073265,97.0,geocoder
+E KNOX RD/S WARPAINT DR,E KNOX RD & S WARPAINT DR,intersection,33.324975,-112.010751,96.67,geocoder
+E LINCOLN DR/E PIESTEWA PEAK DR,E LINCOLN DR & E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+E WALATOWA ST/S WARNER ELLIOT LP,E WALATOWA ST & S WARNER ELLIOT LP,intersection,33.345909,-111.9918555,97.43,geocoder
+GRAND CANAL/E INDIAN SCHOOL RD,GRAND CANAL & E INDIAN SCHOOL RD,intersection,,,78.66,failed
+GRAND CANAL/E MCDOWELL RD,GRAND CANAL & E MCDOWELL RD,intersection,,,75.94,failed
+GRAND CANAL/E OAK ST,GRAND CANAL & E OAK ST,intersection,,,,failed
+GRAND CANAL/E THOMAS RD,GRAND CANAL & E THOMAS RD,intersection,,,,failed
+GRAND CANAL/N LONGVIEW AV,GRAND CANAL & N LONGVIEW AV,intersection,,,75.94,failed
+GRAND CANAL/W INDIAN SCHOOL RD,GRAND CANAL & W INDIAN SCHOOL RD,intersection,,,78.66,failed
+I17/W NEW RIVER RD,I17 & W NEW RIVER RD,intersection,33.913593,-112.145634,96.09,geocoder
+N 10TH DR/W BECKER LN,N 10TH DR & W BECKER LN,intersection,33.583203,-112.0861665,96.4,geocoder
+N 10TH ST/E DOVE VALLEY RD,N 10TH ST & E DOVE VALLEY RD,intersection,33.784551,-112.0609215,96.9,geocoder
+N 11TH ST/E HATCHER RD,N 11TH ST & E HATCHER RD,intersection,33.571359,-112.0594185,96.54,geocoder
+N 12TH ST/E CHOLLA ST,N 12TH ST & E CHOLLA ST,intersection,33.589521,-112.0565115,96.4,geocoder
+N 12TH ST/E CORAL GABLES DR,N 12TH ST & E CORAL GABLES DR,intersection,33.6258,-112.056786,97.0,geocoder
+N 13TH AV/W SAHUARO DR,N 13TH AV & W SAHUARO DR,intersection,33.583923,-112.0890015,96.54,geocoder
+N 13TH ST/E HATCHER RD,N 13TH ST & E HATCHER RD,intersection,33.571305,-112.054518,96.54,geocoder
+N 13TH ST/E MCDOWELL RD,N 13TH ST & E MCDOWELL RD,intersection,33.465744,-112.054248,96.67,geocoder
+N 14TH ST/E DOVE VALLEY RD,N 14TH ST & E DOVE VALLEY RD,intersection,33.784677,-112.0523985,96.9,geocoder
+N 14TH ST/E GOLDEN LN,N 14TH ST & E GOLDEN LN,intersection,33.565572,-112.052484,96.4,geocoder
+N 14TH ST/E WAHALLA LN,N 14TH ST & E WAHALLA LN,intersection,33.667596,-112.052817,96.54,geocoder
+N 15TH AV GRAND CANAL,N 15TH AV GRAND CANAL,address,,,,failed
+N 15TH AV/W DUNLAP AV,N 15TH AV & W DUNLAP AV,intersection,33.567588,-112.0912515,96.4,geocoder
+N 15TH AV/W GLENROSA AV,N 15TH AV & W GLENROSA AV,intersection,33.498576,-112.0912875,96.67,geocoder
+N 15TH AV/W SHANGRI LA RD,N 15TH AV & W SHANGRI LA RD,intersection,33.587091,-112.091184,96.79,geocoder
+N 15TH AV/W YUCCA ST,N 15TH AV & W YUCCA ST,intersection,33.588441,-112.0911525,96.25,geocoder
+N 15TH ST/E DOVE VALLEY RD,N 15TH ST & E DOVE VALLEY RD,intersection,33.784632,-112.0500855,96.9,geocoder
+N 15TH ST/E SUNNYSIDE DR,N 15TH ST & E SUNNYSIDE DR,intersection,33.592662,-112.0501665,96.79,geocoder
+N 16TH AV/W THOMAS RD,N 16TH AV & W THOMAS RD,intersection,33.480495,-112.093569,96.4,geocoder
+N 16TH ST GRAND CANAL,N 16TH ST GRAND CANAL,address,,,,failed
+N 16TH ST/E CAREFREE HW,N 16TH ST & E CAREFREE HW,intersection,33.799176,-112.0480065,96.67,geocoder
+N 16TH ST/E DEER VALLEY RD,N 16TH ST & E DEER VALLEY RD,intersection,33.687846,-112.048479,96.9,geocoder
+N 16TH ST/E INDIAN SCHOOL RD,N 16TH ST & E INDIAN SCHOOL RD,intersection,33.494706,-112.0476195,97.1,geocoder
+N 16TH ST/E MCDOWELL RD,N 16TH ST & E MCDOWELL RD,intersection,33.465753,-112.0476915,96.67,geocoder
+N 16TH ST/E WELDON AV,N 16TH ST & E WELDON AV,intersection,,,,failed
+N 16TH ST/W ARIZONA CANAL,N 16TH ST & W ARIZONA CANAL,intersection,,,,failed
+N 17TH AV/W BELL RD,N 17TH AV & W BELL RD,intersection,33.640146,-112.0957695,96.09,geocoder
+N 17TH AV/W CAMELBACK RD,N 17TH AV & W CAMELBACK RD,intersection,33.509556,-112.095639,96.79,geocoder
+N 17TH AV/W ROMA AV,N 17TH AV & W ROMA AV,intersection,33.501357,-112.095639,96.09,geocoder
+N 17TH WY/E MONTOYA LN,N 17TH WY & E MONTOYA LN,intersection,33.673041,-112.044816,96.54,geocoder
+N 18TH ST/E OSBORN RD,N 18TH ST & E OSBORN RD,intersection,33.487488,-112.0437675,96.4,geocoder
+N 18TH ST/E THUNDERBIRD RD,N 18TH ST & E THUNDERBIRD RD,intersection,33.598197,-112.043574,97.0,geocoder
+N 19TH AV AC/DC CHANNEL,N 19TH AV AC & DC CHANNEL,intersection,,,,failed
+N 19TH AV GRAND CANAL,N 19TH AV GRAND CANAL,address,,,,failed
+N 19TH AV/W ARIZONA CANAL,N 19TH AV & W ARIZONA CANAL,intersection,,,,failed
+N 19TH AV/W GLENROSA AV,N 19TH AV & W GLENROSA AV,intersection,33.499278,-112.0999005,96.67,geocoder
+N 19TH AV/W HATCHER RD,N 19TH AV & W HATCHER RD,intersection,33.572241,-112.099644,96.54,geocoder
+N 19TH AV/W LARKSPUR DR,N 19TH AV & W LARKSPUR DR,intersection,33.600195,-112.1003685,95.67,geocoder
+N 19TH AV/W SUNNYSIDE DR,N 19TH AV & W SUNNYSIDE DR,intersection,33.592959,-112.0996305,93.27,geocoder
+N 19TH AV/W VAN BUREN ST,N 19TH AV & W VAN BUREN ST,intersection,33.451254,-112.100076,96.67,geocoder
+N 19TH AV/W VIA CABALLO BLANCO,N 19TH AV & W VIA CABALLO BLANCO,intersection,33.770925,-112.100463,97.27,geocoder
+N 19TH LN/W ROWEL RD,N 19TH LN & W ROWEL RD,intersection,,,,failed
+N 19TH ST/E THUNDERBIRD RD,N 19TH ST & E THUNDERBIRD RD,intersection,33.597558,-112.041603,97.0,geocoder
+N 1ST ST/E ADAMS ST,N 1ST ST & E ADAMS ST,intersection,33.449319,-112.0725585,96.09,geocoder
+N 20TH ST GRAND CANAL,N 20TH ST GRAND CANAL,address,,,,failed
+N 20TH ST/E MONTEREY WY,N 20TH ST & E MONTEREY WY,intersection,33.485445,-112.0389075,96.67,geocoder
+N 21ST AV/W HEATHERBRAE DR,N 21ST AV & W HEATHERBRAE DR,intersection,33.497784,-112.1041485,97.0,geocoder
+N 21ST PL/E HILLERY DR,N 21ST PL & E HILLERY DR,intersection,33.622794,-112.035969,96.54,geocoder
+N 21ST PL/E SHEA BL,N 21ST PL & E SHEA BL,intersection,33.582042,-112.038066,96.09,geocoder
+N 21ST ST/E LONE CACTUS DR,N 21ST ST & E LONE CACTUS DR,intersection,33.68043,-112.0376115,96.9,geocoder
+N 22ND ST/E BELMONT AV,N 22ND ST & E BELMONT AV,intersection,33.549408,-112.033323,96.54,geocoder
+N 22ND ST/E MULBERRY DR,N 22ND ST & E MULBERRY DR,intersection,33.486633,-112.0345605,96.67,geocoder
+N 22ND ST/E THOMAS RD,N 22ND ST & E THOMAS RD,intersection,33.480279,-112.0345695,96.4,geocoder
+N 23RD AV/W EARLL DR,N 23RD AV & W EARLL DR,intersection,33.484599,-112.1084685,96.25,geocoder
+N 23RD AV/W FAIRMOUNT AV,N 23RD AV & W FAIRMOUNT AV,intersection,33.49323,-112.1087025,95.79,geocoder
+N 23RD AV/W INDIAN SCHOOL RD,N 23RD AV & W INDIAN SCHOOL RD,intersection,33.49503,-112.1084955,97.1,geocoder
+N 23RD DR/W FAIRMOUNT AV,N 23RD DR & W FAIRMOUNT AV,intersection,33.493194,-112.1094315,96.79,geocoder
+N 23RD PL/E PIESTEWA PEAK DR,N 23RD PL & E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+N 23RD ST/E GARDENIA DR,N 23RD ST & E GARDENIA DR,intersection,33.544845,-112.031568,96.67,geocoder
+N 23RD ST/N CAVE CREEK RD,N 23RD ST & N CAVE CREEK RD,intersection,33.61635,-112.033971,96.79,geocoder
+N 24TH ST/E CAMBRIDGE AV,N 24TH ST & E CAMBRIDGE AV,intersection,33.47757,-112.0302135,96.79,geocoder
+N 25TH AV AC/DC CHANNEL,N 25TH AV AC & DC CHANNEL,intersection,,,,failed
+N 26TH PL/E VOLTAIRE AV,N 26TH PL & E VOLTAIRE AV,intersection,33.610653,-112.0254345,96.67,geocoder
+N 26TH ST/E OAK ST,N 26TH ST & E OAK ST,intersection,33.473052,-112.025934,95.91,geocoder
+N 26TH ST/E PIESTEWA PEAK DR,N 26TH ST & E PIESTEWA PEAK DR,preserve_centroid,33.5307,-112.0197,,preserve:Piestewa Peak
+N 27TH AV/W BETHANY HOME RD,N 27TH AV & W BETHANY HOME RD,intersection,33.52401,-112.1169015,97.0,geocoder
+N 27TH AV/W OSBORN RD,N 27TH AV & W OSBORN RD,intersection,33.487704,-112.117059,96.4,geocoder
+N 27TH AV/W THOMAS RD,N 27TH AV & W THOMAS RD,intersection,33.480432,-112.1170275,96.4,geocoder
+N 27TH AV/W WELDON AV,N 27TH AV & W WELDON AV,intersection,33.491016,-112.1170545,96.4,geocoder
+N 28TH AV/W ROBIN LN,N 28TH AV & W ROBIN LN,intersection,33.690699,-112.119642,96.25,geocoder
+N 28TH ST/E FRIESS DR,N 28TH ST & E FRIESS DR,intersection,33.613002,-112.021929,96.4,geocoder
+N 28TH ST/E THUNDERBIRD RD,N 28TH ST & E THUNDERBIRD RD,intersection,33.611454,-112.0219605,97.0,geocoder
+N 29TH AV/N METRO PW E,N 29TH AV & N METRO PW E,intersection,33.571548,-112.120983,96.4,geocoder
+N 29TH AV/N METRO PW W,N 29TH AV & N METRO PW W,intersection,33.571548,-112.120983,96.4,geocoder
+N 29TH AV/W ARIZONA CANAL,N 29TH AV & W ARIZONA CANAL,intersection,,,,failed
+N 29TH AV/W GLENDALE AV,N 29TH AV & W GLENDALE AV,intersection,33.538554,-112.1217435,95.67,geocoder
+N 2ND AV/W FILLMORE ST,N 2ND AV & W FILLMORE ST,intersection,33.454719,-112.076424,96.54,geocoder
+N 2ND AV/W WELDON AV,N 2ND AV & W WELDON AV,intersection,33.490782,-112.076496,96.25,geocoder
+N 32ND ST GRAND CANAL,N 32ND ST GRAND CANAL,address,,,,failed
+N 32ND ST/E A202,N 32ND ST & E A202,intersection,,,,failed
+N 32ND ST/E LINCOLN DR,N 32ND ST & E LINCOLN DR,intersection,33.531858,-112.012947,96.54,geocoder
+N 32ND ST/E MCDOWELL RD,N 32ND ST & E MCDOWELL RD,intersection,33.466383,-111.7619055,96.67,geocoder
+N 32ND ST/E PUGET AV,N 32ND ST & E PUGET AV,intersection,33.567597,-112.012947,96.25,geocoder
+N 32ND ST/E ROSE GARDEN LN,N 32ND ST & E ROSE GARDEN LN,intersection,33.675624,-112.013784,96.9,geocoder
+N 32ND ST/E SHEA BL,N 32ND ST & E SHEA BL,intersection,33.582465,-112.0131,96.09,geocoder
+N 32ND ST/E STANFORD DR,N 32ND ST & E STANFORD DR,intersection,33.518646,-112.0128975,96.67,geocoder
+N 32ND ST/E WILLETTA ST,N 32ND ST & E WILLETTA ST,intersection,33.463899,-112.0129245,96.67,geocoder
+N 33RD AV/W GRAND AV,N 33RD AV & W GRAND AV,intersection,33.491268,-112.1299695,96.25,geocoder
+N 33RD AV/W INDIAN SCHOOL RD,N 33RD AV & W INDIAN SCHOOL RD,intersection,33.494949,-112.1299515,97.1,geocoder
+N 34TH ST/E PINCHOT AV,N 34TH ST & E PINCHOT AV,intersection,33.482322,-112.008573,96.54,geocoder
+N 34TH WY/E DUNLAP AV,N 34TH WY & E DUNLAP AV,intersection,33.568623,-112.0075065,93.89,geocoder
+N 35TH AV GRAND CANAL,N 35TH AV GRAND CANAL,address,,,,failed
+N 35TH AV/W ARIZONA CANAL,N 35TH AV & W ARIZONA CANAL,intersection,,,,failed
+N 35TH AV/W DUNLAP AV,N 35TH AV & W DUNLAP AV,intersection,33.567534,-112.1342535,96.4,geocoder
+N 35TH AV/W OSBORN RD,N 35TH AV & W OSBORN RD,intersection,33.487677,-112.1343165,96.4,geocoder
+N 35TH AV/W SALTER DR,N 35TH AV & W SALTER DR,intersection,33.682122,-112.134753,96.4,geocoder
+N 36TH ST/E LINCOLN DR,N 36TH ST & E LINCOLN DR,intersection,33.531867,-112.0040055,96.54,geocoder
+N 37TH ST/E PIERCE ST,N 37TH ST & E PIERCE ST,intersection,33.454908,-112.0021065,96.4,geocoder
+N 38TH ST/E DUNLAP AV,N 38TH ST & E DUNLAP AV,intersection,33.568884,-111.999942,96.4,geocoder
+N 39TH AV/W WHITTON AV,N 39TH AV & W WHITTON AV,intersection,33.490656,-112.1429385,96.54,geocoder
+N 39TH DR/W ORAIBI DR,N 39TH DR & W ORAIBI DR,intersection,33.663672,-112.144095,96.4,geocoder
+N 39TH ST/E KRISTAL WY,N 39TH ST & E KRISTAL WY,intersection,33.662277,-111.9987585,96.54,geocoder
+N 3RD ST/E MOUNTAIN VIEW RD,N 3RD ST & E MOUNTAIN VIEW RD,intersection,33.575013,-112.069485,97.0,geocoder
+N 40TH AV/W WHITTON AV,N 40TH AV & W WHITTON AV,intersection,33.490737,-112.1451435,96.54,geocoder
+N 40TH ST GRAND CANAL,N 40TH ST GRAND CANAL,address,,,,failed
+N 40TH ST/E CAMELBACK RD,N 40TH ST & E CAMELBACK RD,intersection,33.509853,-111.995307,96.79,geocoder
+N 40TH ST/E DESERT FOREST TL,N 40TH ST & E DESERT FOREST TL,intersection,33.782211,-111.9954195,92.04,geocoder
+N 40TH ST/E LONE MOUNTAIN RD,N 40TH ST & E LONE MOUNTAIN RD,intersection,33.770025,-111.995541,97.1,geocoder
+N 40TH ST/E MISSION LN,N 40TH ST & E MISSION LN,intersection,33.570171,-111.9956355,96.54,geocoder
+N 40TH ST/E NAVIGATOR LN,N 40TH ST & E NAVIGATOR LN,intersection,33.696396,-111.982959,96.79,geocoder
+N 40TH ST/E SHEA BL,N 40TH ST & E SHEA BL,intersection,33.582753,-111.99573,96.09,geocoder
+N 40TH ST/E STANFORD DR,N 40TH ST & E STANFORD DR,intersection,33.51726,-111.995235,96.67,geocoder
+N 40TH ST/E THUNDERBIRD RD,N 40TH ST & E THUNDERBIRD RD,intersection,33.611868,-111.995937,97.0,geocoder
+N 40TH ST/W ARIZONA CANAL,N 40TH ST & W ARIZONA CANAL,intersection,,,,failed
+N 43RD AV GRAND CANAL,N 43RD AV GRAND CANAL,address,,,,failed
+N 43RD AV/W ARIZONA CANAL,N 43RD AV & W ARIZONA CANAL,intersection,,,,failed
+N 43RD AV/W OSBORN RD,N 43RD AV & W OSBORN RD,intersection,33.487722,-112.151646,96.4,geocoder
+N 43RD AV/W PEORIA AV,N 43RD AV & W PEORIA AV,intersection,33.581916,-112.1515245,96.4,geocoder
+N 44TH LN/N 46TH AV,N 44TH LN & N 46TH AV,intersection,33.584562,-112.155525,92.59,geocoder
+N 44TH ST/E CALLE REDONDA,N 44TH ST & E CALLE REDONDA,intersection,33.504948,-111.986793,96.9,geocoder
+N 44TH ST/E WASHINGTON ST,N 44TH ST & E WASHINGTON ST,intersection,33.448302,-111.987135,96.9,geocoder
+N 45TH AV/W CRITTENDEN LN,N 45TH AV & W CRITTENDEN LN,intersection,33.489288,-112.155948,96.9,geocoder
+N 45TH PL/E CROCUS DR,N 45TH PL & E CROCUS DR,intersection,33.615405,-112.155048,92.39,geocoder
+N 47TH AV/W CHOLLA ST,N 47TH AV & W CHOLLA ST,intersection,33.589143,-112.1600745,96.4,geocoder
+N 48TH ST/E INDIAN SCHOOL RD,N 48TH ST & E INDIAN SCHOOL RD,intersection,33.494598,-111.9782295,97.1,geocoder
+N 51ST AV A303,N 51ST AV A303,address,,,,failed
+N 51ST AV/W CACTUS RD,N 51ST AV & W CACTUS RD,intersection,33.596352,-112.168656,96.4,geocoder
+N 51ST AV/W INDIAN SCHOOL RD,N 51ST AV & W INDIAN SCHOOL RD,intersection,33.494976,-112.1688765,97.1,geocoder
+N 51ST AV/W OSBORN RD,N 51ST AV & W OSBORN RD,intersection,33.487488,-112.168926,96.4,geocoder
+N 51ST AV/W ROOSEVELT ST,N 51ST AV & W ROOSEVELT ST,intersection,33.458598,-112.16916,96.79,geocoder
+N 51ST AV/W TONOPAH DR,N 51ST AV & W TONOPAH DR,intersection,33.671898,-112.169394,96.54,geocoder
+N 55TH AV GRAND CANAL,N 55TH AV GRAND CANAL,address,,,,failed
+N 55TH AV/W HAPPY VALLEY RD,N 55TH AV & W HAPPY VALLEY RD,intersection,33.71238,-112.1787675,97.0,geocoder
+N 55TH AV/W OSBORN RD,N 55TH AV & W OSBORN RD,intersection,33.487749,-112.1777505,96.4,geocoder
+N 55TH AV/W WHITTON AV,N 55TH AV & W WHITTON AV,intersection,33.489288,-112.1777325,96.54,geocoder
+N 56TH ST/E INDIAN SCHOOL RD,N 56TH ST & E INDIAN SCHOOL RD,intersection,33.488946,-111.9608415,97.1,geocoder
+N 58TH WY/E INDIAN SCHOOL RD,N 58TH WY & E INDIAN SCHOOL RD,intersection,33.495174,-112.184541,93.06,geocoder
+N 59TH AV GRAND CANAL,N 59TH AV GRAND CANAL,address,,,,failed
+N 59TH AV/W COLUMBUS AV,N 59TH AV & W COLUMBUS AV,intersection,33.490602,-112.186431,96.67,geocoder
+N 59TH AV/W OSBORN RD,N 59TH AV & W OSBORN RD,intersection,33.487794,-112.1864175,96.4,geocoder
+N 5TH AV/W GROVERS AV,N 5TH AV & W GROVERS AV,intersection,33.647382,-112.0800915,96.4,geocoder
+N 5TH ST/E HATCHER RD,N 5TH ST & E HATCHER RD,intersection,33.571395,-112.0673655,96.4,geocoder
+N 60TH LN/W RUNNING DEER TL,N 60TH LN & W RUNNING DEER TL,intersection,33.738588,-112.189968,95.43,geocoder
+N 62ND AV/W INDIAN SCHOOL RD,N 62ND AV & W INDIAN SCHOOL RD,intersection,33.494832,-112.192938,97.1,geocoder
+N 62ND DR/W SPUR DR,N 62ND DR & W SPUR DR,intersection,33.727923,-112.1930775,96.09,geocoder
+N 63RD AV/W CLARENDON AV,N 63RD AV & W CLARENDON AV,intersection,33.490746,-112.195125,96.79,geocoder
+N 63RD DR/W PINNACLE PEAK RD,N 63RD DR & W PINNACLE PEAK RD,intersection,,,,failed
+N 67TH AV/N NEW RIVER RD,N 67TH AV & N NEW RIVER RD,intersection,33.853878,-112.2035085,96.67,geocoder
+N 67TH AV/W HAPPY VALLEY RD,N 67TH AV & W HAPPY VALLEY RD,intersection,33.712209,-112.2031395,97.0,geocoder
+N 67TH AV/W HEATHERBRAE DR,N 67TH AV & W HEATHERBRAE DR,intersection,33.49845,-112.2032115,97.0,geocoder
+N 71ST AV/W CAMPBELL AV,N 71ST AV & W CAMPBELL AV,intersection,33.502752,-112.2113565,96.67,geocoder
+N 71ST DR/W SELLS DR,N 71ST DR & W SELLS DR,intersection,33.501915,-112.212306,96.25,geocoder
+N 75TH AV/W CAMELBACK RD,N 75TH AV & W CAMELBACK RD,intersection,33.508998,-112.220469,96.79,geocoder
+N 79TH AV/W I10,N 79TH AV & W I10,intersection,33.462738,-112.229541,94.5,geocoder
+N 7TH AV GRAND CANAL,N 7TH AV GRAND CANAL,address,,,,failed
+N 7TH AV/W CAMPBELL AV,N 7TH AV & W CAMPBELL AV,intersection,33.503544,-112.082445,96.54,geocoder
+N 7TH AV/W CAREFREE HW,N 7TH AV & W CAREFREE HW,intersection,33.79914,-112.0827105,96.54,geocoder
+N 7TH AV/W CORAL GABLES DR,N 7TH AV & W CORAL GABLES DR,intersection,33.625692,-112.0827825,96.9,geocoder
+N 7TH AV/W GREENWAY PW,N 7TH AV & W GREENWAY PW,intersection,33.632946,-112.082823,96.54,geocoder
+N 7TH AV/W INDIAN SCHOOL RD,N 7TH AV & W INDIAN SCHOOL RD,intersection,33.494877,-112.0834575,97.0,geocoder
+N 7TH AV/W MINNEZONA AV,N 7TH AV & W MINNEZONA AV,intersection,33.502779,-112.0824405,96.67,geocoder
+N 7TH AV/W PEORIA AV,N 7TH AV & W PEORIA AV,intersection,33.582159,-112.082652,96.25,geocoder
+N 7TH AV/W SAHUARO DR,N 7TH AV & W SAHUARO DR,intersection,33.584058,-112.0822875,96.4,geocoder
+N 7TH LN/W BONANZA LN,N 7TH LN & W BONANZA LN,intersection,33.727563,-112.083093,96.4,geocoder
+N 7TH ST GRAND CANAL,N 7TH ST GRAND CANAL,address,,,75.27,failed
+N 7TH ST I10,N 7TH ST I10,address,,,,failed
+N 7TH ST/E DOVE VALLEY RD,N 7TH ST & E DOVE VALLEY RD,intersection,,,,failed
+N 7TH ST/E EUGIE AV,N 7TH ST & E EUGIE AV,intersection,33.610176,-112.065327,96.09,geocoder
+N 7TH ST/E SONORAN DESERT DR,N 7TH ST & E SONORAN DESERT DR,intersection,,,,failed
+N 83RD AV/W GLENROSA AV,N 83RD AV & W GLENROSA AV,intersection,33.497991,-112.237767,96.67,geocoder
+N 83RD AV/W THOMAS RD,N 83RD AV & W THOMAS RD,intersection,33.47982,-112.2378255,96.4,geocoder
+N 91ST AV/W MCDOWELL RD,N 91ST AV & W MCDOWELL RD,intersection,33.465042,-112.2552585,95.67,geocoder
+N 93RD LN/W MCDOWELL RD,N 93RD LN & W MCDOWELL RD,intersection,33.464934,-112.261329,96.67,geocoder
+N 95TH AV/W MCDOWELL RD,N 95TH AV & W MCDOWELL RD,intersection,33.464889,-112.2638625,95.67,geocoder
+N 99TH AV/W BETHANY HOME RD,N 99TH AV & W BETHANY HOME RD,intersection,33.522462,-112.27239,97.0,geocoder
+N 99TH AV/W THOMAS RD,N 99TH AV & W THOMAS RD,intersection,33.479271,-112.27248,96.4,geocoder
+N CAVE CREEK DAM RD/E DESERT PEAK PW,N CAVE CREEK DAM RD & E DESERT PEAK PW,intersection,,,,failed
+N CAVE CREEK RD/E CORTEZ ST,N CAVE CREEK RD & E CORTEZ ST,intersection,33.590538,-112.0441185,97.0,geocoder
+N CAVE CREEK RD/E SONORAN DESERT DR,N CAVE CREEK RD & E SONORAN DESERT DR,intersection,33.734385,-112.003659,97.57,geocoder
+N CAVE CREEK RD/E UNION HILLS DR,N CAVE CREEK RD & E UNION HILLS DR,intersection,33.655023,-112.030866,97.35,geocoder
+N CAVE CREEK RD/E YUCCA ST,N CAVE CREEK RD & E YUCCA ST,intersection,33.58836,-112.0479705,96.9,geocoder
+N CENTRAL AV/E FOOTHILL DR,N CENTRAL AV & E FOOTHILL DR,intersection,33.577362,-112.073742,97.0,geocoder
+N CENTRAL AV/E GRAND CANAL,N CENTRAL AV & E GRAND CANAL,intersection,,,,failed
+N CENTRAL AV/E MOUNTAIN VIEW RD,N CENTRAL AV & E MOUNTAIN VIEW RD,intersection,33.574995,-112.073787,97.35,geocoder
+N CENTRAL AV/E POLK ST,N CENTRAL AV & E POLK ST,intersection,33.452397,-112.0738275,96.54,geocoder
+N CENTRAL AV/E THUNDERBIRD RD,N CENTRAL AV & E THUNDERBIRD RD,intersection,33.607584,-112.0745115,97.27,geocoder
+N CENTRAL AV/W ORCHID LN,N CENTRAL AV & W ORCHID LN,intersection,33.562008,-112.0738905,96.79,geocoder
+N CORAL GABLES DR/W THUNDERBIRD RD,N CORAL GABLES DR & W THUNDERBIRD RD,intersection,33.607521,-112.0853835,97.57,geocoder
+N DEEM HILLS PW/N STETSON VALLEY PW,N DEEM HILLS PW & N STETSON VALLEY PW,intersection,33.730983,-112.1715945,96.04,geocoder
+N DREAMY DRAW DR/E FRIER DR,N DREAMY DRAW DR & E FRIER DR,intersection,33.549327,-112.0416525,97.0,geocoder
+N DREAMY DRAW DR/E GARDENIA AV,N DREAMY DRAW DR & E GARDENIA AV,intersection,33.544629,-112.0433355,95.75,geocoder
+N DREAMY DRAW DR/E LANE AV,N DREAMY DRAW DR & E LANE AV,intersection,33.551397,-112.040244,96.9,geocoder
+N DREAMY DRAW DR/E LINGER LN,N DREAMY DRAW DR & E LINGER LN,intersection,33.552639,-112.0395555,97.1,geocoder
+N DREAMY DRAW DR/E LOMA LN,N DREAMY DRAW DR & E LOMA LN,intersection,33.553728,-112.039362,96.9,geocoder
+N DREAMY DRAW DR/E MANZANITA DR,N DREAMY DRAW DR & E MANZANITA DR,intersection,33.55425,-112.039389,97.35,geocoder
+N DREAMY DRAW DR/E MORTEN AV,N DREAMY DRAW DR & E MORTEN AV,intersection,33.5457,-112.042755,97.1,geocoder
+N DREAMY DRAW DR/E MYRTLE AV,N DREAMY DRAW DR & E MYRTLE AV,intersection,33.541929,-112.045383,97.1,geocoder
+N DREAMY DRAW DR/E NORTHVIEW AV,N DREAMY DRAW DR & E NORTHVIEW AV,intersection,33.543468,-112.0443255,97.35,geocoder
+N DREAMY DRAW DR/E ROYAL PALM RD,N DREAMY DRAW DR & E ROYAL PALM RD,intersection,33.556986,-112.039695,97.35,geocoder
+N DREAMY DRAW DR/E WINTER DR,N DREAMY DRAW DR & E WINTER DR,intersection,33.552009,-112.0399425,97.1,geocoder
+N ECHO CANYON CI/N ECHO CANYON DR,N ECHO CANYON CI & N ECHO CANYON DR,intersection,33.520446,-111.976551,97.43,geocoder
+N ECHO CANYON PW/E MCDONALD DR,N ECHO CANYON PW & E MCDONALD DR,intersection,33.523785,-111.9748185,97.27,geocoder
+N GALVIN PW/E MCDOWELL RD,N GALVIN PW & E MCDOWELL RD,intersection,33.465879,-111.943638,96.9,geocoder
+N I17/W INDIAN SCHOOL RD,N I17 & W INDIAN SCHOOL RD,intersection,33.494985,-112.1129235,96.79,geocoder
+N I17/W JEFFERSON ST,N I17 & W JEFFERSON ST,intersection,33.446961,-112.108284,94.87,geocoder
+N NORTH VALLEY PW/N TRANSFER STATION AC,N NORTH VALLEY PW & N TRANSFER STATION AC,intersection,,,,failed
+N PALOMA PW/W SONORAN DESERT DR,N PALOMA PW & W SONORAN DESERT DR,intersection,33.770115,-112.1011065,97.35,geocoder
+N STETSON VALLEY PW/W STRAIGHT ARROW LN,N STETSON VALLEY PW & W STRAIGHT ARROW LN,intersection,33.733431,-112.1701995,97.8,geocoder
+N TATUM BL/E TOMAHAWK TL,N TATUM BL & E TOMAHAWK TL,intersection,33.564627,-111.977748,95.17,geocoder
+S 11TH AV/W MOHAVE ST,S 11TH AV & W MOHAVE ST,intersection,33.431274,-112.086828,96.4,geocoder
+S 16TH ST WESTERN CANAL,S 16TH ST WESTERN CANAL,address,,,,failed
+S 16TH ST/E BASELINE RD,S 16TH ST & E BASELINE RD,intersection,33.377733,-112.047354,96.67,geocoder
+S 18TH AV/W DOBBINS RD,S 18TH AV & W DOBBINS RD,intersection,33.363189,-112.097781,96.54,geocoder
+S 19TH AV/W BROADWAY RD,S 19TH AV & W BROADWAY RD,intersection,33.406731,-112.099428,95.67,geocoder
+S 19TH AV/W CHANDLER BL,S 19TH AV & W CHANDLER BL,intersection,33.303033,-112.1003505,96.67,geocoder
+S 19TH AV/W DOBBINS RD,S 19TH AV & W DOBBINS RD,intersection,33.363225,-112.1005125,96.54,geocoder
+S 19TH AV/W SOUTH MOUNTAIN AV,S 19TH AV & W SOUTH MOUNTAIN AV,intersection,33.370434,-112.100346,97.19,geocoder
+S 19TH AV/W TELEGRAPH PASS RD,S 19TH AV & W TELEGRAPH PASS RD,intersection,33.351912,-112.100499,97.19,geocoder
+S 19TH ST/E DOBBINS RD,S 19TH ST & E DOBBINS RD,intersection,33.363333,-112.0423185,96.54,geocoder
+S 1ST AV/W JACKSON ST,S 1ST AV & W JACKSON ST,intersection,33.445035,-112.0751595,96.4,geocoder
+S 20TH ST/E DOBBINS RD,S 20TH ST & E DOBBINS RD,intersection,33.364062,-112.0412655,96.54,geocoder
+S 20TH ST/E UNIVERSITY DR,S 20TH ST & E UNIVERSITY DR,intersection,33.423822,-112.0391325,96.9,geocoder
+S 21ST ST/E BETH DR,S 21ST ST & E BETH DR,intersection,33.364566,-112.037904,96.09,geocoder
+S 22ND ST/E ROCKLEDGE RD,S 22ND ST & E ROCKLEDGE RD,intersection,33.315804,-112.033827,96.79,geocoder
+S 23RD AV/W DOBBINS RD,S 23RD AV & W DOBBINS RD,intersection,33.363189,-112.109148,96.54,geocoder
+S 24TH PL/E ROCK WREN RD,S 24TH PL & E ROCK WREN RD,intersection,33.313824,-112.0291785,96.67,geocoder
+S 24TH ST HIGHLINE CANAL,S 24TH ST HIGHLINE CANAL,address,,,,failed
+S 24TH ST/E RIVERVIEW DR,S 24TH ST & E RIVERVIEW DR,intersection,,,,failed
+S 24TH ST/E VALLEY VIEW DR,S 24TH ST & E VALLEY VIEW DR,intersection,33.366843,-112.0316265,96.9,geocoder
+S 24TH WY/E DESERT WILLOW DR,S 24TH WY & E DESERT WILLOW DR,intersection,33.316227,-112.026987,97.1,geocoder
+S 27TH AV/W DOBBINS RD,S 27TH AV & W DOBBINS RD,intersection,33.363081,-112.1176305,96.54,geocoder
+S 27TH AV/W ELLIOT RD,S 27TH AV & W ELLIOT RD,intersection,33.348582,-112.117716,96.4,geocoder
+S 27TH AV/W LOWER BUCKEYE RD,S 27TH AV & W LOWER BUCKEYE RD,intersection,33.422364,-112.117194,97.1,geocoder
+S 27TH AV/W SHAUGHNESSEY RD,S 27TH AV & W SHAUGHNESSEY RD,intersection,33.295563,-112.118382,97.1,geocoder
+S 2ND ST/E JACKSON ST,S 2ND ST & E JACKSON ST,intersection,33.445053,-112.071195,96.4,geocoder
+S 31ST WY/E CALDWELL ST,S 31ST WY & E CALDWELL ST,intersection,33.370074,-112.015224,96.67,geocoder
+S 32ND ST/E AIR LN,S 32ND ST & E AIR LN,intersection,33.443982,-112.012902,95.91,geocoder
+S 32ND ST/E BASELINE RD,S 32ND ST & E BASELINE RD,intersection,33.379119,-111.76263,96.67,geocoder
+S 32ND ST/E CALDWELL ST,S 32ND ST & E CALDWELL ST,intersection,33.370074,-112.015224,96.67,geocoder
+S 32ND ST/E SOUTHERN AV,S 32ND ST & E SOUTHERN AV,intersection,33.393672,-111.761352,96.67,geocoder
+S 35TH AV/W BASELINE RD,S 35TH AV & W BASELINE RD,intersection,33.377679,-112.1337675,96.67,geocoder
+S 35TH AV/W CARVER RD,S 35TH AV & W CARVER RD,intersection,33.348564,-112.1350995,96.4,geocoder
+S 35TH AV/W DOBBINS RD,S 35TH AV & W DOBBINS RD,intersection,33.363018,-112.134789,96.54,geocoder
+S 35TH AV/W DURANGO ST,S 35TH AV & W DURANGO ST,intersection,33.429663,-112.134555,96.54,geocoder
+S 35TH AV/W GIBSON LN,S 35TH AV & W GIBSON LN,intersection,33.426765,-112.134546,96.4,geocoder
+S 35TH AV/W SOUTHERN AV,S 35TH AV & W SOUTHERN AV,intersection,33.392088,-112.1335965,95.67,geocoder
+S 39TH AV/W LOWER BUCKEYE RD,S 39TH AV & W LOWER BUCKEYE RD,intersection,33.422598,-112.1431815,97.1,geocoder
+S 40TH PL/E SAN GABRIEL AV,S 40TH PL & E SAN GABRIEL AV,intersection,33.350607,-111.9968595,96.9,geocoder
+S 40TH PL/E WESTERN STAR BL,S 40TH PL & E WESTERN STAR BL,intersection,33.351399,-111.996846,97.0,geocoder
+S 43RD AV ROOSEVELT CANAL,S 43RD AV ROOSEVELT CANAL,address,,,,failed
+S 43RD AV/W ELWOOD ST,S 43RD AV & W ELWOOD ST,intersection,33.415362,-112.1517855,95.4,geocoder
+S 43RD AV/W ESTRELLA DR,S 43RD AV & W ESTRELLA DR,intersection,33.333993,-112.1517,96.67,geocoder
+S 43RD CT/E OLNEY DR,S 43RD CT & E OLNEY DR,intersection,33.355737,-111.9891555,96.25,geocoder
+S 43RD ST/E PEARCE RD,S 43RD ST & E PEARCE RD,intersection,33.354783,-111.993516,96.4,geocoder
+S 43RD ST/E SUNRISE DR,S 43RD ST & E SUNRISE DR,intersection,33.353307,-111.993237,96.54,geocoder
+S 44TH ST/E WOODLAND DR,S 44TH ST & E WOODLAND DR,intersection,33.301593,-111.989016,96.67,geocoder
+S 46TH PL/E ELLIOT RD,S 46TH PL & E ELLIOT RD,intersection,33.348915,-111.982455,96.4,geocoder
+S 46TH ST/E BEAUTIFUL LN,S 46TH ST & E BEAUTIFUL LN,intersection,33.37641,-111.9844575,96.79,geocoder
+S 47TH AV/W BUCKEYE RD,S 47TH AV & W BUCKEYE RD,intersection,33.436836,-112.160385,96.54,geocoder
+S 47TH LN/W ELLIOT RD,S 47TH LN & W ELLIOT RD,intersection,33.351795,-112.1602545,94.89,geocoder
+S 48TH ST/E CHANDLER BL,S 48TH ST & E CHANDLER BL,intersection,33.305274,-111.980349,96.67,geocoder
+S 48TH ST/E WARNER ELLIOT LP,S 48TH ST & E WARNER ELLIOT LP,intersection,33.330834,-111.980844,93.63,geocoder
+S 48TH ST/E WARNER RD,S 48TH ST & E WARNER RD,intersection,33.330834,-111.980844,96.4,geocoder
+S 48TH ST/S WAKIAL LP,S 48TH ST & S WAKIAL LP,intersection,33.326829,-111.980448,96.4,geocoder
+S 4TH AV/W BASELINE RD,S 4TH AV & W BASELINE RD,intersection,33.377742,-112.079079,96.54,geocoder
+S 51ST AV/W BASELINE RD,S 51ST AV & W BASELINE RD,intersection,33.377553,-112.168269,96.67,geocoder
+S 51ST AV/W MALDONADO RD,S 51ST AV & W MALDONADO RD,intersection,33.382683,-112.1683095,96.79,geocoder
+S 59TH AV/W DOBBINS RD,S 59TH AV & W DOBBINS RD,intersection,33.362892,-112.186251,96.54,geocoder
+S 67TH AV/W BUCKEYE RD,S 67TH AV & W BUCKEYE RD,intersection,33.437205,-112.2037245,96.54,geocoder
+S 6TH ST/E PIMA ST,S 6TH ST & E PIMA ST,intersection,33.433164,-112.0662945,95.91,geocoder
+S 71ST AV/W IRWIN AV,S 71ST AV & W IRWIN AV,intersection,33.384636,-112.211235,96.25,geocoder
+S 71ST AV/W VINEYARD RD,S 71ST AV & W VINEYARD RD,intersection,33.386634,-112.2112755,96.67,geocoder
+S 79TH AV/W LOWER BUCKEYE RD,S 79TH AV & W LOWER BUCKEYE RD,intersection,33.422976,-112.229865,97.1,geocoder
+S 7TH AV/W BASELINE RD,S 7TH AV & W BASELINE RD,intersection,33.377724,-112.083291,96.54,geocoder
+S 7TH AV/W ELWOOD ST,S 7TH AV & W ELWOOD ST,intersection,33.413976,-112.0820085,96.25,geocoder
+S 91ST AV/W SOUTHERN AV,S 91ST AV & W SOUTHERN AV,intersection,,,,failed
+S CENTRAL AV WESTERN CANAL,S CENTRAL AV WESTERN CANAL,address,,,,failed
+S CENTRAL AV/E MINERAL RD,S CENTRAL AV & E MINERAL RD,intersection,33.35598,-112.072185,96.9,geocoder
+S CENTRAL AV/W LAS RAMADAS DR,S CENTRAL AV & W LAS RAMADAS DR,intersection,,,,failed
+S HOLBERT LOOKOUT/E TELEGRAPH PASS RD,S HOLBERT LOOKOUT & E TELEGRAPH PASS RD,preserve_centroid,33.3476,-112.054,,preserve:Holbert Trailhead
+S HOLBERT LOOKOUT/S TELEGRAPH PASS RD,S HOLBERT LOOKOUT & S TELEGRAPH PASS RD,preserve_centroid,33.3476,-112.054,,preserve:Holbert Trailhead
+S RAMADAS CI/S STEPHEN MATHER DR,S RAMADAS CI & S STEPHEN MATHER DR,intersection,33.341904,-112.087125,95.91,geocoder
+S SUMMIT RD/S TELEGRAPH PASS RD,S SUMMIT RD & S TELEGRAPH PASS RD,intersection,33.342237,-112.0587795,95.83,geocoder
+W A74MP 27,W A74MP 27,address,,,,failed
+W BELL RD CAVE CREEK SHORE,W BELL RD CAVE CREEK SHORE,address,,,,failed
+W BOCA RATON RD/N CANTERBURY DR,W BOCA RATON RD & N CANTERBURY DR,intersection,33.611958,-112.074534,97.35,geocoder
+W BROOKWOOD CT/W MORGAN IVY LN,W BROOKWOOD CT & W MORGAN IVY LN,intersection,33.302277,-112.131513,95.75,geocoder
+W CANTERBURY LN/N MEDINAN DR,W CANTERBURY LN & N MEDINAN DR,intersection,33.616098,-112.071888,97.19,geocoder
+W DIXILETA DR/N NORTH VALLEY PW,W DIXILETA DR & N NORTH VALLEY PW,intersection,33.75477,-112.1085315,97.35,geocoder
+W DOVE VALLEY RD/N PALOMA PW,W DOVE VALLEY RD & N PALOMA PW,intersection,33.783768,-112.0995945,97.1,geocoder
+W GRAND AV GRAND CANAL,W GRAND AV GRAND CANAL,address,,,,failed
+W GREENWAY RD/N I17,W GREENWAY RD & N I17,intersection,33.625269,-112.116483,96.25,geocoder
+W LAS RAMADAS DR/S STEPHEN MATHER DR,W LAS RAMADAS DR & S STEPHEN MATHER DR,intersection,33.346971,-112.084632,96.11,geocoder
+W PEDRAS GRANDES DR/S PHOENIX S MTN PAR,W PEDRAS GRANDES DR & S PHOENIX S MTN PAR,intersection,,,,failed
+X E LEXINGTON AV,X E LEXINGTON AV,address,,,75.23,failed
+X N 31ST AV,X N 31ST AV,address,,,,failed
+XX E BASELINE RD,50 E BASELINE RD,hundred_block,,,75.45,failed
+XX E BELL RD,50 E BELL RD,hundred_block,,,,failed
+XX E DUNLAP AV,50 E DUNLAP AV,hundred_block,33.568029,-112.072275,100.0,geocoder
+XX E MISSOURI AV,50 E MISSOURI AV,hundred_block,,,75.45,failed
+XX E MONROE ST,50 E MONROE ST,hundred_block,,,,failed
+XX E PIMA ST,50 E PIMA ST,hundred_block,,,,failed
+XX E ROANOKE AV,50 E ROANOKE AV,hundred_block,,,,failed
+XX E SUNLAND AV,50 E SUNLAND AV,hundred_block,,,,failed
+XX E THOMAS RD,50 E THOMAS RD,hundred_block,,,,failed
+XX N 24TH ST,50 N 24TH ST,hundred_block,33.447447,-112.030407,93.77,geocoder
+XX S 48TH AV,50 S 48TH AV,hundred_block,,,,failed
+XX S 51ST AV,50 S 51ST AV,hundred_block,33.448941,-112.1695065,93.77,geocoder
+XX S CENTRAL AV,50 S CENTRAL AV,hundred_block,33.449175,-112.074138,93.77,geocoder
+XX W BASELINE RD,50 W BASELINE RD,hundred_block,,,75.45,failed
+XX W BOCA RATON RD,50 W BOCA RATON RD,hundred_block,33.611967,-112.076253,100.0,geocoder
+XX W MINNEZONA AV,50 W MINNEZONA AV,hundred_block,,,76.52,failed
+XX W TAMARISK ST,50 W TAMARISK ST,hundred_block,,,75.45,failed
+XX W VAN BUREN ST,50 W VAN BUREN ST,hundred_block,33.451623,-112.07277,100.0,geocoder

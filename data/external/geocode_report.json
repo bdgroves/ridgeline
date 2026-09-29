@@ -1,0 +1,134 @@
+{
+  "incidents_in_clean_set": 5447,
+  "priority_subset": 4704,
+  "located": 1712,
+  "by_method": {
+    "failed": 2992,
+    "geocoder": 1324,
+    "preserve_centroid": 388
+  },
+  "by_precision": {
+    "hundred_block": 3850,
+    "intersection": 435,
+    "preserve_centroid": 388,
+    "address": 31
+  },
+  "mountain_rescue": {
+    "rows": 1619,
+    "unique_incident_ids": 1619,
+    "located": 389,
+    "by_method": {
+      "failed": 1230,
+      "geocoder": 272,
+      "preserve_centroid": 117
+    },
+    "top_unlocated_addresses": [
+      [
+        "49XX E MCDONALD DR",
+        310
+      ],
+      [
+        "106XX N 7TH ST",
+        64
+      ],
+      [
+        "47XX E PIMA CANYON RD",
+        63
+      ],
+      [
+        "27XX E SQUAW PEAK DR",
+        63
+      ],
+      [
+        "51XX N INVERGORDON RD",
+        59
+      ],
+      [
+        "24XX E VALLEY VIEW DR",
+        56
+      ],
+      [
+        "62XX E CHOLLA LN",
+        48
+      ],
+      [
+        "10XX N GALVIN PW",
+        39
+      ],
+      [
+        "6XX N GALVIN PW",
+        33
+      ],
+      [
+        "109XX S CENTRAL AV",
+        32
+      ],
+      [
+        "130XX N CENTRAL AV",
+        27
+      ],
+      [
+        "104XX S CENTRAL AV",
+        23
+      ],
+      [
+        "50XX W ANDREA LN",
+        22
+      ],
+      [
+        "60XX E MCDOWELL RD",
+        22
+      ],
+      [
+        "154XX S 19TH AV",
+        21
+      ],
+      [
+        "158XX N 16TH ST",
+        21
+      ],
+      [
+        "7XX E DESERT FOOTHILLS PW",
+        21
+      ],
+      [
+        "7XX E MINERAL RD",
+        19
+      ],
+      [
+        "24XX E NORTHERN AV",
+        19
+      ],
+      [
+        "32XX E LINCOLN DR",
+        18
+      ],
+      [
+        "130XX S WARPAINT DR",
+        18
+      ],
+      [
+        "44XX E PIMA CANYON RD",
+        18
+      ],
+      [
+        "105XX S 19TH AV",
+        14
+      ],
+      [
+        "48XX E PIMA CANYON RD",
+        13
+      ],
+      [
+        "60XX E MORELAND ST",
+        13
+      ]
+    ]
+  },
+  "by_nature_located_pct": {
+    " ": 100.0,
+    "check flooding condition": 30.9,
+    "mountain rescue": 24.0,
+    "water rescue": 62.0
+  }
+}
