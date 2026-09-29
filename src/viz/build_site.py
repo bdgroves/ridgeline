@@ -24,6 +24,8 @@ from collections import Counter
 from datetime import date, datetime, timezone
 from pathlib import Path
 
+from nps_section import NPS_CSS, nps_data, nps_html, nps_js
+
 ROOT     = Path(__file__).resolve().parents[2]
 EXT_DIR  = ROOT / "data" / "external"
 SITE_DIR = ROOT / "site"
@@ -460,8 +462,10 @@ def heat_section(h: dict) -> str:
 """
 
 
-def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report: dict | None = None) -> None:
+def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report: dict | None = None,
+                nps: dict | None = None) -> None:
     heat = heat_section(heat_report or {})
+    nps_sec, nps_script, nps_css = nps_html(nps, esc, kpi), nps_js(nps), (NPS_CSS if nps else "")
     phx = next(s for c, s, _ in cities if c["key"] == "phoenix")
     # The trend uses every mountain-rescue call, located or not. Located-only counts
     # drift with geocoding success (Cholla's address change in 2022 is one example).
@@ -492,7 +496,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ridgeline — Search &amp; rescue at the wildland–urban edge</title>
-<meta name="description" content="Mountain, technical and water rescue calls from public fire-department dispatch data in Phoenix, Scottsdale and Boulder. Mapped, counted, and explained.">
+<meta name="description" content="Mountain, technical and water rescue calls from public fire-department dispatch data in Phoenix, Scottsdale and Boulder, plus National Park Service search-and-rescue incidents by park. Mapped, counted, and explained.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -581,6 +585,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
   .note {{ border-left:3px solid var(--sand); background:var(--panel); padding:16px 20px; }}
   .note p {{ margin:0 0 10px; color:var(--soft); }} .note p:last-child {{ margin:0; }}
   .scroll {{ overflow-x:auto; }}
+{nps_css}
   details.more {{ margin-top:18px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; }}
   details.more summary {{ cursor:pointer; font:500 12px/1.4 'IBM Plex Mono', monospace; letter-spacing:.06em; text-transform:uppercase; color:var(--sand); }}
   td small, th small {{ color:var(--muted); font-size:11px; }}
@@ -608,7 +613,8 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
   <h1>Where the <span>trail</span><br>runs out</h1>
   <p class="dek">Every mountain, technical and water rescue that three fire departments put into their public dispatch data.
   Phoenix, Scottsdale and Boulder, located on a map and counted by year, month and hour, so you can see
-  when people get into trouble and at which trailheads.</p>
+  when people get into trouble and at which trailheads. Plus <a href="#parks">every search and rescue logged in the
+  national parks</a>, 2013–2021.</p>
   <p class="meta">Updated {esc(updated)} · rebuilt weekly from the source data · all counts are dispatched calls, not confirmed rescues</p>
 </div></header>
 
@@ -653,6 +659,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
 </div></section>
 
 {heat}
+{nps_sec}
 
 <section class="block" id="read"><div class="wrap">
   <h2>How to read this</h2>
@@ -891,6 +898,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
   Promise.all(Object.keys(CITIES).map(k =>
     fetch(`data/${{k}}_sar_incidents.geojson`).then(r => r.json()).then(gj => build(k, gj)).catch(() => null)
   )).then(() => show(current));
+{nps_script}
 }})();
 </script>
 </body>
@@ -917,7 +925,10 @@ def main() -> None:
         built.append((city, s, reports.get(city["key"], {})))
         print(f"  {city['name']}: {len(s['mountain']):,} mountain/technical · {len(rows):,} total")
     updated = datetime.now(timezone.utc).strftime("%B %-d, %Y")
-    write_index(built, updated, load_json("heat_report.json"))
+    nps = nps_data(EXT_DIR, SITE_DIR)
+    if nps:
+        print(f"  National parks: {nps['total']:,} incidents · {nps['n_parks']} parks")
+    write_index(built, updated, load_json("heat_report.json"), nps)
     print(f"  ✓ site/index.html")
 
 

@@ -12,6 +12,8 @@ Ridgeline collects every mountain, technical and water rescue call that three fi
 | Scottsdale, AZ | Scottsdale Fire Department | Dec 2022 – present | 360 (466 of 522 rescue calls located, 89%) |
 | Boulder, CO | Boulder Fire-Rescue | 2015 – present | 581 (published points, 100%) |
 
+Plus a **national parks** section: all 20,058 search-and-rescue incidents the National Park Service logged from 2013 to August 2021, one circle per park, with each park's calendar and incidents per million visits.
+
 The pipeline reruns every Monday and whenever the code changes. The counts in this README reflect the run of September 29, 2026; the live site always shows the current numbers.
 
 ---
@@ -52,6 +54,8 @@ Warning days got relatively quieter only at the closed trails, which is what wor
 
 **The city's "rescues on closed trails" figures.** Phoenix's [October 2024 release](https://www.phoenix.gov/newsroom/parks-news/3256.html) reports 57, 47, 30 and 35 rescues on closed trails for 2021–2024, without a definition. Counting every mountain-rescue call at the closure trails from May through October, on any day and at any hour, gives 55, 50, 33 and 36, within 3 a year. So the figures most likely count *trails that close*, not rescues while closed (those are 5, 1, 3 and 9). Over the same years the November–April count at those trails fell just as much (53 to 35), with no closures in effect.
 
+**National parks: a few parks carry most of the load.** From 2016 to 2020 the Park Service logged about 3,050 search-and-rescue incidents a year. Yosemite (~280 a year), Grand Canyon (~260) and Lake Mead (~240) account for 26% of them. Per visitor, Sequoia & Kings Canyon is highest at 90 incidents per million visits, then Yosemite (70) and Grand Canyon (47). Great Smoky Mountains, the most-visited park, has 5.8. July is the busiest month nationally. At Yosemite, June through September is the season, and January is almost silent.
+
 **Each city has its own season:**
 
 | | Busiest month | Quietest month | Share on weekends |
@@ -79,6 +83,10 @@ All three sources are public and need no key. Each is pulled fresh on every run.
 | What counts as water | *Water Rescue*, *Check Flooding Condition*, swift-water calls | Code `WATER`, *Swift water rescue* | *Water Rescue* call types; NFIRS swift-water, ice and in-water search codes |
 
 Scottsdale's land searches (*Search for person on land* outside the `MTNRES` code) are kept as a separate **land search** category. Many of them are urban missing-person calls rather than trail work. Boulder's *auto-aid* calls are Boulder units sent outside the city, often into county open space.
+
+**National parks.** The [NPS FOIA reading room](https://www.nps.gov/aboutus/foia/foia-frd.htm) publishes two search-and-rescue incident lists, *NPS-SAR-Incidents-List-2013-2018.xlsx* and *SAR-Incidents-List-2019-2020.xlsx*. The second actually runs to August 12, 2021. Each row is an incident number, date, incident type, park code and region; there is no location inside the park, no time of day and no outcome. `src/ingest/fetch_nps.py` combines them (20,058 incidents after dropping 420 rows with no date, most of which also have no park, and 2 duplicate IDs), maps a few spelled-out park codes (`GRANDCANYON` → `GRCA`), and treats Sequoia & Kings Canyon as one park (`SEKI`) as the incident data does. Park outlines come from the [NPS Land Resources Division boundary service](https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/2), and annual recreation visits from the [NPS IRMA visitor use statistics](https://irma.nps.gov/Stats/) service. These files are static, so the fetch runs on demand through the *Probe data sources* workflow (or locally: `pip install httpx openpyxl` then `python src/ingest/fetch_nps.py`), not weekly. The weekly build reads the committed files.
+
+Reporting ramps up over the first years: 570 incidents are dated 2013, 725 in 2014 and 1,230 in 2015, then about 3,000 a year. Yosemite logged 9, 11 and 47 in 2013–2015 and 372 in 2016. That's the reporting system coming into use, not safer parks, so averages and rates use the five complete years, 2016–2020.
 
 Other cities were checked and set aside. Santa Barbara (city and county) doesn't publish incident-level fire calls. San Diego publishes a generic *RESCUE* category with only a ZIP code for location, which is too coarse to map. The probe that tested these sources is in `tools/probe_sources.py`, and its last results are in `data/external/source_probe.json`.
 
@@ -159,6 +167,9 @@ Everything the site needs is committed, so the site can be rebuilt without re-do
 |---|---|
 | `data/external/{city}_sar_incidents.geojson` | One point per located call |
 | `data/external/geocode_report.json` | Phoenix counts, match rates by method and precision, top unlocated addresses |
+| `data/external/nps_sar_incidents.csv` | NPS SAR incidents: id, date, type, park, region |
+| `data/external/nps_parks.geojson`, `nps_visitation.csv` | Park outlines (with a label point) and annual recreation visits |
+| `data/external/nps_report.json` | NPS fetch report: rows kept, dropped and why; boundary and visitation matches |
 | `data/external/heat_report.json` | Heat analysis: warning days per year, rescue rates by temperature and by warning day, before/after, closed-hour calls |
 | `data/external/phoenix_mountain_calls.csv` | All Phoenix mountain-rescue calls: date, hour, dispatch address |
 | `data/external/phoenix_heat_warnings.csv`, `phoenix_daily_weather.csv` | NWS heat warnings (zone AZZ543) and daily weather at Sky Harbor |
@@ -266,7 +277,8 @@ ridgeline/
 - [x] Scottsdale and Boulder
 - [x] **Closure analysis.** NWS heat-warning days and Open-Meteo daily highs against closure-trail rescues (Sept 2026)
 - [ ] Locate the remaining 422 Phoenix rescues (North Mountain, Papago, Desert Foothills) with trailhead-specific matching
-- [ ] National parks: the NPS FOIA SAR incident lists (2013–2020) give date, type and park for about 20,500 incidents; Lake Mead, Yosemite and Grand Canyon have the most (about 1,600 each). No locations, so a park-level calendar rather than a map
+- [x] National parks: NPS SAR incidents 2013–2021 by park, with outlines, calendars and per-visit rates (Sept 2026)
+- [ ] National parks, deaths: the NPS mortality release (2007–2023) has date, park, cause, intent and outcome per death
 - [ ] Sheriff and state SAR logs. Requests are pending with Maricopa County Sheriff's Office and Arizona DEMA
 - [ ] More cities with incident-level, located rescue data. Suggestions welcome
 
