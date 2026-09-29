@@ -47,6 +47,12 @@ BOUNDARY_SERVICES = [
     "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/2",
     "https://mapservices.nps.gov/arcgis/rest/services/LandResourcesDivisionTractAndBoundaryService/MapServer/2",
 ]
+# Incident files use a few non-standard park codes. Sequoia & Kings Canyon report
+# together as SEKI but are two units in the boundary and visitation data.
+ALIASES = {"AMISTAD": "AMIS", "BISCAYNE": "BISC", "GRANDCANYON": "GRCA"}
+COMPOSITE = {"SEKI": ("SEQU", "KICA")}
+COMPOSITE_NAMES = {"SEKI": "Sequoia & Kings Canyon National Parks"}
+
 MORTALITY = ("https://www.nps.gov/aboutus/foia/upload/"
              "FOIA-FAQ-NPS-Mortality-Data-CY2007-to-CY2023-Released-August-2023.xlsx")
 
@@ -59,7 +65,8 @@ def xlsx_rows(content: bytes) -> list[list[str]]:
     import openpyxl
     wb = openpyxl.load_workbook(io.BytesIO(content), read_only=True, data_only=True)
     for ws in wb.worksheets:
-        rows = [["" if v is None else str(v).strip() for v in r] for r in ws.iter_rows(values_only=True)]
+        rows = [["" if v is None else (v.strftime("%m/%d/%Y") if hasattr(v, "strftime") else str(v).strip())
+                 for v in r] for r in ws.iter_rows(values_only=True)]
         for i, r in enumerate(rows):
             if "IncidentNum" in r:
                 return [rows[i]] + [x for x in rows[i + 1:] if any(x)]
@@ -74,20 +81,28 @@ def incidents() -> None:
         head, body = rows[0], rows[1:]
         ix = {k: head.index(k) for k in ("IncidentNum", "IncidentDate", "IncType", "ParkAlphaCode", "Region")}
         n = dup = 0
+        bad = []
         for row in body:
             iid = row[ix["IncidentNum"]]
             if not iid or iid in seen:
                 dup += bool(iid)
                 continue
             seen.add(iid)
-            m, d, y = (row[ix["IncidentDate"]].split(" ")[0].split("/") + ["", "", ""])[:3]
-            if not y:
+            raw = row[ix["IncidentDate"]].split(" ")[0]
+            if re.match(r"\d{4}-\d{2}-\d{2}$", raw):
+                y, m, d = raw.split("-")
+            else:
+                m, d, y = (raw.split("/") + ["", "", ""])[:3]
+            if not (y and m and d):
+                bad.append(iid)
                 continue
             out.append({"id": iid, "date": f"{y}-{int(m):02d}-{int(d):02d}",
-                        "type": row[ix["IncType"]], "park": row[ix["ParkAlphaCode"]].upper(),
+                        "type": row[ix["IncType"]],
+                        "park": ALIASES.get(row[ix["ParkAlphaCode"]].upper(), row[ix["ParkAlphaCode"]].upper()),
                         "region": row[ix["Region"]]})
             n += 1
-        per_file[url.rsplit("/", 1)[-1]] = {"rows": len(body), "kept": n, "duplicate_ids": dup}
+        per_file[url.rsplit("/", 1)[-1]] = {"rows": len(body), "kept": n, "duplicate_ids": dup,
+                                            "bad_date": len(bad), "bad_date_sample": bad[:5]}
     out.sort(key=lambda r: (r["date"], r["id"]))
     tmp = INC.with_suffix(".tmp")
     with tmp.open("w", newline="") as f:
@@ -95,7 +110,29 @@ def incidents() -> None:
         w.writeheader(); w.writerows(out)
     tmp.replace(INC)
     report["incidents"] = {"files": per_file, "total": len(out),
+                           "first_date": out[0]["date"], "last_date": out[-1]["date"],
                            "no_park_code": sum(1 for r in out if not r["park"])}
+
+
+def _polys(g: dict) -> list:
+    return [g["coordinates"]] if g["type"] == "Polygon" else list(g["coordinates"])
+
+
+def _ring_area_centroid(ring):
+    a = cx = cy = 0.0
+    for (x0, y0), (x1, y1) in zip(ring, ring[1:]):
+        k = x0 * y1 - x1 * y0
+        a += k; cx += (x0 + x1) * k; cy += (y0 + y1) * k
+    if abs(a) < 1e-12:
+        xs, ys = zip(*ring)
+        return 0.0, sum(ys) / len(ys), sum(xs) / len(xs)
+    return abs(a) / 2, cy / (3 * a), cx / (3 * a)
+
+
+def _label_point(polys) -> tuple[float, float]:
+    """Centroid of the park's largest polygon, rounded; good enough for a marker."""
+    best = max((_ring_area_centroid(p[0]) for p in polys), key=lambda t: t[0])
+    return round(best[1], 4), round(best[2], 4)
 
 
 def boundaries(codes: set[str]) -> None:
@@ -111,8 +148,8 @@ def boundaries(codes: set[str]) -> None:
             while True:
                 q = c.get(f"{svc}/query", params={
                     "where": "1=1", "outFields": ",".join(x for x in (code_f, name_f, type_f) if x),
-                    "returnGeometry": "true", "outSR": 4326, "maxAllowableOffset": 0.005,
-                    "geometryPrecision": 4, "resultOffset": offset, "resultRecordCount": 200,
+                    "returnGeometry": "true", "outSR": 4326, "maxAllowableOffset": 0.01,
+                    "geometryPrecision": 3, "resultOffset": offset, "resultRecordCount": 200,
                     "f": "geojson"}).json()
                 fs = q.get("features", [])
                 feats += fs
@@ -121,15 +158,24 @@ def boundaries(codes: set[str]) -> None:
                 offset += len(fs)
                 if not fs:
                     break
-            keep = []
+            member_of = {m: k for k, ms in COMPOSITE.items() for m in ms}
+            merged: dict[str, dict] = {}
             for f in feats:
                 p = f.get("properties") or {}
                 code = str(p.get(code_f) or "").upper()
+                code = member_of.get(code, code)
                 if code not in codes or not f.get("geometry"):
                     continue
-                keep.append({"type": "Feature", "geometry": f["geometry"],
-                             "properties": {"park": code, "name": p.get(name_f),
-                                            "unit_type": p.get(type_f) if type_f else None}})
+                polys = _polys(f["geometry"])
+                if code in merged:
+                    merged[code]["geometry"]["coordinates"] += polys
+                    continue
+                merged[code] = {"type": "Feature", "geometry": {"type": "MultiPolygon", "coordinates": polys},
+                                "properties": {"park": code, "name": COMPOSITE_NAMES.get(code, p.get(name_f)),
+                                               "unit_type": p.get(type_f) if type_f else None}}
+            keep = list(merged.values())
+            for f in keep:
+                f["properties"]["lat"], f["properties"]["lon"] = _label_point(f["geometry"]["coordinates"])
             if not keep:
                 raise RuntimeError(f"no features matched from {svc} ({len(feats)} fetched)")
             PARKS.write_text(json.dumps({"type": "FeatureCollection", "features": keep}, separators=(",", ":")))
@@ -148,8 +194,8 @@ def visitation(codes: set[str]) -> None:
     rows, tried = [], []
     for code in sorted(codes):
         got = None
-        for url in (f"https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes={code}&startMonth=1&startYear=2013&endMonth=12&endYear=2020",
-                    f"https://irmaservices.nps.gov/v3/rest/stats/total/2013/2020?unitCodes={code}"):
+        units = ",".join(COMPOSITE.get(code, (code,)))
+        for url in (f"https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes={units}&startMonth=1&startYear=2013&endMonth=12&endYear=2021",):
             try:
                 r = c.get(url, headers={"Accept": "application/json"})
                 if r.status_code != 200:
@@ -171,7 +217,7 @@ def visitation(codes: set[str]) -> None:
             except Exception as e:
                 tried.append([url, repr(e)])
         if got:
-            rows += [{"park": code, "year": y, "visits": v} for y, v in sorted(got.items()) if 2013 <= y <= 2020]
+            rows += [{"park": code, "year": y, "visits": v} for y, v in sorted(got.items()) if 2013 <= y <= 2021]
         if not rows and len(tried) >= 8:       # the service shape is wrong; don't hammer it
             break
     report["visitation_tried"] = tried[:12]
