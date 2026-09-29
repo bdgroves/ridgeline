@@ -48,11 +48,14 @@ jobs:
       - name: Boulder Fire-Rescue (technical + water rescues)
         run: pixi run boulder
 
+      - name: Heat warnings, temperatures and trail closures
+        run: pixi run heat
+
       - name: Commit geocode cache, report and incidents
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/external/geocode_cache.csv data/external/*_report.json data/external/*_sar_incidents.geojson
+          git add data/external/geocode_cache.csv data/external/*_report.json data/external/*_sar_incidents.geojson data/external/phoenix_mountain_calls.csv data/external/phoenix_daily_weather.csv data/external/phoenix_heat_warnings.csv
           if git diff --cached --quiet; then echo "No data changes"; else
             git commit -m "chore: refresh geocode cache and map incidents [skip ci]"
             git pull --rebase origin main && git push
