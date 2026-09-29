@@ -1,10 +1,10 @@
 {
   "incidents_in_clean_set": 5476,
   "priority_subset": 4733,
-  "located": 3245,
+  "located": 3240,
   "by_method": {
-    "failed": 1488,
-    "geocoder_street": 1427,
+    "failed": 1493,
+    "geocoder_street": 1422,
     "geocoder": 1343,
     "preserve_centroid": 475
   },
@@ -129,7 +129,7 @@
   },
   "by_nature_located_pct": {
     " ": 100.0,
-    "check flooding condition": 60.8,
+    "check flooding condition": 60.6,
     "mountain rescue": 71.6,
     "water rescue": 68.7
   }

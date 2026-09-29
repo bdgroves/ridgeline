@@ -1,7 +1,7 @@
 {
   "source": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/20",
   "incidents": 522,
-  "located": 466,
+  "located": 463,
   "by_category": {
     "mountain": 402,
     "water": 50,
@@ -32,9 +32,9 @@
     "": 52
   },
   "by_method": {
-    "geocoder": 320,
+    "geocoder": 317,
     "geocoder_street": 140,
-    "failed": 56,
+    "failed": 59,
     "preserve_centroid": 6
   },
   "date_range": [
