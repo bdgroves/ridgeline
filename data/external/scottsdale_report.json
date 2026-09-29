@@ -3,8 +3,9 @@
   "incidents": 522,
   "located": 466,
   "by_category": {
-    "mountain": 472,
-    "water": 50
+    "mountain": 402,
+    "water": 50,
+    "search": 70
   },
   "by_type_group": {
     "MTNRES": 402,
