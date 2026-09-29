@@ -2011,6 +2011,151 @@ S HOLBERT LOOKOUT/E TELEGRAPH PASS RD,S HOLBERT LOOKOUT & E TELEGRAPH PASS RD,pr
 S HOLBERT LOOKOUT/S TELEGRAPH PASS RD,S HOLBERT LOOKOUT & S TELEGRAPH PASS RD,preserve_centroid,33.3476,-112.054,,,,preserve:Holbert Trailhead,1
 S RAMADAS CI/S STEPHEN MATHER DR,S RAMADAS CI & S STEPHEN MATHER DR,intersection,33.341904,-112.087125,95.91,,,geocoder,1
 S SUMMIT RD/S TELEGRAPH PASS RD,S SUMMIT RD & S TELEGRAPH PASS RD,intersection,33.342237,-112.0587795,95.83,,,geocoder,1
+SCOTTSDALE|01 East RIO SALADO Parkway,01 East RIO SALADO Parkway,address,33.42944289388,-111.93997909302,78.82,"1 E Rio Salado Pkwy, 85281",StreetAddress,geocoder_street,2
+SCOTTSDALE|1001 North GALVIN Parkway,1001 North GALVIN Parkway,address,,,,,,failed,2
+SCOTTSDALE|10400 East BELL Road,10400 East BELL Road,address,33.642909,-111.8410605,100.0,"10400 E BELL RD, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|10890 East VERBENA Lane,10890 East VERBENA Lane,address,33.639255,-111.845493,100.0,"10890 E VERBENA LN, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|10908 East BETONY Drive,10908 East BETONY Drive,address,33.629859,-111.8444085,100.0,"10908 E BETONY DR, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|11114 East VERBENA Lane,11114 East VERBENA Lane,address,33.639849,-111.84066,100.0,"11114 E VERBENA LN, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|11130 East VERBENA Lane,11130 East VERBENA Lane,address,33.639858,-111.83994,100.0,"11130 E VERBENA LN, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|11167 East SAGUARO CANYON Trail,11167 East SAGUARO CANYON Trail,address,33.67062,-111.839508,100.0,"11167 E SAGUARO CANYON TRL, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|11197 East SAGUARO CANYON Trail,11197 East SAGUARO CANYON Trail,address,33.666237,-111.8029815,100.0,"11197 E SAGUARO CANYON TRL, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|11200 East SAGUARO CANYON Trail,11200 East SAGUARO CANYON Trail,address,,,,,,failed,2
+SCOTTSDALE|11985 East DESERT WILLOW Drive,11985 East DESERT WILLOW Drive,address,33.71679,-111.8224485,100.0,"11985 E DESERT WILLOW DR, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|12101 North 145TH Way,12101 North 145TH Way,address,33.611967,-111.7909665,100.0,"12101 N 145TH WAY, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|12400 North 128TH Street,12400 North 128TH Street,address,33.60636,-111.8068695,100.0,"12400 N 128TH ST, SCOTTSDALE, AZ, 85259",PointAddress,geocoder,2
+SCOTTSDALE|12601 North 124TH Street,12601 North 124TH Street,address,33.600348,-111.811887,100.0,"12601 N 124TH ST, SCOTTSDALE, AZ, 85259",PointAddress,geocoder,2
+SCOTTSDALE|12950 North 7TH Street,12950 North 7TH Street,address,33.6040524585,-112.065442185685,76.77,"12950 N 7th St, 85022",StreetAddress,geocoder_street,2
+SCOTTSDALE|1300 West DOVE VALLEY Road,1300 West DOVE VALLEY Road,address,33.784550864067,-112.089105961118,78.82,"1300 W Dove Valley Rd, 85085",StreetAddress,geocoder_street,2
+SCOTTSDALE|13400 East RIO VERDE Road,13400 East RIO VERDE Road,address,33.74622,-111.795165,97.77,"13400 E RIO VERDE DR, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
+SCOTTSDALE|13600 East LONE MOUNTAIN Road,13600 East LONE MOUNTAIN Road,address,33.770699864067,-111.78681204413,80.54,"13600 E Lone Mountain Rd, 85262",StreetAddress,geocoder,2
+SCOTTSDALE|14400 North CAVE CREEK Road,14400 North CAVE CREEK Road,address,33.617577444619,-112.032900738144,79.43,"14400 N Cave Creek Rd, 85022",StreetAddress,geocoder_street,2
+SCOTTSDALE|14428 East DESERT TORTOISE TR,14428 East DESERT TORTOISE TR,address,33.639609247009,-111.769621389431,80.54,"14428 E Desert Tortoise Tr, 85268",StreetAddress,geocoder,2
+SCOTTSDALE|14800 North EAGLE RIDGE Drive,14800 North EAGLE RIDGE Drive,address,,,,,,failed,2
+SCOTTSDALE|15800 North 16TH Street,15800 North 16TH Street,address,,,,,,failed,2
+SCOTTSDALE|1600 East SONORAN DESERT Drive,1600 East SONORAN DESERT Drive,address,33.763853628669,-112.049755034742,81.05,"1600 E Sonoran Desert Dr, 85085",StreetAddress,geocoder,2
+SCOTTSDALE|16300 North MCDOWELL MTN PARK Drive,16300 North MCDOWELL MTN PARK Drive,address,33.695406,-111.733884,98.7,"16300 MCDOWELL MTN PARK DR, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|1635 North 87TH Street,1635 North 87TH Street,address,33.466815,-111.8958885,100.0,"1635 N 87TH ST, SCOTTSDALE, AZ, 85257",PointAddress,geocoder,2
+SCOTTSDALE|17020 North HAYDEN Road,17020 North HAYDEN Road,address,33.640641,-111.9086055,100.0,"17020 N HAYDEN RD, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|1799 East BUENA VISTA Road,1799 East BUENA VISTA Road,address,,,,,,failed,2
+SCOTTSDALE|18333 North THOMPSON PEAK Parkway,18333 North THOMPSON PEAK Parkway,address,33.649407,-111.8585025,100.0,"18333 N THOMPSON PEAK PKWY, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|19070 North 22ND Street,19070 North 22ND Street,address,33.659429057719,-112.032973049776,77.5,"19070 N 22nd St, 85024",StreetAddress,geocoder_street,2
+SCOTTSDALE|1908 East PARKSIDE Lane,1908 East PARKSIDE Lane,address,33.694520579124,-112.041856628244,77.5,"1908 E Parkside Ln, 85024",StreetAddress,geocoder_street,2
+SCOTTSDALE|19224 North TATUM Boulevard,19224 North TATUM Boulevard,address,33.659847,-111.9799575,97.96,"19224 N TATUM BLVD, PHOENIX, AZ, 85050",PointAddress,geocoder,2
+SCOTTSDALE|19250 North 16TH Street,19250 North 16TH Street,address,33.661518649801,-112.048762597728,77.5,"19250 N 16th St, 85024",StreetAddress,geocoder_street,2
+SCOTTSDALE|2027 East ROSE GARDEN Lane,2027 East ROSE GARDEN Lane,address,33.676569135933,-112.038112365907,78.82,"2027 E Rose Garden Ln, 85024",StreetAddress,geocoder_street,2
+SCOTTSDALE|20535 North SR 87 Highway,20535 North SR 87 Highway,address,,,,,,failed,2
+SCOTTSDALE|23015 North 128TH Street,23015 North 128TH Street,address,33.686082,-111.7991835,100.0,"23015 N 128TH ST, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|2421 East NORTHERN Avenue,2421 East NORTHERN Avenue,address,33.561937612388,-112.029788797641,76.98,"2421 Northern Ave, 85028",StreetAddress,geocoder_street,2
+SCOTTSDALE|26761 North 98TH Way,26761 North 98TH Way,address,33.727824,-111.8679075,100.0,"26761 N 98TH WAY, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
+SCOTTSDALE|26802 North 102ND Way,26802 North 102ND Way,address,33.728373,-111.859758,100.0,"26802 N 102ND WAY, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
+SCOTTSDALE|2701 East PIESTEWA PEAK Drive,2701 East PIESTEWA PEAK Drive,preserve_centroid,33.5307,-112.0197,,,,preserve:Piestewa Peak,2
+SCOTTSDALE|27775 North ALMA SCHOOL Parkway,27775 North ALMA SCHOOL Parkway,address,33.735645,-111.842019,100.0,"27775 N ALMA SCHOOL PKWY, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
+SCOTTSDALE|28015 North 15TH Lane,28015 North 15TH Lane,address,33.738169480076,-112.092925368803,76.0,"28015 N 15th Ln, 85085",StreetAddress,geocoder_street,2
+SCOTTSDALE|28777 North PIMA Road,28777 North PIMA Road,address,33.745176,-111.8881395,100.0,"28777 N PIMA RD, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
+SCOTTSDALE|2881 East OLIVINE Avenue,2881 East OLIVINE Avenue,address,33.825141154611,-112.018845683992,78.18,"2881 E Olivine Ave, 85331",StreetAddress,geocoder_street,2
+SCOTTSDALE|30301 North ALMA SCHOOL Parkway,30301 North ALMA SCHOOL Parkway,address,33.765417,-111.8635155,100.0,"30301 N ALMA SCHOOL PKWY, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
+SCOTTSDALE|31402 North 136TH Street,31402 North 136TH Street,address,33.77007,-111.7885005,100.0,"31402 N 136TH ST, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
+SCOTTSDALE|3212 East LINCOLN Drive,3212 East LINCOLN Drive,address,33.532067935672,-112.012678235283,77.5,"3212 E Lincoln Dr, 85018",StreetAddress,geocoder_street,2
+SCOTTSDALE|37500 North SCHOOL HOUSE Road,37500 North SCHOOL HOUSE Road,address,33.824767406285,-111.943873526116,80.54,"37500 N School House Rd, 85331",StreetAddress,geocoder,2
+SCOTTSDALE|37999 North TONALITE Drive,37999 North TONALITE Drive,address,,,,,,failed,2
+SCOTTSDALE|38851 North 48TH Street,38851 North 48TH Street,address,,,,,,failed,2
+SCOTTSDALE|43001 North SPUR CROSS Road,43001 North SPUR CROSS Road,address,33.873142070969,-111.960514477961,79.43,"43001 N Spur Cross Rd, 85331",StreetAddress,geocoder_street,2
+SCOTTSDALE|43376 North NEW RIVER Road,43376 North NEW RIVER Road,address,33.876894377838,-112.069180458078,78.82,"43376 N New River Rd, 85087",StreetAddress,geocoder_street,2
+SCOTTSDALE|4355 East IRMA Lane,4355 East IRMA Lane,address,,,,,,failed,2
+SCOTTSDALE|44000 North SPUR CROSS Road,44000 North SPUR CROSS Road,address,33.88525425465,-111.954110667617,79.43,"44000 N Spur Cross Rd, 85331",StreetAddress,geocoder_street,2
+SCOTTSDALE|44020 North SPUR CROSS Road,44020 North SPUR CROSS Road,address,33.885391234327,-111.953951845957,79.43,"44020 N Spur Cross Rd, 85331",StreetAddress,geocoder_street,2
+SCOTTSDALE|44028 North SPUR CROSS Road,44028 North SPUR CROSS Road,address,33.885454415158,-111.953878467358,79.43,"44028 N Spur Cross Rd, 85331",StreetAddress,geocoder_street,2
+SCOTTSDALE|44029 North SPUR CROSS Road,44029 North SPUR CROSS Road,address,33.885195387896,-111.953577778824,79.43,"44029 N Spur Cross Rd, 85331",StreetAddress,geocoder_street,2
+SCOTTSDALE|445 East TEMPE TOWNLAKE,445 East TEMPE TOWNLAKE,address,,,,,,failed,2
+SCOTTSDALE|45000 North CHIRICAHUA Pass,45000 North CHIRICAHUA Pass,address,33.888222,-111.87387,100.0,"45000 N CHIRICAHUA PASS, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
+SCOTTSDALE|4513 North SCOTTSDALE Road,4513 North SCOTTSDALE Road,address,33.50313,-111.925746,100.0,"4513 N SCOTTSDALE RD, SCOTTSDALE, AZ, 85251",PointAddress,geocoder,2
+SCOTTSDALE|4790 East PIMA CANYON Road,4790 East PIMA CANYON Road,address,33.364441200908,-111.97529007636,78.82,"4790 E Pima Canyon Rd, 85042",StreetAddress,geocoder_street,2
+SCOTTSDALE|4925 East MCDONALD Drive,4925 East MCDONALD Drive,address,33.524011445731,-111.976113940669,78.18,"4925 E McDonald Dr, 85018",StreetAddress,geocoder_street,2
+SCOTTSDALE|500 North SCOTTSDALE Road,500 North SCOTTSDALE Road,address,33.434693330785,-111.926456482272,78.82,"500 N Scottsdale Rd, 85281",StreetAddress,geocoder_street,2
+SCOTTSDALE|5050 West ANDREA Lane,5050 West ANDREA Lane,address,,,,,,failed,2
+SCOTTSDALE|5150 North INVERGORDON Road,5150 North INVERGORDON Road,address,33.552382765915,-111.94310293368,75.6,"N Invergordon Pl, 85253",StreetName,geocoder_street,2
+SCOTTSDALE|5200 East ROCKAWAY HILLS Drive,5200 East ROCKAWAY HILLS Drive,address,33.857308324108,-111.969489180402,81.05,"5200 E Rockaway Hills Dr, 85331",StreetAddress,geocoder,2
+SCOTTSDALE|5402 East LINCOLN Drive,5402 East LINCOLN Drive,address,33.53124271241,-111.964775437836,77.5,"5402 E Lincoln Dr, 85253",StreetAddress,geocoder_street,2
+SCOTTSDALE|5951 East CALLE DEL PAISANO,5951 East CALLE DEL PAISANO,address,33.491358,-111.952773,97.91,"5951 E CALLE DEL PAISANO, PHOENIX, AZ, 85018",PointAddress,geocoder,2
+SCOTTSDALE|6000 East CAMELBACK Road,6000 East CAMELBACK Road,address,33.506874,-111.9484125,100.0,"6000 E CAMELBACK RD, SCOTTSDALE, AZ, 85251",PointAddress,geocoder,2
+SCOTTSDALE|6000 East MORELAND Street,6000 East MORELAND Street,address,,,,,,failed,2
+SCOTTSDALE|6001 East MCDOWELL Road,6001 East MCDOWELL Road,address,33.466182303315,-111.950762061521,77.5,"6001 E McDowell Rd, 85008",StreetAddress,geocoder_street,2
+SCOTTSDALE|625 North GALVIN Parkway,625 North GALVIN Parkway,address,33.454602,-111.945483,97.96,"625 N GALVIN PKWY, PHOENIX, AZ, 85008",PointAddress,geocoder,2
+SCOTTSDALE|700 West RIO SALADO Parkway,700 West RIO SALADO Parkway,address,33.431034431008,-111.94986616876,79.43,"700 W Rio Salado Pkwy, 85281",StreetAddress,geocoder_street,2
+SCOTTSDALE|701 West CAREFREE Highway,701 West CAREFREE Highway,address,,,,,,failed,2
+SCOTTSDALE|705 West CAREFREE Highway,705 West CAREFREE Highway,address,,,,,,failed,2
+SCOTTSDALE|7605 East INDIAN BEND Road,7605 East INDIAN BEND Road,address,33.535854,-111.9153735,100.0,"7605 E INDIAN BEND RD, SCOTTSDALE, AZ, 85250",PointAddress,geocoder,2
+SCOTTSDALE|7803 East PIERCE Street,7803 East PIERCE Street,address,33.454297148983,-111.91158519934,77.5,"7803 E Pierce St, 85257",StreetAddress,geocoder_street,2
+SCOTTSDALE|831 East CLOUD Road,831 East CLOUD Road,address,,,77.59,"831 N Scottsdale Rd, 85281",StreetAddress,failed,2
+SCOTTSDALE|9000 North 40TH Street,9000 North 40TH Street,address,,,,,,failed,2
+SCOTTSDALE|9796 East SOUTH BEND Drive,9796 East SOUTH BEND Drive,address,33.641046,-111.8699865,100.0,"9796 E SOUTH BEND DR, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
+SCOTTSDALE|9850 East CROSS CANYON Way,9850 East CROSS CANYON Way,address,33.682961518637,-111.869825887762,78.82,"9850 E Cross Canyon Wy, 85255",StreetAddress,geocoder_street,2
+SCOTTSDALE|ARIZONA CANAL / North 68TH Street,ARIZONA CANAL & North 68TH Street,intersection,33.49494,-111.934719,77.46,"Arizona Csr & N 68th St, 85251",StreetInt,geocoder_street,2
+SCOTTSDALE|E BEATRICE ST / North 77TH Street,E BEATRICE ST & North 77TH Street,intersection,33.457545,-111.914028,96.84,"E Beatrice St & N 77th St, 85257",StreetInt,geocoder,2
+SCOTTSDALE|E BELL RD / North 104TH Street,E BELL RD & North 104TH Street,intersection,33.640083,-111.856743,96.57,"E Bell Rd & N 104th St, 85255",StreetInt,geocoder,2
+SCOTTSDALE|E BELMONT AV / North 22ND Street,E BELMONT AVE & North 22ND Street,intersection,33.549408,-112.033323,96.84,"E Belmont Ave & N 22nd St, 85020",StreetInt,geocoder,2
+SCOTTSDALE|E CHAPARRAL RD / East ARIZONA CANAL Road,E CHAPARRAL RD & East ARIZONA CANAL Road,intersection,,,,,,failed,2
+SCOTTSDALE|E CINDER CONE TL / North ALMA SCHOOL Parkway,E CINDER CONE TL & North ALMA SCHOOL Parkway,intersection,33.754005,-111.844125,84.31,"E Cinder Cone Tr & N Alma School Pkwy, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E CORAL GABLES DR / North 12TH Street,E CORAL GABLES DR & North 12TH Street,intersection,33.6258,-112.056786,97.07,"E Coral Gables Dr & N 12th St, 85022",StreetInt,geocoder,2
+SCOTTSDALE|E DEER VALLEY RD / North 16TH Street,E DEER VALLEY RD & North 16TH Street,intersection,33.687846,-112.048479,97.0,"E Deer Valley Rd & N 16th St, 85024",StreetInt,geocoder,2
+SCOTTSDALE|E DESERT JEWEL DR / North ARROYO Drive,E DESERT JEWEL DR & North ARROYO Drive,intersection,33.553566,-111.9701745,97.14,"E Desert Jewel Dr & N Arroyo Dr, 85253",StreetInt,geocoder,2
+SCOTTSDALE|E DESERT PEAK PW / North CAVE CREEK DAM Road,E DESERT PEAK PKWY & North CAVE CREEK DAM Road,intersection,,,,,,failed,2
+SCOTTSDALE|E DOVE VALLEY RD / North 136TH Street,E DOVE VALLEY RD & North 136TH Street,intersection,33.784857,-111.786858,97.07,"E Dove Valley Rd & N 136th St, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E DOVE VALLEY RD / North 14TH Street,E DOVE VALLEY RD & North 14TH Street,intersection,33.784677,-112.0523985,97.0,"E Dove Valley Rd & N 14th St, 85085",StreetInt,geocoder,2
+SCOTTSDALE|E FRANK LLOYD WRIGHT BL / North 76TH Street,E FRANK LLOYD WRIGHT BL & North 76TH Street,intersection,33.636312,-111.9167145,97.39,"E Frank Lloyd Wright Blvd & N 76th St, 85260",StreetInt,geocoder,2
+SCOTTSDALE|E GARFIELD ST / North 77TH Street,E GARFIELD ST & North 77TH Street,intersection,33.456843,-111.913911,95.84,"E Garfield St & N 77th St, 85257",StreetInt,geocoder,2
+SCOTTSDALE|E GOLDEN EAGLE BL / East DESERT TORTOISE Trail,E GOLDEN EAGLE BL & East DESERT TORTOISE Trail,intersection,33.63831,-111.7716345,97.55,"E Golden Eagle Blvd & E Desert Tortoise Tr, 85268",StreetInt,geocoder,2
+SCOTTSDALE|E HARVARD ST / North 77TH Street,E HARVARD ST & North 77TH Street,intersection,33.473439,-111.9142575,96.76,"E Harvard St & N 77th St, 85257",StreetInt,geocoder,2
+SCOTTSDALE|E HATCHER RD / North 13TH Street,E HATCHER RD & North 13TH Street,intersection,33.571305,-112.054518,96.76,"E Hatcher Rd & N 13th St, 85020",StreetInt,geocoder,2
+SCOTTSDALE|E HAWKNEST RD / North 136TH Street,E HAWKNEST RD & North 136TH Street,intersection,33.806628,-111.7868715,96.92,"E Hawknest Rd & N 136th St, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E INDIAN BEND RD / North HAYDEN Road,E INDIAN BEND RD & North HAYDEN Road,intersection,33.538509,-111.9086325,97.0,"E Indian Bend Rd & N Hayden Rd, 85250",StreetInt,geocoder,2
+SCOTTSDALE|E INDIAN SCHOOL RD / North 58TH Way,E INDIAN SCHOOL RD & North 58TH Way,intersection,33.495174,-112.184541,92.89,"W Indian School Rd & N 58th Ave, 85031",StreetInt,geocoder,2
+SCOTTSDALE|E INDIAN SCHOOL RD / North 64TH Street,E INDIAN SCHOOL RD & North 64TH Street,intersection,33.490431,-111.9428505,97.14,"E Indian School Rd & N 64th St, 85251",StreetInt,geocoder,2
+SCOTTSDALE|E INDIAN SCHOOL RD / North 68TH Street,E INDIAN SCHOOL RD & North 68TH Street,intersection,33.494652,-111.9347145,97.14,"E Indian School Rd & N 68th St, 85251",StreetInt,geocoder,2
+SCOTTSDALE|E INDIAN SCHOOL RD / North HAYDEN Road,E INDIAN SCHOOL RD & North HAYDEN Road,intersection,33.494859,-111.9088575,97.14,"E Indian School Rd & N Hayden Rd, 85251",StreetInt,geocoder,2
+SCOTTSDALE|E JOMAX RD / North 95TH Street,E JOMAX RD & North 95TH Street,intersection,33.726735,-111.8782035,96.57,"E Jomax Rd & N 95th St, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E MARIGOLD LN / North COLLEGE Avenue,E MARIGOLD LN & North COLLEGE Avenue,intersection,,,,,,failed,2
+SCOTTSDALE|E MCDOWELL RD / CROSS CUT CANAL,E MCDOWELL RD & CROSS CUT CANAL,intersection,33.465654,-111.9804435,94.37,"E McDowell Rd & Crosscut Csr, 85008",StreetInt,geocoder,2
+SCOTTSDALE|E MCDOWELL RD / North GALVIN Parkway,E MCDOWELL RD & North GALVIN Parkway,intersection,33.465879,-111.943638,97.07,"E McDowell Rd & N Galvin Pkwy, 85257",StreetInt,geocoder,2
+SCOTTSDALE|E MEDLOCK DR / North HAYDEN Road,E MEDLOCK DR & North HAYDEN Road,intersection,33.512022,-111.908673,96.76,"E Medlock Dr & N Hayden Rd, 85250",StreetInt,geocoder,2
+SCOTTSDALE|E MONTOYA LN / North 17TH Way,E MONTOYA LN & North 17TH Way,intersection,33.673041,-112.044816,96.47,"E Montoya Ln & N 17th Wy, 85024",StreetInt,geocoder,2
+SCOTTSDALE|E MURRAY LN / North MILLER Road,E MURRAY LN & North MILLER Road,intersection,33.474483,-111.917547,96.67,"E Murray Ln & N Miller Rd, 85257",StreetInt,geocoder,2
+SCOTTSDALE|E NAVIGATOR LN / North 40TH Street,E NAVIGATOR LN & North 40TH Street,intersection,33.696396,-111.982959,96.92,"E Navigator Ln & N 40th St, 85050",StreetInt,geocoder,2
+SCOTTSDALE|E OLD WEST WY / North 7TH Street,E OLD WEST WY & North 7TH Street,intersection,33.785568,-112.0651965,95.16,"W Old West Wy & N 7th St, 85085",StreetInt,geocoder,2
+SCOTTSDALE|E ORILLO OESTE RD / North 50TH Street,E ORILLO OESTE RD & North 50TH Street,intersection,,,,,,failed,2
+SCOTTSDALE|E PAINT YOUR WAGON TL / North CENTRAL Avenue,E PAINT YOUR WAGON TL & North CENTRAL Avenue,intersection,33.791805,-112.0740075,84.31,"E Paint Your Wagon Tr & N Central Ave, 85085",StreetInt,geocoder,2
+SCOTTSDALE|E PRESERVE WY / North LEGEND TRAIL Parkway,E PRESERVE WY & North LEGEND TRAIL Parkway,intersection,33.793839,-111.877587,97.39,"E Preserve Wy & N Legend Trail Pkwy, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E RANCH RD / North PIMA Road,E RANCH RD & North PIMA Road,intersection,33.773841,-111.8912625,96.36,"E Ranch Rd & N Pima Rd, 85266",StreetInt,geocoder,2
+SCOTTSDALE|E RIO VERDE DR / North 128TH Street,E RIO VERDE DR & North 128TH Street,intersection,33.741387,-111.8042325,96.92,"E Rio Verde Dr & N 128th St, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E SEVEN PALMS DR / North 99TH Place,E SEVEN PALMS DR & North 99TH Place,intersection,33.792498,-111.8669265,94.41,"E Seven Palms Wy & N 99th Pl, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E SIENNA AV / North EAGLE RIDGE Drive,E SIENNA AVE & North EAGLE RIDGE Drive,intersection,,,,,,failed,2
+SCOTTSDALE|E SONORA CREST DR / North EAGLE RIDGE Drive,E SONORA CREST DR & North EAGLE RIDGE Drive,intersection,,,,,,failed,2
+SCOTTSDALE|E STANFORD DR / North 40TH Street,E STANFORD DR & North 40TH Street,intersection,33.51726,-111.995235,95.84,"E Stanford Dr & N 40th St, 85018",StreetInt,geocoder,2
+SCOTTSDALE|E SURREY DR / North CAVE CREEK Road,E SURREY DR & North CAVE CREEK Road,intersection,33.820938,-111.954384,96.92,"E Surrey Dr & N Cave Creek Rd, 85331",StreetInt,geocoder,2
+SCOTTSDALE|E TROON NORTH DR / North 93RD Street,E TROON NORTH DR & North 93RD Street,intersection,33.748524,-111.878505,97.0,"E Troon North Dr & N 93rd St, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E VERBENA LN / North 111TH Street,E VERBENA LN & North 111TH Street,intersection,33.639588,-111.841227,96.84,"E Verbena Ln & N 111th St, 85255",StreetInt,geocoder,2
+SCOTTSDALE|E VIA LINDA / North 115TH Street,E VIA LINDA & North 115TH Street,intersection,33.58971,-111.833154,96.76,"E Via Linda & N 115th St, 85259",StreetInt,geocoder,2
+SCOTTSDALE|E VIA LINDA / North CAP CANAL Boulevard,E VIA LINDA & North CAP CANAL Boulevard,intersection,,,,,,failed,2
+SCOTTSDALE|E WINDGATE PASS DR / East SIERRA PINTA Drive,E WINDGATE PASS DR & East SIERRA PINTA Drive,intersection,33.66909,-111.858093,97.45,"E Windgate Pass Dr & E Sierra Pinta Dr, 85255",StreetInt,geocoder,2
+SCOTTSDALE|N FRANK LLOYD WRIGHT BL / East CACTUS Road,N FRANK LLOYD WRIGHT BL & East CACTUS Road,intersection,33.597342,-111.843171,97.33,"N Frank Lloyd Wright Blvd & E Cactus Rd, 85259",StreetInt,geocoder,2
+SCOTTSDALE|N MILLER RD / East CHAPARRAL Road,N MILLER RD & East CHAPARRAL Road,intersection,33.509484,-111.9174615,96.84,"N Miller Rd & E Chaparral Rd, 85251",StreetInt,geocoder,2
+SCOTTSDALE|N MILLER RD / East JACKRABBIT Road,N MILLER RD & East JACKRABBIT Road,intersection,33.516603,-111.916197,96.92,"N Miller Rd & E Jackrabbit Rd, 85250",StreetInt,geocoder,2
+SCOTTSDALE|N NEW RIVER RD / North 67TH Avenue,N NEW RIVER RD & North 67TH Avenue,intersection,33.853878,-112.2035085,96.84,"N New River Rd & N 67th Ave, 85383",StreetInt,geocoder,2
+SCOTTSDALE|N PIMA RD / East DIXILETA Drive,N PIMA RD & East DIXILETA Drive,intersection,33.755805,-111.8911995,96.67,"N Pima Rd & E Dixileta Dr, 85262",StreetInt,geocoder,2
+SCOTTSDALE|N PIMA RD / East DYNAMITE Boulevard,N PIMA RD & East DYNAMITE Boulevard,intersection,33.741243,-111.891177,97.0,"N Pima Rd & E Dynamite Blvd, 85262",StreetInt,geocoder,2
+SCOTTSDALE|N PIMA-PRINCESS DR N / A101,N PIMA-PRINCESS DR N & A101,intersection,33.646671,-111.9253545,93.0,"E Princess Dr & N Scottsdale Rd, 85054",StreetInt,geocoder,2
+SCOTTSDALE|N RIDGEFORD DR / East MCCORMICK Parkway,N RIDGEFORD DR & East MCCORMICK Parkway,intersection,33.54714,-111.912552,96.27,"N Ridgeford Dr & E McCormick Pkwy, 85258",StreetInt,geocoder,2
+SCOTTSDALE|N SCOTTSDALE RD / East CAMELBACK Road,N SCOTTSDALE RD & East CAMELBACK Road,intersection,33.502257,-111.9261465,97.14,"N Scottsdale Rd & E Camelback Rd, 85251",StreetInt,geocoder,2
+SCOTTSDALE|N SCOTTSDALE RD / East GRAYHAWK Drive,N SCOTTSDALE RD & East GRAYHAWK Drive,intersection,33.676938,-111.9254085,97.14,"N Scottsdale Rd & E Grayhawk Dr, 85054",StreetInt,geocoder,2
+SCOTTSDALE|N SCOTTSDALE RD / East JOMAX Road,N SCOTTSDALE RD & East JOMAX Road,intersection,33.72669,-111.9256245,96.84,"N Scottsdale Rd & E Jomax Rd, 85266",StreetInt,geocoder,2
+SCOTTSDALE|N SCOTTSDALE RD / East RIO SALADO Parkway,N SCOTTSDALE RD & East RIO SALADO Parkway,intersection,33.428844,-111.926277,97.33,"N Scottsdale Rd & E Rio Salado Pkwy, 85281",StreetInt,geocoder,2
+SCOTTSDALE|Unverified locatio,Unverified locatio,address,,,,,,failed,2
+SCOTTSDALE|W ARIZONA CANAL / North 40TH Street,W ARIZONA CANAL & North 40TH Street,intersection,33.510348,-111.995316,76.78,"Arizona Csr & N 40th St, 85018",StreetInt,geocoder_street,2
+SCOTTSDALE|W HAPPY VALLEY RD / North 184TH Avenue,W HAPPY VALLEY RD & North 184TH Avenue,intersection,,,75.12,"E Happy Valley Rd & N Scottsdale Rd, 85255",StreetInt,failed,2
+SCOTTSDALE|W JOMAX RD / North DYSART Road,W JOMAX RD & North DYSART Road,intersection,33.724863,-112.34295,96.57,"W Jomax Rd & N Dysart Rd, 85387",StreetInt,geocoder,2
+SCOTTSDALE|W RUNNING DEER TL / North 60TH Lane,W RUNNING DEER TL & North 60TH Lane,intersection,33.738588,-112.189968,81.28,"W Running Deer Tr & N 60th Ln, 85083",StreetInt,geocoder,2
+SCOTTSDALE|W SHANGRI LA RD / North 15TH Avenue,W SHANGRI LA RD & North 15TH Avenue,intersection,33.587091,-112.091184,96.92,"W Shangri La Rd & N 15th Ave, 85029",StreetInt,geocoder,2
 W A74MP 27,W A74MP 27,address,,,,,,failed,2
 W BELL RD CAVE CREEK SHORE,W BELL RD CAVE CREEK SHORE,address,,,,,,failed,2
 W BOCA RATON RD/N CANTERBURY DR,W BOCA RATON RD & N CANTERBURY DR,intersection,33.611958,-112.074534,97.35,,,geocoder,1

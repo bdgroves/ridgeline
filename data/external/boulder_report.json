@@ -1,0 +1,61 @@
+{
+  "source": "https://maps.bouldercolorado.gov/arcgis/rest/services/fire/FireResponseTimesOpenData/MapServer/0",
+  "incidents": 756,
+  "located": 756,
+  "distinct_points": 233,
+  "by_category": {
+    "water": 175,
+    "mountain": 581
+  },
+  "by_call_type": {
+    "Water Rescue": 157,
+    "Auto-Aid Tech Rescue": 423,
+    "Rescue": 109,
+    "Auto-Aid Rescue": 39,
+    "Mutual Aid": 4,
+    "Auto-Aid Water Rescue": 7,
+    "Illness and Other": 5,
+    "Fire Other": 7,
+    "Medical Alarm": 1,
+    "Fall and Injury": 3,
+    "Overdose and Psychiatric": 1
+  },
+  "by_nfirs": {
+    "Water Rescue": 93,
+    "Auto-Aid Tech Rescue": 304,
+    "Rescue": 88,
+    "Auto-Aid Rescue": 17,
+    "Medical, no patient contact": 20,
+    "Police matter": 3,
+    "No Incident found on arrival at dispatch address": 12,
+    "EMS call, excluding vehicle accident with injury": 35,
+    "Search for person in water": 6,
+    "Swift water rescue": 15,
+    "Search for person on land": 20,
+    "EMS call - medical check non-emergent": 5,
+    "Search for lost person, other": 2,
+    "EMS call - medical check emergent": 11,
+    "Medical assist, assist EMS crew": 12,
+    "Rescue or EMS standby": 16,
+    "Auto-Aid Water Rescue": 6,
+    "Animal problem": 1,
+    "Assist police or other governmental agency": 2,
+    "High-angle rescue": 13,
+    "Swimming/recreational water areas rescue": 4,
+    "Dispatched & cancelled en route": 42,
+    "Water & ice-related rescue, other": 8,
+    "Wrong location": 1,
+    "Motor vehicle accident with injuries": 1,
+    "Public service": 2,
+    "Ice rescue": 10,
+    "Person in distress, Other": 6,
+    "Special type of incident, Other": 1
+  },
+  "excluded_non_backcountry": {
+    "Extrication, rescue, Other": 8
+  },
+  "date_range": [
+    "2015-01-10",
+    "2026-09-25"
+  ]
+}
