@@ -312,8 +312,17 @@ def heat_section(h: dict) -> str:
     if not h or "warning_vs_not" not in h:
         return ""
     ww = {(r["period"], r["days"]): r for r in h["warning_vs_not"]}
-    pre_w, pre_o = ww[("2019–2020", "warning days")], ww[("2019–2020", "other May–Sep days")]
-    post_w, post_o = ww[("2021 on", "warning days")], ww[("2021 on", "other May–Sep days")]
+    pre_w, pre_o = ww[("before", "warning days")], ww[("before", "other May–Sep days")]
+    post_w, post_o = ww[("after", "warning days")], ww[("after", "other May–Sep days")]
+    cy = {int(k): v for k, v in h.get("closure_days_by_year", {}).items()}
+    pol = h.get("policy", [])
+    def _d(iso):
+        from datetime import date as _date
+        x = _date.fromisoformat(iso); return f"{x.strftime('%b')} {x.day}, {x.year}"
+    policy_rows = "".join(
+        f'<tr><td class="num">{_d(p["from"])}</td><td class="num">{esc(p["hours"].replace(":00", "").replace("-", "–"))}</td>'
+        f'<td>{esc("Watch or warning" if p["trigger"] == "watch or warning" else "Warning")}</td><td>{esc(p["note"])}</td></tr>'
+        for p in pol)
     did = h.get("diff_in_diff", {})
     wy = {int(k): v for k, v in h["warning_days_by_year"].items()}
     span_years = [y for y in range(2019, int(h["span"][1][:4]) + 1)]
@@ -349,12 +358,12 @@ def heat_section(h: dict) -> str:
                            COLORS["mountain"], title="Rescues per year at the closure trails")
     yr_other = bar_chart([ab.get(y, {}).get("other", 0) + ab.get(y, {}).get("south", 0) for y in span_years],
                          [str(y) for y in span_years], "#8a8676", title="Rescues per year on other Phoenix trails")
-    hrs = h["closure_hours_on_warning_days"]["2021 on"]
+    hrs = h["closure_hours_on_warning_days"]["after"]
     hr_svg = bar_chart(hrs, [f"{i:02d}" for i in range(24)], COLORS["mountain"], label_every=3, show_values=False,
                        title="Closure-trail rescues on warning days since 2021, by hour")
     closed_list = "".join(
         f'<tr><td class="num">{esc(c["date"])}</td><td class="num">{c["hour"]:02d}:00</td>'
-        f'<td>{esc(TRAILHEADS.get(c["address"], c["address"]))}</td><td class="num">{c["high"]:.0f}°F</td></tr>'
+        f'<td>{esc(TRAILHEADS.get(c["address"], c["address"]))}</td><td class="num">{esc(c.get("window", ""))}</td><td class="num">{c["high"]:.0f}°F</td></tr>'
         for c in h.get("closed_hour_calls", []))
     cd = did.get("closure", {})
     cf = h.get("city_figures")
@@ -389,33 +398,43 @@ def heat_section(h: dict) -> str:
 <section class="block" id="heat"><div class="wrap">
   <h2>Heat &amp; trail closures</h2>
   <div class="prose">
-  <p>Since 2021 Phoenix has closed the <b>Echo Canyon and Cholla trails on Camelback</b> and the <b>Piestewa Peak
-  trails</b> from 9&nbsp;a.m. to 5&nbsp;p.m. on days the National Weather Service has a heat warning in effect. In
-  October 2024 the city proposed adding South Mountain and starting at 8&nbsp;a.m. Does the dispatch data show the
-  closures working? This section lines up all {h["calls"]:,} Phoenix mountain-rescue calls, located or not, with daily
-  highs at Sky Harbor and every heat warning the Weather Service issued for Central Phoenix.</p>
+  <p>Since July 2021 Phoenix has closed the <b>Echo Canyon and Cholla trails on Camelback</b> and the <b>Piestewa Peak
+  trails</b> on National Weather Service heat days, and added South Mountain in October 2024. The hours, season and
+  trigger changed several times (table below), so every date here is scored under the rules in force that day. Does the
+  dispatch data show the closures working? This section lines up all {h["calls"]:,} Phoenix mountain-rescue calls, located
+  or not, with daily highs at Sky Harbor and every heat warning and watch the Weather Service issued for Central Phoenix.</p>
   </div>
+  <div class="scroll"><table>
+    <thead><tr><th class="num">From</th><th>Closed</th><th>Trigger</th><th>Rules</th></tr></thead>
+    <tbody>{policy_rows}</tbody>
+  </table></div>
+  <p class="source">Timeline shared by Yun-Peng (Liz) Lu, University of Maryland, and checked against
+  <a href="https://cronkitenews.azpbs.org/2021/07/15/hiking-trails-on-piestewa-camelback-will-close-when-temperatures-hit-105/">2021</a> and
+  <a href="https://cronkitenews.azpbs.org/2023/09/08/phoenix-hiking-trails-camelback-mountain-piestewa-peak-heat-warning-closures/">2023</a>
+  coverage and the city's <a href="https://www.phoenix.gov/newsroom/parks-news/3256.html">2024 release</a>.</p>
   <div class="kpis">
     {kpi(f"{avg_warn}", "Warning days a year", f"{post_years[0]}–{post_years[-1]} average")}
-    {kpi(f'{pre_w["closure_per_100_days"]:.0f} &rarr; {post_w["closure_per_100_days"]:.0f}', "Closure-trail rescues", "per 100 warning days, before &rarr; after")}
+    {kpi(f'{pre_w["closure_per_100_days"]:.0f} &rarr; {post_w["closure_per_100_days"]:.0f}', "Closure-trail rescues", "per 100 heat days, before &rarr; closure days after")}
     {kpi(f'{pre_o["closure_per_100_days"]:.0f} &rarr; {post_o["closure_per_100_days"]:.0f}', "Same trails, other days", "per 100 ordinary May–Sep days")}
-    {kpi(f"{n_closed}", "Rescues during closed hours", "closure trails, warning days, since 2021")}
+    {kpi(f"{n_closed}", "Rescues during closed hours", "closed trails, closure days, since July 2021")}
   </div>
 
   <h3>Warning days vs. ordinary summer days</h3>
   <div class="scroll"><table>
-    <thead><tr><th>Rescues per 100 days, May–Sep</th><th class="num">2019–20<br>warning</th><th class="num">2019–20<br>ordinary</th>
-      <th class="num">2021 on<br>warning</th><th class="num">2021 on<br>ordinary</th><th class="num">Net change<br><small>95% range</small></th></tr></thead>
+    <thead><tr><th>Rescues per 100 days, May–Sep</th><th class="num">Before<br>heat days</th><th class="num">Before<br>ordinary</th>
+      <th class="num">After<br>closure days</th><th class="num">After<br>ordinary</th><th class="num">Net change<br><small>95% range</small></th></tr></thead>
     <tbody>
       {row("Closure trails (Camelback, Piestewa)", "closure")}
-      {row("South Mountain (proposed Oct 2024)", "south")}
+      {row("South Mountain (closed from Oct 2024)", "south")}
       {row("All other Phoenix trails", "other")}
     </tbody>
   </table></div>
-  <p class="source">Days: {pre_w["n_days"]} warning and {pre_o["n_days"]} ordinary May–Sep days before the program,
-  {post_w["n_days"]} and {post_o["n_days"]} after. "Net change" compares the warning-day rate with the same trails' ordinary-day
-  rate, after vs before; 1.00 means no change, below 1 means warning days got relatively quieter. The range is an
-  approximate 95% interval from the call counts.</p>
+  <p class="source">Before = January 2019 to July 15, 2021; after = from the pilot's start on July 16, 2021. Before,
+  a heat day is one with a warning in effect between 11&nbsp;a.m. and 5&nbsp;p.m. (the first rule); after, a closure day is one
+  with the trigger in effect during that day's closed hours. Days: {pre_w["n_days"]} heat and {pre_o["n_days"]} ordinary
+  May–Sep days before, {post_w["n_days"]} and {post_o["n_days"]} after. "Net change" compares the heat-day rate with the same
+  trails' ordinary-day rate, after vs before; 1.00 means no change, below 1 means heat days got relatively quieter. The
+  range is an approximate 95% interval from the call counts.</p>
 
   <div class="grid2" style="margin-top:18px">
     <figure class="chart"><figcaption>Closure trails · rescues per 100 days, by daily high (°F)</figcaption>{t_closure}</figure>
@@ -423,16 +442,17 @@ def heat_section(h: dict) -> str:
     <figure class="chart"><figcaption>Closure trails · rescues per year, all months</figcaption>{yr_closure}</figure>
     <figure class="chart"><figcaption>Other Phoenix trails (incl. South Mountain) · rescues per year</figcaption>{yr_other}</figure>
     <figure class="chart"><figcaption>NWS heat-warning days per year · Central Phoenix</figcaption>{warn_svg}</figure>
-    <figure class="chart"><figcaption>Closure trails · warning-day rescues since 2021, by hour</figcaption>{hr_svg}</figure>
+    <figure class="chart"><figcaption>Closure trails · rescues on closure days since July 2021, by hour</figcaption>{hr_svg}</figure>
   </div>
 
   <h3>What it says</h3>
   <div class="defs">
-    <div class="def"><h4>Warning days got quieter at the closed trails</h4><p>Before the program the closure trails
-      averaged {pre_w["closure_per_100_days"]:.0f} rescues per 100 warning days; since, {post_w["closure_per_100_days"]:.0f}. Other trails
+    <div class="def"><h4>Heat days got quieter at the closed trails</h4><p>Before the program the closure trails
+      averaged {pre_w["closure_per_100_days"]:.0f} rescues per 100 heat days; on closure days since, {post_w["closure_per_100_days"]:.0f}. Other trails
       barely moved ({pre_w["other_per_100_days"]:.0f} &rarr; {post_w["other_per_100_days"]:.0f}). That's the pattern you'd expect if closures
-      work. But the counts are small ({cd.get("counts", [0]*4)[0]} and {cd.get("counts", [0]*4)[2]} calls), and the 95% range on the net change,
-      {cd.get("ci95", [0, 0])[0]:.2f} to {cd.get("ci95", [0, 0])[1]:.2f}, includes no effect at all.</p></div>
+      work. The net change is {cd.get("ratio", 0):.2f}, about a {round(100 * (1 - cd.get("ratio", 1)))}% relative drop, with a 95% range of
+      {cd.get("ci95", [0, 0])[0]:.2f} to {cd.get("ci95", [0, 0])[1]:.2f}{", which only just excludes no effect" if cd.get("ci95", [0, 1])[1] < 1 else ", which includes no effect at all"}.
+      The counts are small ({cd.get("counts", [0]*4)[0]} and {cd.get("counts", [0]*4)[2]} calls), so treat it as a signal, not a measurement.</p></div>
     <div class="def"><h4>Closures can't explain the long drop</h4><p>The closure trails went from {c19} rescues in 2019 to about
       {c_late} a year in {last3[0]}–{last3[-1]}, while other trails went from {o19} to about {o_late}. But the drop is year-round,
       and there are only about {avg_warn} warning days a year. Even if every warning-day rescue that disappeared was prevented by
@@ -440,22 +460,25 @@ def heat_section(h: dict) -> str:
     <div class="def"><h4>Rescues don't rise with the thermometer</h4><p>Calls per day are roughly flat from below 70°F
       to 110°F and up. At the closure trails, 110-degree days are as quiet as the coolest ones. The city's own review found visitors fall
       as the temperature climbs, so each hiker out there faces more risk even though the count of rescues doesn't grow.</p></div>
-    <div class="def"><h4>Some people go anyway</h4><p>Since 2021 there have been {n_closed} rescues at the closure trails during
-      closed hours on warning days, mostly late morning. Some may have started before 9&nbsp;a.m.; some may be at the trailhead
-      rather than on the trail. The list is below.</p></div>
+    <div class="def"><h4>Some people go anyway</h4><p>Since the pilot began there have been {n_closed} rescues at closed
+      trails during that day's closed hours, none in 2021–22 and most since the 2023 switch to 9&nbsp;a.m. Some may have started
+      before the closure; some may be at the trailhead rather than on the trail. The list is below.</p></div>
   </div>
 
 {city_block}
   <details class="more"><summary>Rescues at closure trails during closed hours ({n_closed})</summary>
-    <div class="scroll"><table><thead><tr><th class="num">Date</th><th class="num">Hour</th><th>Where</th><th class="num">High</th></tr></thead>
+    <div class="scroll"><table><thead><tr><th class="num">Date</th><th class="num">Hour</th><th>Where</th><th class="num">Closed</th><th class="num">High</th></tr></thead>
     <tbody>{closed_list}</tbody></table></div>
   </details>
-  <p class="source">Warning days are dates on which a Weather Service Excessive (since 2025, Extreme) Heat Warning for zone
-  {esc(h["zone"])}, Central Phoenix, was in effect at any point between 9&nbsp;a.m. and 5&nbsp;p.m., from the
-  <a href="https://mesonet.agron.iastate.edu/vtec/">Iowa Environmental Mesonet VTEC archive</a>. For 2021–2024 this gives
-  {", ".join(str(wy.get(y, 0)) for y in (2021, 2022, 2023, 2024))} days; the city's
+  <p class="source">Heat warnings and watches for zone {esc(h["zone"])}, Central Phoenix, come from the
+  <a href="https://mesonet.agron.iastate.edu/vtec/">Iowa Environmental Mesonet VTEC archive</a>. Counting every date a
+  warning touched gives {", ".join(str(wy.get(y, 0)) for y in (2021, 2022, 2023, 2024))} days for 2021–2024, the same as the city's
   <a href="https://www.phoenix.gov/content/dam/phoenix/parkssite/documents/2024-10-24%20phoenix%20trails%20and%20heat%20safety.pdf">2024 program review</a>
-  counts 20, 18, 42 and 45. Daily highs: <a href="https://open-meteo.com/">Open-Meteo</a> historical reanalysis at Sky Harbor.
+  (20, 18, 42, 45). Closure days, which need the trigger in effect during closed hours and fall inside the program's
+  season, number {", ".join(str(cy.get(y, 0)) for y in (2021, 2022, 2023, 2024))}: 2021 counts only the pilot from July 16, and 2022
+  loses July 17, when the warning expired at 2&nbsp;a.m. A watch later upgraded to a warning is stored with its end before its
+  start; it has no in-effect time of its own, and in this zone every 2021 pilot watch was upgraded to a warning for the same
+  days, so watches add no closure days unless a closure began the day a watch was issued. Daily highs: <a href="https://open-meteo.com/">Open-Meteo</a> historical reanalysis at Sky Harbor.
   Trails are assigned from the dispatch address, so unlocated calls count too. The "before" years include 2020, when
   trail use changed with the pandemic.</p>
 </div></section>

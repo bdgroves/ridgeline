@@ -3,20 +3,21 @@ ridgeline / src / analysis / heat.py
 
 Heat and trail closures in Phoenix.
 
-Since 2021 Phoenix has closed the Echo Canyon and Cholla trails on Camelback
-and the Piestewa Peak trails from 9 a.m. to 5 p.m. whenever the National
-Weather Service has an (Excessive/Extreme) Heat Warning in effect. In October
-2024 the city proposed adding South Mountain and starting at 8 a.m.
-(Phoenix Parks and Recreation Board, "Phoenix Trails and Heat Safety",
-24 Oct 2024).
+Phoenix closes its busiest mountain trails on National Weather Service heat
+days. The rules changed several times (POLICY below): a July 2021 pilot at
+11 a.m.-5 p.m. triggered by an Excessive Heat Watch; May-September seasons at
+11-5 on Warnings in 2022-23; year-round from 9 a.m. from 31 Aug 2023; 8 a.m.
+with South Mountain added from 25 Oct 2024; South Mountain narrowed to named
+trails from 27 Mar 2025. Timeline from a researcher's reconstruction (Yun-Peng
+Lu, University of Maryland), checked against contemporary news coverage.
 
 This script asks what the dispatch data can say about that:
 
   * mountain-rescue calls per day by daily high temperature,
-  * on warning days, closure trails vs trails that never closed,
-    before the program (2019-2020) and after (2021 on),
-  * on warning days after 2021, whether calls at the closure trails
-    fall inside or outside the closed hours.
+  * on heat days, closure trails vs trails that never closed, before the
+    program (Jan 2019 - 15 Jul 2021) and after,
+  * on closure days, whether calls at the closed trails fall inside or
+    outside the closed hours in force on that date.
 
 Inputs (fetched when the network allows, otherwise read from the committed copy):
   data/processed/phoenix_fire_sar_clean.parquet  -> data/external/phoenix_mountain_calls.csv
@@ -49,8 +50,32 @@ OUT = EXT / "heat_report.json"
 
 ZONE = "AZZ543"            # NWS Phoenix zone "Central Phoenix"
 MST = timezone(timedelta(hours=-7))   # Arizona: no daylight saving
-PROGRAM_START = date(2021, 5, 1)       # first closures, summer 2021
-CLOSE_HOURS = range(9, 17)             # 9 a.m. to 5 p.m.
+PROGRAM_START = date(2021, 7, 16)      # pilot began Friday 16 July 2021
+CLOSE_END = 17                         # every version closes until 5 p.m.
+PRE_START_HOUR = 11                    # "would-be" window for heat days before the program
+
+# (start, end or None, closure start hour, trigger, trail kinds closed, note)
+POLICY = [
+    (date(2021, 7, 16), date(2021, 9, 30), 11, "watch or warning", {"closure"},
+     "Pilot: Echo Canyon and Piestewa Peak, 11 a.m.-5 p.m., on an Excessive Heat Watch. Cholla was closed for renovation."),
+    (date(2022, 5, 1), date(2022, 9, 30), 11, "warning", {"closure"},
+     "May-September, 11 a.m.-5 p.m., on an Excessive Heat Warning."),
+    (date(2023, 5, 1), date(2023, 8, 30), 11, "warning", {"closure"},
+     "May-September rules, 11 a.m.-5 p.m."),
+    (date(2023, 8, 31), date(2024, 10, 24), 9, "warning", {"closure"},
+     "Year-round, 9 a.m.-5 p.m., on a Warning (Parks Board, 31 Aug 2023)."),
+    (date(2024, 10, 25), date(2025, 3, 26), 8, "warning", {"closure", "south"},
+     "8 a.m.-5 p.m.; South Mountain added (Parks Board, 25 Oct 2024)."),
+    (date(2025, 3, 27), None, 8, "warning", {"closure", "south"},
+     "South Mountain limited to Holbert, Mormon, Hau'pal Loop and Pima Canyon access to the National Trail."),
+]
+
+
+def policy_on(d: date):
+    for p in POLICY:
+        if p[0] <= d and (p[1] is None or d <= p[1]):
+            return p
+    return None
 
 # Trail groups from the dispatch address. Only addresses we are sure of are
 # assigned; anything else is "other".
@@ -113,29 +138,66 @@ def load_warnings() -> pd.DataFrame:
                       params={"ugc": ZONE, "sdate": "2018-01-01", "edate": date.today().isoformat()})
         r.raise_for_status()
         ev = r.json().get("events", [])
-        rows = [{"eventid": e["eventid"], "phenomena": e["phenomena"], "issue": e["issue"],
-                 "expire": e["expire"], "name": e.get("name")}
-                for e in ev if e.get("phenomena") in ("EH", "XH") and e.get("significance") == "W"]
+        # Warnings (W) and watches (A). A watch later upgraded to a warning has
+        # an "expire" (the upgrade time) before its "issue" (its valid start);
+        # those rows carry no in-effect interval of their own and are kept only
+        # for the record. product_id holds the issuance time.
+        rows = [{"eventid": e["eventid"], "phenomena": e["phenomena"],
+                 "significance": e.get("significance"), "issue": e["issue"],
+                 "expire": e["expire"], "name": e.get("name"), "product_id": e.get("product_id")}
+                for e in ev if e.get("phenomena") in ("EH", "XH") and e.get("significance") in ("W", "A")]
         pd.DataFrame(rows).sort_values("issue").to_csv(WARNINGS, index=False)
     except Exception as e:
         print(f"  warnings: using cached copy ({e!r})")
-    return pd.read_csv(WARNINGS)
+    wr = pd.read_csv(WARNINGS)
+    if "significance" not in wr.columns:       # older cached copy: warnings only
+        wr["significance"] = "W"
+    return wr
+
+
+def intervals(wr: pd.DataFrame, sig: tuple[str, ...]) -> list[tuple[datetime, datetime]]:
+    out = []
+    for _, e in wr[wr["significance"].isin(sig)].iterrows():
+        a = datetime.fromisoformat(str(e["issue"]).replace("Z", "+00:00")).astimezone(MST)
+        b = datetime.fromisoformat(str(e["expire"]).replace("Z", "+00:00")).astimezone(MST)
+        if b > a:
+            out.append((a, b))
+    return out
+
+
+def in_effect(iv, d: date, lo_hour: int = 0, hi_hour: int = 24) -> bool:
+    lo = datetime(d.year, d.month, d.day, tzinfo=MST) + timedelta(hours=lo_hour)
+    hi = datetime(d.year, d.month, d.day, tzinfo=MST) + timedelta(hours=hi_hour)
+    return any(a < hi and b > lo for a, b in iv)
 
 
 def warning_days(wr: pd.DataFrame) -> set[date]:
-    """Local dates on which a warning was in effect for any part of 9 a.m.-5 p.m."""
+    """Local dates a warning touched at any hour (how the city's review counts them)."""
     days = set()
-    for _, e in wr.iterrows():
-        a = datetime.fromisoformat(str(e["issue"]).replace("Z", "+00:00")).astimezone(MST)
-        b = datetime.fromisoformat(str(e["expire"]).replace("Z", "+00:00")).astimezone(MST)
+    for a, b in intervals(wr, ("W",)):
         d = a.date()
         while d <= b.date():
-            lo = datetime(d.year, d.month, d.day, 9, tzinfo=MST)
-            hi = datetime(d.year, d.month, d.day, 17, tzinfo=MST)
-            if a < hi and b > lo:
+            if in_effect([(a, b)], d):
                 days.add(d)
             d += timedelta(days=1)
     return days
+
+
+def day_flags(wr: pd.DataFrame, d: date) -> dict:
+    """
+    For one date: the policy in force, whether it was a closure day (trigger in
+    effect during that day's closed hours), and for dates before the program,
+    whether it would have been a heat day under the first rule (11 a.m.-5 p.m.).
+    """
+    W = intervals(wr, ("W",))
+    WA = intervals(wr, ("W", "A"))
+    p = policy_on(d)
+    if p:
+        iv = WA if p[3] == "watch or warning" else W
+        closed = in_effect(iv, d, p[2], CLOSE_END)
+        return {"policy": p, "heat": closed, "closed": closed, "start_hour": p[2], "kinds": p[4]}
+    heat = in_effect(W, d, PRE_START_HOUR, CLOSE_END)
+    return {"policy": None, "heat": heat, "closed": False, "start_hour": PRE_START_HOUR, "kinds": set()}
 
 
 # ── analysis ────────────────────────────────────────────────────────────────
@@ -154,12 +216,23 @@ def main() -> None:
     first = min(calls["date"])
     cal = pd.DataFrame({"date": pd.date_range(first, last, freq="D").date})
     cal = cal.merge(w[["date", "temperature_2m_max"]], on="date", how="left")
-    cal["warning"] = cal["date"].isin(wdays)
+    flags = {d: day_flags(wr, d) for d in cal["date"]}
+    # "warning" = a heat day: a closure day after the program started, or a
+    # would-be closure day (warning in effect 11 a.m.-5 p.m.) before it.
+    cal["warning"] = [flags[d]["heat"] for d in cal["date"]]
+    cal["closed_day"] = [flags[d]["closed"] for d in cal["date"]]
     cal["year"] = [d.year for d in cal["date"]]
     cal["month"] = [d.month for d in cal["date"]]
     cal["post"] = cal["date"] >= PROGRAM_START
     cal["season"] = cal["month"].between(5, 9)
     calls = calls.merge(cal, on="date", how="left")
+    # A call is "during closure" when its trail was closed that day and its hour
+    # falls inside that day's closed window.
+    calls["during_closure"] = [
+        bool(flags[r.date]["closed"] and r.kind in flags[r.date]["kinds"]
+             and flags[r.date]["start_hour"] <= r.hour < CLOSE_END)
+        for r in calls.itertuples()]
+    calls["in_window"] = [flags[r.date]["start_hour"] <= r.hour < CLOSE_END for r in calls.itertuples()]
 
     rep: dict = {"zone": ZONE, "program_start": PROGRAM_START.isoformat(),
                  "span": [first.isoformat(), last.isoformat()],
@@ -167,9 +240,20 @@ def main() -> None:
                  "groups": calls.groupby("group").size().sort_values(ascending=False).to_dict(),
                  "weather_days": int(cal["temperature_2m_max"].notna().sum())}
 
-    # Warning days per year (cross-check: city review says 20, 18, 42, 45 for 2021-24)
+    # Warning days per year. Counting any day a warning touched reproduces the
+    # city's review (20, 18, 42, 45 for 2021-24). Closure days need the trigger in
+    # force during that day's closed hours, which drops e.g. 17 Jul 2022 (a
+    # warning that expired at 2 a.m.).
     wy = pd.Series([d.year for d in wdays]).value_counts().sort_index()
     rep["warning_days_by_year"] = {int(k): int(v) for k, v in wy.items()}
+    cy = cal[cal["closed_day"]].groupby("year").size()
+    rep["closure_days_by_year"] = {int(k): int(v) for k, v in cy.items()}
+    rep["policy"] = [{"from": p[0].isoformat(), "to": p[1].isoformat() if p[1] else None,
+                      "hours": f"{p[2]}:00-17:00", "trigger": p[3], "kinds": sorted(p[4]), "note": p[5]}
+                     for p in POLICY]
+    watch = wr[wr["significance"] == "A"]
+    rep["watches"] = {"rows": int(len(watch)),
+                      "upgraded_no_interval": int((watch["expire"] < watch["issue"]).sum()) if len(watch) else 0}
     hot = cal[cal["temperature_2m_max"] >= 110].groupby("year").size()
     rep["days_110_by_year"] = {int(k): int(v) for k, v in hot.items()}
 
@@ -195,15 +279,15 @@ def main() -> None:
         for warn in (True, False):
             mask = cal["season"] & (cal["post"] == post) & (cal["warning"] == warn)
             nd = int(mask.sum())
-            row = {"period": "2021 on" if post else "2019–2020",
+            row = {"period": "after" if post else "before",
                    "days": "warning days" if warn else "other May–Sep days", "n_days": nd}
             cm = calls["season"] & (calls["post"] == post) & (calls["warning"] == warn)
             for kind in ("closure", "south", "other"):
                 n = int((cm & (calls["kind"] == kind)).sum())
                 row[kind] = n
                 row[f"{kind}_per_100_days"] = round(100 * n / nd, 1) if nd else None
-            # closed hours only
-            n = int((cm & (calls["kind"] == "closure") & calls["hour"].isin(CLOSE_HOURS)).sum())
+            # inside that day's closed window (or the 11-5 would-be window before)
+            n = int((cm & (calls["kind"] == "closure") & calls["in_window"]).sum())
             row["closure_in_closed_hours"] = n
             row["closure_in_closed_hours_per_100_days"] = round(100 * n / nd, 1) if nd else None
             dd.append(row)
@@ -216,10 +300,10 @@ def main() -> None:
     did = {}
     for kind in ("closure", "south", "other"):
         pre_w, pre_o, post_w, post_o = (next(r for r in dd if r["period"] == p and r["days"] == d)
-                                        for p, d in [("2019–2020", "warning days"),
-                                                     ("2019–2020", "other May–Sep days"),
-                                                     ("2021 on", "warning days"),
-                                                     ("2021 on", "other May–Sep days")])
+                                        for p, d in [("before", "warning days"),
+                                                     ("before", "other May–Sep days"),
+                                                     ("after", "warning days"),
+                                                     ("after", "other May–Sep days")])
         n = [pre_w[kind], pre_o[kind], post_w[kind], post_o[kind]]
         d = [pre_w["n_days"], pre_o["n_days"], post_w["n_days"], post_o["n_days"]]
         if min(n) == 0:
@@ -240,13 +324,14 @@ def main() -> None:
     for post in (False, True):
         m = (calls["kind"] == "closure") & calls["warning"] & (calls["post"] == post)
         h = calls.loc[m, "hour"].value_counts().reindex(range(24), fill_value=0)
-        hrs["2021 on" if post else "2019–2020"] = [int(x) for x in h]
+        hrs["after" if post else "before"] = [int(x) for x in h]
     rep["closure_hours_on_warning_days"] = hrs
 
     # 4. The list of post-program calls at closure trails inside closed hours
-    m = (calls["kind"] == "closure") & calls["warning"] & calls["post"] & calls["hour"].isin(CLOSE_HOURS)
+    m = calls["during_closure"]
     rep["closed_hour_calls"] = [
-        {"date": str(r.date), "hour": int(r.hour), "address": r.address, "high": r.temperature_2m_max}
+        {"date": str(r.date), "hour": int(r.hour), "address": r.address, "high": r.temperature_2m_max,
+         "window": f"{flags[r.date]['start_hour']}:00-17:00"}
         for r in calls[m].itertuples()]
 
     # 5. May-Sep calls by year and kind (compare with city-reported counts)
@@ -268,7 +353,7 @@ def main() -> None:
         "ours_may_oct": {int(y): int(n) for y, n in calls[cl & heat_season].groupby("year").size().items()},
         "ours_nov_apr": {int(y): int(n) for y, n in calls[cl & ~heat_season].groupby("year").size().items()},
         "ours_closed_hours_on_warning_days": {int(y): int(n) for y, n in calls[
-            cl & calls["warning"] & calls["hour"].isin(CLOSE_HOURS)].groupby("year").size().items()},
+            cl & calls["during_closure"]].groupby("year").size().items()},
     }
 
     OUT.write_text(json.dumps(rep, indent=1, default=str))

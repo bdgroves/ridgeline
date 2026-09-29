@@ -42,17 +42,32 @@ These are descriptive patterns in dispatch counts. None of them is a causal clai
 
 **Phoenix mountain rescues have fallen by about a fifth.** Counting every call, located or not, there were 255 in 2019 and about 203 a year in 2023–2025. (An earlier version said "about a third", from located calls only; that overstated the drop, because which calls could be located changed over time.) Those years overlap Phoenix's heat-triggered trail closures, but the closures can't be most of the explanation (next paragraph). Other changes over the same years (visitation, dispatch coding, the pandemic) could produce the same shape.
 
-**Heat closures: a signal on warning days, too small to explain the long drop.** Since 2021 Phoenix closes the Echo Canyon, Cholla and Piestewa Peak trails from 9 a.m. to 5 p.m. whenever the National Weather Service has a heat warning in effect. `src/analysis/heat.py` lines up all 1,619 mountain-rescue calls (trail assigned from the dispatch address, so unlocated calls count) with every NWS heat warning for zone AZZ543, Central Phoenix, and Open-Meteo daily highs at Sky Harbor. The warning-day count matches the city's own 2024 program review within one day a year (20, 17, 42, 45 vs 20, 18, 42, 45 for 2021–2024).
+**Heat closures: a signal on closure days, too small to explain the long drop.** Phoenix closes the Echo Canyon, Cholla and Piestewa Peak trails on National Weather Service heat days, and added South Mountain in October 2024. The rules changed several times, and `src/analysis/heat.py` scores every date under the rules in force that day:
 
-| Rescues per 100 days, May–Sep | 2019–20 warning | 2019–20 ordinary | 2021 on warning | 2021 on ordinary | Net change (95% range) |
+| From | Closed | Trigger | Rules |
+|---|---|---|---|
+| Jul 16, 2021 | 11 a.m.–5 p.m. | Excessive Heat Watch | Pilot through Sep 30: Echo Canyon and Piestewa Peak (Cholla closed for renovation) |
+| May 1, 2022 | 11 a.m.–5 p.m. | Warning | May–September |
+| May 1, 2023 | 11 a.m.–5 p.m. | Warning | May–September rules |
+| Aug 31, 2023 | 9 a.m.–5 p.m. | Warning | Year-round |
+| Oct 25, 2024 | 8 a.m.–5 p.m. | Warning | South Mountain added |
+| Mar 27, 2025 | 8 a.m.–5 p.m. | Warning | South Mountain limited to Holbert, Mormon, Hau'pal Loop and Pima Canyon access to the National Trail |
+
+The timeline was shared by Yun-Peng (Liz) Lu (University of Maryland) and checked against [2021](https://cronkitenews.azpbs.org/2021/07/15/hiking-trails-on-piestewa-camelback-will-close-when-temperatures-hit-105/) and [2023](https://cronkitenews.azpbs.org/2023/09/08/phoenix-hiking-trails-camelback-mountain-piestewa-peak-heat-warning-closures/) coverage and the city's [2024 release](https://www.phoenix.gov/newsroom/parks-news/3256.html).
+
+The analysis lines up all 1,619 mountain-rescue calls (trail assigned from the dispatch address, so unlocated calls count) with every NWS heat warning and watch for zone AZZ543, Central Phoenix, from the IEM VTEC archive, and Open-Meteo daily highs at Sky Harbor. Counting every date a warning touched gives 20, 18, 42 and 45 days for 2021–2024, exactly the city's 2024 program review. *Closure days* are stricter: the trigger must be in effect during that day's closed hours, inside the program's season (8, 17, 42 and 45 days; 2021 is the pilot only, and 2022 drops July 17, when the warning expired at 2 a.m.). *Before* is January 2019 to July 15, 2021, where a heat day is one with a warning in effect from 11 a.m. to 5 p.m.
+
+| Rescues per 100 days, May–Sep | Before, heat days | Before, ordinary | After, closure days | After, ordinary | Net change (95% range) |
 |---|---|---|---|---|---|
-| Closure trails | 28 | 34 | 14 | 26 | 0.68 (0.34–1.33) |
-| South Mountain | 12 | 10 | 9 | 7 | 1.06 (0.39–2.91) |
-| Other Phoenix trails | 36 | 33 | 29 | 26 | 1.02 (0.58–1.79) |
+| Closure trails | 32 | 34 | 11 | 24 | 0.49 (0.25–0.98) |
+| South Mountain (closed from Oct 2024) | 13 | 10 | 8 | 7 | 0.83 (0.31–2.22) |
+| Other Phoenix trails | 34 | 32 | 30 | 26 | 1.08 (0.62–1.87) |
 
-Warning days got relatively quieter only at the closed trails, which is what working closures would look like, but the counts are small (19 and 21 calls) and the interval includes no effect. The closure trails' long decline (119 rescues in 2019, about 74 a year in 2023–2025) is year-round, and with about 31 warning days a year the closures could account for about 4 rescues a year at most. Rescues per day don't rise with temperature. Since 2021, 21 rescues at the closure trails happened during closed hours on warning days; the site lists them.
+Closure days got relatively quieter only at the closed trails, about a 51% relative drop, and the interval only just excludes no effect. The counts are small (25 and 15 calls), so it's a signal, not a measurement. The closure trails' long decline (119 rescues in 2019, about 74 a year in 2023–2025) is year-round, and with about 31 warning days a year the closures could account for about 6 rescues a year at most. Rescues per day don't rise with temperature. Since the pilot began, 17 rescues at closed trails happened during that day's closed hours (none in 2021–22); the site lists them.
 
-**The city's "rescues on closed trails" figures.** Phoenix's [October 2024 release](https://www.phoenix.gov/newsroom/parks-news/3256.html) reports 57, 47, 30 and 35 rescues on closed trails for 2021–2024, without a definition. Counting every mountain-rescue call at the closure trails from May through October, on any day and at any hour, gives 55, 50, 33 and 36, within 3 a year. So the figures most likely count *trails that close*, not rescues while closed (those are 5, 1, 3 and 9). Over the same years the November–April count at those trails fell just as much (53 to 35), with no closures in effect.
+**Watches.** A watch later upgraded to a warning is stored in the VTEC archive with its end before its start, so it has no in-effect time of its own. In this zone every 2021 pilot watch was upgraded to a warning covering the same days, so watches add no closure days unless a closure began on the day a watch was *issued* (the product time). That reading isn't used here.
+
+**The city's "rescues on closed trails" figures.** Phoenix's [October 2024 release](https://www.phoenix.gov/newsroom/parks-news/3256.html) reports 57, 47, 30 and 35 rescues on closed trails for 2021–2024, without a definition. Counting every mountain-rescue call at the closure trails from May through October, on any day and at any hour, gives 55, 50, 33 and 36, within 3 a year. So the figures most likely count *trails that close*, not rescues while closed (those are 0, 0, 3 and 9 under the rules in force each day). Over the same years the November–April count at those trails fell just as much (53 to 35), with no closures in effect.
 
 **National parks: a few parks carry most of the load.** From 2016 to 2020 the Park Service logged about 3,050 search-and-rescue incidents a year. Yosemite (~280 a year), Grand Canyon (~260) and Lake Mead (~240) account for 26% of them. Per visitor, Sequoia & Kings Canyon is highest at 90 incidents per million visits, then Yosemite (70) and Grand Canyon (47). Great Smoky Mountains, the most-visited park, has 5.8. July is the busiest month nationally. At Yosemite, June through September is the season, and January is almost silent.
 
@@ -276,6 +291,7 @@ ridgeline/
 - **Opposite-direction matches.** A Scottsdale call on *East* Indian School Road had been matched with a high score to *West* Indian School Road, 15 miles away. Matches on the right street with the opposite direction are now rejected (7 of about 1,300).
 - **Cholla's new address.** Since the Cholla Trail reopened in 2022, Phoenix Fire logs its calls at `51XX N INVERGORDON RD`, the trailhead corner in Paradise Valley, instead of `62XX E CHOLLA LN`. Those 59 rescues had failed to geocode, and the first run of the heat analysis counted them as "other trails", which overstated the closure-trail decline. Both are fixed.
 - **Trend from all calls.** The "down about a third" headline used located calls only. Because the Cholla calls became unlocatable from 2022, that overstated the decline. Trends now use all 1,619 calls: down about a fifth.
+- **Closure policy timeline.** The first heat analysis assumed one rule (9 a.m.–5 p.m. on a warning, from May 2021). The program actually began as a July 16, 2021 pilot at 11 a.m.–5 p.m. on a watch, and moved to 9 a.m. only on August 31, 2023. With each date scored under its own rules, the closure-trail net change went from 0.68 (0.34–1.33) to 0.49 (0.25–0.98), and closed-hour rescues from 21 to 17. Thanks to Yun-Peng (Liz) Lu for the timeline and for flagging the watch records.
 - **Wrong street type.** Near-miss matches must now also have the same street type. This rejected six wrong matches, including `7XX E DESERT FOOTHILLS PW` → Desert Flower Ln (21 South Mountain rescues, now unplaced rather than misplaced) and Invergordon Rd → Invergordon Pl, three miles north.
 
 ---
