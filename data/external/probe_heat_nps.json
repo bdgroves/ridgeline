@@ -1,0 +1,1761 @@
+{
+ "weather": {
+  "days": 3185,
+  "columns": [
+   "time",
+   "temperature_2m_max",
+   "temperature_2m_min",
+   "apparent_temperature_max",
+   "precipitation_sum"
+  ]
+ },
+ "nps_foia": {
+  "page": "https://www.nps.gov/aboutus/foia/foia-frd.htm",
+  "all_links": [
+   "https://www.nps.gov/aboutus/foia/upload/1stAmendmentPermitsJan-Jun2019.xlsx",
+   "https://www.nps.gov/aboutus/foia/upload/20-2280-search-results-Sasquatch.xlsx",
+   "https://www.nps.gov/aboutus/foia/upload/FOIA-FAQ-NPS-Mortality-Data-CY2007-to-CY2023-Released-August-2023.xlsx",
+   "https://www.nps.gov/aboutus/foia/upload/Fee-Increase-Public-Comments.xls",
+   "https://www.nps.gov/aboutus/foia/upload/NPS-SAR-Incidents-List-2013-2018.xlsx",
+   "https://www.nps.gov/aboutus/foia/upload/NPS_SO3431_QR_Comments-For-Release.xlsx",
+   "https://www.nps.gov/aboutus/foia/upload/PM-11-03-Sales-Data-Collection-Effort_Final.xlsx",
+   "https://www.nps.gov/aboutus/foia/upload/SAR-Incidents-List-2019-2020.xlsx",
+   "https://www.nps.gov/aboutus/foia/upload/TICA_8152016-9302016_FOIA_2017-02-27.xlsx",
+   "https://www.nps.gov/features/foia/CHIS_GMP_PublicComments_forWEB.xls",
+   "https://www.nps.gov/aboutus/foia/upload/NPS-FY-2020-Part-1.csv",
+   "https://www.nps.gov/aboutus/foia/upload/NPS-FY-2020-Part-2.csv",
+   "https://www.nps.gov/aboutus/foia/upload/NPS-FY-2021.csv",
+   "https://www.nps.gov/aboutus/foia/upload/NPS-FY-2022.csv",
+   "https://www.nps.gov/aboutus/foia/upload/NPS-FY-2023.csv"
+  ],
+  "files": {
+   "20-2280-search-results-Sasquatch.xlsx": {
+    "url": "https://www.nps.gov/aboutus/foia/upload/20-2280-search-results-Sasquatch.xlsx",
+    "bytes": 17881,
+    "sheets": {
+     "Batch1-Result1": {
+      "header_row": 0,
+      "columns": [
+       "Incident #",
+       "CY",
+       "Summary",
+       "Park Alpha"
+      ],
+      "rows": 3,
+      "sample": [
+       [
+        "NP20109014",
+        "2020",
+        "traffic control device/pilot car - bigfoot picnic area - written warn",
+        "BADL"
+       ],
+       [
+        "NP20165493",
+        "2020",
+        "Suspicious circumstance- Bigfoot hunters flocking to Yampa Bench Road report \"bone piles\" near road and bigfoot sighting near Cleopatra's Couch; bone piles may be related to poaching, possible OB camping along bench road, unprepared visitors visiting area in winter may result in increased risk of SARs; Yampa Bench Road, Echo Park, Cleopatras Couch, Sage Creek Trail; ",
+        "DINO"
+       ],
+       [
+        "NP19127816",
+        "2019",
+        "On the above date and time I received a call from dispatch that pertained to a man that had shot a gun at First Creek.  The individual claimed to have been shooting at Sasquatch.",
+        "MACA"
+       ]
+      ],
+      "values:Park Alpha": {
+       "distinct": 3,
+       "top": [
+        [
+         "BADL",
+         1
+        ],
+        [
+         "DINO",
+         1
+        ],
+        [
+         "MACA",
+         1
+        ]
+       ]
+      },
+      "yosemite_rows": 0,
+      "yosemite_sample": [],
+      "vocab:Incident #": [
+       [
+        "NP20109014",
+        1
+       ],
+       [
+        "NP20165493",
+        1
+       ],
+       [
+        "NP19127816",
+        1
+       ]
+      ],
+      "vocab:CY": [
+       [
+        "2020",
+        2
+       ],
+       [
+        "2019",
+        1
+       ]
+      ],
+      "vocab:Summary": [
+       [
+        "traffic control device/pilot car - bigfoot picnic area - written warn",
+        1
+       ],
+       [
+        "Suspicious circumstance- Bigfoot hunters flocking to Yampa Bench Road report \"bone piles\" near road and bigfoot sighting near Cleopatra's Couch; bone piles may be related to poaching, possible OB camping along bench road, unprepared visitors visiting area in winter may result in increased risk of SARs; Yampa Bench Road, Echo Park, Cleopatras Couch, Sage Creek Trail; ",
+        1
+       ],
+       [
+        "On the above date and time I received a call from dispatch that pertained to a man that had shot a gun at First Creek.  The individual claimed to have been shooting at Sasquatch.",
+        1
+       ]
+      ],
+      "vocab:Park Alpha": [
+       [
+        "BADL",
+        1
+       ],
+       [
+        "DINO",
+        1
+       ],
+       [
+        "MACA",
+        1
+       ]
+      ]
+     }
+    }
+   },
+   "NPS-SAR-Incidents-List-2013-2018.xlsx": {
+    "url": "https://www.nps.gov/aboutus/foia/upload/NPS-SAR-Incidents-List-2013-2018.xlsx",
+    "bytes": 392849,
+    "sheets": {
+     "Batch1-Result1": {
+      "header_row": 0,
+      "columns": [
+       "IncidentNum",
+       "IncidentDate",
+       "IncType",
+       "ParkAlphaCode",
+       "Region"
+      ],
+      "rows": 12243,
+      "sample": [
+       [
+        "NP13000101",
+        "01/01/2013",
+        "Search: Land Area (NPS-96-00-00)",
+        "LAKE",
+        "PWR"
+       ],
+       [
+        "NP13000514",
+        "01/04/2013",
+        "Search: Land Area (NPS-96-00-00)",
+        "JOTR",
+        "PWR"
+       ],
+       [
+        "NP13000857",
+        "01/05/2013",
+        "Search: Land Area (NPS-96-00-00)",
+        "COLM",
+        "IMR"
+       ]
+      ],
+      "values:ParkAlphaCode": {
+       "distinct": 186,
+       "top": [
+        [
+         "YOSE",
+         1022
+        ],
+        [
+         "GRCA",
+         867
+        ],
+        [
+         "",
+         858
+        ],
+        [
+         "LAKE",
+         793
+        ],
+        [
+         "SEKI",
+         704
+        ],
+        [
+         "ROMO",
+         560
+        ],
+        [
+         "YELL",
+         557
+        ],
+        [
+         "ZION",
+         386
+        ],
+        [
+         "GRSM",
+         314
+        ],
+        [
+         "SHEN",
+         272
+        ],
+        [
+         "GRTE",
+         248
+        ],
+        [
+         "ARCH",
+         220
+        ],
+        [
+         "GOGA",
+         216
+        ],
+        [
+         "GLAC",
+         212
+        ],
+        [
+         "GLCA",
+         199
+        ],
+        [
+         "OLYM",
+         189
+        ],
+        [
+         "BUFF",
+         177
+        ],
+        [
+         "NOCA",
+         166
+        ],
+        [
+         "DENA",
+         164
+        ],
+        [
+         "BIBE",
+         152
+        ],
+        [
+         "CANY",
+         151
+        ],
+        [
+         "MORA",
+         142
+        ],
+        [
+         "BRCA",
+         133
+        ],
+        [
+         "SLBE",
+         132
+        ],
+        [
+         "JOTR",
+         117
+        ],
+        [
+         "EVER",
+         115
+        ],
+        [
+         "PORE",
+         113
+        ],
+        [
+         "OZAR",
+         111
+        ],
+        [
+         "BLRI",
+         92
+        ],
+        [
+         "ACAD",
+         89
+        ]
+       ]
+      },
+      "yosemite_rows": 1022,
+      "yosemite_sample": [
+       [
+        "NP13020941",
+        "02/04/2013",
+        "Search: Land Area (NPS-96-00-00)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP13025699",
+        "05/29/2013",
+        "SAR (Search and Rescue)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP13052194",
+        "07/27/2013",
+        "Search: Land Area (NPS-96-00-00)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP13059257",
+        "07/12/2013",
+        "Search: Land Area (NPS-96-00-00)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP13072996",
+        "07/06/2013",
+        "Search: Land Area (NPS-96-00-00)",
+        "YOSE",
+        "PWR"
+       ]
+      ],
+      "vocab:IncType": [
+       [
+        "SAR (Search and Rescue)",
+        10142
+       ],
+       [
+        "Search: Land Area (NPS-96-00-00)",
+        1731
+       ],
+       [
+        "Search: Water Area (NPS-96-10-00)",
+        370
+       ]
+      ],
+      "vocab:Region": [
+       [
+        "IMR",
+        4198
+       ],
+       [
+        "PWR",
+        4101
+       ],
+       [
+        "SER",
+        967
+       ],
+       [
+        "",
+        905
+       ],
+       [
+        "MWR",
+        889
+       ],
+       [
+        "NER",
+        727
+       ],
+       [
+        "AKR",
+        366
+       ],
+       [
+        "NCR",
+        89
+       ],
+       [
+        "SE",
+        1
+       ]
+      ]
+     }
+    }
+   },
+   "SAR-Incidents-List-2019-2020.xlsx": {
+    "url": "https://www.nps.gov/aboutus/foia/upload/SAR-Incidents-List-2019-2020.xlsx",
+    "bytes": 262776,
+    "sheets": {
+     "Commands": {
+      "header_row": 0,
+      "columns": [
+       "SET ROWLIMIT 100000"
+      ],
+      "rows": 11,
+      "sample": [
+       [
+        "SELECT"
+       ],
+       [
+        "Occurrence.OccurrenceFileNoG AS IncidentNum,"
+       ],
+       [
+        "Occurrence.StartTimeDG AS IncidentDate,"
+       ]
+      ],
+      "yosemite_rows": 0,
+      "yosemite_sample": [],
+      "vocab:SET ROWLIMIT 100000": [
+       [
+        "SELECT",
+        1
+       ],
+       [
+        "Occurrence.OccurrenceFileNoG AS IncidentNum,",
+        1
+       ],
+       [
+        "Occurrence.StartTimeDG AS IncidentDate,",
+        1
+       ],
+       [
+        "Occurrence.OccurrenceStdOccTypeRId_L AS IncType,",
+        1
+       ],
+       [
+        "Occurrence.ESAreaLevel4 AS ParkAlphaCode,",
+        1
+       ],
+       [
+        "Occurrence.ESAreaLevel6 AS Region,",
+        1
+       ],
+       [
+        "Occurrence.Summary",
+        1
+       ],
+       [
+        "FROM Occurrence",
+        1
+       ],
+       [
+        "WHERE OccurrenceStdOccTypeRId = '95825003000000037240661' ",
+        1
+       ],
+       [
+        "AND Occurrence.StartTimeTZV2I = '[20190101 --:--:--:---,20210813 --:--:--:---]' ",
+        1
+       ],
+       [
+        "AND Occurrence.ACCDomain = 'USA/DOI/NPS/'",
+        1
+       ]
+      ]
+     },
+     "Batch1-Result1": {
+      "header_row": 0,
+      "columns": [
+       "IncidentNum",
+       "IncidentDate",
+       "IncType",
+       "ParkAlphaCode",
+       "Region"
+      ],
+      "rows": 8237,
+      "sample": [
+       [
+        "NP19000290",
+        "01/01/2019",
+        "SAR (Search and Rescue)",
+        "BRCA",
+        "IMR"
+       ],
+       [
+        "NP19000320",
+        "01/01/2019",
+        "SAR (Search and Rescue)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP20000318",
+        "01/01/2020",
+        "SAR (Search and Rescue)",
+        "BLRI",
+        "SER"
+       ]
+      ],
+      "values:ParkAlphaCode": {
+       "distinct": 166,
+       "top": [
+        [
+         "LAKE",
+         854
+        ],
+        [
+         "GRCA",
+         762
+        ],
+        [
+         "YOSE",
+         617
+        ],
+        [
+         "",
+         416
+        ],
+        [
+         "SEKI",
+         381
+        ],
+        [
+         "YELL",
+         324
+        ],
+        [
+         "ROMO",
+         258
+        ],
+        [
+         "ZION",
+         253
+        ],
+        [
+         "GLCA",
+         241
+        ],
+        [
+         "OLYM",
+         205
+        ],
+        [
+         "GRTE",
+         202
+        ],
+        [
+         "GRSM",
+         191
+        ],
+        [
+         "MORA",
+         156
+        ],
+        [
+         "ARCH",
+         147
+        ],
+        [
+         "GLAC",
+         144
+        ],
+        [
+         "BUFF",
+         134
+        ],
+        [
+         "BIBE",
+         114
+        ],
+        [
+         "DEWA",
+         114
+        ],
+        [
+         "CANY",
+         110
+        ],
+        [
+         "GOGA",
+         106
+        ],
+        [
+         "SHEN",
+         99
+        ],
+        [
+         "EVER",
+         93
+        ],
+        [
+         "PIRO",
+         88
+        ],
+        [
+         "ACAD",
+         87
+        ],
+        [
+         "OZAR",
+         86
+        ],
+        [
+         "BRCA",
+         83
+        ],
+        [
+         "DENA",
+         80
+        ],
+        [
+         "BISO",
+         78
+        ],
+        [
+         "SLBE",
+         77
+        ],
+        [
+         "JOTR",
+         76
+        ]
+       ]
+      },
+      "yosemite_rows": 617,
+      "yosemite_sample": [
+       [
+        "NP19000320",
+        "01/01/2019",
+        "SAR (Search and Rescue)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP20000770",
+        "01/02/2020",
+        "SAR (Search and Rescue)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP19000938",
+        "01/03/2019",
+        "SAR (Search and Rescue)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP20001463",
+        "01/04/2020",
+        "SAR (Search and Rescue)",
+        "YOSE",
+        "PWR"
+       ],
+       [
+        "NP19005068",
+        "01/15/2019",
+        "SAR (Search and Rescue)",
+        "YOSE",
+        "PWR"
+       ]
+      ],
+      "vocab:Region": [
+       [
+        "IMR",
+        2995
+       ],
+       [
+        "PWR",
+        2873
+       ],
+       [
+        "SER",
+        670
+       ],
+       [
+        "MWR",
+        619
+       ],
+       [
+        "NER",
+        497
+       ],
+       [
+        "",
+        395
+       ],
+       [
+        "AKR",
+        153
+       ],
+       [
+        "NCR",
+        35
+       ]
+      ]
+     }
+    }
+   }
+  }
+ },
+ "iem_heat": {
+  "az_zones_phoenixish": [
+   {
+    "index": 7,
+    "ugc": "AZC013",
+    "name": "Maricopa",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 22,
+    "ugc": "AZZ009",
+    "name": "Northeast Plateaus and Mesas Hwy 264 Northward",
+    "state": "AZ",
+    "wfo": "FGZ"
+   },
+   {
+    "index": 23,
+    "ugc": "AZZ010",
+    "name": "Chinle Valley",
+    "state": "AZ",
+    "wfo": "FGZ"
+   },
+   {
+    "index": 25,
+    "ugc": "AZZ012",
+    "name": "Little Colorado River Valley in Coconino County",
+    "state": "AZ",
+    "wfo": "FGZ"
+   },
+   {
+    "index": 26,
+    "ugc": "AZZ013",
+    "name": "Little Colorado River Valley in Navajo County",
+    "state": "AZ",
+    "wfo": "FGZ"
+   },
+   {
+    "index": 27,
+    "ugc": "AZZ014",
+    "name": "Little Colorado River Valley in Apache County",
+    "state": "AZ",
+    "wfo": "FGZ"
+   },
+   {
+    "index": 32,
+    "ugc": "AZZ037",
+    "name": "Yavapai County Valleys and Basins",
+    "state": "AZ",
+    "wfo": "FGZ"
+   },
+   {
+    "index": 34,
+    "ugc": "AZZ039",
+    "name": "Black Mesa Area",
+    "state": "AZ",
+    "wfo": "FGZ"
+   },
+   {
+    "index": 35,
+    "ugc": "AZZ040",
+    "name": "Northeast Plateaus and Mesas South of Hwy 264",
+    "state": "AZ",
+    "wfo": "FGZ"
+   },
+   {
+    "index": 38,
+    "ugc": "AZZ503",
+    "name": "Upper Santa Cruz River and Altar Valleys including Nogales",
+    "state": "AZ",
+    "wfo": "TWC"
+   },
+   {
+    "index": 39,
+    "ugc": "AZZ504",
+    "name": "Tucson Metro Area including Tucson/Green Valley/Marana/Vail",
+    "state": "AZ",
+    "wfo": "TWC"
+   },
+   {
+    "index": 42,
+    "ugc": "AZZ507",
+    "name": "Upper San Pedro River Valley including Sierra Vista/Benson",
+    "state": "AZ",
+    "wfo": "TWC"
+   },
+   {
+    "index": 44,
+    "ugc": "AZZ509",
+    "name": "Upper Gila River and Aravaipa Valleys including Clifton/Safford",
+    "state": "AZ",
+    "wfo": "TWC"
+   },
+   {
+    "index": 51,
+    "ugc": "AZZ530",
+    "name": "Parker Valley",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 55,
+    "ugc": "AZZ534",
+    "name": "Aguila Valley",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 57,
+    "ugc": "AZZ536",
+    "name": "Gila River Valley",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 58,
+    "ugc": "AZZ537",
+    "name": "Northwest Valley",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 63,
+    "ugc": "AZZ542",
+    "name": "Deer Valley",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 64,
+    "ugc": "AZZ543",
+    "name": "Central Phoenix",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 65,
+    "ugc": "AZZ544",
+    "name": "North Phoenix/Glendale",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 66,
+    "ugc": "AZZ545",
+    "name": "New River Mesa",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 67,
+    "ugc": "AZZ546",
+    "name": "Scottsdale/Paradise Valley",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 69,
+    "ugc": "AZZ548",
+    "name": "East Valley",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 70,
+    "ugc": "AZZ549",
+    "name": "Fountain Hills/East Mesa",
+    "state": "AZ",
+    "wfo": "PSR"
+   },
+   {
+    "index": 72,
+    "ugc": "AZZ551",
+    "name": "Southeast Valley/Queen Creek",
+    "state": "AZ",
+    "wfo": "PSR"
+   }
+  ],
+  "AZZ023": {
+   "n_events": 0,
+   "n_heat_warnings": 0,
+   "keys": [],
+   "heat_sample": [],
+   "name": null
+  },
+  "AZZ537": {
+   "n_events": 226,
+   "n_heat_warnings": 69,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ537",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0005",
+     "issue": "2018-06-21T17:00:00Z",
+     "expire": "2018-06-23T04:00:00Z",
+     "eventid": 5,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ537",
+     "product_id": "201806202043-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0006",
+     "issue": "2018-07-05T17:00:00Z",
+     "expire": "2018-07-07T04:00:00Z",
+     "eventid": 6,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ537",
+     "product_id": "201807041027-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ540": {
+   "n_events": 242,
+   "n_heat_warnings": 71,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0001",
+     "issue": "2018-05-06T17:00:00Z",
+     "expire": "2018-05-07T03:00:00Z",
+     "eventid": 1,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ540",
+     "product_id": "201805041929-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0003",
+     "issue": "2018-06-03T18:00:00Z",
+     "expire": "2018-06-05T03:00:00Z",
+     "eventid": 3,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ540",
+     "product_id": "201806011951-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ540",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ541": {
+   "n_events": 196,
+   "n_heat_warnings": 65,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ541",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0005",
+     "issue": "2018-06-21T17:00:00Z",
+     "expire": "2018-06-23T04:00:00Z",
+     "eventid": 5,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ541",
+     "product_id": "201806192031-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0006",
+     "issue": "2018-07-05T17:00:00Z",
+     "expire": "2018-07-07T04:00:00Z",
+     "eventid": 6,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ541",
+     "product_id": "201807041027-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Wind Advisory"
+  },
+  "AZZ542": {
+   "n_events": 226,
+   "n_heat_warnings": 69,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ542",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0005",
+     "issue": "2018-06-21T17:00:00Z",
+     "expire": "2018-06-23T04:00:00Z",
+     "eventid": 5,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ542",
+     "product_id": "201806192031-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0006",
+     "issue": "2018-07-05T17:00:00Z",
+     "expire": "2018-07-07T04:00:00Z",
+     "eventid": 6,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ542",
+     "product_id": "201807041027-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ543": {
+   "n_events": 227,
+   "n_heat_warnings": 71,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0001",
+     "issue": "2018-05-06T17:00:00Z",
+     "expire": "2018-05-07T03:00:00Z",
+     "eventid": 1,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ543",
+     "product_id": "201805041929-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0003",
+     "issue": "2018-06-03T18:00:00Z",
+     "expire": "2018-06-05T03:00:00Z",
+     "eventid": 3,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ543",
+     "product_id": "201806011951-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ543",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ544": {
+   "n_events": 228,
+   "n_heat_warnings": 71,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0001",
+     "issue": "2018-05-06T17:00:00Z",
+     "expire": "2018-05-07T03:00:00Z",
+     "eventid": 1,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ544",
+     "product_id": "201805041929-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0003",
+     "issue": "2018-06-03T18:00:00Z",
+     "expire": "2018-06-05T03:00:00Z",
+     "eventid": 3,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ544",
+     "product_id": "201806011951-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ544",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ545": {
+   "n_events": 157,
+   "n_heat_warnings": 42,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-13T17:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ545",
+     "product_id": "201806121110-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0005",
+     "issue": "2018-06-21T17:00:00Z",
+     "expire": "2018-06-23T04:00:00Z",
+     "eventid": 5,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ545",
+     "product_id": "201806192031-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0006",
+     "issue": "2018-07-05T17:00:00Z",
+     "expire": "2018-07-07T04:00:00Z",
+     "eventid": 6,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ545",
+     "product_id": "201807041027-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Wind Advisory"
+  },
+  "AZZ546": {
+   "n_events": 224,
+   "n_heat_warnings": 70,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0001",
+     "issue": "2018-05-06T17:00:00Z",
+     "expire": "2018-05-07T03:00:00Z",
+     "eventid": 1,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ546",
+     "product_id": "201805041929-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ546",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0005",
+     "issue": "2018-06-21T17:00:00Z",
+     "expire": "2018-06-23T04:00:00Z",
+     "eventid": 5,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ546",
+     "product_id": "201806192031-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ547": {
+   "n_events": 166,
+   "n_heat_warnings": 37,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-13T17:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ547",
+     "product_id": "201806121110-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0006",
+     "issue": "2018-07-05T17:00:00Z",
+     "expire": "2018-07-07T04:00:00Z",
+     "eventid": 6,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ547",
+     "product_id": "201807041027-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0008",
+     "issue": "2018-07-23T17:00:00Z",
+     "expire": "2018-07-26T03:00:00Z",
+     "eventid": 8,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ547",
+     "product_id": "201807201013-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Wind Advisory"
+  },
+  "AZZ548": {
+   "n_events": 238,
+   "n_heat_warnings": 71,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0001",
+     "issue": "2018-05-06T17:00:00Z",
+     "expire": "2018-05-07T03:00:00Z",
+     "eventid": 1,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ548",
+     "product_id": "201805041929-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0003",
+     "issue": "2018-06-03T18:00:00Z",
+     "expire": "2018-06-05T03:00:00Z",
+     "eventid": 3,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ548",
+     "product_id": "201806011951-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ548",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ549": {
+   "n_events": 198,
+   "n_heat_warnings": 64,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ549",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0005",
+     "issue": "2018-06-21T17:00:00Z",
+     "expire": "2018-06-23T04:00:00Z",
+     "eventid": 5,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ549",
+     "product_id": "201806202043-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0006",
+     "issue": "2018-07-05T17:00:00Z",
+     "expire": "2018-07-07T04:00:00Z",
+     "eventid": 6,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ549",
+     "product_id": "201807041027-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ550": {
+   "n_events": 272,
+   "n_heat_warnings": 71,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0001",
+     "issue": "2018-05-06T17:00:00Z",
+     "expire": "2018-05-07T03:00:00Z",
+     "eventid": 1,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ550",
+     "product_id": "201805041929-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0003",
+     "issue": "2018-06-03T18:00:00Z",
+     "expire": "2018-06-05T03:00:00Z",
+     "eventid": 3,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ550",
+     "product_id": "201806011951-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ550",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  },
+  "AZZ551": {
+   "n_events": 283,
+   "n_heat_warnings": 70,
+   "keys": [
+    "url",
+    "issue",
+    "expire",
+    "eventid",
+    "phenomena",
+    "hvtec_nwsli",
+    "significance",
+    "wfo",
+    "name",
+    "ph_name",
+    "sig_name",
+    "ugc",
+    "product_id"
+   ],
+   "heat_sample": [
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0001",
+     "issue": "2018-05-06T17:00:00Z",
+     "expire": "2018-05-07T03:00:00Z",
+     "eventid": 1,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ551",
+     "product_id": "201805041929-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0004",
+     "issue": "2018-06-12T18:00:00Z",
+     "expire": "2018-06-14T03:00:00Z",
+     "eventid": 4,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ551",
+     "product_id": "201806112046-KPSR-WWUS75-NPWPSR"
+    },
+    {
+     "url": "/vtec/?year=2018&wfo=KPSR&phenomena=EH&significance=W&eventid=0005",
+     "issue": "2018-06-21T17:00:00Z",
+     "expire": "2018-06-23T04:00:00Z",
+     "eventid": 5,
+     "phenomena": "EH",
+     "hvtec_nwsli": null,
+     "significance": "W",
+     "wfo": "PSR",
+     "name": "Excessive Heat Warning",
+     "ph_name": "Excessive Heat",
+     "sig_name": "Warning",
+     "ugc": "AZZ551",
+     "product_id": "201806192031-KPSR-WWUS75-NPWPSR"
+    }
+   ],
+   "name": "Blowing Dust Advisory"
+  }
+ },
+ "phoenix_heat_pdf": {
+  "url": "https://www.phoenix.gov/content/dam/phoenix/parkssite/documents/2024-10-24%20phoenix%20trails%20and%20heat%20safety.pdf",
+  "pages": 17,
+  "text": "Phoenix Trails and Heat Safety\nTrail Closure Program Review \nPhoenix Parks and Recreation Board\nOctober 24, 2024\n\n---page---\n\nPhoenix Trails and Heat Safety \nPolicy Review\nPolicy Time Frame:\n\u2022 Year round, on Heat Warning days\nOn NWS issued Heat Warning days:\n\u2022 Trail access restricted from 9 a.m. to 5 p.m.\nTrail restrictions at these two locations:\n\u2022 Camelback Mountain Preserve\n\u2022 Echo Canyon Trail\n\u2022 Cholla Trail\n\u2022 Phoenix Mountains Preserve - Piestewa Peak \n\u2022 Summit Trail and associated trails\n\n---page---\n\nweather.gov/psr/\nHow potential trail closures are tracked and \nimplemented\nExcessive Heat \nWarning \nIssued\nCity \nCommunicates \nClosure\nTrailheads are \nclosed from     \n9 am \u2013 5 pm\n\n\n---page---\n\nS M T W T F S\n1 2 3 4 5 6 7\n8 9 10 11 12 13 14\n15 16 17 18 19 20 21\n22 23 24 25 26 27 28\n29 30\nSeptember\n2024 Summer Months\nS M T W T F S\n1 2 3\n4 5 6 7 8 9 10\n11 12 13 14 15 16 17\n18 19 20 21 22 23 24\n25 26 27 28 29 30 31\nAugust\nJuly\nS M T W T F S\n1\n2 3 4 5 6 7 8\n9 10 11 12 13 14 15\n16 17 18 19 20 21 22\n23 24 25 26 27 28 29\n30\nJune\nS M T W T F S\n1 2 3 4\n5 6 7 8 9 10 11\n12 13 14 15 16 17 18\n19 20 21 22 23 24 25\n26 27 28 29 30 31\nMay\nS M T W T F S\n1 2 3 4 5 6\n7 8 9 10 11 12 13\n14 15 16 17 18 19 20\n21 22 23 24 25 26 27\n28 29 30 31\nS M T W T F S\n1 2 3 4 5\n6 7 8 9 10 11 12\n13 14 15 16 17 18 19\n20 21 22 23 24 25 26\n27 28 29 31\nOctober\n\n---page---\n\nS M T W T F S\n1 2 3 4 5 6 7\n8 9 10 11 12 13 14\n15 16 17 18 19 20 21\n22 23 24 25 26 27 28\n29 30\nSeptember\n2024 Summer Months and Trail Restriction Days\nS M T W T F S\n1 2 3\n4 5 6 7 8 9 10\n11 12 13 14 15 16 17\n18 19 20 21 22 23 24\n25 26 27 28 29 30 31\nAugust\nJuly\nS M T W T F S\n1\n2 3 4 5 6 7 8\n9 10 11 12 13 14 15\n16 17 18 19 20 21 22\n23 24 25 26 27 28 29\n30\nJune\nS M T W T F S\n1 2 3 4\n5 6 7 8 9 10 11\n12 13 14 15 16 17 18\n19 20 21 22 23 24 25\n26 27 28 29 30 31\nMay\nS M T W T F S\n1 2 3 4 5 6\n7 8 9 10 11 12 13\n14 15 16 17 18 19 20\n21 22 23 24 25 26 27\n28 29 30 31\nS M T W T F S\n1 2 3 4 5\n6 7 8 9 10 11 12\n13 14 15 16 17 18 19\n20 21 22 23 24 25 26\n27 28 29 31\nOctober\nTrail restriction days \n(NWS Heat Warning Days) \n\u2013 45 total days\n\n---page---\n\nS M T W T F S\n1 2 3 4 5 6 7\n8 9 10 11 12 13 14\n15 16 17 18 19 20 21\n22 23 24 25 26 27 28\n29 30\nSeptember\n2024 Summer Months  \u2265 110, No Heat Warning\nS M T W T F S\n1 2 3\n4 5 6 7 8 9 10\n11 12 13 14 15 16 17\n18 19 20 21 22 23 24\n25 26 27 28 29 30 31\nAugust\nJuly\nS M T W T F S\n1\n2 3 4 5 6 7 8\n9 10 11 12 13 14 15\n16 17 18 19 20 21 22\n23 24 25 26 27 28 29\n30\nJune\nS M T W T F S\n1 2 3 4\n5 6 7 8 9 10 11\n12 13 14 15 16 17 18\n19 20 21 22 23 24 25\n26 27 28 29 30 31\nMay\nS M T W T F S\n1 2 3 4 5 6\n7 8 9 10 11 12 13\n14 15 16 17 18 19 20\n21 22 23 24 25 26 27\n28 29 30 31\nDays that were 110 or greater \nand not NWS Heat Warning Days \n\u2013 33 total days\nTemperatures on these 33 days \nranged as follows:\n110 \u2013 12 days\n111 \u2013 8 days\n112 \u2013 7 days\n113 \u2013 5 days\n114 \u2013 1 day\nS M T W T F S\n1 2 3 4 5\n6 7 8 9 10 11 12\n13 14 15 16 17 18 19\n20 21 22 23 24 25 26\n27 28 29 31\nOctober\nTrail restriction days \n(NWS Heat Warning Days) \n\u2013 45 total days\n\n---page---\n\n20 18\n42 45\n138\n157 159 162\n104\n113\n133\n142\n69 72\n88\n122\n22 22\n55\n70\n0\n20\n40\n60\n80\n100\n120\n140\n160\n180\n2021 2022 2023 2024\n2021 to 2024 Heat Warning Days and Temperatures\nNWS Days\n(31 avg)\n95+days\n(154 avg)\n100+ days\n(123 avg)\n105+ Days\n(88 avg)\n110+ Days\n(42 avg)\n\n---page---\n\nPhoenix Mountain Calls\nGoal: Identify mountain closures and temperature limits to reduce \nmountain rescues and risk of heat related illness, while still allowing \nsafe use of the mountain trails.\nData Review: Mountain rescues and visitor counts were reviewed for \nthe top 4 mountain ranges in Phoenix. Additional considerations were \nextreme heat closure days and the historical high and average \ntemperatures for each day (NWS). \n8\n\n\n---page---\n\nHeat \nExhaustion \nvs. \nHeat \nStroke\nSource: Weather.govPhoenix Mountain Calls\n 9\n\n---page---\n\nMountain \nCalls by \nYear\nMay 1 \u2013 September 30\n10Phoenix Mountain Calls\n\n\n---page---\n\nMountain Calls by Hour 2021-2024/May-Sept\nPhoenix Mountain Calls 11\nHours included in trail closure days\n\n---page---\n\nMountain Calls by Hour Combined 2021-2024\nPhoenix Mountain Calls 12\nJanuary - December May - September\nHigh Risk of Heat Related Illness (NWS)\nPeak Heat (NWS)\n\n\n---page---\n\nMountain Rescues vs Temperature\n13Phoenix Mountain Calls\nDaily High - Temperature (\u00b0 f)\nMountain Rescues\nCamelback\nPiestewa\nNorth Mountain/Shaw Butte\nSouth Mountain\n\n---page---\n\nPark \nVisitors\n14Phoenix Mountain Park Visitors\nCOP Parks and Rec visitor counts for: \n\u2022 Camelback\n\u2022 Piestewa Peak \n\u2022 N. Mountain/Shaw Butte\n\u2022 S. Mountain\nPark Visitors vs Temperature\nCamelback\nPiestewa\nNorth Mountain/Shaw Butte\nSouth Mountain\nNumber of Visitors\nDaily High - Temperature (\u00b0 f)\n\n---page---\n\nCombining the Data (based on 2021-2024 trends)\nThe highest risk reduction model:\n\u2022 Closing Camelback, Piestewa Peak, \nNorth Mountain and South Mountain\n\u2022 When the temperature reaches 95 \ndegrees \n\u2022 Between the hours of 8 am \u2013 7 pm \nWill reduce the number of \nmountain rescues by about 50%\nA reasonable risk reduction model:\n\u2022 Closing Camelback, Piestewa Peak, and \nSouth Mountain\n\u2022 When the temperature reaches 105 \ndegrees\n\u2022 Between the hours of 8 am \u2013 5 pm\nWill reduce the number of \nmountain rescues by almost 30%\nPhoenix Mountain Parks 15\n\n\n---page---\n\nPolicy modification request\nCurrent:  \nClose trails from 9 a.m. to 5 p.m. at Camelback Mountain Preserve- Echo \nCanyon and Cholla Trail, and all associated trails and trailheads at Phoenix \nMountains Preserve - Piestewa Peak when the National Weather Services \nIssues Excessive Heat Warning Days.\n2024 Proposed Changes:\nAdd the closure of trails at South Mountain Park / Preserve\nBegin closures at 8 a.m.\n\n\n---page---\n\nThank You"
+ }
+}
