@@ -50,6 +50,8 @@ These are descriptive patterns in dispatch counts. None of them is a causal clai
 
 Warning days got relatively quieter only at the closed trails, which is what working closures would look like, but the counts are small (19 and 21 calls) and the interval includes no effect. The closure trails' long decline (119 rescues in 2019, about 74 a year in 2023–2025) is year-round, and with about 31 warning days a year the closures could account for about 4 rescues a year at most. Rescues per day don't rise with temperature. Since 2021, 21 rescues at the closure trails happened during closed hours on warning days; the site lists them.
 
+**The city's "rescues on closed trails" figures.** Phoenix's [October 2024 release](https://www.phoenix.gov/newsroom/parks-news/3256.html) reports 57, 47, 30 and 35 rescues on closed trails for 2021–2024, without a definition. Counting every mountain-rescue call at the closure trails from May through October, on any day and at any hour, gives 55, 50, 33 and 36, within 3 a year. So the figures most likely count *trails that close*, not rescues while closed (those are 5, 1, 3 and 9). Over the same years the November–April count at those trails fell just as much (53 to 35), with no closures in effect.
+
 **Each city has its own season:**
 
 | | Busiest month | Quietest month | Share on weekends |

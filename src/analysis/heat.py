@@ -255,6 +255,22 @@ def main() -> None:
     ya = calls.groupby(["year", "kind"]).size().unstack(fill_value=0)
     rep["all_by_year"] = {int(y): {k: int(v) for k, v in r.items()} for y, r in ya.iterrows()}
 
+    # 6. Reconcile the city's published "rescues on closed trails" (2021-24: 57, 47,
+    # 30, 35; Parks news release, 25 Oct 2024). The definition isn't published. The
+    # closest reproduction is every mountain-rescue call at the closure trails from
+    # May through October, any day and any hour: trails that close, not rescues
+    # while closed. Nov-Apr at the same trails shows what the off-season did.
+    cl = calls["kind"] == "closure"
+    heat_season = calls["month"].between(5, 10)
+    rep["city_figures"] = {
+        "published": {2021: 57, 2022: 47, 2023: 30, 2024: 35},
+        "source": "https://www.phoenix.gov/newsroom/parks-news/3256.html",
+        "ours_may_oct": {int(y): int(n) for y, n in calls[cl & heat_season].groupby("year").size().items()},
+        "ours_nov_apr": {int(y): int(n) for y, n in calls[cl & ~heat_season].groupby("year").size().items()},
+        "ours_closed_hours_on_warning_days": {int(y): int(n) for y, n in calls[
+            cl & calls["warning"] & calls["hour"].isin(CLOSE_HOURS)].groupby("year").size().items()},
+    }
+
     OUT.write_text(json.dumps(rep, indent=1, default=str))
     print(json.dumps({k: v for k, v in rep.items() if k != "closed_hour_calls"}, indent=1, default=str))
 

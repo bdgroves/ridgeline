@@ -355,6 +355,34 @@ def heat_section(h: dict) -> str:
         f'<td>{esc(TRAILHEADS.get(c["address"], c["address"]))}</td><td class="num">{c["high"]:.0f}°F</td></tr>'
         for c in h.get("closed_hour_calls", []))
     cd = did.get("closure", {})
+    cf = h.get("city_figures")
+    city_block = ""
+    if cf:
+        yrs = [y for y in (2021, 2022, 2023, 2024)]
+        pub = {int(k): v for k, v in cf["published"].items()}
+        mo = {int(k): v for k, v in cf["ours_may_oct"].items()}
+        na = {int(k): v for k, v in cf["ours_nov_apr"].items()}
+        ch = {int(k): v for k, v in cf["ours_closed_hours_on_warning_days"].items()}
+        def pct(d):
+            return f"{100 * (d.get(yrs[-1], 0) / max(d.get(yrs[0], 1), 1) - 1):+.0f}%"
+        cells = lambda d: "".join(f'<td class="num">{d.get(y, 0)}</td>' for y in yrs)
+        city_block = f"""
+  <h3>The city's numbers, reproduced</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Closure trails (Echo Canyon, Cholla, Piestewa)</th>{"".join(f'<th class="num">{y}</th>' for y in yrs)}<th class="num">{yrs[0]}&rarr;{yrs[-1]}</th></tr></thead>
+    <tbody>
+      <tr><td>City of Phoenix, "rescues on closed trails"</td>{cells(pub)}<td class="num">{pct(pub)}</td></tr>
+      <tr><td>Dispatch data, May–October, any day or hour</td>{cells(mo)}<td class="num">{pct(mo)}</td></tr>
+      <tr><td>Dispatch data, November–April (no closures)</td>{cells(na)}<td class="num">{pct(na)}</td></tr>
+      <tr><td>Dispatch data, during closed hours on warning days</td>{cells(ch)}<td class="num"></td></tr>
+    </tbody>
+  </table></div>
+  <p class="source">The city published these four figures in its
+  <a href="{esc(cf["source"])}">October 2024 news release</a> without a definition. Counting every mountain-rescue call at
+  the closure trails from May through October, on any day and at any hour, reproduces them to within 3 a year, so
+  "on closed trails" most likely means <i>trails that close</i>, not rescues while they were closed. The same trails fell
+  just as much over the winter months, when nothing closes.</p>
+"""
     return f"""
 <section class="block" id="heat"><div class="wrap">
   <h2>Heat &amp; trail closures</h2>
@@ -415,6 +443,7 @@ def heat_section(h: dict) -> str:
       rather than on the trail. The list is below.</p></div>
   </div>
 
+{city_block}
   <details class="more"><summary>Rescues at closure trails during closed hours ({n_closed})</summary>
     <div class="scroll"><table><thead><tr><th class="num">Date</th><th class="num">Hour</th><th>Where</th><th class="num">High</th></tr></thead>
     <tbody>{closed_list}</tbody></table></div>
