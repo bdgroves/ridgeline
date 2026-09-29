@@ -40,13 +40,19 @@ jobs:
         run: pixi run geocode
 
       - name: Export map incidents
-        run: pixi run python export_geojson.py
+        run: pixi run export
+
+      - name: Scottsdale Fire (mountain + water rescues)
+        run: pixi run scottsdale
+
+      - name: Boulder Fire-Rescue (technical + water rescues)
+        run: pixi run boulder
 
       - name: Commit geocode cache, report and incidents
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/external/geocode_cache.csv data/external/geocode_report.json data/external/phoenix_sar_incidents.geojson
+          git add data/external/geocode_cache.csv data/external/*_report.json data/external/*_sar_incidents.geojson
           if git diff --cached --quiet; then echo "No data changes"; else
             git commit -m "chore: refresh geocode cache and map incidents [skip ci]"
             git pull --rebase origin main && git push

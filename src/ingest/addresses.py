@@ -35,7 +35,7 @@ PRESERVE_SITES: list[tuple[str, str, tuple[float, float]]] = [
     ("Phoenix Mountains",      r"phoenix\s+(mountain|mtn)s?\s+(park|preserve)",   (33.5550, -112.0200)),
     ("South Mountain Park",    r"south\s+(mountain|mtn)\s+(park|preserve)",       (33.3476, -112.0540)),
     ("Holbert Trailhead",      r"holbert",                                        (33.3476, -112.0540)),
-    ("McDowell Sonoran",       r"mcdowell\s+(mountain|mtn|sonoran)",              (33.6918, -111.7951)),
+    ("McDowell Sonoran",       r"mcdowell\s+(mountain|mtn|sonoran)(?!\s+ranch)",              (33.6918, -111.7951)),
     ("White Tank Mountains",   r"white\s+tank",                                   (33.5971, -112.5476)),
     ("Estrella Mountain",      r"estrella\s+(mountain|mtn)",                      (33.4317, -112.4076)),
     ("Usery Mountain",         r"usery",                                          (33.4754, -111.6218)),
@@ -52,9 +52,11 @@ _BLOCK = re.compile(r"\b(\d*)XX\b", re.I)
 _SUFFIX = [(re.compile(r"\bPW\b", re.I), "PKWY"), (re.compile(r"\bAV\b", re.I), "AVE")]
 _ALIASES = [(re.compile(r"\bSQUAW\s+PEAK\b", re.I), "PIESTEWA PEAK")]
 
-_DIRS = {"N", "S", "E", "W"}
+_DIRS = {"N", "S", "E", "W", "NORTH", "SOUTH", "EAST", "WEST"}
 _TYPES = {"RD", "DR", "ST", "AVE", "AV", "PKWY", "PW", "LN", "WAY", "PL", "CT",
-          "BLVD", "CIR", "TRL", "TR", "HWY", "FWY", "LOOP", "TER", "PASS"}
+          "BLVD", "CIR", "TRL", "TR", "HWY", "FWY", "LOOP", "TER", "PASS",
+          "ROAD", "DRIVE", "STREET", "AVENUE", "PARKWAY", "LANE", "PLACE",
+          "COURT", "BOULEVARD", "CIRCLE", "TRAIL", "HIGHWAY", "TERRACE"}
 
 
 def _clean(part: str) -> str:

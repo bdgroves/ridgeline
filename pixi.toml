@@ -10,8 +10,11 @@ platforms = ["win-64", "linux-64"]
 # ── Data pipeline ──────────────────────────────────────────────────────────
 phoenix   = "python src/ingest/fetch_phoenix_fire.py"
 geocode   = "python src/ingest/geocode_phoenix.py"
+scottsdale = "python src/ingest/fetch_scottsdale.py"
+boulder   = "python src/ingest/fetch_boulder.py"
+export    = "python export_geojson.py"
 clean     = "python src/ingest/clean_incidents.py"
-pipeline  = { depends-on = ["phoenix", "geocode"] }
+pipeline  = { depends-on = ["phoenix", "geocode", "export", "scottsdale", "boulder"] }
 
 # ── Analysis ───────────────────────────────────────────────────────────────
 stats     = "python src/analysis/sar_stats.py"

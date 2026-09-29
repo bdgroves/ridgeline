@@ -68,7 +68,7 @@ PRIORITY_NATURE_CODES = {
 # Preserve fallbacks live in addresses.py (see the note there on street names).
 
 
-def geocode_address(address: str, client: httpx.Client) -> dict:
+def geocode_address(address: str, client: httpx.Client, city: str = "Phoenix") -> dict:
     """
     Geocode one Phoenix Fire address. Returns a cache row.
 
@@ -91,7 +91,7 @@ def geocode_address(address: str, client: httpx.Client) -> dict:
 
     try:
         params = {
-            "SingleLine": query + ", Phoenix, AZ",
+            "SingleLine": f"{query}, {city}, AZ",
             "outFields":  "Score,Match_addr,Addr_type",
             "maxLocations": 1,
             "outSR": "4326",   # return decimal degrees, not Web Mercator
