@@ -45,6 +45,9 @@ def nps_data(ext: Path, site: Path) -> dict | None:
             geo[p["park"]] = p
             (out_dir / f"{p['park']}.geojson").write_text(json.dumps(f, separators=(",", ":")))
 
+    if geo_p.exists():
+        _write_overview(json.loads(geo_p.read_text())["features"], site / "data" / "nps_overview.geojson")
+
     parks: dict[str, dict] = {}
     nat_years, nat_months, nat_wk = Counter(), Counter(), Counter()
     no_park = 0
@@ -104,6 +107,35 @@ def nps_data(ext: Path, site: Path) -> dict | None:
     }
 
 
+def _write_overview(features: list, out: Path) -> None:
+    """
+    A light copy of every park outline for the national map: coordinates snapped
+    to 0.02 degrees (about 2 km), holes and specks dropped. The detailed outline
+    is still loaded when a park is picked.
+    """
+    feats = []
+    for f in features:
+        parts = []
+        for poly in f["geometry"]["coordinates"]:
+            ring, prev = [], None
+            for x, y in poly[0]:
+                pt = (round(x / 0.02) * 0.02, round(y / 0.02) * 0.02)
+                pt = (round(pt[0], 2), round(pt[1], 2))
+                if pt != prev:
+                    ring.append(pt); prev = pt
+            if len(ring) < 4:
+                continue
+            xs, ys = [p[0] for p in ring], [p[1] for p in ring]
+            parts.append((max(max(xs) - min(xs), max(ys) - min(ys)), [[list(p) for p in ring]]))
+        if not parts:
+            continue
+        big = max(parts)[0]
+        keep = [pp for span, pp in parts if span >= 0.06 or span == big]
+        feats.append({"type": "Feature", "properties": {"park": f["properties"]["park"]},
+                      "geometry": {"type": "MultiPolygon", "coordinates": keep}})
+    out.write_text(json.dumps({"type": "FeatureCollection", "features": feats}, separators=(",", ":")))
+
+
 def _name(p: dict) -> str:
     return (p["name"] or "").replace(" National Park", " NP").replace(" National Recreation Area", " NRA")
 
@@ -142,6 +174,7 @@ def nps_html(d: dict | None, esc, kpi) -> str:
     <span class="hint lead">Circle size:</span>
     <button class="ntog on" data-mode="count" aria-pressed="true">Incidents per year</button>
     <button class="ntog" data-mode="rate" aria-pressed="false">Per million visits</button>
+    <button class="ntog on" data-mode="bounds" aria-pressed="true"><i style="background:#8fb573"></i>Park boundaries</button>
     <button class="ntog" data-mode="reset" aria-pressed="false">&#8634; All parks</button>
     <span class="hint">Click a circle, or choose a park below</span>
   </div>
@@ -193,6 +226,44 @@ NPS_JS = r"""
     {maxZoom:12}).addTo(nmap);
   const US = [[24.5, -125], [49.5, -66.5]];
   nmap.fitBounds(US);
+  // Every park outline, under the circles. Click one to pick that park.
+  nmap.createPane('bounds'); nmap.getPane('bounds').style.zIndex = 350;
+  // Zoomed out: a light, simplified copy. Zoomed in (7+): each park in view swaps
+  // to its detailed outline, fetched once and cached.
+  let bounds = null, showBounds = true;
+  const BSTYLE = {color:'#8fb573', weight:.8, opacity:.7, fillColor:'#8fb573', fillOpacity:.14};
+  const overview = {}, detail = {}, loading = {};
+  const hook = (code, lyr) => {
+    const p = NPS.parks[code]; if (!p) return;
+    lyr.bindTooltip(esc(short(p.name)), {sticky:true});
+    lyr.on('click', () => pick(code, true));
+  };
+  fetch('data/nps_overview.geojson').then(r => r.json()).then(gj => {
+    bounds = L.featureGroup().addTo(nmap);
+    for (const f of gj.features) {
+      const lyr = L.geoJSON(f, {pane:'bounds', style:BSTYLE}); hook(f.properties.park, lyr);
+      overview[f.properties.park] = lyr; bounds.addLayer(lyr);
+    }
+    refine();
+  }).catch(() => null);
+  function refine() {
+    if (!bounds || !showBounds) return;
+    const close = nmap.getZoom() >= 7, view = nmap.getBounds().pad(.3);
+    for (const [code, lyr] of Object.entries(overview)) {
+      const d = detail[code];
+      const want = close && lyr.getBounds().intersects(view);
+      if (want && !d && !loading[code] && NPS.parks[code] && NPS.parks[code].geom) {
+        loading[code] = true;
+        fetch(`data/nps/${code}.geojson`).then(r => r.json()).then(gj => {
+          detail[code] = L.geoJSON(gj, {pane:'bounds', style:BSTYLE}); hook(code, detail[code]); refine();
+        }).catch(() => null);
+      }
+      const useDetail = want && d;
+      if (useDetail) { bounds.removeLayer(lyr); bounds.addLayer(d); }
+      else { if (d) bounds.removeLayer(d); bounds.addLayer(lyr); }
+    }
+  }
+  nmap.on('zoomend moveend', refine);
   const PK = Object.entries(NPS.parks).filter(([, p]) => p.lat != null && p.full > 0);
   const maxN = Math.max(...PK.map(([, p]) => p.full)), maxR = Math.max(...PK.map(([, p]) => p.rate || 0));
   let nmode = 'count', picked = null, outline = null;
@@ -237,6 +308,10 @@ NPS_JS = r"""
   }
   document.getElementById('parkpick').addEventListener('change', e => pick(e.target.value, false));
   document.querySelectorAll('.ntog').forEach(b => b.addEventListener('click', () => {
+    if (b.dataset.mode === 'bounds') {
+      const on = !b.classList.contains('on'); b.classList.toggle('on', on); b.setAttribute('aria-pressed', on);
+      showBounds = on; if (bounds) { on ? bounds.addTo(nmap) : nmap.removeLayer(bounds); refine(); } return;
+    }
     if (b.dataset.mode === 'reset') { if (outline) { nmap.removeLayer(outline); outline = null; } nmap.fitBounds(US); return; }
     nmode = b.dataset.mode; resize();
     document.querySelectorAll('.ntog[data-mode=count], .ntog[data-mode=rate]').forEach(x => {

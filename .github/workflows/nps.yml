@@ -1,0 +1,48 @@
+name: RIDGELINE — National parks data
+
+# The NPS search-and-rescue lists are static FOIA releases, so this runs monthly
+# rather than weekly. It also picks up any new SAR list the FOIA page adds.
+# When the data changes, it commits it and triggers a site rebuild.
+
+on:
+  schedule:
+    - cron: "0 7 1 * *"          # 1st of each month, 07:00 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["src/ingest/fetch_nps.py", ".github/workflows/nps.yml"]
+
+permissions:
+  contents: write
+  actions: write                # to start the deploy workflow
+
+concurrency:
+  group: nps-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install httpx openpyxl
+      - name: Fetch NPS incidents, boundaries and visits
+        run: python src/ingest/fetch_nps.py
+      - name: Commit changes and rebuild the site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/external/nps_*
+          if git diff --cached --quiet -- data/external/nps_sar_incidents.csv data/external/nps_parks.geojson data/external/nps_visitation.csv; then
+            echo "NPS data unchanged"
+            git diff --cached --quiet || { git commit -m "chore: NPS fetch report [skip ci]"; git pull --rebase origin main && git push; }
+          else
+            git commit -m "chore: refresh national parks data [skip ci]"
+            git pull --rebase origin main && git push
+            gh workflow run deploy.yml --ref main
+          fi

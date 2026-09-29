@@ -73,11 +73,30 @@ def xlsx_rows(content: bytes) -> list[list[str]]:
     return []
 
 
+def sar_files() -> list[str]:
+    """The known SAR lists plus any new one the FOIA page has added since."""
+    files = list(FILES)
+    try:
+        page = c.get("https://www.nps.gov/aboutus/foia/foia-frd.htm").text
+        for href in re.findall(r'href="([^"]+\.xlsx)"', page, re.I):
+            url = href if href.startswith("http") else "https://www.nps.gov" + href
+            name = url.rsplit("/", 1)[-1]
+            if re.search(r"sar[-_ ]|search[-_ ]?and[-_ ]?rescue", name, re.I) and url not in files:
+                files.append(url)
+        report["foia_new_files"] = files[len(FILES):]
+    except Exception as e:
+        report["foia_page_error"] = repr(e)
+    return files
+
+
 def incidents() -> None:
     seen, out, per_file = set(), [], {}
-    for url in FILES:
+    for url in sar_files():
         r = c.get(url); r.raise_for_status()
         rows = xlsx_rows(r.content)
+        if not rows:
+            per_file[url.rsplit("/", 1)[-1]] = {"skipped": "no IncidentNum header"}
+            continue
         head, body = rows[0], rows[1:]
         ix = {k: head.index(k) for k in ("IncidentNum", "IncidentDate", "IncType", "ParkAlphaCode", "Region")}
         n = dup = 0
