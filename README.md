@@ -12,9 +12,9 @@ Ridgeline collects every mountain, technical and water rescue call that three fi
 | Scottsdale, AZ | Scottsdale Fire Department | Dec 2022 – present | 360 (466 of 522 rescue calls located, 89%) |
 | Boulder, CO | Boulder Fire-Rescue | 2015 – present | 581 (published points, 100%) |
 
-Plus a **national parks** section: all 20,058 search-and-rescue incidents the National Park Service logged from 2013 to August 2021, one circle per park, with each park's calendar and incidents per million visits.
+Plus a **national parks** section: all 20,058 search-and-rescue incidents the National Park Service logged from 2013 to August 2021, on a map of every park's boundary with one circle per park, and each park's calendar and incidents per million visits.
 
-The pipeline reruns every Monday and whenever the code changes. The counts in this README reflect the run of September 29, 2026; the live site always shows the current numbers.
+The city pipeline reruns every Monday, the national parks data monthly, and both whenever the code changes (see [Automation](#automation)). The counts in this README reflect the run of September 29, 2026; the live site always shows the current numbers.
 
 ---
 
@@ -84,7 +84,9 @@ All three sources are public and need no key. Each is pulled fresh on every run.
 
 Scottsdale's land searches (*Search for person on land* outside the `MTNRES` code) are kept as a separate **land search** category. Many of them are urban missing-person calls rather than trail work. Boulder's *auto-aid* calls are Boulder units sent outside the city, often into county open space.
 
-**National parks.** The [NPS FOIA reading room](https://www.nps.gov/aboutus/foia/foia-frd.htm) publishes two search-and-rescue incident lists, *NPS-SAR-Incidents-List-2013-2018.xlsx* and *SAR-Incidents-List-2019-2020.xlsx*. The second actually runs to August 12, 2021. Each row is an incident number, date, incident type, park code and region; there is no location inside the park, no time of day and no outcome. `src/ingest/fetch_nps.py` combines them (20,058 incidents after dropping 420 rows with no date, most of which also have no park, and 2 duplicate IDs), maps a few spelled-out park codes (`GRANDCANYON` → `GRCA`), and treats Sequoia & Kings Canyon as one park (`SEKI`) as the incident data does. Park outlines come from the [NPS Land Resources Division boundary service](https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/2), and annual recreation visits from the [NPS IRMA visitor use statistics](https://irma.nps.gov/Stats/) service. These files are static, so the fetch runs on demand through the *Probe data sources* workflow (or locally: `pip install httpx openpyxl` then `python src/ingest/fetch_nps.py`), not weekly. The weekly build reads the committed files.
+**National parks.** The [NPS FOIA reading room](https://www.nps.gov/aboutus/foia/foia-frd.htm) publishes two search-and-rescue incident lists, *NPS-SAR-Incidents-List-2013-2018.xlsx* and *SAR-Incidents-List-2019-2020.xlsx*. The second actually runs to August 12, 2021. Each row is an incident number, date, incident type, park code and region; there is no location inside the park, no time of day and no outcome. `src/ingest/fetch_nps.py` combines them (20,058 incidents after dropping 420 rows with no date, most of which also have no park, and 2 duplicate IDs), maps a few spelled-out park codes (`GRANDCANYON` → `GRCA`), and treats Sequoia & Kings Canyon as one park (`SEKI`) as the incident data does. Park outlines come from the [NPS Land Resources Division boundary service](https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/2), and annual recreation visits from the [NPS IRMA visitor use statistics](https://irma.nps.gov/Stats/) service. These are periodic FOIA releases, so `nps.yml` refreshes them monthly rather than weekly, and adds any new SAR list that appears on the FOIA page. To run it locally: `pip install httpx openpyxl`, then `python src/ingest/fetch_nps.py`.
+
+On the map, every park with incidents gets its boundary. Zoomed out, the page draws a light copy snapped to about 2 km (`site/data/nps_overview.geojson`, built from the committed boundaries); from zoom 7 each park in view swaps to its detailed outline (`site/data/nps/<CODE>.geojson`). Ten very small units have no outline at national scale and show as circles only.
 
 Reporting ramps up over the first years: 570 incidents are dated 2013, 725 in 2014 and 1,230 in 2015, then about 3,000 a year. Yosemite logged 9, 11 and 47 in 2013–2015 and 372 in 2016. That's the reporting system coming into use, not safer parks, so averages and rates use the five complete years, 2016–2020.
 
@@ -135,7 +137,15 @@ One GeoJSON file per city is written to `data/external/`, together with a JSON r
 
 ### Automation
 
-[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) runs every Monday and on every push. It fetches, filters, geocodes, exports and builds, then commits the updated cache, reports and GeoJSON back to the repo and deploys the site to GitHub Pages.
+Three workflows keep everything current. None needs a key or secret.
+
+| Workflow | When | What it does |
+|---|---|---|
+| [`deploy.yml`](.github/workflows/deploy.yml) | Every Monday 06:00 UTC, every push, on demand | Fetches the three cities' dispatch data, filters, geocodes (cache first), exports GeoJSON; refreshes heat warnings and daily highs and reruns the heat analysis; commits the cache, reports and data back; builds the site and deploys it to GitHub Pages |
+| [`nps.yml`](.github/workflows/nps.yml) | 1st of each month 07:00 UTC, on demand, and when the fetch code changes | Re-downloads the NPS search-and-rescue lists, park boundaries and visits; **picks up any new SAR list the FOIA page adds**; if anything changed, commits it and starts `deploy.yml` |
+| [`probe.yml`](.github/workflows/probe.yml) | On demand | Tests candidate cities' open data and records what they contain in `source_probe.json` |
+
+To refresh by hand: **Actions → workflow → Run workflow** on GitHub.
 
 ---
 
