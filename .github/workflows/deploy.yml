@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write      # commits the geocode cache + report back
   pages: write
   id-token: write
 
@@ -32,6 +32,25 @@ jobs:
 
       - name: Fetch Phoenix Fire data
         run: pixi run phoenix
+
+      # Geocoding used to be local-only, so the map showed a hand-exported
+      # snapshot. It now runs here against a committed address cache, so only
+      # addresses never seen before hit the county geocoder.
+      - name: Geocode incidents
+        run: pixi run geocode
+
+      - name: Export map incidents
+        run: pixi run python export_geojson.py
+
+      - name: Commit geocode cache, report and incidents
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/external/geocode_cache.csv data/external/geocode_report.json data/external/phoenix_sar_incidents.geojson
+          if git diff --cached --quiet; then echo "No data changes"; else
+            git commit -m "chore: refresh geocode cache and map incidents [skip ci]"
+            git pull --rebase origin main && git push
+          fi
 
       - name: Fetch GIS layers
         run: pixi run gis

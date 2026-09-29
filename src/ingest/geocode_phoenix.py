@@ -17,12 +17,15 @@ Run:
 
 from __future__ import annotations
 
+import json
 import time
 from pathlib import Path
 
 import httpx
 import pandas as pd
 from rich.console import Console
+
+from addresses import normalize, preserve_site
 from rich.progress import (
     BarColumn, MofNCompleteColumn, Progress,
     SpinnerColumn, TextColumn, TimeElapsedColumn,
@@ -30,6 +33,12 @@ from rich.progress import (
 
 ROOT     = Path(__file__).resolve().parents[2]
 PROC_DIR = ROOT / "data" / "processed"
+EXT_DIR  = ROOT / "data" / "external"
+
+# Committed, so CI and local runs only query addresses they haven't seen.
+CACHE_PATH  = EXT_DIR / "geocode_cache.csv"
+REPORT_PATH = EXT_DIR / "geocode_report.json"
+CACHE_COLS  = ["address", "query", "precision", "latitude", "longitude", "score", "method"]
 
 console = Console()
 
@@ -44,42 +53,31 @@ PRIORITY_NATURE_CODES = {
     "check flooding condition",
 }
 
-# Known mountain/preserve address fragments → rough centroid fallback
-# Used when geocoder returns no result
-PRESERVE_FALLBACKS = {
-    "camelback":      (33.5194, -111.9749),
-    "piestewa":       (33.5307, -112.0197),
-    "south mountain": (33.3476, -112.0540),
-    "mcdowell":       (33.6918, -111.7951),
-    "echo canyon":    (33.5194, -111.9749),
-    "cholla":         (33.5244, -111.9603),
-    "north mountain": (33.5710, -112.0580),
-    "shaw butte":     (33.5791, -112.1020),
-    "white tank":     (33.5971, -112.5476),
-    "estrella":       (33.4317, -112.4076),
-    "usery":          (33.4754, -111.6218),
-    "dreamy draw":    (33.5460, -112.0260),
-}
+# Preserve fallbacks live in addresses.py (see the note there on street names).
 
 
-def geocode_address(address: str, client: httpx.Client) -> tuple[float, float] | None:
+def geocode_address(address: str, client: httpx.Client) -> dict:
     """
-    Geocode one address string. Returns (lat, lon) or None.
-    Uses Maricopa County geocoder first, then preserve fallback.
+    Geocode one Phoenix Fire address. Returns a cache row.
+
+    Order matters: the Maricopa geocoder is tried first on the normalized
+    query (hundred block -> midpoint, "A/B" -> "A & B"). Only if that fails
+    does a preserve name fall back to that preserve's representative point,
+    and only for patterns that mean the preserve rather than a street named
+    after it. The old code ran the fallback first on bare keywords, which
+    pinned calls on Camelback Rd and McDowell Rd to the preserves.
     """
+    row = {"address": address, "query": None, "precision": None,
+           "latitude": None, "longitude": None, "score": None, "method": "failed"}
     if not isinstance(address, str) or not address.strip():
-        return None
+        return row
 
-    # Check preserve fallback first — fast path for known mountain addresses
-    addr_lower = address.lower()
-    for keyword, coords in PRESERVE_FALLBACKS.items():
-        if keyword in addr_lower:
-            return coords
+    query, precision = normalize(address)
+    row.update(query=query, precision=precision)
 
-    # Try Maricopa County geocoder
     try:
         params = {
-            "SingleLine": address + ", Phoenix, AZ",
+            "SingleLine": query + ", Phoenix, AZ",
             "outFields":  "Score",
             "maxLocations": 1,
             "outSR": "4326",   # return decimal degrees, not Web Mercator
@@ -87,15 +85,42 @@ def geocode_address(address: str, client: httpx.Client) -> tuple[float, float] |
         }
         r = client.get(GEOCODE_URL, params=params, timeout=10)
         r.raise_for_status()
-        data = r.json()
-        candidates = data.get("candidates", [])
-        if candidates and candidates[0].get("score", 0) >= 80:
-            loc = candidates[0]["location"]
-            return (loc["y"], loc["x"])   # lat, lon
+        candidates = r.json().get("candidates", [])
+        if candidates:
+            score = candidates[0].get("score", 0)
+            row["score"] = score
+            if score >= 80:
+                loc = candidates[0]["location"]
+                row.update(latitude=loc["y"], longitude=loc["x"], method="geocoder")
+                return row
     except Exception:
-        pass
+        errored = True
+    else:
+        errored = False
 
-    return None
+    site = preserve_site(address)
+    if site:
+        name, (lat, lon) = site
+        row.update(latitude=lat, longitude=lon, precision="preserve_centroid",
+                   method=f"preserve:{name}")
+    if errored:
+        row["method"] = "error"      # not trusted from cache; retried next run
+    return row
+
+
+def load_cache() -> dict[str, dict]:
+    if not CACHE_PATH.exists():
+        return {}
+    c = pd.read_csv(CACHE_PATH, dtype={"address": str})
+    c = c[c["method"] != "error"]
+    return {r["address"]: r for r in c.to_dict(orient="records")}
+
+
+def save_cache(cache: dict[str, dict]) -> None:
+    rows = sorted(cache.values(), key=lambda r: str(r["address"]))
+    tmp = CACHE_PATH.with_suffix(".tmp")
+    pd.DataFrame(rows, columns=CACHE_COLS).to_csv(tmp, index=False)
+    tmp.replace(CACHE_PATH)
 
 
 LA_PRESERVE_FALLBACKS = {
@@ -144,6 +169,40 @@ def geocode_la_address(address: str, client: httpx.Client) -> tuple[float, float
     return None
 
 
+def write_report(df: pd.DataFrame, to_geocode: pd.DataFrame) -> None:
+    """Committed summary so match rates can be checked without the raw data."""
+    def method_group(m):
+        m = str(m)
+        return "preserve_centroid" if m.startswith("preserve:") else m
+    tg = to_geocode.assign(method=to_geocode["geo_method"].map(method_group),
+                           nature=to_geocode["incident_type"].str.lower())
+    mr_all = df[df["incident_type"].str.lower() == "mountain rescue"]
+    mr = tg[tg["nature"] == "mountain rescue"]
+    report = {
+        "incidents_in_clean_set": int(len(df)),
+        "priority_subset": int(len(tg)),
+        "located": int(tg["latitude"].notna().sum()),
+        "by_method": {k: int(v) for k, v in tg["method"].value_counts().items()},
+        "by_precision": {str(k): int(v) for k, v in tg["geo_precision"].value_counts(dropna=False).items()},
+        "mountain_rescue": {
+            "rows": int(len(mr_all)),
+            "unique_incident_ids": int(mr_all["incident_id"].nunique()),
+            "located": int(mr["latitude"].notna().sum()),
+            "by_method": {k: int(v) for k, v in mr["method"].value_counts().items()},
+            "top_unlocated_addresses": [
+                [a, int(n)] for a, n in
+                mr[mr["latitude"].isna()]["location_name"].value_counts().head(25).items()
+            ],
+        },
+        "by_nature_located_pct": {
+            k: round(float(g["latitude"].notna().mean()) * 100, 1)
+            for k, g in tg.groupby("nature") if len(g) >= 20
+        },
+    }
+    REPORT_PATH.write_text(json.dumps(report, indent=2))
+    console.print(f"  [green]✓[/green] Report → {REPORT_PATH.name}")
+
+
 def main() -> None:
     console.rule("[bold]RIDGELINE — Geocoding SAR Incidents (PHX + LA)[/bold]")
 
@@ -155,21 +214,18 @@ def main() -> None:
     df = pd.read_parquet(parquet)
     console.print(f"  Loaded: [cyan]{len(df):,}[/cyan] incidents")
 
-    # Filter to priority nature codes + WUI address matches
+    # Filter to priority nature codes + preserve addresses
     nature_mask = df["incident_type"].str.lower().isin(PRIORITY_NATURE_CODES)
-    preserve_mask = pd.Series(False, index=df.index)
-    for kw in PRESERVE_FALLBACKS:
-        preserve_mask |= df["location_name"].str.lower().str.contains(kw, na=False)
-
+    preserve_mask = df["location_name"].map(lambda a: preserve_site(a) is not None)
     to_geocode = df[nature_mask | preserve_mask].copy()
     console.print(f"  Priority subset for geocoding: [cyan]{len(to_geocode):,}[/cyan]")
 
-    # Deduplicate addresses — many incidents at same location
     unique_addresses = to_geocode["location_name"].dropna().unique()
-    console.print(f"  Unique addresses: [cyan]{len(unique_addresses):,}[/cyan]\n")
-
-    # Geocode unique addresses
-    addr_cache: dict[str, tuple[float, float] | None] = {}
+    cache = load_cache()
+    todo = [a for a in unique_addresses if a not in cache]
+    console.print(f"  Unique addresses: [cyan]{len(unique_addresses):,}[/cyan] "
+                  f"· cached [cyan]{len(unique_addresses) - len(todo):,}[/cyan] "
+                  f"· to query [cyan]{len(todo):,}[/cyan]\n")
 
     with httpx.Client() as client:
         with Progress(
@@ -180,35 +236,30 @@ def main() -> None:
             TimeElapsedColumn(),
             console=console,
         ) as prog:
-            task = prog.add_task("Geocoding…", total=len(unique_addresses))
-
-            for addr in unique_addresses:
-                if addr not in addr_cache:
-                    result = geocode_address(addr, client)
-                    addr_cache[addr] = result
-                    # Rate limit — be polite
-                    time.sleep(0.05)
+            task = prog.add_task("Geocoding…", total=len(todo))
+            for i, addr in enumerate(todo, 1):
+                cache[addr] = geocode_address(addr, client)
+                time.sleep(0.05)          # be polite to the county server
+                if i % 500 == 0:
+                    save_cache(cache)     # don't lose work if the run dies
                 prog.advance(task)
+    save_cache(cache)
 
-    # Map results back to full dataframe
-    hits     = sum(1 for v in addr_cache.values() if v is not None)
-    misses   = len(addr_cache) - hits
-    console.print(f"\n  Geocoded: [green]{hits:,}[/green] ✓  |  Failed: [yellow]{misses:,}[/yellow]")
-
-    to_geocode["latitude"]  = to_geocode["location_name"].map(
-        lambda a: addr_cache.get(a, (None, None))[0] if addr_cache.get(a) else None
-    )
-    to_geocode["longitude"] = to_geocode["location_name"].map(
-        lambda a: addr_cache.get(a, (None, None))[1] if addr_cache.get(a) else None
-    )
+    looked = {a: cache[a] for a in unique_addresses if a in cache}
+    to_geocode["latitude"]  = to_geocode["location_name"].map(lambda a: looked.get(a, {}).get("latitude"))
+    to_geocode["longitude"] = to_geocode["location_name"].map(lambda a: looked.get(a, {}).get("longitude"))
+    to_geocode["geo_precision"] = to_geocode["location_name"].map(lambda a: looked.get(a, {}).get("precision"))
+    to_geocode["geo_method"]    = to_geocode["location_name"].map(lambda a: looked.get(a, {}).get("method"))
 
     geocoded = to_geocode[to_geocode["latitude"].notna()].copy()
-    console.print(f"  Incidents with coordinates: [cyan]{len(geocoded):,}[/cyan]")
+    console.print(f"  Incidents with coordinates: [cyan]{len(geocoded):,}[/cyan] "
+                  f"of {len(to_geocode):,}")
 
-    # Save
     out = PROC_DIR / "phoenix_fire_sar_geocoded.parquet"
     geocoded.to_parquet(out, index=False)
     console.print(f"\n  [green]✓[/green] Saved → {out.name}")
+
+    write_report(df, to_geocode)
 
     # Quick breakdown
     if "incident_type" in geocoded.columns:

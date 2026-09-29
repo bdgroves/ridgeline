@@ -96,6 +96,9 @@ for _, row in sar.iterrows():
             "is_weekend":          bool(row.get("is_weekend", False)),
             "location_name":       str(row.get("location_name", "")),
             "year":                int(row["year"]) if pd.notna(row.get("year")) else None,
+            # How precise the point is: hundred_block / intersection /
+            # address, or preserve_centroid when only the preserve is known.
+            "precision":           str(row.get("geo_precision") or ""),
         },
     })
 

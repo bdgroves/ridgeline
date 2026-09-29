@@ -29,6 +29,8 @@ import pandas as pd
 from rich.console import Console
 from rich.table import Table
 
+from addresses import PRESERVE_PATTERN
+
 ROOT     = Path(__file__).resolve().parents[2]
 RAW_DIR  = ROOT / "data" / "raw"
 PROC_DIR = ROOT / "data" / "processed"
@@ -59,13 +61,10 @@ SAR_TERMS = [
     "lost person", "search", "overdue",
 ]
 
-# Address keywords that suggest WUI / mountain locations
-WUI_ADDRESS_TERMS = [
-    "camelback", "piestewa", "south mountain", "mcdowell",
-    "phoenix mountain", "echo canyon", "cholla", "holbert",
-    "shaw butte", "north mountain", "dreamy draw",
-    "white tank", "estrella", "usery",
-]
+# Addresses that mean a preserve or trailhead. These used to be bare keywords
+# ("camelback", "mcdowell", "south mountain"), which also matched Camelback
+# Road, McDowell Road and South Mountain Avenue and pulled every call on those
+# arterials into the SAR set. The patterns live in addresses.py.
 
 
 def fetch_year(year: int, url: str) -> pd.DataFrame | None:
@@ -103,9 +102,7 @@ def filter_sar(df: pd.DataFrame, year: int) -> pd.DataFrame:
         sar_mask |= nature_code.str.contains(term, na=False)
 
     # Match WUI address terms
-    wui_mask = pd.Series(False, index=df.index)
-    for term in WUI_ADDRESS_TERMS:
-        wui_mask |= address.str.contains(term, na=False)
+    wui_mask = address.str.contains(PRESERVE_PATTERN, na=False)
 
     combined = sar_mask | wui_mask
     filtered = df[combined].copy()
