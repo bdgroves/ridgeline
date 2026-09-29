@@ -1,0 +1,346 @@
+{
+ "incidents": {
+  "files": {
+   "NPS-SAR-Incidents-List-2013-2018.xlsx": {
+    "rows": 12243,
+    "kept": 11823,
+    "duplicate_ids": 0
+   },
+   "SAR-Incidents-List-2019-2020.xlsx": {
+    "rows": 8237,
+    "kept": 8235,
+    "duplicate_ids": 2
+   }
+  },
+  "total": 20058,
+  "no_park_code": 1237
+ },
+ "boundaries": {
+  "service": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/NPS_Land_Resources_Division_Boundary_and_Tract_Data_Service/FeatureServer/2",
+  "fields": [
+   "OBJECTID",
+   "UNIT_CODE",
+   "UNIT_NAME",
+   "DATE_EDIT",
+   "STATE",
+   "REGION",
+   "UNIT_TYPE",
+   "METADATA",
+   "PARKNAME",
+   "GlobalID",
+   "AreaID",
+   "IRMAReference",
+   "Status",
+   "Shape__Area",
+   "Shape__Length"
+  ],
+  "fetched": 442,
+  "matched": 182,
+  "missing": [
+   "AMISTAD",
+   "BDWL",
+   "BISCAYNE",
+   "GRANDCANYON",
+   "IMRO",
+   "MWRO",
+   "PARA",
+   "PTGR",
+   "SEKI",
+   "VALR",
+   "WESTDISTRICT"
+  ]
+ },
+ "visitation_sample": {
+  "url": "https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes=ACAD&startMonth=1&startYear=2013&endMonth=12&endYear=2020",
+  "record": {
+   "Month": 1,
+   "NonRecreationVisitors": 600,
+   "RecreationVisitors": 11249,
+   "UnitCode": "ACAD",
+   "UnitName": "Acadia NP",
+   "Year": 2013
+  }
+ },
+ "visitation_tried": [
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes=ALAG&startMonth=1&startYear=2013&endMonth=12&endYear=2020",
+   "no usable records",
+   "[]"
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/total/2013/2020?unitCodes=ALAG",
+   404
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes=AMISTAD&startMonth=1&startYear=2013&endMonth=12&endYear=2020",
+   "no usable records",
+   "[]"
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/total/2013/2020?unitCodes=AMISTAD",
+   404
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes=APPA&startMonth=1&startYear=2013&endMonth=12&endYear=2020",
+   "no usable records",
+   "[]"
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/total/2013/2020?unitCodes=APPA",
+   404
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes=BDWL&startMonth=1&startYear=2013&endMonth=12&endYear=2020",
+   "no usable records",
+   "[]"
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/total/2013/2020?unitCodes=BDWL",
+   404
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes=BISCAYNE&startMonth=1&startYear=2013&endMonth=12&endYear=2020",
+   "no usable records",
+   "[]"
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/total/2013/2020?unitCodes=BISCAYNE",
+   404
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/visitation?unitCodes=GRANDCANYON&startMonth=1&startYear=2013&endMonth=12&endYear=2020",
+   "no usable records",
+   "[]"
+  ],
+  [
+   "https://irmaservices.nps.gov/v3/rest/stats/total/2013/2020?unitCodes=GRANDCANYON",
+   404
+  ]
+ ],
+ "visitation": {
+  "parks": 179,
+  "rows": 1421
+ },
+ "mortality_probe": {
+  "Data Statement": [
+   [
+    "Data Quality\nMortality data from CY2007 to CY2023 are included in this output. These are the best available data at the time of collection by the Public Risk Management Program (PRMP). PRMP aggregates data from NPS systems that are updated continuously. If queried today, data from the same time period might be slightly different.  \n\nPrior to 2014, the PRMP collected data only on unintentional deaths (e.g. drownings, motor vehicle crashes, falls) versus all deaths (unintentional, intentional, medical, and undetermined deaths). This accounts for the significant difference in total number of deaths between CY2007-CY2013 and CY2014-Present. \n\nData for CY2017-CY2023 are provisional and have not undergone the quality check process. These data are subject to change as information continues to be collected and analyzed \u2013 as such, they are estimates that may differ from the final count. The NPS is working to validate and finalize all records before publishing them.\n\nCommunicating Safely About Suicide\nThis data output includes information about completed suicides. Studies show that reading, hearing, or seeing messages about suicide or suicidal behaviors can trigger vulnerable individuals and increase the risk of suicide and suicidal behaviors. \n\nCommunication is a powerful tool. The National Park Service Public Risk Management Program recommends that anyone who communicates about suicides does so in a way that reduces stigma, provides resources for those who need them, and shares a message of hope. Please  craft stories that inform the public, raise awareness, and promote resilience",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ]
+  ],
+  "Mortality Data CY2007-Present": [
+   [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "NPS Mortality CY 2007 to CY 2023 ",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "Released April 2023",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   [
+    "",
+    "Incident Date",
+    "Park Name",
+    "Cause of Death",
+    "Intent",
+    "Outcome",
+    "Sex",
+    "Age Range"
+   ],
+   [
+    "",
+    "2007-01-01 00:00:00",
+    "Glen Canyon National Recreation Area",
+    "Undetermined",
+    "Undetermined",
+    "Fatal injury",
+    "Male",
+    "65+"
+   ],
+   [
+    "",
+    "2007-01-22 00:00:00",
+    "Golden Gate National Recreation Area",
+    "Drowning",
+    "Unintentional",
+    "Fatal injury",
+    "Male",
+    "Not Reported"
+   ],
+   [
+    "",
+    "2007-01-22 00:00:00",
+    "Golden Gate National Recreation Area",
+    "Undetermined",
+    "Undetermined",
+    "Fatal injury",
+    "Male",
+    "Not Reported"
+   ],
+   [
+    "",
+    "2007-01-29 00:00:00",
+    "Natchez Trace Parkway",
+    "Motor Vehicle Crash",
+    "Unintentional",
+    "Fatal injury",
+    "Female",
+    "15-24"
+   ]
+  ]
+ }
+}
