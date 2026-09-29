@@ -64,7 +64,9 @@ def nps_data(ext: Path, site: Path) -> dict | None:
         if not code:
             continue
         p = parks.setdefault(code, {"years": Counter(), "months": Counter(), "wk": Counter(),
-                                    "types": Counter(), "region": Counter(), "total": 0})
+                                    "types": Counter(), "region": Counter(), "total": 0,
+                                    "first": r["date"], "last": r["date"]})
+        p["first"], p["last"] = min(p["first"], r["date"]), max(p["last"], r["date"])
         p["total"] += 1
         p["region"][r["region"]] += 1
         if d.year in YEARS:
@@ -84,7 +86,7 @@ def nps_data(ext: Path, site: Path) -> dict | None:
             "name": g.get("name") or code,
             "region": p["region"].most_common(1)[0][0] if p["region"] else "",
             "lat": g.get("lat"), "lon": g.get("lon"), "geom": code in geo,
-            "total": p["total"], "full": full,
+            "total": p["total"], "full": full, "first": p["first"], "last": p["last"],
             "years": [p["years"][y] for y in YEARS],
             "months": [p["months"][m] for m in range(1, 13)],
             "wk": [p["wk"][i] for i in range(7)],
@@ -176,7 +178,7 @@ def nps_html(d: dict | None, esc, kpi) -> str:
     <button class="ntog" data-mode="rate" aria-pressed="false">Per million visits</button>
     <button class="ntog on" data-mode="bounds" aria-pressed="true"><i style="background:#8fb573"></i>Park boundaries</button>
     <button class="ntog" data-mode="reset" aria-pressed="false">&#8634; All parks</button>
-    <span class="hint">Click a circle, or choose a park below</span>
+    <span class="hint">Click a park's circle or boundary for its numbers, or choose one below</span>
   </div>
   <div id="npsmap" role="region" aria-label="Map of national park search-and-rescue incidents"></div>
 
@@ -236,7 +238,7 @@ NPS_JS = r"""
   const hook = (code, lyr) => {
     const p = NPS.parks[code]; if (!p) return;
     lyr.bindTooltip(esc(short(p.name)), {sticky:true});
-    lyr.on('click', () => pick(code, true));
+    lyr.on('click', e => { pick(code, true); popup(code, e.latlng); });
   };
   fetch('data/nps_overview.geojson').then(r => r.json()).then(gj => {
     bounds = L.featureGroup().addTo(nmap);
@@ -275,7 +277,22 @@ NPS_JS = r"""
       fillColor: COLORS.mountain, fillOpacity: .5})
       .bindTooltip(`<b>${esc(short(p.name))}</b><br>${fmt(Math.round(p.full / 5))} incidents a year` +
                    (p.rate ? `<br>${p.rate.toFixed(1)} per million visits` : ''), {direction:'top'})
-      .on('click', () => pick(k, true)).addTo(nmap);
+      .on('click', e => { pick(k, true); popup(k, e.latlng); }).addTo(nmap);
+  }
+  // Click a park: the same kind of popup as the city dots, plus a jump to its charts.
+  const RANK = Object.entries(NPS.parks).filter(([, p]) => p.full > 0).sort((a, b) => b[1].full - a[1].full).map(([k]) => k);
+  const niceDate = d => new Date(d + 'T12:00').toLocaleDateString('en-US', {month:'short', year:'numeric'});
+  function popup(k, latlng) {
+    const p = NPS.parks[k]; if (!p) return;
+    const bm = p.months.indexOf(Math.max(...p.months)), wkTot = p.wk.reduce((a, b) => a + b, 0);
+    const html = `<div class="k">NPS · ${esc(k)} · ${esc(p.region)}</div><b>${esc(p.name)}</b>`
+      + `<br>~${fmt(Math.round(p.full / 5))} search &amp; rescue incidents a year`
+      + `<br><span class="k">Rank ${RANK.indexOf(k) + 1} of ${RANK.length} parks · ${NFULL[0]}–${NFULL[1]}</span>`
+      + (p.rate != null ? `<br>${p.rate.toFixed(1)} per million visits` : (p.visits ? `<br><span class="k">Too few visits to rank a rate</span>` : ''))
+      + (p.full ? `<br>Busiest month: ${MONTHS_L[bm]} · weekends ${(100 * (p.wk[5] + p.wk[6]) / Math.max(1, wkTot)).toFixed(0)}%` : '')
+      + `<br><span class="k">${fmt(p.total)} logged · ${esc(niceDate(p.first))} → ${esc(niceDate(p.last))}</span>`
+      + `<br><a href="#parkpanel" class="k">Year-by-year charts &darr;</a>`;
+    L.popup({maxWidth:280, autoPanPadding:[20, 20]}).setLatLng(latlng).setContent(html).openOn(nmap);
   }
   function resize() { for (const [k, p] of PK) nmark[k].setRadius(nrad(p)); }
 
@@ -286,7 +303,8 @@ NPS_JS = r"""
     if (outline) { nmap.removeLayer(outline); outline = null; }
     if (p.geom) fetch(`data/nps/${k}.geojson`).then(r => r.json()).then(gj => {
       if (picked !== k) return;
-      outline = L.geoJSON(gj, {style:{color:'#fff', weight:1.5, fill:true, fillColor:COLORS.mountain, fillOpacity:.12}}).addTo(nmap);
+      // Not interactive, so the circle and boundary underneath still take clicks.
+      outline = L.geoJSON(gj, {interactive:false, style:{color:'#fff', weight:1.5, fill:true, fillColor:COLORS.mountain, fillOpacity:.12}}).addTo(nmap);
       if (zoom && (!fromMap || nmap.getZoom() < 5)) nmap.fitBounds(outline.getBounds(), {padding:[30, 30], maxZoom:9});
     }).catch(() => null);
     const full = p.full, perYr = Math.round(full / 5);
