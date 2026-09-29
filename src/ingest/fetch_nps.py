@@ -94,7 +94,7 @@ def incidents() -> None:
             else:
                 m, d, y = (raw.split("/") + ["", "", ""])[:3]
             if not (y and m and d):
-                bad.append(iid)
+                bad.append((iid, row[ix["IncidentDate"]], row[ix["ParkAlphaCode"]]))
                 continue
             out.append({"id": iid, "date": f"{y}-{int(m):02d}-{int(d):02d}",
                         "type": row[ix["IncType"]],
