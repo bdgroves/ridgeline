@@ -48,6 +48,9 @@ TRAILHEADS = {
     "27XX E SQUAW PEAK DR":              "Piestewa Peak · park road (old name)",
     "47XX E PIMA CANYON RD":             "Pima Canyon Trailhead · South Mountain",
     "62XX E CHOLLA LN":                  "Cholla Trailhead · Camelback",
+    "51XX N INVERGORDON RD":             "Cholla Trailhead · Camelback (address since 2022)",
+    "7XX E DESERT FOOTHILLS PW":         "Desert Foothills Pkwy · South Mountain",
+    "24XX E VALLEY VIEW DR":             "Valley View Dr · South Mountain, north side",
     "109XX S CENTRAL AV":                "South Mountain Park entrance",
     "18333 North THOMPSON PEAK Parkway": "Gateway Trailhead · McDowell Sonoran",
     "23015 North 128TH Street":          "Tom's Thumb Trailhead · McDowell Sonoran",
@@ -302,7 +305,134 @@ def city_panel(city: dict, s: dict, report: dict) -> str:
 </section>"""
 
 
-def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
+def heat_section(h: dict) -> str:
+    """Phoenix heat warnings, daily highs and the trail-closure program."""
+    if not h or "warning_vs_not" not in h:
+        return ""
+    ww = {(r["period"], r["days"]): r for r in h["warning_vs_not"]}
+    pre_w, pre_o = ww[("2019–2020", "warning days")], ww[("2019–2020", "other May–Sep days")]
+    post_w, post_o = ww[("2021 on", "warning days")], ww[("2021 on", "other May–Sep days")]
+    did = h.get("diff_in_diff", {})
+    wy = {int(k): v for k, v in h["warning_days_by_year"].items()}
+    span_years = [y for y in range(2019, int(h["span"][1][:4]) + 1)]
+    post_years = [y for y in span_years if y >= 2021]
+    avg_warn = round(sum(wy.get(y, 0) for y in post_years) / max(len(post_years), 1))
+    ab = {int(k): v for k, v in h["all_by_year"].items()}
+    c19 = ab.get(2019, {}).get("closure", 0)
+    last3 = [y for y in span_years][-3:]
+    c_late = round(sum(ab.get(y, {}).get("closure", 0) for y in last3) / 3)
+    o19 = ab.get(2019, {}).get("other", 0) + ab.get(2019, {}).get("south", 0)
+    o_late = round(sum(ab.get(y, {}).get("other", 0) + ab.get(y, {}).get("south", 0) for y in last3) / 3)
+    # Upper bound on rescues the closures could have prevented per year: the whole
+    # warning-day drop at the closure trails, times warning days per year.
+    saved = (pre_w["closure_per_100_days"] - post_w["closure_per_100_days"]) / 100 * avg_warn
+    n_closed = len(h.get("closed_hour_calls", []))
+
+    def row(label, kind):
+        cells = "".join(f'<td class="num">{r[kind + "_per_100_days"]:.0f}</td>' for r in (pre_w, pre_o, post_w, post_o))
+        d = did.get(kind)
+        eff = (f'<td class="num">{d["ratio"]:.2f}<br><small>{d["ci95"][0]:.2f}–{d["ci95"][1]:.2f}</small></td>'
+               if d else '<td class="num">–</td>')
+        return f"<tr><td>{label}</td>{cells}{eff}</tr>"
+
+    temp = h["by_temperature"]
+    t_labels = [t["bin"] for t in temp]
+    t_closure = bar_chart([t["closure_per_100_days"] or 0 for t in temp], t_labels, COLORS["mountain"],
+                          title="Rescues per 100 days at the closure trails, by daily high")
+    t_other = bar_chart([t["other_per_100_days"] or 0 for t in temp], t_labels, "#8a8676",
+                        title="Rescues per 100 days on other Phoenix trails, by daily high")
+    warn_svg = bar_chart([wy.get(y, 0) for y in span_years], [str(y) for y in span_years], "#d9534f",
+                         title="NWS heat-warning days per year, Central Phoenix")
+    yr_closure = bar_chart([ab.get(y, {}).get("closure", 0) for y in span_years], [str(y) for y in span_years],
+                           COLORS["mountain"], title="Rescues per year at the closure trails")
+    yr_other = bar_chart([ab.get(y, {}).get("other", 0) + ab.get(y, {}).get("south", 0) for y in span_years],
+                         [str(y) for y in span_years], "#8a8676", title="Rescues per year on other Phoenix trails")
+    hrs = h["closure_hours_on_warning_days"]["2021 on"]
+    hr_svg = bar_chart(hrs, [f"{i:02d}" for i in range(24)], COLORS["mountain"], label_every=3, show_values=False,
+                       title="Closure-trail rescues on warning days since 2021, by hour")
+    closed_list = "".join(
+        f'<tr><td class="num">{esc(c["date"])}</td><td class="num">{c["hour"]:02d}:00</td>'
+        f'<td>{esc(TRAILHEADS.get(c["address"], c["address"]))}</td><td class="num">{c["high"]:.0f}°F</td></tr>'
+        for c in h.get("closed_hour_calls", []))
+    cd = did.get("closure", {})
+    return f"""
+<section class="block" id="heat"><div class="wrap">
+  <h2>Heat &amp; trail closures</h2>
+  <div class="prose">
+  <p>Since 2021 Phoenix has closed the <b>Echo Canyon and Cholla trails on Camelback</b> and the <b>Piestewa Peak
+  trails</b> from 9&nbsp;a.m. to 5&nbsp;p.m. on days the National Weather Service has a heat warning in effect. In
+  October 2024 the city proposed adding South Mountain and starting at 8&nbsp;a.m. Does the dispatch data show the
+  closures working? This section lines up all {h["calls"]:,} Phoenix mountain-rescue calls, located or not, with daily
+  highs at Sky Harbor and every heat warning the Weather Service issued for Central Phoenix.</p>
+  </div>
+  <div class="kpis">
+    {kpi(f"{avg_warn}", "Warning days a year", f"{post_years[0]}–{post_years[-1]} average")}
+    {kpi(f'{pre_w["closure_per_100_days"]:.0f} &rarr; {post_w["closure_per_100_days"]:.0f}', "Closure-trail rescues", "per 100 warning days, before &rarr; after")}
+    {kpi(f'{pre_o["closure_per_100_days"]:.0f} &rarr; {post_o["closure_per_100_days"]:.0f}', "Same trails, other days", "per 100 ordinary May–Sep days")}
+    {kpi(f"{n_closed}", "Rescues during closed hours", "closure trails, warning days, since 2021")}
+  </div>
+
+  <h3>Warning days vs. ordinary summer days</h3>
+  <div class="scroll"><table>
+    <thead><tr><th>Rescues per 100 days, May–Sep</th><th class="num">2019–20<br>warning</th><th class="num">2019–20<br>ordinary</th>
+      <th class="num">2021 on<br>warning</th><th class="num">2021 on<br>ordinary</th><th class="num">Net change<br><small>95% range</small></th></tr></thead>
+    <tbody>
+      {row("Closure trails (Camelback, Piestewa)", "closure")}
+      {row("South Mountain (proposed Oct 2024)", "south")}
+      {row("All other Phoenix trails", "other")}
+    </tbody>
+  </table></div>
+  <p class="source">Days: {pre_w["n_days"]} warning and {pre_o["n_days"]} ordinary May–Sep days before the program,
+  {post_w["n_days"]} and {post_o["n_days"]} after. "Net change" compares the warning-day rate with the same trails' ordinary-day
+  rate, after vs before; 1.00 means no change, below 1 means warning days got relatively quieter. The range is an
+  approximate 95% interval from the call counts.</p>
+
+  <div class="grid2" style="margin-top:18px">
+    <figure class="chart"><figcaption>Closure trails · rescues per 100 days, by daily high (°F)</figcaption>{t_closure}</figure>
+    <figure class="chart"><figcaption>Other Phoenix trails · rescues per 100 days, by daily high (°F)</figcaption>{t_other}</figure>
+    <figure class="chart"><figcaption>Closure trails · rescues per year, all months</figcaption>{yr_closure}</figure>
+    <figure class="chart"><figcaption>Other Phoenix trails (incl. South Mountain) · rescues per year</figcaption>{yr_other}</figure>
+    <figure class="chart"><figcaption>NWS heat-warning days per year · Central Phoenix</figcaption>{warn_svg}</figure>
+    <figure class="chart"><figcaption>Closure trails · warning-day rescues since 2021, by hour</figcaption>{hr_svg}</figure>
+  </div>
+
+  <h3>What it says</h3>
+  <div class="defs">
+    <div class="def"><h4>Warning days got quieter at the closed trails</h4><p>Before the program the closure trails
+      averaged {pre_w["closure_per_100_days"]:.0f} rescues per 100 warning days; since, {post_w["closure_per_100_days"]:.0f}. Other trails
+      barely moved ({pre_w["other_per_100_days"]:.0f} &rarr; {post_w["other_per_100_days"]:.0f}). That's the pattern you'd expect if closures
+      work. But the counts are small ({cd.get("counts", [0]*4)[0]} and {cd.get("counts", [0]*4)[2]} calls), and the 95% range on the net change,
+      {cd.get("ci95", [0, 0])[0]:.2f} to {cd.get("ci95", [0, 0])[1]:.2f}, includes no effect at all.</p></div>
+    <div class="def"><h4>Closures can't explain the long drop</h4><p>The closure trails went from {c19} rescues in 2019 to about
+      {c_late} a year in {last3[0]}–{last3[-1]}, while other trails went from {o19} to about {o_late}. But the drop is year-round,
+      and there are only about {avg_warn} warning days a year. Even if every warning-day rescue that disappeared was prevented by
+      a closure, that's about {saved:.0f} a year. Something else, most of it outside summer, did the rest.</p></div>
+    <div class="def"><h4>Rescues don't rise with the thermometer</h4><p>Calls per day are roughly flat from below 70°F
+      to 110°F and up. At the closure trails, 110-degree days are as quiet as the coolest ones. The city's own review found visitors fall
+      as the temperature climbs, so each hiker out there faces more risk even though the count of rescues doesn't grow.</p></div>
+    <div class="def"><h4>Some people go anyway</h4><p>Since 2021 there have been {n_closed} rescues at the closure trails during
+      closed hours on warning days, mostly late morning. Some may have started before 9&nbsp;a.m.; some may be at the trailhead
+      rather than on the trail. The list is below.</p></div>
+  </div>
+
+  <details class="more"><summary>Rescues at closure trails during closed hours ({n_closed})</summary>
+    <div class="scroll"><table><thead><tr><th class="num">Date</th><th class="num">Hour</th><th>Where</th><th class="num">High</th></tr></thead>
+    <tbody>{closed_list}</tbody></table></div>
+  </details>
+  <p class="source">Warning days are dates on which a Weather Service Excessive (since 2025, Extreme) Heat Warning for zone
+  {esc(h["zone"])}, Central Phoenix, was in effect at any point between 9&nbsp;a.m. and 5&nbsp;p.m., from the
+  <a href="https://mesonet.agron.iastate.edu/vtec/">Iowa Environmental Mesonet VTEC archive</a>. For 2021–2024 this gives
+  {", ".join(str(wy.get(y, 0)) for y in (2021, 2022, 2023, 2024))} days; the city's
+  <a href="https://www.phoenix.gov/content/dam/phoenix/parkssite/documents/2024-10-24%20phoenix%20trails%20and%20heat%20safety.pdf">2024 program review</a>
+  counts 20, 18, 42 and 45. Daily highs: <a href="https://open-meteo.com/">Open-Meteo</a> historical reanalysis at Sky Harbor.
+  Trails are assigned from the dispatch address, so unlocated calls count too. The "before" years include 2020, when
+  trail use changed with the pandemic.</p>
+</div></section>
+"""
+
+
+def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report: dict | None = None) -> None:
+    heat = heat_section(heat_report or {})
     phx = next(s for c, s, _ in cities if c["key"] == "phoenix")
     ann = phx["annual"]
     drop = round(100 * (1 - (ann.get(2023, 0) + ann.get(2024, 0) + ann.get(2025, 0)) / 3 / max(ann.get(2019, 1), 1)))
@@ -419,6 +549,9 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
   .note {{ border-left:3px solid var(--sand); background:var(--panel); padding:16px 20px; }}
   .note p {{ margin:0 0 10px; color:var(--soft); }} .note p:last-child {{ margin:0; }}
   .scroll {{ overflow-x:auto; }}
+  details.more {{ margin-top:18px; background:var(--panel); border:1px solid var(--line); padding:12px 16px; }}
+  details.more summary {{ cursor:pointer; font:500 12px/1.4 'IBM Plex Mono', monospace; letter-spacing:.06em; text-transform:uppercase; color:var(--sand); }}
+  td small, th small {{ color:var(--muted); font-size:11px; }}
   footer {{ border-top:1px solid var(--line); padding:28px 0 48px; color:var(--muted); font:400 12px/1.8 'IBM Plex Mono', monospace; }}
   .leaflet-popup-content-wrapper, .leaflet-popup-tip {{ background:#1d211b; color:var(--text); border-radius:2px; }}
   .leaflet-popup-content {{ font:14px/1.5 Barlow, sans-serif; margin:12px 14px; }}
@@ -456,7 +589,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
       {len(phx['mountain']):,} located calls ({echo_pct}%). Add Piestewa Peak, Pima Canyon and Cholla and you have most of the city.</p></div>
     <div class="finding"><div class="big">&minus;{drop}%</div>
       <p><b>Phoenix rescues are down about a third.</b> {ann.get(2019, 0)} in 2019, about {round((ann.get(2023, 0) + ann.get(2024, 0) + ann.get(2025, 0)) / 3)} a year from 2023 to 2025.
-      That's the same years as the city's heat-triggered trail closures. It's a lead worth testing, not a finding.</p></div>
+      Heat closures only cover about a month of days a year, so they can't be most of it. <a href="#heat">See the heat analysis</a>.</p></div>
     <div class="finding"><div class="big">3 seasons</div>
       <p><b>Each city has its own calendar.</b> Boulder peaks in July. Scottsdale peaks in February and goes quiet in summer.
       Phoenix barely has a season at all: March and May are as busy as July.</p></div>
@@ -486,6 +619,8 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str) -> None:
   <p class="source">Mountain &amp; technical rescues only. "Rescues / yr" averages full calendar years. The cities don't count the same way
   (see <a href="#read">How to read this</a>), so compare shapes, not totals.</p>
 </div></section>
+
+{heat}
 
 <section class="block" id="read"><div class="wrap">
   <h2>How to read this</h2>
@@ -750,7 +885,7 @@ def main() -> None:
         built.append((city, s, reports.get(city["key"], {})))
         print(f"  {city['name']}: {len(s['mountain']):,} mountain/technical · {len(rows):,} total")
     updated = datetime.now(timezone.utc).strftime("%B %-d, %Y")
-    write_index(built, updated)
+    write_index(built, updated, load_json("heat_report.json"))
     print(f"  ✓ site/index.html")
 
 

@@ -7,8 +7,8 @@
  ],
  "calls": 1619,
  "groups": {
-  "Other trails": 817,
-  "Camelback (Echo Canyon, Cholla)": 386,
+  "Other trails": 758,
+  "Camelback (Echo Canyon, Cholla)": 445,
   "South Mountain": 236,
   "Piestewa Peak": 180
  },
@@ -37,72 +37,72 @@
   {
    "bin": "<70",
    "days": 547,
-   "closure": 109,
-   "closure_per_100_days": 19.9,
+   "closure": 117,
+   "closure_per_100_days": 21.4,
    "south": 47,
    "south_per_100_days": 8.6,
-   "other": 156,
-   "other_per_100_days": 28.5
+   "other": 148,
+   "other_per_100_days": 27.1
   },
   {
    "bin": "70s",
    "days": 427,
-   "closure": 96,
-   "closure_per_100_days": 22.5,
+   "closure": 110,
+   "closure_per_100_days": 25.8,
    "south": 48,
    "south_per_100_days": 11.2,
-   "other": 150,
-   "other_per_100_days": 35.1
+   "other": 136,
+   "other_per_100_days": 31.9
   },
   {
    "bin": "80s",
    "days": 385,
-   "closure": 86,
-   "closure_per_100_days": 22.3,
+   "closure": 95,
+   "closure_per_100_days": 24.7,
    "south": 40,
    "south_per_100_days": 10.4,
-   "other": 132,
-   "other_per_100_days": 34.3
+   "other": 123,
+   "other_per_100_days": 31.9
   },
   {
    "bin": "90s",
    "days": 441,
-   "closure": 96,
-   "closure_per_100_days": 21.8,
+   "closure": 106,
+   "closure_per_100_days": 24.0,
    "south": 38,
    "south_per_100_days": 8.6,
-   "other": 160,
-   "other_per_100_days": 36.3
+   "other": 150,
+   "other_per_100_days": 34.0
   },
   {
    "bin": "100\u2013104",
    "days": 289,
-   "closure": 82,
-   "closure_per_100_days": 28.4,
+   "closure": 86,
+   "closure_per_100_days": 29.8,
    "south": 26,
    "south_per_100_days": 9.0,
-   "other": 82,
-   "other_per_100_days": 28.4
+   "other": 78,
+   "other_per_100_days": 27.0
   },
   {
    "bin": "105\u2013109",
    "days": 303,
-   "closure": 69,
-   "closure_per_100_days": 22.8,
+   "closure": 80,
+   "closure_per_100_days": 26.4,
    "south": 20,
    "south_per_100_days": 6.6,
-   "other": 84,
-   "other_per_100_days": 27.7
+   "other": 73,
+   "other_per_100_days": 24.1
   },
   {
    "bin": "110+",
    "days": 152,
-   "closure": 28,
-   "closure_per_100_days": 18.4,
+   "closure": 31,
+   "closure_per_100_days": 20.4,
    "south": 17,
    "south_per_100_days": 11.2,
-   "other": 53,
-   "other_per_100_days": 34.9
+   "other": 50,
+   "other_per_100_days": 32.9
   }
  ],
  "warning_vs_not": [
@@ -136,29 +136,76 @@
    "period": "2021 on",
    "days": "warning days",
    "n_days": 147,
-   "closure": 15,
-   "closure_per_100_days": 10.2,
+   "closure": 21,
+   "closure_per_100_days": 14.3,
    "south": 13,
    "south_per_100_days": 8.8,
-   "other": 49,
-   "other_per_100_days": 33.3,
-   "closure_in_closed_hours": 11,
-   "closure_in_closed_hours_per_100_days": 7.5
+   "other": 43,
+   "other_per_100_days": 29.3,
+   "closure_in_closed_hours": 17,
+   "closure_in_closed_hours_per_100_days": 11.6
   },
   {
    "period": "2021 on",
    "days": "other May\u2013Sep days",
    "n_days": 618,
-   "closure": 143,
-   "closure_per_100_days": 23.1,
+   "closure": 158,
+   "closure_per_100_days": 25.6,
    "south": 45,
    "south_per_100_days": 7.3,
-   "other": 177,
-   "other_per_100_days": 28.6,
-   "closure_in_closed_hours": 108,
-   "closure_in_closed_hours_per_100_days": 17.5
+   "other": 162,
+   "other_per_100_days": 26.2,
+   "closure_in_closed_hours": 119,
+   "closure_in_closed_hours_per_100_days": 19.3
   }
  ],
+ "diff_in_diff": {
+  "closure": {
+   "warning_vs_ordinary_before": 0.83,
+   "warning_vs_ordinary_after": 0.56,
+   "ratio": 0.68,
+   "ci95": [
+    0.34,
+    1.33
+   ],
+   "counts": [
+    19,
+    82,
+    21,
+    158
+   ]
+  },
+  "south": {
+   "warning_vs_ordinary_before": 1.14,
+   "warning_vs_ordinary_after": 1.21,
+   "ratio": 1.06,
+   "ci95": [
+    0.39,
+    2.91
+   ],
+   "counts": [
+    8,
+    25,
+    13,
+    45
+   ]
+  },
+  "other": {
+   "warning_vs_ordinary_before": 1.1,
+   "warning_vs_ordinary_after": 1.12,
+   "ratio": 1.02,
+   "ci95": [
+    0.58,
+    1.79
+   ],
+   "counts": [
+    24,
+    78,
+    43,
+    162
+   ]
+  }
+ },
  "closure_hours_on_warning_days": {
   "2019\u20132020": [
    0,
@@ -192,17 +239,17 @@
    0,
    0,
    0,
-   0,
-   0,
    1,
    0,
    1,
-   3,
-   1,
+   0,
+   2,
+   5,
+   5,
    4,
    2,
    1,
-   1,
+   2,
    0,
    1,
    0,
@@ -257,10 +304,28 @@
    "high": 110.2
   },
   {
+   "date": "2023-07-17",
+   "hour": 15,
+   "address": "51XX N INVERGORDON RD",
+   "high": 112.9
+  },
+  {
    "date": "2023-07-25",
    "hour": 13,
    "address": "57XX N ECHO CANYON PW",
    "high": 115.1
+  },
+  {
+   "date": "2024-06-07",
+   "hour": 10,
+   "address": "51XX N INVERGORDON RD",
+   "high": 109.7
+  },
+  {
+   "date": "2024-07-09",
+   "hour": 9,
+   "address": "51XX N INVERGORDON RD",
+   "high": 112.6
   },
   {
    "date": "2024-07-19",
@@ -291,6 +356,36 @@
    "hour": 12,
    "address": "57XX N ECHO CANYON PW",
    "high": 104.8
+  },
+  {
+   "date": "2024-10-03",
+   "hour": 11,
+   "address": "51XX N INVERGORDON RD",
+   "high": 106.5
+  },
+  {
+   "date": "2024-10-06",
+   "hour": 11,
+   "address": "51XX N INVERGORDON RD",
+   "high": 106.8
+  },
+  {
+   "date": "2025-08-05",
+   "hour": 11,
+   "address": "51XX N INVERGORDON RD",
+   "high": 113.8
+  },
+  {
+   "date": "2025-08-23",
+   "hour": 11,
+   "address": "51XX N INVERGORDON RD",
+   "high": 109.0
+  },
+  {
+   "date": "2025-08-24",
+   "hour": 10,
+   "address": "51XX N INVERGORDON RD",
+   "high": 107.6
   }
  ],
  "season_by_year": {
@@ -315,18 +410,18 @@
    "south": 13
   },
   "2023": {
-   "closure": 21,
-   "other": 43,
+   "closure": 25,
+   "other": 39,
    "south": 12
   },
   "2024": {
-   "closure": 19,
-   "other": 47,
+   "closure": 28,
+   "other": 38,
    "south": 15
   },
   "2025": {
-   "closure": 27,
-   "other": 54,
+   "closure": 35,
+   "other": 46,
    "south": 8
   }
  },
@@ -347,23 +442,23 @@
    "south": 29
   },
   "2022": {
-   "closure": 86,
-   "other": 117,
+   "closure": 92,
+   "other": 111,
    "south": 29
   },
   "2023": {
-   "closure": 63,
-   "other": 112,
+   "closure": 75,
+   "other": 100,
    "south": 24
   },
   "2024": {
-   "closure": 53,
-   "other": 114,
+   "closure": 71,
+   "other": 96,
    "south": 37
   },
   "2025": {
-   "closure": 54,
-   "other": 126,
+   "closure": 77,
+   "other": 103,
    "south": 25
   }
  }

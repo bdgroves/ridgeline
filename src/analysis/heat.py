@@ -209,6 +209,32 @@ def main() -> None:
             dd.append(row)
     rep["warning_vs_not"] = dd
 
+    # Difference in differences: at each kind of trail, how did the warning-day
+    # rate move relative to the same trails' ordinary summer days? A ratio of
+    # rate ratios, with an approximate 95% interval from the Poisson counts.
+    import math
+    did = {}
+    for kind in ("closure", "south", "other"):
+        pre_w, pre_o, post_w, post_o = (next(r for r in dd if r["period"] == p and r["days"] == d)
+                                        for p, d in [("2019–2020", "warning days"),
+                                                     ("2019–2020", "other May–Sep days"),
+                                                     ("2021 on", "warning days"),
+                                                     ("2021 on", "other May–Sep days")])
+        n = [pre_w[kind], pre_o[kind], post_w[kind], post_o[kind]]
+        d = [pre_w["n_days"], pre_o["n_days"], post_w["n_days"], post_o["n_days"]]
+        if min(n) == 0:
+            continue
+        rr_pre = (n[0] / d[0]) / (n[1] / d[1])
+        rr_post = (n[2] / d[2]) / (n[3] / d[3])
+        se = math.sqrt(sum(1 / x for x in n))
+        r = rr_post / rr_pre
+        did[kind] = {"warning_vs_ordinary_before": round(rr_pre, 2),
+                     "warning_vs_ordinary_after": round(rr_post, 2),
+                     "ratio": round(r, 2),
+                     "ci95": [round(r * math.exp(-1.96 * se), 2), round(r * math.exp(1.96 * se), 2)],
+                     "counts": n}
+    rep["diff_in_diff"] = did
+
     # 3. Hour of day at the closure trails on warning days, before vs after
     hrs = {}
     for post in (False, True):
