@@ -1,0 +1,48 @@
+{
+ "url": "https://www.phoenixopendata.com/dataset/1f46604c-ce46-4503-8e9b-45b498456185/resource/aa4e2a08-c0ad-4fc4-bee9-44c2d85a58fa/download/hiking.csv",
+ "rows": 111844,
+ "columns": [
+  "Date",
+  "Site",
+  "Count"
+ ],
+ "sample": [
+  {
+   "Date": "1/1/2019",
+   "Site": "E - Camelback - Cholla Trail ",
+   "Count": ""
+  },
+  {
+   "Date": "1/1/2019",
+   "Site": "E - Camelback - Echo Canyon Trail",
+   "Count": "1259"
+  },
+  {
+   "Date": "1/1/2019",
+   "Site": "E - Dreamy Draw Park - Bike Path - Restroom Area",
+   "Count": "588"
+  },
+  {
+   "Date": "1/1/2019",
+   "Site": "E - Dreamy Draw Park - Trail 100",
+   "Count": "181"
+  },
+  {
+   "Date": "1/1/2019",
+   "Site": "E - Papago - 5K Fitness",
+   "Count": "264"
+  }
+ ],
+ "range:Date": [
+  "1/1/2019",
+  "9/9/2025"
+ ],
+ "range:Site": [
+  "E - Camelback - Cholla Trail ",
+  "South Mountain-Telegraph Pass Trail"
+ ],
+ "range:Count": [
+  "0",
+  "999"
+ ]
+}
