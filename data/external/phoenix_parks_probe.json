@@ -1,0 +1,124 @@
+{
+ "service": "https://maps.phoenix.gov/pub/rest/services/Public/ParksOpenData/MapServer",
+ "layers": [
+  [
+   14,
+   "WalkPHX Trailheads"
+  ],
+  [
+   13,
+   "Disc Golf"
+  ],
+  [
+   12,
+   "Volleyball Courts"
+  ],
+  [
+   11,
+   "Walk Phoenix Trails"
+  ],
+  [
+   0,
+   "Basketball Courts"
+  ],
+  [
+   1,
+   "Community Centers"
+  ],
+  [
+   2,
+   "Dog Parks"
+  ],
+  [
+   3,
+   "Golf Courses"
+  ],
+  [
+   4,
+   "Playgrounds"
+  ],
+  [
+   5,
+   "Skate Parks"
+  ],
+  [
+   6,
+   "Splash Pads"
+  ],
+  [
+   7,
+   "Sports Complexes"
+  ],
+  [
+   8,
+   "Swimming Pools"
+  ],
+  [
+   9,
+   "Tennis and Pickleball Courts"
+  ],
+  [
+   10,
+   "Park Boundaries"
+  ]
+ ],
+ "layer:14": {
+  "name": "WalkPHX Trailheads",
+  "geometryType": "esriGeometryPoint",
+  "fields": [
+   "OBJECTID",
+   "NAME",
+   "ADDRESS",
+   "INTERSECTION",
+   "HOURS",
+   "DISTANCE",
+   "WALKPHXGUIDE",
+   "AMENITIES",
+   "SHAPE",
+   "TRAILNUMBER",
+   "PARKSDIVISION"
+  ],
+  "count": 63,
+  "sample": [
+   {
+    "OBJECTID": 1,
+    "NAME": "Western Star Park",
+    "ADDRESS": "4425 E. Western Star Blvd.",
+    "INTERSECTION": "44th Street and Western Star Boulevard",
+    "HOURS": "5:30 a.m. to 10 p.m.",
+    "DISTANCE": ".388 Miles",
+    "WALKPHXGUIDE": "Y/ N",
+    "AMENITIES": "Lighted basketball, playground, ramadas and picnic area, restrooms, lighted tennis, lighted sand volleyball.",
+    "TRAILNUMBER": "1",
+    "PARKSDIVISION": "South",
+    "_layer": "WalkPHX Trailheads"
+   },
+   {
+    "OBJECTID": 2,
+    "NAME": "Sun Ray Park",
+    "ADDRESS": "4059 E. Ray Road",
+    "INTERSECTION": "41st Street and Ray Road",
+    "HOURS": "5:30 a.m. to 10:00 p.m.",
+    "DISTANCE": ".47 miles",
+    "WALKPHXGUIDE": "Y/N",
+    "AMENITIES": "Lighted softball field, lighted basketball, picnic area, playground with shade structure, restrooms, soccer, lighted tennis, lighted volleyball, grill.",
+    "TRAILNUMBER": "1",
+    "PARKSDIVISION": "South",
+    "_layer": "WalkPHX Trailheads"
+   },
+   {
+    "OBJECTID": 3,
+    "NAME": "Vista Canyon Park",
+    "ADDRESS": "16020 S. 30th St.",
+    "INTERSECTION": "30th Street and Mountain Vista Drive",
+    "HOURS": "5:30 a.m. to 11:00 p.m.",
+    "DISTANCE": ".55",
+    "WALKPHXGUIDE": "Y/N",
+    "AMENITIES": "Lighted basketball, playground, restrooms, softball, lighted\r\nvolleyball, grill, soccer.",
+    "TRAILNUMBER": "1",
+    "PARKSDIVISION": "South",
+    "_layer": "WalkPHX Trailheads"
+   }
+  ]
+ }
+}
