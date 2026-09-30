@@ -8,7 +8,7 @@ Ridgeline collects every mountain, technical and water rescue call that three fi
 
 | City | Agency | Coverage | Mountain & technical rescues located |
 |---|---|---|---|
-| Phoenix, AZ | Phoenix Fire Department | 2019–2025 | 1,197 of 1,619 (74%) |
+| Phoenix, AZ | Phoenix Fire Department | 2019–2025 | 1,489 of 1,619 (92%) |
 | Scottsdale, AZ | Scottsdale Fire Department | Dec 2022 – present | 360 (466 of 522 rescue calls located, 89%) |
 | Boulder, CO | Boulder Fire-Rescue | 2015 – present | 581 (published points, 100%) |
 
@@ -38,7 +38,7 @@ The city pipeline reruns every Monday, the national parks data monthly, and both
 
 These are descriptive patterns in dispatch counts. None of them is a causal claim.
 
-**A few trailheads account for most of the calls.** In Phoenix, Echo Canyon on Camelback Mountain (dispatch address `49XX E MCDONALD DR`) accounts for 310 of the 1,197 located mountain rescues, about 26%. Piestewa Peak, Cholla on Camelback, Pima Canyon on South Mountain and the South Mountain Park entrance make up most of the rest. In Boulder, 243 of 581 technical rescues sit at Chautauqua Park, the main entry to the Flatirons.
+**A few trailheads account for most of the calls.** In Phoenix, Echo Canyon on Camelback Mountain (dispatch address `49XX E MCDONALD DR`) accounts for 310 of the 1,489 located mountain rescues, about a fifth. Piestewa Peak, Cholla on Camelback, Pima Canyon on South Mountain and the South Mountain Park entrance make up most of the rest. In Boulder, 243 of 581 technical rescues sit at Chautauqua Park, the main entry to the Flatirons.
 
 **Phoenix mountain rescues have fallen by about a fifth.** Counting every call, located or not, there were 255 in 2019 and about 203 a year in 2023–2025. (An earlier version said "about a third", from located calls only; that overstated the drop, because which calls could be located changed over time.) Those years overlap Phoenix's heat-triggered trail closures, but the closures can't be most of the explanation (next paragraph). Other changes over the same years (visitation, dispatch coding, the pandemic) could produce the same shape.
 
@@ -63,7 +63,22 @@ The analysis lines up all 1,619 mountain-rescue calls (trail assigned from the d
 | South Mountain (closed from Oct 2024) | 13 | 10 | 8 | 7 | 0.83 (0.31–2.22) |
 | Other Phoenix trails | 34 | 32 | 30 | 26 | 1.08 (0.62–1.87) |
 
-Closure days got relatively quieter only at the closed trails, about a 51% relative drop, and the interval only just excludes no effect. The counts are small (25 and 15 calls), so it's a signal, not a measurement. The closure trails' long decline (119 rescues in 2019, about 74 a year in 2023–2025) is year-round, and with about 31 warning days a year the closures could account for about 6 rescues a year at most. Rescues per day don't rise with temperature. Since the pilot began, 17 rescues at closed trails happened during that day's closed hours (none in 2021–22); the site lists them.
+Closure days got relatively quieter only at the closed trails, about a 51% relative drop, and the interval only just excludes no effect. The counts are small (25 and 15 calls), so it's a signal, not a measurement. The closure trails' long decline (119 rescues in 2019, about 74 a year in 2023–2025) is year-round, and with about 31 warning days a year the closures could account for about 6 rescues a year at most. Since the pilot began, 17 rescues at closed trails happened during that day's closed hours (none in 2021–22); the site lists them.
+
+**Per hiker, not per day.** Phoenix publishes daily [trail-counter data](https://www.phoenixopendata.com/dataset/hiking-trail-usage) (infrared counters, 2019 on, CC BY; `src/ingest/fetch_trail_counts.py`, weekly). Two counters sit on the closure trails for the whole period, Echo Canyon and the Piestewa Summit Trail, so rescues at those two trailheads can be divided by the counters' passes on the same days (2,296 days with both reporting). A pass is one person crossing the counter, so the rates are for comparison, not "1 in N hikers."
+
+| | Passes a day | Rescues per 100,000 passes |
+|---|---:|---:|
+| Daily high below 80°F | ~2,170 | 8.9 |
+| Daily high 105°F and up | ~740 | 26.3 |
+| May–Sep, before the program: ordinary days / heat days | 1,355 / 918 | 21.5 / 50.5 |
+| May–Sep, after: ordinary days / closure days | 1,060 / 602 | 20.6 / 10.5 |
+| 2019 / 2024, all days | 1,588 / 1,518 | 14.3 / 9.6 |
+| 2019 / 2024, November–April | 1,952 / 2,042 | 10.2 / 7.8 |
+
+Three things follow. **Heat roughly triples the risk per hiker**: rescues per day look flat with temperature only because the crowd shrinks. **Closure days are safer per hiker than ordinary days**, even with about 600 passes a day still counted outside the closed hours (only 8 rescues, so treat it as a signal). And **the long decline isn't fewer hikers**: traffic in 2024 was about 2019's, including winter, but rescues per pass fell by about a third.
+
+**Did rescues move to another call type?** `fetch_phoenix_fire.py` tallies every call type at the closure trailhead addresses from the full dispatch data (`data/external/trailhead_call_types.csv`). Mountain rescues went 119, 83, 108, 92, 75, 71, 77 (2019–2025); every other published call type combined, including calls whose type the city withholds, went 51, 37, 39, 49, 48, 35, 42, with no rise. Medical calls left out of the public data entirely can't be checked.
 
 **Watches.** A watch later upgraded to a warning is stored in the VTEC archive with its end before its start, so it has no in-effect time of its own. In this zone every 2021 pilot watch was upgraded to a warning covering the same days, so watches add no closure days unless a closure began on the day a watch was *issued* (the product time). That reading isn't used here.
 
@@ -75,7 +90,7 @@ Closure days got relatively quieter only at the closed trails, about a 51% relat
 
 | | Busiest month | Quietest month | Share on weekends |
 |---|---|---|---|
-| Phoenix | March | December | 39.7% |
+| Phoenix | March | December | 41.2% |
 | Scottsdale | February | June | 41.4% |
 | Boulder | July | January | 41.5% |
 
@@ -130,9 +145,10 @@ Boulder publishes points, so nothing there is geocoded. Phoenix and Scottsdale a
 
 1. **Normalize the address.** Hundred blocks become the block midpoint (`49XX` → `4950`). Intersections become `A & B`. Phoenix Fire's abbreviations are expanded (`PW` → `PKWY`, `AV` → `AVE`). A renamed street is updated (*Squaw Peak Dr* → *Piestewa Peak Dr*).
 2. **Accept a match scoring 80 or higher.**
-3. **Accept a near miss (score 70–80) only when it lands on the same street.** Hundred-block midpoints often fall outside a street's address range, which lowers the score even when the street is right. So a near miss is kept only if it is an address, street or intersection match and the geocoder's matched address contains the street name that was asked for.
-4. **Fall back to a preserve.** If the geocoder fails and the address clearly names a preserve, the call is placed at a representative point for that preserve.
-5. **Otherwise the call is not located.** It stays in the counts that note it, but it isn't on the map.
+3. **Accept a near miss (score 70–80) only when it lands on the same street.** Hundred-block midpoints often fall outside a street's address range, which lowers the score even when the street is right. So a near miss is kept only if it is an address, street or intersection match, the geocoder's matched address contains the street name that was asked for, and the direction (E/W, N/S) and street type (Rd/Pl) agree.
+4. **Try the U.S. Census Bureau geocoder.** It interpolates along TIGER address ranges, which cover park roads and hundred blocks the county file doesn't (North Mountain on 7th Street, Lookout Mountain on 16th Street, the south side of South Mountain). Its results are public domain, so they can be cached. The same street, direction and type checks apply; they rejected, for example, *E* Northern Ave landing on *W* Northern and *S* 19th Ave landing on *N* 19th.
+5. **Fall back to a preserve.** If the geocoder fails and the address clearly names a preserve, the call is placed at a representative point for that preserve.
+6. **Otherwise the call is not located.** It stays in the counts that note it, but it isn't on the map.
 
 Every result is written to `data/external/geocode_cache.csv`, so the next run only queries addresses it hasn't seen. The cache records the query, score, matched address, match type, method and a logic version. Misses from an older logic version are retried; hits are kept.
 
@@ -142,8 +158,9 @@ For Phoenix mountain rescues, the 1,619 calls resolve like this:
 |---|---:|
 | Geocoder match, score ≥ 80 | 275 |
 | Same-street near miss, score 70–80 (same direction and street type) | 683 |
-| Preserve representative point | 239 |
-| Not located | 422 |
+| Census Bureau geocoder (same checks) | 198 |
+| Preserve representative point | 333 |
+| Not located | 130 |
 | **Total** (1,619 unique incident IDs) | **1,619** |
 
 ### 3. Publish
@@ -292,6 +309,7 @@ ridgeline/
 - **Cholla's new address.** Since the Cholla Trail reopened in 2022, Phoenix Fire logs its calls at `51XX N INVERGORDON RD`, the trailhead corner in Paradise Valley, instead of `62XX E CHOLLA LN`. Those 59 rescues had failed to geocode, and the first run of the heat analysis counted them as "other trails", which overstated the closure-trail decline. Both are fixed.
 - **Trend from all calls.** The "down about a third" headline used located calls only. Because the Cholla calls became unlocatable from 2022, that overstated the decline. Trends now use all 1,619 calls: down about a fifth.
 - **Closure policy timeline.** The first heat analysis assumed one rule (9 a.m.–5 p.m. on a warning, from May 2021). The program actually began as a July 16, 2021 pilot at 11 a.m.–5 p.m. on a watch, and moved to 9 a.m. only on August 31, 2023. With each date scored under its own rules, the closure-trail net change went from 0.68 (0.34–1.33) to 0.49 (0.25–0.98), and closed-hour rescues from 21 to 17. Thanks to Yun-Peng (Liz) Lu for the timeline and for flagging the watch records.
+- **"Rescues don't rise with temperature."** True of rescues per day, but misleading: trail-counter data shows the crowd shrinks in the heat, and per hiker the risk roughly triples above 105°F. The heat section now leads with the per-hiker rate.
 - **Wrong street type.** Near-miss matches must now also have the same street type. This rejected six wrong matches, including `7XX E DESERT FOOTHILLS PW` → Desert Flower Ln (21 South Mountain rescues, now unplaced rather than misplaced) and Invergordon Rd → Invergordon Pl, three miles north.
 
 ---
@@ -302,8 +320,11 @@ ridgeline/
 - [x] Geocoding in CI with a committed cache and match report
 - [x] Scottsdale and Boulder
 - [x] **Closure analysis.** NWS heat-warning days and Open-Meteo daily highs against closure-trail rescues, on the real policy timeline (Sept 2026)
-- [ ] **Trail use.** Phoenix's [Hiking Trail Usage](https://www.phoenixopendata.com/dataset/hiking-trail-usage) infrared counter data (2019 on, CC BY) as a denominator: rescues per hiker, not per day
-- [ ] Locate the remaining 422 Phoenix rescues (North Mountain, Papago, Desert Foothills) with trailhead-specific matching
+- [x] **Trail use.** Phoenix's trail-counter data as a denominator: rescues per hiker, not per day (Sept 2026)
+- [x] Locate most of the remaining Phoenix rescues: Census geocoder fallback, Papago Park and South Mountain summit roads (1,197 → 1,489 located)
+- [x] Rocky Mountain National Park on the Boulder map
+- [ ] **Why each hike got safer.** Rescues per hiker fell about a third since 2019, winter included, with no rise in other call types. Candidates: trail work, signage and parking changes, who hikes, how Phoenix Fire triages calls
+- [ ] The last 130 unlocated Phoenix rescues (W Andrea Ln, E Moreland St, S 46th St and a few one-offs)
 - [x] National parks: NPS SAR incidents 2013–2021 by park, with outlines, calendars and per-visit rates (Sept 2026)
 - [ ] National parks, deaths: the NPS mortality release (2007–2023) has date, park, cause, intent and outcome per death
 - [ ] Sheriff and state SAR logs. Requests are pending with Maricopa County Sheriff's Office and Arizona DEMA
