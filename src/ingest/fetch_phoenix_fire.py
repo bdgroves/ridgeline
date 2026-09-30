@@ -196,6 +196,11 @@ def main() -> None:
 
     all_frames = []
     year_counts = {}
+    # Every call type (not just rescues) at the main trailhead addresses, by
+    # year: a check on whether calls there moved to other call types over time.
+    th_rows = []
+    TRAILHEADS_RX = (r"MCDONALD\s+DR|ECHO\s+CANYON|CHOLLA\s+LN|51XX\s+N\s+INVERGORDON|"
+                     r"(PIESTEWA|SQUAW)\s+PEAK|PIMA\s+CANYON|106XX\s+N\s+7TH\s+ST|GALVIN\s+PW")
 
     for year, url in sorted(YEAR_URLS.items()):
         raw = fetch_year(year, url)
@@ -205,6 +210,11 @@ def main() -> None:
 
         filtered = filter_sar(raw, year)
         year_counts[year] = len(filtered)
+        addr = raw.get("INCIDENT_ADDRESS", pd.Series(dtype=str)).fillna("").astype(str)
+        th = raw[addr.str.contains(TRAILHEADS_RX, case=False, regex=True)]
+        if not th.empty:
+            g = th.groupby([th["INCIDENT_ADDRESS"].str.strip(), th["NATURE_TEXT"].fillna("").str.strip()]).size()
+            th_rows += [{"year": year, "address": a_, "nature": n_, "calls": int(v)} for (a_, n_), v in g.items()]
 
         if not filtered.empty:
             all_frames.append(filtered)
@@ -219,6 +229,9 @@ def main() -> None:
         return
 
     combined = pd.concat(all_frames, ignore_index=True)
+    if th_rows:
+        (ROOT / "data" / "external" / "trailhead_call_types.csv").write_text(
+            pd.DataFrame(th_rows).sort_values(["address", "year", "calls"], ascending=[True, True, False]).to_csv(index=False))
 
     # Save raw filtered
     raw_out = RAW_DIR / "phoenix_fire_sar_raw.csv"

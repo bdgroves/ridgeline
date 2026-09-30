@@ -561,5 +561,224 @@
    "2024": 9,
    "2025": 3
   }
- }
+ },
+ "trail_use": {
+  "counters": {
+   "echo": "E - Camelback - Echo Canyon Trail",
+   "pies": "E - PMP - Piestewa Summit Trail"
+  },
+  "coverage_days": 2296,
+  "span": [
+   "2019-01-01",
+   "2025-11-30"
+  ],
+  "by_year": {
+   "2019": {
+    "days": 338,
+    "passes_per_day": 1588,
+    "rescues": 77,
+    "per_100k": 14.34
+   },
+   "2020": {
+    "days": 220,
+    "passes_per_day": 2127,
+    "rescues": 47,
+    "per_100k": 10.05
+   },
+   "2021": {
+    "days": 365,
+    "passes_per_day": 1991,
+    "rescues": 107,
+    "per_100k": 14.73
+   },
+   "2022": {
+    "days": 357,
+    "passes_per_day": 1733,
+    "rescues": 82,
+    "per_100k": 13.25
+   },
+   "2023": {
+    "days": 333,
+    "passes_per_day": 1589,
+    "rescues": 59,
+    "per_100k": 11.15
+   },
+   "2024": {
+    "days": 358,
+    "passes_per_day": 1518,
+    "rescues": 52,
+    "per_100k": 9.57
+   },
+   "2025": {
+    "days": 325,
+    "passes_per_day": 1318,
+    "rescues": 49,
+    "per_100k": 11.44
+   }
+  },
+  "by_year_half": {
+   "2019 May\u2013Oct": {
+    "days": 168,
+    "passes_per_day": 1220,
+    "rescues": 43,
+    "per_100k": 20.98
+   },
+   "2019 Nov\u2013Apr": {
+    "days": 170,
+    "passes_per_day": 1952,
+    "rescues": 34,
+    "per_100k": 10.24
+   },
+   "2020 May\u2013Oct": {
+    "days": 75,
+    "passes_per_day": 1801,
+    "rescues": 20,
+    "per_100k": 14.81
+   },
+   "2020 Nov\u2013Apr": {
+    "days": 145,
+    "passes_per_day": 2296,
+    "rescues": 27,
+    "per_100k": 8.11
+   },
+   "2021 May\u2013Oct": {
+    "days": 184,
+    "passes_per_day": 1438,
+    "rescues": 55,
+    "per_100k": 20.79
+   },
+   "2021 Nov\u2013Apr": {
+    "days": 181,
+    "passes_per_day": 2553,
+    "rescues": 52,
+    "per_100k": 11.25
+   },
+   "2022 May\u2013Oct": {
+    "days": 179,
+    "passes_per_day": 1157,
+    "rescues": 44,
+    "per_100k": 21.25
+   },
+   "2022 Nov\u2013Apr": {
+    "days": 178,
+    "passes_per_day": 2313,
+    "rescues": 38,
+    "per_100k": 9.23
+   },
+   "2023 May\u2013Oct": {
+    "days": 167,
+    "passes_per_day": 1085,
+    "rescues": 27,
+    "per_100k": 14.9
+   },
+   "2023 Nov\u2013Apr": {
+    "days": 166,
+    "passes_per_day": 2097,
+    "rescues": 32,
+    "per_100k": 9.19
+   },
+   "2024 May\u2013Oct": {
+    "days": 176,
+    "passes_per_day": 976,
+    "rescues": 23,
+    "per_100k": 13.39
+   },
+   "2024 Nov\u2013Apr": {
+    "days": 182,
+    "passes_per_day": 2042,
+    "rescues": 29,
+    "per_100k": 7.8
+   },
+   "2025 May\u2013Oct": {
+    "days": 183,
+    "passes_per_day": 894,
+    "rescues": 32,
+    "per_100k": 19.56
+   },
+   "2025 Nov\u2013Apr": {
+    "days": 142,
+    "passes_per_day": 1865,
+    "rescues": 17,
+    "per_100k": 6.42
+   }
+  },
+  "heat": {
+   "before ordinary": {
+    "days": 216,
+    "passes_per_day": 1355,
+    "rescues": 63,
+    "per_100k": 21.53
+   },
+   "before heat": {
+    "days": 41,
+    "passes_per_day": 918,
+    "rescues": 19,
+    "per_100k": 50.5
+   },
+   "after ordinary": {
+    "days": 540,
+    "passes_per_day": 1060,
+    "rescues": 118,
+    "per_100k": 20.62
+   },
+   "after heat": {
+    "days": 127,
+    "passes_per_day": 602,
+    "rescues": 8,
+    "per_100k": 10.47
+   }
+  },
+  "by_temperature": [
+   {
+    "bin": "<70",
+    "days": 509,
+    "passes_per_day": 2102,
+    "rescues": 95,
+    "per_100k": 8.88
+   },
+   {
+    "bin": "70s",
+    "days": 394,
+    "passes_per_day": 2266,
+    "rescues": 79,
+    "per_100k": 8.85
+   },
+   {
+    "bin": "80s",
+    "days": 363,
+    "passes_per_day": 1950,
+    "rescues": 75,
+    "per_100k": 10.6
+   },
+   {
+    "bin": "90s",
+    "days": 404,
+    "passes_per_day": 1527,
+    "rescues": 84,
+    "per_100k": 13.62
+   },
+   {
+    "bin": "100\u2013104",
+    "days": 259,
+    "passes_per_day": 1128,
+    "rescues": 69,
+    "per_100k": 23.63
+   },
+   {
+    "bin": "105\u2013109",
+    "days": 249,
+    "passes_per_day": 774,
+    "rescues": 51,
+    "per_100k": 26.47
+   },
+   {
+    "bin": "110+",
+    "days": 117,
+    "passes_per_day": 658,
+    "rescues": 20,
+    "per_100k": 25.97
+   }
+  ]
+ },
+ "call_types": null
 }

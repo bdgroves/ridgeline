@@ -200,6 +200,74 @@ def day_flags(wr: pd.DataFrame, d: date) -> dict:
     return {"policy": None, "heat": heat, "closed": False, "start_hour": PRE_START_HOUR, "kinds": set()}
 
 
+# ── trail use: rescues per counted hiker ───────────────────────────────────
+# Phoenix "Hiking Trail Usage" open data: daily infrared counter passes. Two
+# counters sit on the closure trails for the whole period, Echo Canyon and the
+# Piestewa Summit Trail; Cholla's counter is too patchy (and the trail was shut
+# for renovation in 2020-22), so Cholla calls and counts are left out here.
+COUNTS = EXT / "phoenix_trail_counts.csv"
+COUNTERS = {"echo": "E - Camelback - Echo Canyon Trail", "pies": "E - PMP - Piestewa Summit Trail"}
+COUNTER_CALLS = {"echo": r"\bMCDONALD\s+DR\b|ECHO\s+CANYON", "pies": r"(PIESTEWA|SQUAW)\s+PEAK"}
+
+
+def trail_use(calls: pd.DataFrame, cal: pd.DataFrame) -> dict | None:
+    if not COUNTS.exists():
+        return None
+    d = pd.read_csv(COUNTS)
+    d["Site"] = d["Site"].astype(str).str.strip()
+    d["date"] = pd.to_datetime(d["Date"], format="%m/%d/%Y", errors="coerce").dt.date
+    d["Count"] = pd.to_numeric(d["Count"], errors="coerce")
+    piv = d[d["Site"].isin(COUNTERS.values())].pivot_table(index="date", columns="Site", values="Count", aggfunc="sum")
+    piv = piv.rename(columns={v: k for k, v in COUNTERS.items()})
+    if not set(COUNTERS) <= set(piv.columns):
+        return None
+    # Days both counters reported something. Zeros are dropped as outages.
+    piv = piv.dropna()
+    piv = piv[(piv["echo"] > 0) & (piv["pies"] > 0)]
+    piv["passes"] = piv["echo"] + piv["pies"]
+    rx = {k: re.compile(v, re.I) for k, v in COUNTER_CALLS.items()}
+    cc = calls[calls["address"].map(lambda a: any(r.search(str(a)) for r in rx.values()))]
+    resc = cc.groupby("date").size()
+    x = piv.join(resc.rename("rescues"), how="left").fillna({"rescues": 0})
+    x = x.join(cal.set_index("date")[["warning", "post", "temperature_2m_max"]], how="left")
+    x["year"] = [dd.year for dd in x.index]
+    x["month"] = [dd.month for dd in x.index]
+    x["half"] = ["Nov–Apr" if m in (11, 12, 1, 2, 3, 4) else "May–Oct" for m in x["month"]]
+
+    def agg(df):
+        n, p, r = len(df), float(df["passes"].sum()), int(df["rescues"].sum())
+        return {"days": n, "passes_per_day": round(p / n) if n else None, "rescues": r,
+                "per_100k": round(r / p * 1e5, 2) if p else None}
+
+    out = {"counters": COUNTERS, "coverage_days": int(len(x)),
+           "span": [str(min(x.index)), str(max(x.index))] if len(x) else None,
+           "by_year": {int(y): agg(g) for y, g in x.groupby("year")},
+           "by_year_half": {f"{int(y)} {h}": agg(g) for (y, h), g in x.groupby(["year", "half"])}}
+    s = x[x["month"].between(5, 9)]
+    out["heat"] = {f"{'after' if post else 'before'} {'heat' if w else 'ordinary'}": agg(g)
+                   for (post, w), g in s.groupby(["post", "warning"])}
+    bins = [-100, 70, 80, 90, 100, 105, 110, 200]
+    labels = ["<70", "70s", "80s", "90s", "100–104", "105–109", "110+"]
+    x["tbin"] = pd.cut(x["temperature_2m_max"], bins, right=False, labels=labels)
+    out["by_temperature"] = [dict(bin=lab, **agg(x[x["tbin"] == lab])) for lab in labels]
+    return out
+
+
+def call_types() -> dict | None:
+    """All call types at the closure trailheads by year (from the raw city data)."""
+    p = EXT / "trailhead_call_types.csv"
+    if not p.exists():
+        return None
+    t = pd.read_csv(p)
+    t = t[t["address"].str.contains(r"MCDONALD\s+DR|ECHO\s+CANYON|CHOLLA\s+LN|51XX\s+N\s+INVERGORDON|(?:PIESTEWA|SQUAW)\s+PEAK",
+                                    case=False, regex=True)]
+    t["kind"] = t["nature"].str.lower().map(lambda n: "mountain rescue" if n == "mountain rescue" else n)
+    top = t.groupby("kind")["calls"].sum().sort_values(ascending=False).head(12).index
+    tab = t[t["kind"].isin(top)].pivot_table(index="kind", columns="year", values="calls", aggfunc="sum", fill_value=0)
+    return {"by_type": {k: {int(y): int(v) for y, v in r.items()} for k, r in tab.iterrows()},
+            "all_calls": {int(y): int(v) for y, v in t.groupby("year")["calls"].sum().items()}}
+
+
 # ── analysis ────────────────────────────────────────────────────────────────
 
 def rate(n: int, days: int) -> float | None:
@@ -355,6 +423,9 @@ def main() -> None:
         "ours_closed_hours_on_warning_days": {int(y): int(n) for y, n in calls[
             cl & calls["during_closure"]].groupby("year").size().items()},
     }
+
+    rep["trail_use"] = trail_use(calls, cal)
+    rep["call_types"] = call_types()
 
     OUT.write_text(json.dumps(rep, indent=1, default=str))
     print(json.dumps({k: v for k, v in rep.items() if k != "closed_hour_calls"}, indent=1, default=str))

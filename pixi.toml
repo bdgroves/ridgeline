@@ -20,6 +20,7 @@ pipeline  = { depends-on = ["phoenix", "geocode", "export", "scottsdale", "bould
 stats     = "python src/analysis/sar_stats.py"
 model     = "python src/analysis/wui_model.py"
 weather   = "python src/analysis/weather_pull.py"
+trailcounts = "python src/ingest/fetch_trail_counts.py"
 heat      = "python src/analysis/heat.py"
 analyze   = { depends-on = ["stats", "model"] }
 

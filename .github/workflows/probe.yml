@@ -14,15 +14,17 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: pip install httpx openpyxl pypdf
+      - run: pip install httpx openpyxl pypdf pandas
       - run: python tools/probe_sources.py
       - run: python tools/probe_heat_zones.py
       - run: python src/ingest/fetch_trail_counts.py
       - run: python tools/probe_phx_parks.py
         continue-on-error: true
+      - run: python tools/probe_census_geocode.py
+        continue-on-error: true
       - name: Commit probe report
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/external/source_probe.json data/external/probe_heat_zones.json data/external/phoenix_trail_counts.csv data/external/trail_counts_report.json data/external/phoenix_parks_probe.json data/external/phoenix_city_trailheads.geojson
+          git add data/external/source_probe.json data/external/probe_heat_zones.json data/external/phoenix_trail_counts.csv data/external/trail_counts_report.json data/external/phoenix_parks_probe.json data/external/phoenix_city_trailheads.geojson data/external/census_geocode_probe.json
           git diff --cached --quiet || { git commit -m "chore: data source probe [skip ci]"; git pull --rebase origin main && git push; }
