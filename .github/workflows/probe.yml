@@ -18,9 +18,11 @@ jobs:
       - run: python tools/probe_sources.py
       - run: python tools/probe_heat_zones.py
       - run: python src/ingest/fetch_trail_counts.py
+      - run: python tools/probe_phx_parks.py
+        continue-on-error: true
       - name: Commit probe report
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/external/source_probe.json data/external/probe_heat_zones.json data/external/phoenix_trail_counts.csv data/external/trail_counts_report.json
+          git add data/external/source_probe.json data/external/probe_heat_zones.json data/external/phoenix_trail_counts.csv data/external/trail_counts_report.json data/external/phoenix_parks_probe.json data/external/phoenix_city_trailheads.geojson
           git diff --cached --quiet || { git commit -m "chore: data source probe [skip ci]"; git pull --rebase origin main && git push; }
