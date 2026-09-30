@@ -476,7 +476,9 @@ def heat_section(h: dict) -> str:
   <a href="https://www.phoenix.gov/content/dam/phoenix/parkssite/documents/2024-10-24%20phoenix%20trails%20and%20heat%20safety.pdf">2024 program review</a>
   (20, 18, 42, 45). Closure days, which need the trigger in effect during closed hours and fall inside the program's
   season, number {", ".join(str(cy.get(y, 0)) for y in (2021, 2022, 2023, 2024))}: 2021 counts only the pilot from July 16, and 2022
-  loses July 17, when the warning expired at 2&nbsp;a.m. A watch later upgraded to a warning is stored with its end before its
+  loses July 17, when the warning expired at 2&nbsp;a.m. An independent check: an ABC15 report at the end of the 2021 pilot (found by Yun-Peng Lu) said
+  the trails closed on eight days with no mountain rescues during closure hours, which matches the {cy.get(2021, 0)} pilot closure days
+  and zero closed-hour rescues here. A watch later upgraded to a warning is stored with its end before its
   start; it has no in-effect time of its own, and in this zone every 2021 pilot watch was upgraded to a warning for the same
   days, so watches add no closure days unless a closure began the day a watch was issued. Daily highs: <a href="https://open-meteo.com/">Open-Meteo</a> historical reanalysis at Sky Harbor.
   Trails are assigned from the dispatch address, so unlocated calls count too. The "before" years include 2020, when

@@ -55,7 +55,7 @@ These are descriptive patterns in dispatch counts. None of them is a causal clai
 
 The timeline was shared by Yun-Peng (Liz) Lu (University of Maryland) and checked against [2021](https://cronkitenews.azpbs.org/2021/07/15/hiking-trails-on-piestewa-camelback-will-close-when-temperatures-hit-105/) and [2023](https://cronkitenews.azpbs.org/2023/09/08/phoenix-hiking-trails-camelback-mountain-piestewa-peak-heat-warning-closures/) coverage and the city's [2024 release](https://www.phoenix.gov/newsroom/parks-news/3256.html).
 
-The analysis lines up all 1,619 mountain-rescue calls (trail assigned from the dispatch address, so unlocated calls count) with every NWS heat warning and watch for zone AZZ543, Central Phoenix, from the IEM VTEC archive, and Open-Meteo daily highs at Sky Harbor. Counting every date a warning touched gives 20, 18, 42 and 45 days for 2021–2024, exactly the city's 2024 program review. *Closure days* are stricter: the trigger must be in effect during that day's closed hours, inside the program's season (8, 17, 42 and 45 days; 2021 is the pilot only, and 2022 drops July 17, when the warning expired at 2 a.m.). *Before* is January 2019 to July 15, 2021, where a heat day is one with a warning in effect from 11 a.m. to 5 p.m.
+The analysis lines up all 1,619 mountain-rescue calls (trail assigned from the dispatch address, so unlocated calls count) with every NWS heat warning and watch for zone AZZ543, Central Phoenix, from the IEM VTEC archive, and Open-Meteo daily highs at Sky Harbor. Counting every date a warning touched gives 20, 18, 42 and 45 days for 2021–2024, exactly the city's 2024 program review. *Closure days* are stricter: the trigger must be in effect during that day's closed hours, inside the program's season (8, 17, 42 and 45 days; 2021 is the pilot only, and 2022 drops July 17, when the warning expired at 2 a.m.). As an independent check, an ABC15 report at the end of the 2021 pilot, found by Yun-Peng Lu, said the trails closed on eight days with no mountain rescues during closure hours: the same 8 days and zero closed-hour rescues this analysis reconstructs. *Before* is January 2019 to July 15, 2021, where a heat day is one with a warning in effect from 11 a.m. to 5 p.m.
 
 | Rescues per 100 days, May–Sep | Before, heat days | Before, ordinary | After, closure days | After, ordinary | Net change (95% range) |
 |---|---|---|---|---|---|
@@ -301,7 +301,8 @@ ridgeline/
 - [x] Geocoding fix: street-name matches, hundred blocks, near-miss rule (Sept 2026)
 - [x] Geocoding in CI with a committed cache and match report
 - [x] Scottsdale and Boulder
-- [x] **Closure analysis.** NWS heat-warning days and Open-Meteo daily highs against closure-trail rescues (Sept 2026)
+- [x] **Closure analysis.** NWS heat-warning days and Open-Meteo daily highs against closure-trail rescues, on the real policy timeline (Sept 2026)
+- [ ] **Trail use.** Phoenix's [Hiking Trail Usage](https://www.phoenixopendata.com/dataset/hiking-trail-usage) infrared counter data (2019 on, CC BY) as a denominator: rescues per hiker, not per day
 - [ ] Locate the remaining 422 Phoenix rescues (North Mountain, Papago, Desert Foothills) with trailhead-specific matching
 - [x] National parks: NPS SAR incidents 2013–2021 by park, with outlines, calendars and per-visit rates (Sept 2026)
 - [ ] National parks, deaths: the NPS mortality release (2007–2023) has date, park, cause, intent and outcome per death
