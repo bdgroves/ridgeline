@@ -562,6 +562,65 @@
    "2025": 3
   }
  },
+ "sensitivity": {
+  "all years": {
+   "ratio": 0.49,
+   "ci95": [
+    0.25,
+    0.98
+   ],
+   "counts": [
+    25,
+    104,
+    15,
+    136
+   ],
+   "days": [
+    79,
+    303,
+    135,
+    554
+   ]
+  },
+  "without 2020": {
+   "ratio": 0.42,
+   "ci95": [
+    0.19,
+    0.9
+   ],
+   "counts": [
+    15,
+    74,
+    15,
+    136
+   ],
+   "days": [
+    36,
+    193,
+    135,
+    554
+   ]
+  },
+  "without 2020\u201321": {
+   "ratio": 0.49,
+   "ci95": [
+    0.2,
+    1.2
+   ],
+   "counts": [
+    9,
+    52,
+    14,
+    118
+   ],
+   "days": [
+    24,
+    129,
+    127,
+    485
+   ]
+  }
+ },
  "trail_use": {
   "counters": {
    "echo": "E - Camelback - Echo Canyon Trail",
@@ -777,6 +836,49 @@
     "passes_per_day": 658,
     "rescues": 20,
     "per_100k": 25.97
+   }
+  ]
+ },
+ "counter_checks": {
+  "steady_counters": 17,
+  "citywide_per_day_by_year": {
+   "2019": 4131,
+   "2020": 4899,
+   "2021": 4643,
+   "2022": 3978,
+   "2023": 3801,
+   "2024": 3603,
+   "2025": 3347
+  },
+  "citywide_jan_mar_per_day": {
+   "2019": 6186,
+   "2020": 6219,
+   "2021": 6559,
+   "2022": 6214,
+   "2023": 5675,
+   "2024": 5867,
+   "2025": 4980
+  },
+  "closure_trail_gaps": [
+   {
+    "counter": "E - Camelback - Echo Canyon Trail",
+    "month": "2020-06",
+    "mean_per_day": 0
+   },
+   {
+    "counter": "E - Camelback - Echo Canyon Trail",
+    "month": "2020-07",
+    "mean_per_day": 0
+   },
+   {
+    "counter": "E - Camelback - Echo Canyon Trail",
+    "month": "2020-08",
+    "mean_per_day": 16
+   },
+   {
+    "counter": "E - Camelback - Echo Canyon Trail",
+    "month": "2025-11",
+    "mean_per_day": 6
    }
   ]
  },

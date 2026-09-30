@@ -80,6 +80,18 @@ Three things follow. **Heat roughly triples the risk per hiker**: rescues per da
 
 **Did rescues move to another call type?** `fetch_phoenix_fire.py` tallies every call type at the closure trailhead addresses from the full dispatch data (`data/external/trailhead_call_types.csv`). Mountain rescues went 119, 83, 108, 92, 75, 71, 77 (2019–2025); every other published call type combined, including calls whose type the city withholds, went 51, 37, 39, 49, 48, 35, 42, with no rise. Medical calls left out of the public data entirely can't be checked.
 
+**The pandemic and trail closures.** Two checks, both rerun weekly (`sensitivity` and `counter_checks` in `heat_report.json`):
+
+| Closure-trail net change | Ratio | 95% range |
+|---|---:|---:|
+| All years | 0.49 | 0.25–0.98 |
+| Without 2020 | 0.42 | 0.19–0.90 |
+| Without 2020–21 | 0.49 | 0.20–1.20 |
+
+Leaving out the pandemic years doesn't make the closure effect go away. Using the 17 city trail counters that reported every year, city-wide traffic ran +19% in 2020 and +12% in 2021 against 2019, then fell back below 2019 from 2022 (−13% in 2024). An earlier sum over all counters overstated the boom, because the city added counters over time. The long decline in rescues runs from 2019 (before the pandemic) to 2023–25 (after it), so the pandemic can't explain it, though it can explain the 2021 bump.
+
+The counters also show trails closed for other reasons. Echo Canyon's counter reads zero in June–July 2020 (16 passes a day in August), which is most of why 2020 had so few rescues at the closure trails; I found no city notice for it. Echo Canyon closed again in October 2025 after storm damage ([KJZZ](https://www.kjzz.org/the-show/2025-11-20/camelback-mountains-echo-canyon-trail-remains-closed-with-no-reopening-in-sight)), which lowers late-2025 counts, and Cholla was closed for about a year and a half after a 2020 boulder accident. Per-hiker rates skip zero-count days, so they aren't distorted. What counters can't show is *who* hikes: a post-pandemic crowd with more experienced locals and fewer visitors could make each hike safer on its own.
+
 **Watches.** A watch later upgraded to a warning is stored in the VTEC archive with its end before its start, so it has no in-effect time of its own. In this zone every 2021 pilot watch was upgraded to a warning covering the same days, so watches add no closure days unless a closure began on the day a watch was *issued* (the product time). That reading isn't used here.
 
 **The city's "rescues on closed trails" figures.** Phoenix's [October 2024 release](https://www.phoenix.gov/newsroom/parks-news/3256.html) reports 57, 47, 30 and 35 rescues on closed trails for 2021–2024, without a definition. Counting every mountain-rescue call at the closure trails from May through October, on any day and at any hour, gives 55, 50, 33 and 36, within 3 a year. So the figures most likely count *trails that close*, not rescues while closed (those are 0, 0, 3 and 9 under the rules in force each day). Over the same years the November–April count at those trails fell just as much (53 to 35), with no closures in effect.

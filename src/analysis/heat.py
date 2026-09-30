@@ -253,6 +253,69 @@ def trail_use(calls: pd.DataFrame, cal: pd.DataFrame) -> dict | None:
     return out
 
 
+def sensitivity(calls: pd.DataFrame, cal: pd.DataFrame) -> dict:
+    """
+    The closure-trail net change with pandemic years left out. 2020 had a
+    hiking boom and a summer when Echo Canyon was closed; 2021 was still a
+    boom year. If the effect came from those years, it would move here.
+    """
+    import math
+    out = {}
+    for label, drop in [("all years", ()), ("without 2020", (2020,)), ("without 2020–21", (2020, 2021))]:
+        m = cal["season"] & ~cal["year"].isin(drop)
+        cm = calls["season"] & ~calls["year"].isin(drop)
+        n, d = [], []
+        for post, w in [(False, True), (False, False), (True, True), (True, False)]:
+            d.append(int((m & (cal["post"] == post) & (cal["warning"] == w)).sum()))
+            n.append(int((cm & (calls["post"] == post) & (calls["warning"] == w) & (calls["kind"] == "closure")).sum()))
+        if min(n) == 0 or min(d) == 0:
+            continue
+        r = (n[2] / d[2] / (n[3] / d[3])) / (n[0] / d[0] / (n[1] / d[1]))
+        se = math.sqrt(sum(1 / x for x in n))
+        out[label] = {"ratio": round(r, 2), "ci95": [round(r * math.exp(-1.96 * se), 2), round(r * math.exp(1.96 * se), 2)],
+                      "counts": n, "days": d}
+    return out
+
+
+def counter_checks() -> dict | None:
+    """
+    What the trail counters say about the pandemic and trail closures:
+      * city-wide traffic by year, from counters that reported through the whole
+        period (so new counters don't inflate later years),
+      * months when the Echo Canyon or Piestewa counter read near zero while the
+        other was busy: the trail was closed or the counter was down.
+    """
+    if not COUNTS.exists():
+        return None
+    d = pd.read_csv(COUNTS)
+    d["Site"] = d["Site"].astype(str).str.strip()
+    d["date"] = pd.to_datetime(d["Date"], format="%m/%d/%Y", errors="coerce")
+    d["Count"] = pd.to_numeric(d["Count"], errors="coerce")
+    d = d.dropna(subset=["date"])
+    d["year"] = d["date"].dt.year
+    cover = d[d["Count"] > 0].groupby(["Site", "year"]).size().unstack(fill_value=0)
+    years = [y for y in cover.columns if y < d["date"].max().year or d["date"].max().month == 12]
+    steady = cover.index[(cover[years] >= 300).all(axis=1)] if years else []
+    s = d[d["Site"].isin(steady) & (d["Count"] > 0)]
+    daily = s.groupby("date")["Count"].sum()
+    by_year = daily.groupby(daily.index.year).mean().round()
+    jfm = daily[daily.index.month.isin([1, 2, 3])]
+    winter = jfm.groupby(jfm.index.year).mean().round()
+    gaps = []
+    piv = d[d["Site"].isin(COUNTERS.values())].pivot_table(index="date", columns="Site", values="Count", aggfunc="sum")
+    piv = piv.rename(columns={v: k for k, v in COUNTERS.items()})
+    mon = piv.resample("MS").mean()
+    for k, other in (("echo", "pies"), ("pies", "echo")):
+        if k in mon and other in mon:
+            low = mon[(mon[k].fillna(0) < 50) & (mon[other] > 200)]
+            gaps += [{"counter": COUNTERS[k], "month": i.strftime("%Y-%m"), "mean_per_day": None if pd.isna(v) else round(float(v))}
+                     for i, v in low[k].items()]
+    return {"steady_counters": len(steady),
+            "citywide_per_day_by_year": {int(k): int(v) for k, v in by_year.items()},
+            "citywide_jan_mar_per_day": {int(k): int(v) for k, v in winter.items()},
+            "closure_trail_gaps": gaps}
+
+
 def call_types() -> dict | None:
     """All call types at the closure trailheads by year (from the raw city data)."""
     p = EXT / "trailhead_call_types.csv"
@@ -424,7 +487,9 @@ def main() -> None:
             cl & calls["during_closure"]].groupby("year").size().items()},
     }
 
+    rep["sensitivity"] = sensitivity(calls, cal)
     rep["trail_use"] = trail_use(calls, cal)
+    rep["counter_checks"] = counter_checks()
     rep["call_types"] = call_types()
 
     OUT.write_text(json.dumps(rep, indent=1, default=str))

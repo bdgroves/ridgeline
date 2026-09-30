@@ -473,6 +473,44 @@ def heat_section(h: dict) -> str:
   {esc(tu.get("span", ["", ""])[1])}); zero-count days are treated as outages. Cholla is left out: its counter is patchy and the
   trail was shut for renovation in 2020–22. Counters count all day, including the open hours before and after a closure.</p>
 {ct_rows}"""
+    sens = h.get("sensitivity") or {}
+    cc_ = h.get("counter_checks") or {}
+    checks_block = ""
+    if sens or cc_:
+        srows = "".join(f'<tr><td>{esc(k)}</td><td class="num">{v["ratio"]:.2f}</td><td class="num">{v["ci95"][0]:.2f}–{v["ci95"][1]:.2f}</td>'
+                        f'<td class="num">{v["counts"][0]} / {v["counts"][2]}</td></tr>' for k, v in sens.items())
+        cw = {int(k): v for k, v in (cc_.get("citywide_per_day_by_year") or {}).items()}
+        cw_svg = bar_chart([cw[y] for y in sorted(cw)], [str(y) for y in sorted(cw)], "#8fb573",
+                           title="City-wide trail-counter passes per day") if cw else ""
+        base = cw.get(2019)
+        cw_note = ", ".join(f"{y} {100 * (cw[y] / base - 1):+.0f}%" for y in sorted(cw) if base and y != 2019)
+        gaps = cc_.get("closure_trail_gaps") or []
+        gap_txt = "; ".join(f'{esc(g["counter"].split(" - ")[-1])} {esc(g["month"])} ({g["mean_per_day"]}/day)' for g in gaps)
+        checks_block = f"""
+  <h3>Checks: the pandemic and trail closures</h3>
+  <div class="grid2">
+    <div>
+      <div class="scroll"><table><thead><tr><th>Closure-trail net change</th><th class="num">Ratio</th><th class="num">95% range</th><th class="num">Heat-day calls<br>before / after</th></tr></thead>
+        <tbody>{srows}</tbody></table></div>
+      <p class="source">The same heat-day comparison with the pandemic years left out. Dropping 2020 makes the effect a little
+      stronger; dropping 2020 and 2021 keeps the estimate and widens the range (fewer days). The pandemic adds noise; it doesn't
+      create the result.</p>
+    </div>
+    <figure class="chart"><figcaption>City-wide trail-counter passes per day · {cc_.get("steady_counters", 0)} counters that reported every year</figcaption>{cw_svg}</figure>
+  </div>
+  <div class="prose">
+  <p><b>The pandemic boom was real but short.</b> Relative to 2019, city-wide counts ran {esc(cw_note)}. The busy years were 2020–21;
+  by 2022 traffic was back below 2019 ({esc(str(max(cw)) if cw else "")} runs only through {esc((h.get("trail_use") or {}).get("span", ["", ""])[1][:7])}, so it's partial). The long decline in rescues is measured from 2019, before the pandemic, to 2023–25, after
+  it, so the pandemic can't be what brought it down. It can explain the 2021 bump.</p>
+  <p><b>Trails closed for other reasons too.</b> Months when a closure-trail counter read near zero while the other was busy:
+  {gap_txt or "none"}. Echo Canyon appears to have been shut in summer 2020 (no city notice found), which is most of why 2020 had
+  so few rescues at the closure trails. It has been closed again since October 2025 after storm damage and loose boulders
+  (<a href="https://www.kjzz.org/the-show/2025-11-20/camelback-mountains-echo-canyon-trail-remains-closed-with-no-reopening-in-sight">KJZZ</a>),
+  which will lower late-2025 counts. Cholla was closed for about a year and a half for rebuilding after a 2020 boulder
+  accident. The per-hiker rates skip days a counter reads zero, so these closures don't distort them.</p>
+  <p><b>What the data can't see.</b> Counters count people, not who they are. If the crowd after the pandemic has more
+  experienced locals and fewer visitors than 2019, that alone could make each hike safer.</p>
+  </div>"""
     cf = h.get("city_figures")
     city_block = ""
     if cf:
@@ -553,6 +591,7 @@ def heat_section(h: dict) -> str:
   </div>
 
 {hiker_block}
+{checks_block}
 
   <h3>What it says</h3>
   <div class="defs">
