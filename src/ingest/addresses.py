@@ -35,7 +35,11 @@ PRESERVE_SITES: list[tuple[str, str, tuple[float, float]]] = [
     ("North Mountain",         r"north\s+(mountain|mtn)\s+(park|preserve|trail)", (33.5710, -112.0580)),
     ("Shaw Butte",             r"shaw\s+butte(?!\s+(dr|rd|av|ave|st|ln|pl|ct|way)\b)",                                   (33.5791, -112.1020)),
     ("Phoenix Mountains",      r"phoenix\s+(mountain|mtn)s?\s+(park|preserve)",   (33.5550, -112.0200)),
-    ("South Mountain Park",    r"south\s+(mountain|mtn)\s+(park|preserve)",       (33.3476, -112.0540)),
+    ("South Mountain Park",    r"south\s+(mountain|mtn)\s+(park|preserve)|\bS\s+(TV|SUMMIT)\s+RD\b",       (33.3476, -112.0540)),  # the park's summit and TV-tower roads
+    # Papago Park: Galvin Parkway runs through the park; its hundred blocks have
+    # no built addresses. Point = 625 N Galvin Pkwy, a PointAddress match (score
+    # 98) from the county geocoder.
+    ("Papago Park",            r"\b(6|7|8|9|10|11)XX\s+N\s+GALVIN\s+(PW|PKWY|PARKWAY)\b", (33.4546, -111.9455)),
     ("Holbert Trailhead",      r"holbert",                                        (33.3476, -112.0540)),
     ("McDowell Sonoran",       r"mcdowell\s+(mountain|mtn|sonoran)(?!\s+ranch)",              (33.6918, -111.7951)),
     ("White Tank Mountains",   r"white\s+tank",                                   (33.5971, -112.5476)),

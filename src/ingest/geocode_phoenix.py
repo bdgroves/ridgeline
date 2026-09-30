@@ -43,7 +43,7 @@ CACHE_COLS  = ["address", "query", "precision", "latitude", "longitude",
 
 # Bump when matching logic changes; cached misses from older versions are
 # re-queried, cached hits are kept.
-GEOCODER_VERSION = 4
+GEOCODER_VERSION = 5
 
 # Scores 70-80 on these match types are usually the right street with an
 # out-of-range house number (hundred-block midpoints often don't exist).
@@ -124,6 +124,17 @@ def geocode_address(address: str, client: httpx.Client, city: str = "Phoenix") -
     else:
         errored = False
 
+    # Second geocoder: the U.S. Census Bureau's, which interpolates along TIGER
+    # address ranges and often has ranges the county file lacks (park roads,
+    # hundred blocks with no built address). Public domain, so results can be
+    # cached. Same checks as above: same street, direction and street type.
+    if not errored and precision != "intersection":
+        hit = census_geocode(query, city)
+        if hit:
+            row.update(latitude=hit["lat"], longitude=hit["lon"], match_addr=hit["match"],
+                       addr_type="census", score=None, method="census")
+            return row
+
     site = preserve_site(address)
     if site:
         name, (lat, lon) = site
@@ -132,6 +143,27 @@ def geocode_address(address: str, client: httpx.Client, city: str = "Phoenix") -
     if errored:
         row["method"] = "error"      # not trusted from cache; retried next run
     return row
+
+
+CENSUS_URL = "https://geocoding.geo.census.gov/geocoder/locations/onelineaddress"
+
+
+def census_geocode(query: str, city: str) -> dict | None:
+    try:
+        r = httpx.get(CENSUS_URL, timeout=30, params={"address": f"{query}, {city}, AZ",
+                      "benchmark": "Public_AR_Current", "format": "json"},
+                      headers={"User-Agent": "ridgeline (brooksgroves.com)"})
+        r.raise_for_status()
+        m = r.json().get("result", {}).get("addressMatches", [])
+    except Exception:
+        return None
+    if not m:
+        return None
+    ma = m[0]["matchedAddress"]
+    same = all(ws & set(ma.upper().replace(",", " ").split()) for ws in street_words(query))
+    if not same or direction_conflict(query, ma) or type_conflict(query, ma):
+        return None
+    return {"match": ma, "lat": m[0]["coordinates"]["y"], "lon": m[0]["coordinates"]["x"]}
 
 
 def load_cache() -> dict[str, dict]:

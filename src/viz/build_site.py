@@ -98,6 +98,7 @@ CITIES = [
     },
     {
         "key": "boulder", "name": "Boulder", "state": "CO",
+        "nps": [("ROMO", "Rocky Mountain NP")],   # nearby park, drawn on request
         "agency": "Boulder Fire-Rescue",
         "source_name": "Boulder Open Data · Response times for Boulder Fire-Rescue",
         "source_url": "https://open-data.bouldercolorado.gov/datasets/18c58aed5261498980e61b1e58eed376_0",
@@ -366,6 +367,112 @@ def heat_section(h: dict) -> str:
         f'<td>{esc(TRAILHEADS.get(c["address"], c["address"]))}</td><td class="num">{esc(c.get("window", ""))}</td><td class="num">{c["high"]:.0f}°F</td></tr>'
         for c in h.get("closed_hour_calls", []))
     cd = did.get("closure", {})
+    tu = h.get("trail_use") or {}
+    _by = {int(k): v for k, v in (tu.get("by_year") or {}).items()}
+    _half = tu.get("by_year_half") or {}
+    _tb = tu.get("by_temperature") or []
+    _hh = tu.get("heat") or {}
+    if _by.get(2019) and _by.get(2024):
+        w19, w24 = _half.get("2019 Nov–Apr", {}), _half.get("2024 Nov–Apr", {})
+        hiker_long = (f"The trail counters say it isn't fewer hikers either: Echo Canyon and Piestewa averaged "
+                      f"{_by[2024]['passes_per_day']:,} counter passes a day in 2024 against {_by[2019]['passes_per_day']:,} in 2019, "
+                      f"yet rescues per 100,000 passes fell from {_by[2019]['per_100k']:.1f} to {_by[2024]['per_100k']:.1f}. Winter fell just as much "
+                      f"({w19.get('per_100k', 0):.1f} to {w24.get('per_100k', 0):.1f}) with the same number of winter hikers. Each hike got safer, and no other call "
+                      f"type rose to hide it (table above). Why is the open question.")
+    else:
+        hiker_long = "Something else, most of it outside summer, did the rest."
+    if _tb:
+        cool = [t for t in _tb if t["bin"] in ("<70", "70s")]
+        hot = [t for t in _tb if t["bin"] in ("105–109", "110+")]
+        def _rate(ts):
+            r = sum(t["rescues"] for t in ts); p_ = sum((t["passes_per_day"] or 0) * t["days"] for t in ts)
+            return round(r / p_ * 1e5, 1) if p_ else None
+        def _ppd(ts):
+            d_ = sum(t["days"] for t in ts); p_ = sum((t["passes_per_day"] or 0) * t["days"] for t in ts)
+            return round(p_ / d_) if d_ else None
+        hb, ho = _hh.get("before heat", {}), _hh.get("before ordinary", {})
+        ah, ao = _hh.get("after heat", {}), _hh.get("after ordinary", {})
+        heat_risk = (f"Rescues per day look flat with temperature because the crowd shrinks: from about {_ppd(cool):,} counter passes a day "
+                     f"below 80°F to about {_ppd(hot):,} above 105°F. Per 100,000 passes, rescues go from about {_rate(cool)} to "
+                     f"{_rate(hot)}. Before the program, heat days ran {hb.get('per_100k', 0):.1f} per 100,000 passes against "
+                     f"{ho.get('per_100k', 0):.1f} on ordinary summer days. On closure days since, it's {ah.get('per_100k', 0):.1f}, below ordinary days "
+                     f"({ao.get('per_100k', 0):.1f}), even with about {ah.get('passes_per_day')} passes a day still counted outside the closed hours. "
+                     f"That's only {ah.get('rescues')} rescues, but it's the strongest sign yet that the closures do what they're meant to.")
+    else:
+        heat_risk = ("Calls per day are roughly flat with temperature, but the city's review found visitors fall as it gets hotter, "
+                     "so each hiker faces more risk even though the count doesn't grow.")
+    ct = h.get("call_types") or {}
+    hiker_block = ""
+    if tu.get("by_year"):
+        by = {int(k): v for k, v in tu["by_year"].items()}
+        yrs_t = sorted(by)
+        passes_svg = bar_chart([by[y]["passes_per_day"] or 0 for y in yrs_t], [str(y) for y in yrs_t], "#8fb573",
+                               title="Counter passes per day at Echo Canyon + Piestewa Summit")
+        rate_svg = bar_chart([round(by[y]["per_100k"] or 0, 1) for y in yrs_t], [str(y) for y in yrs_t], COLORS["mountain"],
+                             title="Rescues per 100,000 counter passes")
+        tb = tu.get("by_temperature", [])
+        trate_svg = bar_chart([round(t["per_100k"] or 0, 1) for t in tb], [t["bin"] for t in tb], COLORS["mountain"],
+                              title="Rescues per 100,000 passes, by daily high")
+        tpass_svg = bar_chart([t["passes_per_day"] or 0 for t in tb], [t["bin"] for t in tb], "#8fb573",
+                              title="Counter passes per day, by daily high")
+        hy = {k: v for k, v in (tu.get("heat") or {}).items()}
+        halves = {k: v for k, v in tu.get("by_year_half", {}).items()}
+        def hv(y, half, f):
+            v = halves.get(f"{y} {half}", {}).get(f)
+            if v is None: return None
+            return f"{v:,.1f}" if f == "per_100k" else f"{v:,}"
+        half_rows = "".join(
+            f'<tr><td class="num">{y}</td><td class="num">{hv(y, "Nov–Apr", "passes_per_day") or "–"}</td><td class="num">{hv(y, "Nov–Apr", "per_100k") or "–"}</td>'
+            f'<td class="num">{hv(y, "May–Oct", "passes_per_day") or "–"}</td><td class="num">{hv(y, "May–Oct", "per_100k") or "–"}</td></tr>'
+            for y in yrs_t)
+        def hk(k, f):
+            v = (hy.get(k) or {}).get(f)
+            if v is None or f == "rescues": return v
+            return f"{v:,.1f}" if f == "per_100k" else f"{v:,}"
+        heat_rows = "".join(
+            f'<tr><td>{lab}</td><td class="num">{hk(k, "days") or "–"}</td><td class="num">{hk(k, "passes_per_day") or "–"}</td>'
+            f'<td class="num">{hk(k, "rescues") if hk(k, "rescues") is not None else "–"}</td><td class="num">{hk(k, "per_100k") or "–"}</td></tr>'
+            for k, lab in [("before ordinary", "Before · ordinary May–Sep days"), ("before heat", "Before · heat days"),
+                           ("after ordinary", "After · ordinary May–Sep days"), ("after heat", "After · closure days")])
+        ct_rows = ""
+        if ct.get("by_type"):
+            yy = sorted({int(y) for v in ct["by_type"].values() for y in v})
+            mr = ct["by_type"].get("mountain rescue", {})
+            other = {y: sum(v.get(str(y), v.get(y, 0)) for k, v in ct["by_type"].items() if k != "mountain rescue") for y in yy}
+            allc = {int(k): v for k, v in ct.get("all_calls", {}).items()}
+            ct_rows = (f'<tr><td>Mountain rescue</td>{"".join(f"<td class=num>{mr.get(str(y), mr.get(y, 0))}</td>" for y in yy)}</tr>'
+                       f'<tr><td>Every other call type, incl. type withheld</td>{"".join(f"<td class=num>{allc.get(y, 0) - mr.get(str(y), mr.get(y, 0))}</td>" for y in yy)}</tr>')
+            ct_head = "".join(f'<th class="num">{y}</th>' for y in yy)
+            ct_rows = f"""
+  <h3>Did rescues just get logged as something else?</h3>
+  <div class="scroll"><table><thead><tr><th>All published calls at the closure trailheads</th>{ct_head}</tr></thead><tbody>{ct_rows}</tbody></table></div>
+  <p class="source">Every call the city published at the Echo Canyon, Cholla and Piestewa trailhead addresses, from the full
+  (unfiltered) dispatch data. Nothing else rose as mountain rescues fell. Calls whose type the city withholds (probably medical)
+  are in the second row and show no trend either. Medical calls that are left out of the public data entirely can't be checked.</p>"""
+        b19, b24 = by.get(2019, {}), by.get(2024, {})
+        hiker_block = f"""
+  <h3>Per hiker, not per day</h3>
+  <div class="prose"><p>Counting rescues per day hides how many people were out there. Phoenix publishes daily
+  <a href="https://www.phoenixopendata.com/dataset/hiking-trail-usage">trail-counter data</a> (infrared counters, 2019 on).
+  Two counters sit on the closure trails for the whole period: <b>Echo Canyon</b> and the <b>Piestewa Summit Trail</b>. Below,
+  rescues at those two trailheads are divided by the counters' passes on the same days. A pass is one person crossing the
+  counter, so a round trip may count twice; the rates are for comparing, not for "1 in N hikers."</p></div>
+  <div class="grid2">
+    <figure class="chart"><figcaption>Rescues per 100,000 passes, by daily high (°F)</figcaption>{trate_svg}</figure>
+    <figure class="chart"><figcaption>Passes per day, by daily high (°F)</figcaption>{tpass_svg}</figure>
+    <figure class="chart"><figcaption>Passes per day, by year · days both counters reported</figcaption>{passes_svg}</figure>
+    <figure class="chart"><figcaption>Rescues per 100,000 passes, by year</figcaption>{rate_svg}</figure>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="scroll"><table><thead><tr><th class="num">Year</th><th class="num">Nov–Apr<br>passes/day</th><th class="num">Nov–Apr<br>per 100k</th>
+      <th class="num">May–Oct<br>passes/day</th><th class="num">May–Oct<br>per 100k</th></tr></thead><tbody>{half_rows}</tbody></table></div>
+    <div class="scroll"><table><thead><tr><th>May–Sep days</th><th class="num">Days</th><th class="num">Passes/day</th><th class="num">Rescues</th><th class="num">Per 100k</th></tr></thead>
+      <tbody>{heat_rows}</tbody></table></div>
+  </div>
+  <p class="source">Days with both counters reporting ({tu.get("coverage_days", 0):,} of them, {esc(tu.get("span", ["", ""])[0])} to
+  {esc(tu.get("span", ["", ""])[1])}); zero-count days are treated as outages. Cholla is left out: its counter is patchy and the
+  trail was shut for renovation in 2020–22. Counters count all day, including the open hours before and after a closure.</p>
+{ct_rows}"""
     cf = h.get("city_figures")
     city_block = ""
     if cf:
@@ -445,6 +552,8 @@ def heat_section(h: dict) -> str:
     <figure class="chart"><figcaption>Closure trails · rescues on closure days since July 2021, by hour</figcaption>{hr_svg}</figure>
   </div>
 
+{hiker_block}
+
   <h3>What it says</h3>
   <div class="defs">
     <div class="def"><h4>Heat days got quieter at the closed trails</h4><p>Before the program the closure trails
@@ -454,12 +563,9 @@ def heat_section(h: dict) -> str:
       {cd.get("ci95", [0, 0])[0]:.2f} to {cd.get("ci95", [0, 0])[1]:.2f}{", which only just excludes no effect" if cd.get("ci95", [0, 1])[1] < 1 else ", which includes no effect at all"}.
       The counts are small ({cd.get("counts", [0]*4)[0]} and {cd.get("counts", [0]*4)[2]} calls), so treat it as a signal, not a measurement.</p></div>
     <div class="def"><h4>Closures can't explain the long drop</h4><p>The closure trails went from {c19} rescues in 2019 to about
-      {c_late} a year in {last3[0]}–{last3[-1]}, while other trails went from {o19} to about {o_late}. But the drop is year-round,
-      and there are only about {avg_warn} warning days a year. Even if every warning-day rescue that disappeared was prevented by
-      a closure, that's about {saved:.0f} a year. Something else, most of it outside summer, did the rest.</p></div>
-    <div class="def"><h4>Rescues don't rise with the thermometer</h4><p>Calls per day are roughly flat from below 70°F
-      to 110°F and up. At the closure trails, 110-degree days are as quiet as the coolest ones. The city's own review found visitors fall
-      as the temperature climbs, so each hiker out there faces more risk even though the count of rescues doesn't grow.</p></div>
+      {c_late} a year in {last3[0]}–{last3[-1]}, while other trails went from {o19} to about {o_late}. There are only about {avg_warn} warning days a year;
+      even if every heat-day rescue that disappeared was prevented by a closure, that's about {saved:.0f} a year. {hiker_long}</p></div>
+    <div class="def"><h4>Heat roughly triples the risk per hiker</h4><p>{heat_risk}</p></div>
     <div class="def"><h4>Some people go anyway</h4><p>Since the pilot began there have been {n_closed} rescues at closed
       trails during that day's closed hours, none in 2021–22 and most since the 2023 switch to 9&nbsp;a.m. Some may have started
       before the closure; some may be at the trailhead rather than on the trail. The list is below.</p></div>
@@ -510,7 +616,8 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
         f'<td class="num">{s["years"][0]}–{s["years"][1]}</td><td class="num">~{s["per_year"]:,}</td>'
         f'<td>{esc(s["busiest_month"])}</td><td>{esc(s["quietest_month"])}</td><td class="num">{s["weekend_pct"]}%</td></tr>'
         for c, s, _ in cities)
-    city_cfg = json.dumps({c["key"]: {"center": c["center"], "zoom": c["zoom"], "name": c["name"]} for c, _, _ in cities})
+    city_cfg = json.dumps({c["key"]: {"center": c["center"], "zoom": c["zoom"], "name": c["name"],
+                                      "nps": c.get("nps", [])} for c, _, _ in cities})
     series = json.dumps({c["key"]: city_series(c, s["rows"]) for c, s, _ in cities}, separators=(",", ":"))
     colors = json.dumps(COLORS)
     labels = json.dumps(CAT_LABEL)
@@ -566,6 +673,12 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
   .tog {{ background:var(--panel); border:1px solid var(--line); color:var(--muted); padding:6px 10px; cursor:pointer;
           font:400 12px/1.4 'IBM Plex Mono', monospace; border-radius:2px; }}
   .tog.on {{ color:var(--text); border-color:#4a5143; }}
+  .ptog {{ background:var(--panel); border:1px dashed #4a5143; color:var(--muted); padding:6px 10px; cursor:pointer;
+          font:400 12px/1.4 'IBM Plex Mono', monospace; border-radius:2px; }}
+  .ptog.on {{ color:var(--text); border-style:solid; }}
+  .ptog:not(.on) i {{ opacity:.3; }}
+  .ptog[hidden] {{ display:none; }}
+  .ptog:focus-visible {{ outline:2px solid var(--ember); outline-offset:2px; }}
   .tog b {{ font-weight:500; color:var(--soft); margin-left:4px; }}
   .tog[hidden] {{ display:none; }}
   .legend .lead {{ color:var(--sand); }}
@@ -652,7 +765,8 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
       {len(phx['mountain']):,} located calls ({echo_pct}%). Add Piestewa Peak, Pima Canyon and Cholla and you have most of the city.</p></div>
     <div class="finding"><div class="big">&minus;{drop}%</div>
       <p><b>Phoenix rescues are down about a fifth.</b> {ann.get(2019, 0)} mountain-rescue calls in 2019, about {late} a year from 2023 to 2025, counting every call whether or not it could be mapped.
-      Heat closures only cover about a month of days a year, so they can't be most of it. <a href="#heat">See the heat analysis</a>.</p></div>
+      Trail counters show about as many hikers as in 2019, and heat closures cover only about a month of days a year, so
+      mostly each hike got safer. <a href="#heat">See the heat analysis</a>.</p></div>
     <div class="finding"><div class="big">3 seasons</div>
       <p><b>Each city has its own calendar.</b> Boulder peaks in July. Scottsdale peaks in February and goes quiet in summer.
       Phoenix barely has a season at all: March and May are as busy as July.</p></div>
@@ -668,6 +782,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
     <button class="tog on" data-cat="mountain" aria-pressed="true"><i style="background:{COLORS['mountain']}"></i>Mountain &amp; technical rescue <b data-count="mountain"></b></button>
     <button class="tog" data-cat="water" aria-pressed="false"><i style="background:{COLORS['water']}"></i>Flood &amp; water rescue <b data-count="water"></b></button>
     <button class="tog" data-cat="search" aria-pressed="false"><i style="background:{COLORS['search']}"></i>Land search <b data-count="search"></b></button>
+    <button class="ptog" id="ptog" hidden aria-pressed="false"><i style="background:#8fb573"></i><span></span></button>
     <span class="hint">These buttons drive the map, the numbers and the charts below · bigger circle = more calls at that spot</span>
   </div>
   {panels}
@@ -913,12 +1028,66 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
       document.querySelectorAll('.tog').forEach(b => {{ const on = b.dataset.cat === 'mountain'; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); }}); }}
     draw(); panel(key);
     fit(key);
+    parkButton(key);
     document.querySelectorAll('.city').forEach(s => s.hidden = s.dataset.city !== key);
     document.querySelectorAll('.tab').forEach(t => {{
       const on = t.dataset.city === key; t.classList.toggle('on', on); t.setAttribute('aria-selected', on);
     }});
   }}
   document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => show(t.dataset.city)));
+
+  // ── A nearby national park on the city map (Boulder: Rocky Mountain NP) ──
+  // Off by default because it sits outside the city's calls; turning it on draws
+  // the boundary, zooms out to include it, and opens a popup with the park's
+  // Park Service search-and-rescue numbers.
+  const parkLayers = {{}};
+  let parkOn = false;
+  function parkPopup(code, label) {{
+    const p = (typeof NPS !== 'undefined' && NPS.parks[code]) || null;
+    if (!p) return `<b>${{esc(label)}}</b>`;
+    const bm = p.months.indexOf(Math.max(...p.months));
+    return `<div class="k">National park · nearby</div><b>${{esc(p.name)}}</b>`
+      + `<br>~${{Math.round(p.full / 5).toLocaleString()}} search &amp; rescue incidents a year (NPS, 2016–2020)`
+      + (p.rate != null ? `<br>${{p.rate.toFixed(1)}} per million visits` : '')
+      + `<br>Busiest month: ${{['January','February','March','April','May','June','July','August','September','October','November','December'][bm]}}`
+      + `<br><span class="k">Separate from the city's calls: rangers log these, not ${{esc(CITIES[current].name)}} Fire</span>`
+      + `<br><a href="#parks" class="k" data-park="${{code}}">Its calendar in National parks &darr;</a>`;
+  }}
+  function parkButton(key) {{
+    const b = document.getElementById('ptog'), list = CITIES[key].nps || [];
+    for (const k in parkLayers) map.removeLayer(parkLayers[k]);
+    b.hidden = !list.length; b.classList.remove('on'); b.setAttribute('aria-pressed', false); parkOn = false;
+    if (list.length) b.querySelector('span').textContent = list.map(x => x[1]).join(', ');
+  }}
+  document.getElementById('ptog').addEventListener('click', async () => {{
+    const b = document.getElementById('ptog'), list = CITIES[current].nps || [];
+    parkOn = !parkOn; b.classList.toggle('on', parkOn); b.setAttribute('aria-pressed', parkOn);
+    if (!parkOn) {{ for (const [code] of list) if (parkLayers[code]) map.removeLayer(parkLayers[code]); fit(current); return; }}
+    let bounds = null;
+    for (const [code, label] of list) {{
+      if (!parkLayers[code]) {{
+        try {{
+          const gj = await fetch(`data/nps/${{code}}.geojson`).then(r => r.json());
+          parkLayers[code] = L.geoJSON(gj, {{style: {{color:'#8fb573', weight:1.5, fillColor:'#8fb573', fillOpacity:.15}}}})
+            .bindPopup(() => parkPopup(code, label));
+        }} catch (e) {{ continue; }}
+      }}
+      parkLayers[code].addTo(map);
+      bounds = bounds ? bounds.extend(parkLayers[code].getBounds()) : L.latLngBounds(parkLayers[code].getBounds());
+    }}
+    if (bounds) {{
+      const pts = []; for (const c of visible) pts.push(...((points[current] || {{}})[c] || []));
+      for (const p of pts) bounds.extend(p);
+      const first = parkLayers[list[0][0]];
+      if (first) map.once('moveend', () => first.openPopup(first.getBounds().getCenter()));
+      map.fitBounds(bounds, {{padding:[24, 24]}});
+    }}
+  }});
+  // The popup's link jumps to the park in the National parks section and picks it there.
+  document.addEventListener('click', e => {{
+    const a = e.target.closest && e.target.closest('a[data-park]');
+    if (a && typeof pick === 'function') setTimeout(() => pick(a.dataset.park, false), 50);
+  }});
 
   Promise.all(Object.keys(CITIES).map(k =>
     fetch(`data/${{k}}_sar_incidents.geojson`).then(r => r.json()).then(gj => build(k, gj)).catch(() => null)
