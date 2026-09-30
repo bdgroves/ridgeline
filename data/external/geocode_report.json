@@ -1,65 +1,39 @@
 {
-  "incidents_in_clean_set": 5484,
-  "priority_subset": 4741,
-  "located": 3280,
+  "incidents_in_clean_set": 5662,
+  "priority_subset": 4919,
+  "located": 4612,
   "by_method": {
-    "failed": 1461,
     "geocoder_street": 1395,
-    "geocoder": 1343,
-    "preserve_centroid": 542
+    "geocoder": 1355,
+    "census": 1059,
+    "preserve_centroid": 803,
+    "failed": 307
   },
   "by_precision": {
-    "hundred_block": 3733,
-    "preserve_centroid": 542,
-    "intersection": 435,
+    "hundred_block": 3643,
+    "preserve_centroid": 803,
+    "intersection": 442,
     "address": 31
   },
   "mountain_rescue": {
     "rows": 1619,
     "unique_incident_ids": 1619,
-    "located": 1197,
+    "located": 1489,
     "by_method": {
       "geocoder_street": 683,
-      "failed": 422,
+      "preserve_centroid": 333,
       "geocoder": 275,
-      "preserve_centroid": 239
+      "census": 198,
+      "failed": 130
     },
     "top_unlocated_addresses": [
-      [
-        "106XX N 7TH ST",
-        64
-      ],
-      [
-        "10XX N GALVIN PW",
-        39
-      ],
-      [
-        "6XX N GALVIN PW",
-        33
-      ],
       [
         "50XX W ANDREA LN",
         22
       ],
       [
-        "154XX S 19TH AV",
-        21
-      ],
-      [
-        "158XX N 16TH ST",
-        21
-      ],
-      [
-        "7XX E DESERT FOOTHILLS PW",
-        21
-      ],
-      [
         "24XX E NORTHERN AV",
         19
-      ],
-      [
-        "130XX S WARPAINT DR",
-        18
       ],
       [
         "105XX S 19TH AV",
@@ -74,10 +48,6 @@
         13
       ],
       [
-        "127XX S TV RD",
-        12
-      ],
-      [
         "79XX S 46TH ST",
         10
       ],
@@ -86,51 +56,83 @@
         9
       ],
       [
-        "110XX N 7TH AV",
-        9
-      ],
-      [
         "80XX S 42ND PL",
         6
-      ],
-      [
-        "E BUENA VISTA RD/S TV RD",
-        5
-      ],
-      [
-        "108XX S SUMMIT RD",
-        5
-      ],
-      [
-        "92XX N 40TH ST",
-        4
       ],
       [
         "N 7TH ST/E SONORAN DESERT DR",
         2
       ],
       [
-        "40XX E RAY RD",
+        "17XX E BUENA VISTA RD",
         2
       ],
       [
-        "192XX N 16TH ST",
+        "104XX S 40TH PL",
         2
       ],
       [
-        "40XX E WESTERN STAR BL",
-        2
+        "111XX N 7TH AV",
+        1
       ],
       [
-        "104XX N 7TH AV",
-        2
+        "107XX S 19TH AV",
+        1
+      ],
+      [
+        "32XX E EQUESTRIAN TL",
+        1
+      ],
+      [
+        "268XX N 14TH LN",
+        1
+      ],
+      [
+        "W PEDRAS GRANDES DR/S PHOENIX S MTN PAR",
+        1
+      ],
+      [
+        "N 63RD DR/W PINNACLE PEAK RD",
+        1
+      ],
+      [
+        "30XX W SAN JUAN RD",
+        1
+      ],
+      [
+        "S CENTRAL AV/W LAS RAMADAS DR",
+        1
+      ],
+      [
+        "E CHOLLA LN/E DUNLAP AV",
+        1
+      ],
+      [
+        "20XX E JOMAX RD",
+        1
+      ],
+      [
+        "220XX N 43RD AV",
+        1
+      ],
+      [
+        "80XX S 46TH ST",
+        1
+      ],
+      [
+        "109XX S LOS LOMITAS DR",
+        1
+      ],
+      [
+        "280XX N 15TH LN",
+        1
       ]
     ]
   },
   "by_nature_located_pct": {
     " ": 100.0,
-    "check flooding condition": 60.3,
-    "mountain rescue": 73.9,
-    "water rescue": 68.7
+    "check flooding condition": 95.3,
+    "mountain rescue": 92.0,
+    "water rescue": 77.5
   }
 }
