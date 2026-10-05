@@ -2157,6 +2157,7 @@ SCOTTSDALE|N SCOTTSDALE RD / East RIO SALADO Parkway,N SCOTTSDALE RD & East RIO 
 SCOTTSDALE|Unverified locatio,Unverified locatio,address,,,,,,failed,5
 SCOTTSDALE|W ARIZONA CANAL / North 40TH Street,W ARIZONA CANAL & North 40TH Street,intersection,33.510348,-111.995316,76.78,"Arizona Csr & N 40th St, 85018",StreetInt,geocoder_street,2
 SCOTTSDALE|W HAPPY VALLEY RD / North 184TH Avenue,W HAPPY VALLEY RD & North 184TH Avenue,intersection,,,75.12,"E Happy Valley Rd & N Scottsdale Rd, 85255",StreetInt,failed,5
+SCOTTSDALE|W IRVINE RD / North 19TH Avenue,W IRVINE RD & North 19TH Avenue,intersection,33.83541,-112.100139,96.67,"W Irvine Rd & N 19th Ave, 85086",StreetInt,geocoder,5
 SCOTTSDALE|W JOMAX RD / North DYSART Road,W JOMAX RD & North DYSART Road,intersection,33.724863,-112.34295,96.57,"W Jomax Rd & N Dysart Rd, 85387",StreetInt,geocoder,2
 SCOTTSDALE|W RUNNING DEER TL / North 60TH Lane,W RUNNING DEER TL & North 60TH Lane,intersection,33.738588,-112.189968,81.28,"W Running Deer Tr & N 60th Ln, 85083",StreetInt,geocoder,2
 SCOTTSDALE|W SHANGRI LA RD / North 15TH Avenue,W SHANGRI LA RD & North 15TH Avenue,intersection,33.587091,-112.091184,96.92,"W Shangri La Rd & N 15th Ave, 85029",StreetInt,geocoder,2
