@@ -782,7 +782,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
 <body>
 <nav class="topbar"><div class="wrap">
   <a href="https://brooksgroves.com/">&larr; brooksgroves.com</a>
-  <span><a href="https://github.com/bdgroves/ridgeline">Code &amp; data on GitHub &nearr;</a></span>
+  <span><a href="https://brooksgroves.com/blog/ridgeline-post.html">The story</a> &nbsp;&middot;&nbsp; <a href="https://github.com/bdgroves/ridgeline">Code &amp; data on GitHub &nearr;</a></span>
 </div></nav>
 
 <header class="hero"><div class="wrap">
