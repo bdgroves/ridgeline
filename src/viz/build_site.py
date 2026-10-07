@@ -1134,6 +1134,7 @@ def write_index(cities: list[tuple[dict, dict, dict]], updated: str, heat_report
 {nps_script}
 }})();
 </script>
+<script src="https://brooksgroves.com/js/site-footer.js" defer></script>
 </body>
 </html>
 """
