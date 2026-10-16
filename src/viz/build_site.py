@@ -625,7 +625,7 @@ def heat_section(h: dict) -> str:
   the trails closed on eight days with no mountain rescues during closure hours, which matches the {cy.get(2021, 0)} pilot closure days
   and zero closed-hour rescues here. A watch later upgraded to a warning is stored with its end before its
   start; it has no in-effect time of its own, and in this zone every 2021 pilot watch was upgraded to a warning for the same
-  days, so watches add no closure days unless a closure began the day a watch was issued. Daily highs: <a href="https://open-meteo.com/">Open-Meteo</a> historical reanalysis at Sky Harbor.
+  days, so watches add no closure days unless a closure began the day a watch was issued. Daily highs: the Sky Harbor station record (<a href="https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily">NOAA GHCN-Daily</a> USW00023183, with the latest days from the <a href="https://mesonet.agron.iastate.edu/">Iowa Environmental Mesonet</a>).
   Trails are assigned from the dispatch address, so unlocated calls count too. The "before" years include 2020, when
   trail use changed with the pandemic.</p>
 </div></section>

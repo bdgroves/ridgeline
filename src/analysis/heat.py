@@ -21,7 +21,7 @@ This script asks what the dispatch data can say about that:
 
 Inputs (fetched when the network allows, otherwise read from the committed copy):
   data/processed/phoenix_fire_sar_clean.parquet  -> data/external/phoenix_mountain_calls.csv
-  Open-Meteo archive, Sky Harbor                  -> data/external/phoenix_daily_weather.csv
+  NOAA GHCN-Daily + IEM ASOS, Sky Harbor (PHX)    -> data/external/phoenix_daily_weather.csv
   IEM VTEC archive, zone AZZ543 Central Phoenix   -> data/external/phoenix_heat_warnings.csv
 Output:
   data/external/heat_report.json
@@ -32,6 +32,7 @@ from the dispatch address text, so geocoding doesn't limit it.
 
 from __future__ import annotations
 
+import io
 import json
 import re
 from datetime import date, datetime, timedelta, timezone
@@ -116,20 +117,50 @@ def load_calls() -> pd.DataFrame:
     return out
 
 
+STATION = "USW00023183"   # Phoenix Sky Harbor, the NWS climate station (GHCN-Daily)
+
+
 def load_weather(end: date) -> pd.DataFrame:
+    """
+    Daily high at Sky Harbor, from the station itself.
+
+    GHCN-Daily (NOAA NCEI) is the official record and matches the Weather
+    Service's counts (70 days at 110F+ in 2024). It runs a few days behind, so
+    the most recent days come from the Iowa Environmental Mesonet's ASOS daily
+    summary for PHX. An earlier version used Open-Meteo's gridded reanalysis at
+    the airport's coordinates, which runs several degrees cool on the hottest
+    days (25 days at 110F+ in 2024); see the README's Corrections.
+    Columns: date, tmax (F), source.
+    """
     try:
-        r = httpx.get("https://archive-api.open-meteo.com/v1/archive", timeout=120, params={
-            "latitude": 33.4342, "longitude": -112.0116, "start_date": "2018-01-01",
-            "end_date": end.isoformat(), "timezone": "America/Phoenix",
-            "temperature_unit": "fahrenheit",
-            "daily": "temperature_2m_max,temperature_2m_min,apparent_temperature_max,precipitation_sum"})
+        r = httpx.get("https://www.ncei.noaa.gov/access/services/data/v1", timeout=180, params={
+            "dataset": "daily-summaries", "stations": STATION, "dataTypes": "TMAX",
+            "startDate": "2018-01-01", "endDate": end.isoformat(), "units": "standard", "format": "csv"})
         r.raise_for_status()
-        pd.DataFrame(r.json()["daily"]).to_csv(WEATHER, index=False)
+        g = pd.read_csv(io.StringIO(r.text))
+        g = pd.DataFrame({"date": pd.to_datetime(g["DATE"]).dt.date,
+                          "tmax": pd.to_numeric(g["TMAX"], errors="coerce"), "source": "GHCN-Daily"})
+        g = g.dropna(subset=["tmax"])
+        have = set(g["date"])
+        start = max(have) + timedelta(days=1) if have else date(2018, 1, 1)
+        if start <= end:
+            r = httpx.get("https://mesonet.agron.iastate.edu/cgi-bin/request/daily.py", timeout=120, params={
+                "network": "AZ_ASOS", "stations": "PHX", "year1": start.year, "month1": start.month,
+                "day1": start.day, "year2": end.year, "month2": end.month, "day2": end.day,
+                "var": "max_temp_f", "format": "csv", "na": "blank"})
+            r.raise_for_status()
+            a = pd.read_csv(io.StringIO(r.text))
+            a = pd.DataFrame({"date": pd.to_datetime(a["day"]).dt.date,
+                              "tmax": pd.to_numeric(a["max_temp_f"], errors="coerce"), "source": "IEM ASOS"})
+            g = pd.concat([g, a.dropna(subset=["tmax"])], ignore_index=True)
+        g.sort_values("date").to_csv(WEATHER, index=False)
     except Exception as e:  # sandbox or outage: use the committed copy
         print(f"  weather: using cached copy ({e!r})")
     w = pd.read_csv(WEATHER)
-    w["date"] = pd.to_datetime(w["time"]).dt.date
-    return w.dropna(subset=["temperature_2m_max"])
+    if "tmax" not in w:  # the old Open-Meteo file: refuse rather than mix sources silently
+        raise SystemExit("phoenix_daily_weather.csv is the old Open-Meteo file; rerun with network access")
+    w["date"] = pd.to_datetime(w["date"]).dt.date
+    return w.dropna(subset=["tmax"])
 
 
 def load_warnings() -> pd.DataFrame:
@@ -221,7 +252,9 @@ def trail_use(calls: pd.DataFrame, cal: pd.DataFrame) -> dict | None:
     piv = piv.rename(columns={v: k for k, v in COUNTERS.items()})
     if not set(COUNTERS) <= set(piv.columns):
         return None
-    # Days both counters reported something. Zeros are dropped as outages.
+    raw = piv.copy()
+    # Days both counters reported something. Zeros are dropped as outages
+    # (see retention() for how many, and why).
     piv = piv.dropna()
     piv = piv[(piv["echo"] > 0) & (piv["pies"] > 0)]
     piv["passes"] = piv["echo"] + piv["pies"]
@@ -229,7 +262,7 @@ def trail_use(calls: pd.DataFrame, cal: pd.DataFrame) -> dict | None:
     cc = calls[calls["address"].map(lambda a: any(r.search(str(a)) for r in rx.values()))]
     resc = cc.groupby("date").size()
     x = piv.join(resc.rename("rescues"), how="left").fillna({"rescues": 0})
-    x = x.join(cal.set_index("date")[["warning", "post", "temperature_2m_max"]], how="left")
+    x = x.join(cal.set_index("date")[["warning", "post", "tmax"]], how="left")
     x["year"] = [dd.year for dd in x.index]
     x["month"] = [dd.month for dd in x.index]
     x["half"] = ["Nov–Apr" if m in (11, 12, 1, 2, 3, 4) else "May–Oct" for m in x["month"]]
@@ -248,9 +281,45 @@ def trail_use(calls: pd.DataFrame, cal: pd.DataFrame) -> dict | None:
                    for (post, w), g in s.groupby(["post", "warning"])}
     bins = [-100, 70, 80, 90, 100, 105, 110, 200]
     labels = ["<70", "70s", "80s", "90s", "100–104", "105–109", "110+"]
-    x["tbin"] = pd.cut(x["temperature_2m_max"], bins, right=False, labels=labels)
+    x["tbin"] = pd.cut(x["tmax"], bins, right=False, labels=labels)
     out["by_temperature"] = [dict(bin=lab, **agg(x[x["tbin"] == lab])) for lab in labels]
+    out["retention_by_temperature"] = retention(raw, cal, bins, labels)
     return out
+
+
+def retention(raw: pd.DataFrame, cal: pd.DataFrame, bins, labels) -> list[dict]:
+    """
+    How many days survive the matched-counter rule (both counters above zero),
+    by daily high, and why the others drop out. Asked by Yun-Peng Lu: the
+    hottest days kept fewer days than the coolest. Most of the gap is 2020,
+    when Echo Canyon's counter read zero for months; heat closures themselves
+    only cover part of a day, so they don't empty one.
+    """
+    c = cal.set_index("date")[["tmax"]].join(raw, how="left")
+    c = c[(c.index >= min(raw.index)) & (c.index <= max(raw.index))]
+
+    def why(e, p):
+        if pd.isna(e) or pd.isna(p):
+            return "no record"
+        if e > 0 and p > 0:
+            return "kept"
+        if e == 0 and p == 0:
+            return "both zero"
+        return "Echo Canyon zero" if e == 0 else "Piestewa zero"
+
+    c["why"] = [why(e, p) for e, p in zip(c["echo"], c["pies"])]
+    c["tbin"] = pd.cut(c["tmax"], bins, right=False, labels=labels)
+    c["y2020"] = [d.year == 2020 for d in c.index]
+    rows = []
+    for lab in labels:
+        g = c[c["tbin"] == lab]
+        g2 = g[~g["y2020"]]
+        rows.append({"bin": lab, "days": int(len(g)),
+                     "kept_pct": round(100 * (g["why"] == "kept").mean(), 1) if len(g) else None,
+                     "kept_pct_without_2020": round(100 * (g2["why"] == "kept").mean(), 1) if len(g2) else None,
+                     "dropped": {k: int(v) for k, v in g.loc[g["why"] != "kept", "why"].value_counts().items()},
+                     "dropped_in_2020": int(((g["why"] != "kept") & g["y2020"]).sum())})
+    return rows
 
 
 def sensitivity(calls: pd.DataFrame, cal: pd.DataFrame) -> dict:
@@ -346,7 +415,7 @@ def main() -> None:
 
     first = min(calls["date"])
     cal = pd.DataFrame({"date": pd.date_range(first, last, freq="D").date})
-    cal = cal.merge(w[["date", "temperature_2m_max"]], on="date", how="left")
+    cal = cal.merge(w[["date", "tmax"]], on="date", how="left")
     flags = {d: day_flags(wr, d) for d in cal["date"]}
     # "warning" = a heat day: a closure day after the program started, or a
     # would-be closure day (warning in effect 11 a.m.-5 p.m.) before it.
@@ -369,7 +438,7 @@ def main() -> None:
                  "span": [first.isoformat(), last.isoformat()],
                  "calls": int(len(calls)),
                  "groups": calls.groupby("group").size().sort_values(ascending=False).to_dict(),
-                 "weather_days": int(cal["temperature_2m_max"].notna().sum())}
+                 "weather_days": int(cal["tmax"].notna().sum())}
 
     # Warning days per year. Counting any day a warning touched reproduces the
     # city's review (20, 18, 42, 45 for 2021-24). Closure days need the trigger in
@@ -385,14 +454,22 @@ def main() -> None:
     watch = wr[wr["significance"] == "A"]
     rep["watches"] = {"rows": int(len(watch)),
                       "upgraded_no_interval": int((watch["expire"] < watch["issue"]).sum()) if len(watch) else 0}
-    hot = cal[cal["temperature_2m_max"] >= 110].groupby("year").size()
+    hot = cal[cal["tmax"] >= 110].groupby("year").size()
     rep["days_110_by_year"] = {int(k): int(v) for k, v in hot.items()}
+    src = w.set_index("date")["source"] if "source" in w else pd.Series(dtype=str)
+    rep["weather_source"] = {"station": f"Phoenix Sky Harbor ({STATION})",
+                             "days_by_source": {k: int(v) for k, v in src.value_counts().items()}}
+    # The Weather Service counts 70 days at 110F+ at Sky Harbor in 2024. If the
+    # station series stops matching, say so loudly.
+    if 2024 in rep["days_110_by_year"] and rep["days_110_by_year"][2024] != 70:
+        print(f"= WARNING: {rep['days_110_by_year'][2024]} days at 110F+ in 2024; NWS counts 70")
+    print(f"= days at 110F+ by year: {rep['days_110_by_year']}")
 
     # 1. Calls per day by daily high, by kind
     bins = [-100, 70, 80, 90, 100, 105, 110, 200]
     labels = ["<70", "70s", "80s", "90s", "100–104", "105–109", "110+"]
-    cal["tbin"] = pd.cut(cal["temperature_2m_max"], bins, right=False, labels=labels)
-    calls["tbin"] = pd.cut(calls["temperature_2m_max"], bins, right=False, labels=labels)
+    cal["tbin"] = pd.cut(cal["tmax"], bins, right=False, labels=labels)
+    calls["tbin"] = pd.cut(calls["tmax"], bins, right=False, labels=labels)
     temp = []
     for lab in labels:
         nd = int((cal["tbin"] == lab).sum())
@@ -461,7 +538,7 @@ def main() -> None:
     # 4. The list of post-program calls at closure trails inside closed hours
     m = calls["during_closure"]
     rep["closed_hour_calls"] = [
-        {"date": str(r.date), "hour": int(r.hour), "address": r.address, "high": r.temperature_2m_max,
+        {"date": str(r.date), "hour": int(r.hour), "address": r.address, "high": r.tmax,
          "window": f"{flags[r.date]['start_hour']}:00-17:00"}
         for r in calls[m].itertuples()]
 
