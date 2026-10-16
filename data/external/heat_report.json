@@ -100,84 +100,90 @@
   "upgraded_no_interval": 56
  },
  "days_110_by_year": {
-  "2019": 13,
-  "2020": 33,
-  "2021": 14,
-  "2022": 14,
-  "2023": 32,
-  "2024": 25,
-  "2025": 21
+  "2019": 29,
+  "2020": 53,
+  "2021": 22,
+  "2022": 22,
+  "2023": 55,
+  "2024": 70,
+  "2025": 37
+ },
+ "weather_source": {
+  "station": "Phoenix Sky Harbor (USW00023183)",
+  "days_by_source": {
+   "GHCN-Daily": 2910
+  }
  },
  "by_temperature": [
   {
    "bin": "<70",
-   "days": 547,
-   "closure": 117,
-   "closure_per_100_days": 21.4,
-   "south": 47,
-   "south_per_100_days": 8.6,
-   "other": 148,
-   "other_per_100_days": 27.1
+   "days": 389,
+   "closure": 79,
+   "closure_per_100_days": 20.3,
+   "south": 31,
+   "south_per_100_days": 8.0,
+   "other": 97,
+   "other_per_100_days": 24.9
   },
   {
    "bin": "70s",
-   "days": 427,
-   "closure": 110,
-   "closure_per_100_days": 25.8,
-   "south": 48,
-   "south_per_100_days": 11.2,
-   "other": 136,
-   "other_per_100_days": 31.9
+   "days": 486,
+   "closure": 116,
+   "closure_per_100_days": 23.9,
+   "south": 53,
+   "south_per_100_days": 10.9,
+   "other": 169,
+   "other_per_100_days": 34.8
   },
   {
    "bin": "80s",
-   "days": 385,
-   "closure": 95,
-   "closure_per_100_days": 24.7,
-   "south": 40,
-   "south_per_100_days": 10.4,
-   "other": 123,
-   "other_per_100_days": 31.9
+   "days": 404,
+   "closure": 109,
+   "closure_per_100_days": 27.0,
+   "south": 41,
+   "south_per_100_days": 10.1,
+   "other": 126,
+   "other_per_100_days": 31.2
   },
   {
    "bin": "90s",
-   "days": 441,
-   "closure": 106,
-   "closure_per_100_days": 24.0,
-   "south": 38,
-   "south_per_100_days": 8.6,
-   "other": 150,
-   "other_per_100_days": 34.0
+   "days": 402,
+   "closure": 96,
+   "closure_per_100_days": 23.9,
+   "south": 40,
+   "south_per_100_days": 10.0,
+   "other": 122,
+   "other_per_100_days": 30.3
   },
   {
    "bin": "100\u2013104",
-   "days": 289,
-   "closure": 86,
-   "closure_per_100_days": 29.8,
-   "south": 26,
-   "south_per_100_days": 9.0,
-   "other": 78,
-   "other_per_100_days": 27.0
+   "days": 256,
+   "closure": 71,
+   "closure_per_100_days": 27.7,
+   "south": 19,
+   "south_per_100_days": 7.4,
+   "other": 82,
+   "other_per_100_days": 32.0
   },
   {
    "bin": "105\u2013109",
-   "days": 303,
-   "closure": 80,
-   "closure_per_100_days": 26.4,
-   "south": 20,
-   "south_per_100_days": 6.6,
-   "other": 73,
+   "days": 319,
+   "closure": 90,
+   "closure_per_100_days": 28.2,
+   "south": 28,
+   "south_per_100_days": 8.8,
+   "other": 77,
    "other_per_100_days": 24.1
   },
   {
    "bin": "110+",
-   "days": 152,
-   "closure": 31,
-   "closure_per_100_days": 20.4,
-   "south": 17,
-   "south_per_100_days": 11.2,
-   "other": 50,
-   "other_per_100_days": 32.9
+   "days": 288,
+   "closure": 64,
+   "closure_per_100_days": 22.2,
+   "south": 24,
+   "south_per_100_days": 8.3,
+   "other": 85,
+   "other_per_100_days": 29.5
   }
  ],
  "warning_vs_not": [
@@ -340,119 +346,119 @@
    "date": "2023-07-01",
    "hour": 12,
    "address": "49XX E MCDONALD DR",
-   "high": 110.2,
+   "high": 114,
    "window": "11:00-17:00"
   },
   {
    "date": "2023-07-17",
    "hour": 15,
    "address": "51XX N INVERGORDON RD",
-   "high": 112.9,
+   "high": 116,
    "window": "11:00-17:00"
   },
   {
    "date": "2023-07-25",
    "hour": 13,
    "address": "57XX N ECHO CANYON PW",
-   "high": 115.1,
+   "high": 119,
    "window": "11:00-17:00"
   },
   {
    "date": "2024-06-07",
    "hour": 10,
    "address": "51XX N INVERGORDON RD",
-   "high": 109.7,
+   "high": 113,
    "window": "9:00-17:00"
   },
   {
    "date": "2024-07-09",
    "hour": 9,
    "address": "51XX N INVERGORDON RD",
-   "high": 112.6,
+   "high": 116,
    "window": "9:00-17:00"
   },
   {
    "date": "2024-07-19",
    "hour": 11,
    "address": "49XX E MCDONALD DR",
-   "high": 110.6,
+   "high": 112,
    "window": "9:00-17:00"
   },
   {
    "date": "2024-08-05",
    "hour": 9,
    "address": "27XX E PIESTEWA PEAK DR",
-   "high": 108.1,
+   "high": 112,
    "window": "9:00-17:00"
   },
   {
    "date": "2024-09-28",
    "hour": 12,
    "address": "27XX E PIESTEWA PEAK DR",
-   "high": 113.7,
+   "high": 117,
    "window": "9:00-17:00"
   },
   {
    "date": "2024-10-01",
    "hour": 12,
    "address": "49XX E MCDONALD DR",
-   "high": 110.0,
+   "high": 113,
    "window": "9:00-17:00"
   },
   {
    "date": "2024-10-02",
    "hour": 12,
    "address": "57XX N ECHO CANYON PW",
-   "high": 104.8,
+   "high": 108,
    "window": "9:00-17:00"
   },
   {
    "date": "2024-10-03",
    "hour": 11,
    "address": "51XX N INVERGORDON RD",
-   "high": 106.5,
+   "high": 109,
    "window": "9:00-17:00"
   },
   {
    "date": "2024-10-06",
    "hour": 11,
    "address": "51XX N INVERGORDON RD",
-   "high": 106.8,
+   "high": 113,
    "window": "9:00-17:00"
   },
   {
    "date": "2025-06-14",
    "hour": 9,
    "address": "24XX E VALLEY VIEW DR",
-   "high": 109.4,
+   "high": 110,
    "window": "8:00-17:00"
   },
   {
    "date": "2025-06-19",
    "hour": 8,
    "address": "24XX E VALLEY VIEW DR",
-   "high": 115.1,
+   "high": 117,
    "window": "8:00-17:00"
   },
   {
    "date": "2025-08-05",
    "hour": 11,
    "address": "51XX N INVERGORDON RD",
-   "high": 113.8,
+   "high": 114,
    "window": "8:00-17:00"
   },
   {
    "date": "2025-08-23",
    "hour": 11,
    "address": "51XX N INVERGORDON RD",
-   "high": 109.0,
+   "high": 110,
    "window": "8:00-17:00"
   },
   {
    "date": "2025-08-24",
    "hour": 10,
    "address": "51XX N INVERGORDON RD",
-   "high": 107.6,
+   "high": 111,
    "window": "8:00-17:00"
   }
  ],
@@ -790,52 +796,135 @@
   "by_temperature": [
    {
     "bin": "<70",
-    "days": 509,
-    "passes_per_day": 2102,
-    "rescues": 95,
-    "per_100k": 8.88
+    "days": 367,
+    "passes_per_day": 2045,
+    "rescues": 64,
+    "per_100k": 8.53
    },
    {
     "bin": "70s",
-    "days": 394,
-    "passes_per_day": 2266,
-    "rescues": 79,
-    "per_100k": 8.85
+    "days": 445,
+    "passes_per_day": 2292,
+    "rescues": 90,
+    "per_100k": 8.83
    },
    {
     "bin": "80s",
-    "days": 363,
-    "passes_per_day": 1950,
-    "rescues": 75,
-    "per_100k": 10.6
+    "days": 379,
+    "passes_per_day": 2055,
+    "rescues": 82,
+    "per_100k": 10.53
    },
    {
     "bin": "90s",
-    "days": 404,
-    "passes_per_day": 1527,
-    "rescues": 84,
-    "per_100k": 13.62
+    "days": 373,
+    "passes_per_day": 1618,
+    "rescues": 72,
+    "per_100k": 11.93
    },
    {
     "bin": "100\u2013104",
-    "days": 259,
-    "passes_per_day": 1128,
-    "rescues": 69,
-    "per_100k": 23.63
+    "days": 229,
+    "passes_per_day": 1272,
+    "rescues": 60,
+    "per_100k": 20.61
    },
    {
     "bin": "105\u2013109",
-    "days": 249,
-    "passes_per_day": 774,
-    "rescues": 51,
-    "per_100k": 26.47
+    "days": 277,
+    "passes_per_day": 921,
+    "rescues": 68,
+    "per_100k": 26.65
    },
    {
     "bin": "110+",
-    "days": 117,
-    "passes_per_day": 658,
-    "rescues": 20,
-    "per_100k": 25.97
+    "days": 225,
+    "passes_per_day": 667,
+    "rescues": 37,
+    "per_100k": 24.65
+   }
+  ],
+  "retention_by_temperature": [
+   {
+    "bin": "<70",
+    "days": 385,
+    "kept_pct": 95.3,
+    "kept_pct_without_2020": 96.3,
+    "dropped": {
+     "Echo Canyon zero": 10,
+     "Piestewa zero": 8
+    },
+    "dropped_in_2020": 6
+   },
+   {
+    "bin": "70s",
+    "days": 473,
+    "kept_pct": 94.1,
+    "kept_pct_without_2020": 97.2,
+    "dropped": {
+     "Piestewa zero": 19,
+     "Echo Canyon zero": 9
+    },
+    "dropped_in_2020": 17
+   },
+   {
+    "bin": "80s",
+    "days": 402,
+    "kept_pct": 94.3,
+    "kept_pct_without_2020": 97.8,
+    "dropped": {
+     "Piestewa zero": 20,
+     "Echo Canyon zero": 3
+    },
+    "dropped_in_2020": 15
+   },
+   {
+    "bin": "90s",
+    "days": 402,
+    "kept_pct": 92.8,
+    "kept_pct_without_2020": 96.3,
+    "dropped": {
+     "Echo Canyon zero": 18,
+     "both zero": 8,
+     "Piestewa zero": 3
+    },
+    "dropped_in_2020": 16
+   },
+   {
+    "bin": "100\u2013104",
+    "days": 256,
+    "kept_pct": 89.5,
+    "kept_pct_without_2020": 94.4,
+    "dropped": {
+     "Echo Canyon zero": 18,
+     "both zero": 6,
+     "Piestewa zero": 3
+    },
+    "dropped_in_2020": 15
+   },
+   {
+    "bin": "105\u2013109",
+    "days": 319,
+    "kept_pct": 86.8,
+    "kept_pct_without_2020": 95.6,
+    "dropped": {
+     "Echo Canyon zero": 30,
+     "Piestewa zero": 8,
+     "both zero": 4
+    },
+    "dropped_in_2020": 30
+   },
+   {
+    "bin": "110+",
+    "days": 288,
+    "kept_pct": 78.1,
+    "kept_pct_without_2020": 93.2,
+    "dropped": {
+     "Echo Canyon zero": 44,
+     "Piestewa zero": 12,
+     "both zero": 7
+    },
+    "dropped_in_2020": 47
    }
   ]
  },
