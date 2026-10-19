@@ -1,16 +1,16 @@
 {
   "source": "https://maps.bouldercolorado.gov/arcgis/rest/services/fire/FireResponseTimesOpenData/MapServer/0",
-  "incidents": 760,
-  "located": 760,
+  "incidents": 762,
+  "located": 762,
   "distinct_points": 233,
   "by_category": {
     "water": 175,
-    "mountain": 585
+    "mountain": 587
   },
   "by_call_type": {
     "Water Rescue": 157,
-    "Auto-Aid Tech Rescue": 427,
-    "Rescue": 109,
+    "Auto-Aid Tech Rescue": 428,
+    "Rescue": 110,
     "Auto-Aid Rescue": 39,
     "Mutual Aid": 4,
     "Auto-Aid Water Rescue": 7,
@@ -22,8 +22,8 @@
   },
   "by_nfirs": {
     "Water Rescue": 93,
-    "Auto-Aid Tech Rescue": 308,
-    "Rescue": 88,
+    "Auto-Aid Tech Rescue": 309,
+    "Rescue": 89,
     "Auto-Aid Rescue": 17,
     "Medical, no patient contact": 20,
     "Police matter": 3,
@@ -56,6 +56,6 @@
   },
   "date_range": [
     "2015-01-10",
-    "2026-10-10"
+    "2026-10-17"
   ]
 }
