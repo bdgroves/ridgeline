@@ -2091,9 +2091,11 @@ SCOTTSDALE|625 North GALVIN Parkway,625 North GALVIN Parkway,address,33.454602,-
 SCOTTSDALE|700 West RIO SALADO Parkway,700 West RIO SALADO Parkway,address,33.431034431008,-111.94986616876,79.43,"700 W Rio Salado Pkwy, 85281",StreetAddress,geocoder_street,2
 SCOTTSDALE|701 West CAREFREE Highway,701 West CAREFREE Highway,address,,,,,,failed,5
 SCOTTSDALE|705 West CAREFREE Highway,705 West CAREFREE Highway,address,,,,,,failed,5
+SCOTTSDALE|7190 East TERRAVITA Way,7190 East TERRAVITA Way,address,33.790779,-111.930174,100.0,"7190 E TERRAVITA WAY, SCOTTSDALE, AZ, 85266",PointAddress,geocoder,5
 SCOTTSDALE|7605 East INDIAN BEND Road,7605 East INDIAN BEND Road,address,33.535854,-111.9153735,100.0,"7605 E INDIAN BEND RD, SCOTTSDALE, AZ, 85250",PointAddress,geocoder,2
 SCOTTSDALE|7803 East PIERCE Street,7803 East PIERCE Street,address,33.454297148983,-111.91158519934,77.5,"7803 E Pierce St, 85257",StreetAddress,geocoder_street,2
 SCOTTSDALE|831 East CLOUD Road,831 East CLOUD Road,address,,,77.59,"831 N Scottsdale Rd, 85281",StreetAddress,failed,5
+SCOTTSDALE|8601 North 59TH Place,8601 North 59TH Place,address,33.56211932982,-111.952359792643,76.0,"8601 N 59th Pl, 85253",StreetAddress,geocoder_street,5
 SCOTTSDALE|9000 North 40TH Street,9000 North 40TH Street,address,,,,,,failed,5
 SCOTTSDALE|9796 East SOUTH BEND Drive,9796 East SOUTH BEND Drive,address,33.641046,-111.8699865,100.0,"9796 E SOUTH BEND DR, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
 SCOTTSDALE|9850 East CROSS CANYON Way,9850 East CROSS CANYON Way,address,33.682961518637,-111.869825887762,78.82,"9850 E Cross Canyon Wy, 85255",StreetAddress,geocoder_street,2
@@ -2122,6 +2124,7 @@ SCOTTSDALE|E INDIAN SCHOOL RD / North 68TH Street,E INDIAN SCHOOL RD & North 68T
 SCOTTSDALE|E INDIAN SCHOOL RD / North HAYDEN Road,E INDIAN SCHOOL RD & North HAYDEN Road,intersection,33.494859,-111.9088575,97.14,"E Indian School Rd & N Hayden Rd, 85251",StreetInt,geocoder,2
 SCOTTSDALE|E JOMAX RD / North 95TH Street,E JOMAX RD & North 95TH Street,intersection,33.726735,-111.8782035,96.57,"E Jomax Rd & N 95th St, 85262",StreetInt,geocoder,2
 SCOTTSDALE|E MARIGOLD LN / North COLLEGE Avenue,E MARIGOLD LN & North COLLEGE Avenue,intersection,,,,,,failed,5
+SCOTTSDALE|E MCCORMICK PW / North HAYDEN Road,E MCCORMICK PKWY & North HAYDEN Road,intersection,33.544764,-111.9064635,97.07,"E McCormick Pkwy & N Hayden Rd, 85258",StreetInt,geocoder,5
 SCOTTSDALE|E MCDOWELL RD / CROSS CUT CANAL,E MCDOWELL RD & CROSS CUT CANAL,intersection,33.465654,-111.9804435,94.37,"E McDowell Rd & Crosscut Csr, 85008",StreetInt,geocoder,2
 SCOTTSDALE|E MCDOWELL RD / North GALVIN Parkway,E MCDOWELL RD & North GALVIN Parkway,intersection,33.465879,-111.943638,97.07,"E McDowell Rd & N Galvin Pkwy, 85257",StreetInt,geocoder,2
 SCOTTSDALE|E MEDLOCK DR / North HAYDEN Road,E MEDLOCK DR & North HAYDEN Road,intersection,33.512022,-111.908673,96.76,"E Medlock Dr & N Hayden Rd, 85250",StreetInt,geocoder,2
@@ -2134,6 +2137,7 @@ SCOTTSDALE|E PAINT YOUR WAGON TL / North CENTRAL Avenue,E PAINT YOUR WAGON TL & 
 SCOTTSDALE|E PRESERVE WY / North LEGEND TRAIL Parkway,E PRESERVE WY & North LEGEND TRAIL Parkway,intersection,33.793839,-111.877587,97.39,"E Preserve Wy & N Legend Trail Pkwy, 85262",StreetInt,geocoder,2
 SCOTTSDALE|E RANCH RD / North PIMA Road,E RANCH RD & North PIMA Road,intersection,33.773841,-111.8912625,96.36,"E Ranch Rd & N Pima Rd, 85266",StreetInt,geocoder,2
 SCOTTSDALE|E RIO VERDE DR / North 128TH Street,E RIO VERDE DR & North 128TH Street,intersection,33.741387,-111.8042325,96.92,"E Rio Verde Dr & N 128th St, 85262",StreetInt,geocoder,2
+SCOTTSDALE|E ROOSEVELT ST / North MILLER Road,E ROOSEVELT ST & North MILLER Road,intersection,33.458517,-111.917736,96.92,"E Roosevelt St & N Miller Rd, 85257",StreetInt,geocoder,5
 SCOTTSDALE|E SEVEN PALMS DR / North 99TH Place,E SEVEN PALMS DR & North 99TH Place,intersection,33.792498,-111.8669265,94.41,"E Seven Palms Wy & N 99th Pl, 85262",StreetInt,geocoder,2
 SCOTTSDALE|E SIENNA AV / North EAGLE RIDGE Drive,E SIENNA AVE & North EAGLE RIDGE Drive,intersection,,,,,,failed,5
 SCOTTSDALE|E SONORA CREST DR / North EAGLE RIDGE Drive,E SONORA CREST DR & North EAGLE RIDGE Drive,intersection,,,,,,failed,5
@@ -2141,12 +2145,14 @@ SCOTTSDALE|E STANFORD DR / North 40TH Street,E STANFORD DR & North 40TH Street,i
 SCOTTSDALE|E SURREY DR / North CAVE CREEK Road,E SURREY DR & North CAVE CREEK Road,intersection,33.820938,-111.954384,96.92,"E Surrey Dr & N Cave Creek Rd, 85331",StreetInt,geocoder,2
 SCOTTSDALE|E TROON NORTH DR / North 93RD Street,E TROON NORTH DR & North 93RD Street,intersection,33.748524,-111.878505,97.0,"E Troon North Dr & N 93rd St, 85262",StreetInt,geocoder,2
 SCOTTSDALE|E VERBENA LN / North 111TH Street,E VERBENA LN & North 111TH Street,intersection,33.639588,-111.841227,96.84,"E Verbena Ln & N 111th St, 85255",StreetInt,geocoder,2
+SCOTTSDALE|E VIA DE VENTURA / East VIA COSTA,E VIA DE VENTURA & East VIA COSTA,intersection,,,95.2,"N Via De Ventura & E Via Costa, 85258",StreetInt,failed,5
 SCOTTSDALE|E VIA LINDA / North 115TH Street,E VIA LINDA & North 115TH Street,intersection,33.58971,-111.833154,96.76,"E Via Linda & N 115th St, 85259",StreetInt,geocoder,2
 SCOTTSDALE|E VIA LINDA / North CAP CANAL Boulevard,E VIA LINDA & North CAP CANAL Boulevard,intersection,,,,,,failed,5
 SCOTTSDALE|E WINDGATE PASS DR / East SIERRA PINTA Drive,E WINDGATE PASS DR & East SIERRA PINTA Drive,intersection,33.66909,-111.858093,97.45,"E Windgate Pass Dr & E Sierra Pinta Dr, 85255",StreetInt,geocoder,2
 SCOTTSDALE|N FRANK LLOYD WRIGHT BL / East CACTUS Road,N FRANK LLOYD WRIGHT BL & East CACTUS Road,intersection,33.597342,-111.843171,97.33,"N Frank Lloyd Wright Blvd & E Cactus Rd, 85259",StreetInt,geocoder,2
 SCOTTSDALE|N MILLER RD / East CHAPARRAL Road,N MILLER RD & East CHAPARRAL Road,intersection,33.509484,-111.9174615,96.84,"N Miller Rd & E Chaparral Rd, 85251",StreetInt,geocoder,2
 SCOTTSDALE|N MILLER RD / East JACKRABBIT Road,N MILLER RD & East JACKRABBIT Road,intersection,33.516603,-111.916197,96.92,"N Miller Rd & E Jackrabbit Rd, 85250",StreetInt,geocoder,2
+SCOTTSDALE|N MORNING GLORY RD / East CABALLO Drive,N MORNING GLORY RD & East CABALLO Drive,intersection,33.562404,-111.9506805,97.21,"N Morning Glory Rd & E Caballo Dr, 85253",StreetInt,geocoder,5
 SCOTTSDALE|N NEW RIVER RD / North 67TH Avenue,N NEW RIVER RD & North 67TH Avenue,intersection,33.853878,-112.2035085,96.84,"N New River Rd & N 67th Ave, 85383",StreetInt,geocoder,2
 SCOTTSDALE|N PIMA RD / East DIXILETA Drive,N PIMA RD & East DIXILETA Drive,intersection,33.755805,-111.8911995,96.67,"N Pima Rd & E Dixileta Dr, 85262",StreetInt,geocoder,2
 SCOTTSDALE|N PIMA RD / East DYNAMITE Boulevard,N PIMA RD & East DYNAMITE Boulevard,intersection,33.741243,-111.891177,97.0,"N Pima Rd & E Dynamite Blvd, 85262",StreetInt,geocoder,2
