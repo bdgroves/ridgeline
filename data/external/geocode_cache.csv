@@ -2050,6 +2050,7 @@ SCOTTSDALE|19224 North TATUM Boulevard,19224 North TATUM Boulevard,address,33.65
 SCOTTSDALE|19250 North 16TH Street,19250 North 16TH Street,address,33.661518649801,-112.048762597728,77.5,"19250 N 16th St, 85024",StreetAddress,geocoder_street,2
 SCOTTSDALE|2027 East ROSE GARDEN Lane,2027 East ROSE GARDEN Lane,address,33.676569135933,-112.038112365907,78.82,"2027 E Rose Garden Ln, 85024",StreetAddress,geocoder_street,2
 SCOTTSDALE|20535 North SR 87 Highway,20535 North SR 87 Highway,address,,,,,,failed,5
+SCOTTSDALE|2114 East ACHIEVE Way,2114 East ACHIEVE Way,address,,,,,,failed,5
 SCOTTSDALE|23015 North 128TH Street,23015 North 128TH Street,address,33.686082,-111.7991835,100.0,"23015 N 128TH ST, SCOTTSDALE, AZ, 85255",PointAddress,geocoder,2
 SCOTTSDALE|2421 East NORTHERN Avenue,2421 East NORTHERN Avenue,address,33.561937612388,-112.029788797641,76.98,"2421 Northern Ave, 85028",StreetAddress,geocoder_street,2
 SCOTTSDALE|26761 North 98TH Way,26761 North 98TH Way,address,33.727824,-111.8679075,100.0,"26761 N 98TH WAY, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
@@ -2059,6 +2060,7 @@ SCOTTSDALE|27775 North ALMA SCHOOL Parkway,27775 North ALMA SCHOOL Parkway,addre
 SCOTTSDALE|28015 North 15TH Lane,28015 North 15TH Lane,address,33.738169480076,-112.092925368803,76.0,"28015 N 15th Ln, 85085",StreetAddress,geocoder_street,2
 SCOTTSDALE|28777 North PIMA Road,28777 North PIMA Road,address,33.745176,-111.8881395,100.0,"28777 N PIMA RD, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
 SCOTTSDALE|2881 East OLIVINE Avenue,2881 East OLIVINE Avenue,address,33.825141154611,-112.018845683992,78.18,"2881 E Olivine Ave, 85331",StreetAddress,geocoder_street,2
+SCOTTSDALE|300 West LAKE VIEW Drive,300 West LAKE VIEW Drive,address,,,76.61,"300 N Lakeview Dr W, 85234",StreetAddress,failed,5
 SCOTTSDALE|30301 North ALMA SCHOOL Parkway,30301 North ALMA SCHOOL Parkway,address,33.765417,-111.8635155,100.0,"30301 N ALMA SCHOOL PKWY, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
 SCOTTSDALE|31402 North 136TH Street,31402 North 136TH Street,address,33.77007,-111.7885005,100.0,"31402 N 136TH ST, SCOTTSDALE, AZ, 85262",PointAddress,geocoder,2
 SCOTTSDALE|3212 East LINCOLN Drive,3212 East LINCOLN Drive,address,33.532067935672,-112.012678235283,77.5,"3212 E Lincoln Dr, 85018",StreetAddress,geocoder_street,2
@@ -2141,13 +2143,16 @@ SCOTTSDALE|E ROOSEVELT ST / North MILLER Road,E ROOSEVELT ST & North MILLER Road
 SCOTTSDALE|E SEVEN PALMS DR / North 99TH Place,E SEVEN PALMS DR & North 99TH Place,intersection,33.792498,-111.8669265,94.41,"E Seven Palms Wy & N 99th Pl, 85262",StreetInt,geocoder,2
 SCOTTSDALE|E SIENNA AV / North EAGLE RIDGE Drive,E SIENNA AVE & North EAGLE RIDGE Drive,intersection,,,,,,failed,5
 SCOTTSDALE|E SONORA CREST DR / North EAGLE RIDGE Drive,E SONORA CREST DR & North EAGLE RIDGE Drive,intersection,,,,,,failed,5
+SCOTTSDALE|E STAGECOACH PS / North LEGEND TRAIL Parkway,E STAGECOACH PS & North LEGEND TRAIL Parkway,intersection,33.813882,-111.8807775,84.62,"E Stagecoach Pass & N Legend Trail Pkwy, 85262",StreetInt,geocoder,5
 SCOTTSDALE|E STANFORD DR / North 40TH Street,E STANFORD DR & North 40TH Street,intersection,33.51726,-111.995235,95.84,"E Stanford Dr & N 40th St, 85018",StreetInt,geocoder,2
 SCOTTSDALE|E SURREY DR / North CAVE CREEK Road,E SURREY DR & North CAVE CREEK Road,intersection,33.820938,-111.954384,96.92,"E Surrey Dr & N Cave Creek Rd, 85331",StreetInt,geocoder,2
+SCOTTSDALE|E TERRAVITA WY / North 71ST Street,E TERRAVITA WY & North 71ST Street,intersection,33.791958,-111.9276585,96.92,"E Terravita Wy & N 71st St, 85266",StreetInt,geocoder,5
 SCOTTSDALE|E TROON NORTH DR / North 93RD Street,E TROON NORTH DR & North 93RD Street,intersection,33.748524,-111.878505,97.0,"E Troon North Dr & N 93rd St, 85262",StreetInt,geocoder,2
 SCOTTSDALE|E VERBENA LN / North 111TH Street,E VERBENA LN & North 111TH Street,intersection,33.639588,-111.841227,96.84,"E Verbena Ln & N 111th St, 85255",StreetInt,geocoder,2
 SCOTTSDALE|E VIA DE VENTURA / East VIA COSTA,E VIA DE VENTURA & East VIA COSTA,intersection,,,95.2,"N Via De Ventura & E Via Costa, 85258",StreetInt,failed,5
 SCOTTSDALE|E VIA LINDA / North 115TH Street,E VIA LINDA & North 115TH Street,intersection,33.58971,-111.833154,96.76,"E Via Linda & N 115th St, 85259",StreetInt,geocoder,2
 SCOTTSDALE|E VIA LINDA / North CAP CANAL Boulevard,E VIA LINDA & North CAP CANAL Boulevard,intersection,,,,,,failed,5
+SCOTTSDALE|E WESTLAND RD / North 136TH Street,E WESTLAND RD & North 136TH Street,intersection,33.792219,-111.7868805,95.92,"E Westland Rd & N 136th St, 85262",StreetInt,geocoder,5
 SCOTTSDALE|E WINDGATE PASS DR / East SIERRA PINTA Drive,E WINDGATE PASS DR & East SIERRA PINTA Drive,intersection,33.66909,-111.858093,97.45,"E Windgate Pass Dr & E Sierra Pinta Dr, 85255",StreetInt,geocoder,2
 SCOTTSDALE|N FRANK LLOYD WRIGHT BL / East CACTUS Road,N FRANK LLOYD WRIGHT BL & East CACTUS Road,intersection,33.597342,-111.843171,97.33,"N Frank Lloyd Wright Blvd & E Cactus Rd, 85259",StreetInt,geocoder,2
 SCOTTSDALE|N MILLER RD / East CHAPARRAL Road,N MILLER RD & East CHAPARRAL Road,intersection,33.509484,-111.9174615,96.84,"N Miller Rd & E Chaparral Rd, 85251",StreetInt,geocoder,2
