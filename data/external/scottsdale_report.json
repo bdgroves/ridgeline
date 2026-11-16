@@ -1,44 +1,44 @@
 {
   "source": "https://maps.scottsdaleaz.gov/arcgis/rest/services/OpenData_Tabular/MapServer/20",
-  "incidents": 546,
-  "located": 483,
+  "incidents": 550,
+  "located": 487,
   "by_category": {
-    "mountain": 415,
-    "search": 70,
-    "water": 61
+    "water": 61,
+    "mountain": 419,
+    "search": 70
   },
   "by_type_group": {
-    "MTNRES": 415,
-    "DB": 2,
-    "WATER": 46,
-    "CODE": 1,
-    "HEAT": 4,
+    "WATER": 47,
+    "MTNRES": 419,
     "ALOC": 3,
+    "FALLA": 3,
+    "CKWELF": 2,
+    "FALL": 3,
+    "INJA": 1,
+    "UNC": 1,
+    "CODE": 1,
+    "UNKM": 1,
+    "HEAT": 4,
+    "BITE": 2,
+    "DB": 2,
     "DR": 1,
     "INJ": 1,
     "NOSEND": 1,
     "DIAB": 1,
-    "CKWELF": 2,
     "ASSPD": 1,
     "BACK": 1,
-    "FALLA": 3,
-    "BITE": 2,
-    "SERV": 3,
     "OFFRDR": 1,
-    "FALL": 3,
-    "INJA": 1,
-    "UNC": 1,
-    "UNKM": 1,
+    "SERV": 2,
     "": 52
   },
   "by_method": {
-    "preserve_centroid": 68,
-    "geocoder_street": 82,
-    "geocoder": 333,
-    "failed": 63
+    "geocoder": 335,
+    "failed": 63,
+    "preserve_centroid": 69,
+    "geocoder_street": 83
   },
   "date_range": [
     "2022-12-18",
-    "2026-11-07"
+    "2026-11-14"
   ]
 }
